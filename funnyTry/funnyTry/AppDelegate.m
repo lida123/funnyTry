@@ -22,6 +22,7 @@
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
     //增加了一行注释
+    //git diff命令可以看到的增加文字
     return YES;
 }
 
