@@ -21,7 +21,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
-    //增加了一行注释
     return YES;
 }
 
