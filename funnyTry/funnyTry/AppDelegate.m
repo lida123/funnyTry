@@ -23,6 +23,7 @@
     [self.window makeKeyAndVisible];
     //增加了一行注释
     //git diff命令可以看到的增加文字
+    //增加另一行注释
     return YES;
 }
 
