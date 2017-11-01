@@ -14,6 +14,7 @@
 		C5616C291FA8777E00A9C033 /* funnyTryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C281FA8777E00A9C033 /* funnyTryTests.m */; };
 		C5616C341FA8777E00A9C033 /* funnyTryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C331FA8777E00A9C033 /* funnyTryUITests.m */; };
 		C5616C481FA9724500A9C033 /* FTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C471FA9724500A9C033 /* FTTabBarController.m */; };
+		C5616C4B1FA9992B00A9C033 /* FTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C4A1FA9992B00A9C033 /* FTBaseView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		C5616C351FA8777E00A9C033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5616C461FA9724500A9C033 /* FTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTabBarController.h; sourceTree = "<group>"; };
 		C5616C471FA9724500A9C033 /* FTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTabBarController.m; sourceTree = "<group>"; };
+		C5616C491FA9992B00A9C033 /* FTBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseView.h; sourceTree = "<group>"; };
+		C5616C4A1FA9992B00A9C033 /* FTBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBaseView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 			children = (
 				C5616C461FA9724500A9C033 /* FTTabBarController.h */,
 				C5616C471FA9724500A9C033 /* FTTabBarController.m */,
+				C5616C491FA9992B00A9C033 /* FTBaseView.h */,
+				C5616C4A1FA9992B00A9C033 /* FTBaseView.m */,
 			);
 			path = TabBarController;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				C5616C141FA8777E00A9C033 /* ViewController.m in Sources */,
 				C5616C481FA9724500A9C033 /* FTTabBarController.m in Sources */,
 				C5616C1F1FA8777E00A9C033 /* main.m in Sources */,
+				C5616C4B1FA9992B00A9C033 /* FTBaseView.m in Sources */,
 				C5616C111FA8777E00A9C033 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
