@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     // 我写了一行注释
+    // 我写了一行注释2
 }
 
 
