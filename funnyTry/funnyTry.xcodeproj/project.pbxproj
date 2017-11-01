@@ -15,6 +15,7 @@
 		C5616C341FA8777E00A9C033 /* funnyTryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C331FA8777E00A9C033 /* funnyTryUITests.m */; };
 		C5616C481FA9724500A9C033 /* FTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C471FA9724500A9C033 /* FTTabBarController.m */; };
 		C5616C4B1FA9992B00A9C033 /* FTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C4A1FA9992B00A9C033 /* FTBaseView.m */; };
+		C5616C4E1FA9B56000A9C033 /* FTNewFileOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C4D1FA9B56000A9C033 /* FTNewFileOne.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		C5616C471FA9724500A9C033 /* FTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTabBarController.m; sourceTree = "<group>"; };
 		C5616C491FA9992B00A9C033 /* FTBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseView.h; sourceTree = "<group>"; };
 		C5616C4A1FA9992B00A9C033 /* FTBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBaseView.m; sourceTree = "<group>"; };
+		C5616C4C1FA9B56000A9C033 /* FTNewFileOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTNewFileOne.h; sourceTree = "<group>"; };
+		C5616C4D1FA9B56000A9C033 /* FTNewFileOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTNewFileOne.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				C5616C181FA8777E00A9C033 /* Assets.xcassets */,
 				C5616C1D1FA8777E00A9C033 /* Info.plist */,
 				C5616C1E1FA8777E00A9C033 /* main.m */,
+				C5616C4C1FA9B56000A9C033 /* FTNewFileOne.h */,
+				C5616C4D1FA9B56000A9C033 /* FTNewFileOne.m */,
 			);
 			path = funnyTry;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				C5616C141FA8777E00A9C033 /* ViewController.m in Sources */,
 				C5616C481FA9724500A9C033 /* FTTabBarController.m in Sources */,
 				C5616C1F1FA8777E00A9C033 /* main.m in Sources */,
+				C5616C4E1FA9B56000A9C033 /* FTNewFileOne.m in Sources */,
 				C5616C4B1FA9992B00A9C033 /* FTBaseView.m in Sources */,
 				C5616C111FA8777E00A9C033 /* AppDelegate.m in Sources */,
 			);
