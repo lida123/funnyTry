@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C5616C111FA8777E00A9C033 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C101FA8777E00A9C033 /* AppDelegate.m */; };
-		C5616C141FA8777E00A9C033 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C131FA8777E00A9C033 /* ViewController.m */; };
 		C5616C191FA8777E00A9C033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5616C181FA8777E00A9C033 /* Assets.xcassets */; };
 		C5616C1F1FA8777E00A9C033 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C1E1FA8777E00A9C033 /* main.m */; };
 		C5616C291FA8777E00A9C033 /* funnyTryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C281FA8777E00A9C033 /* funnyTryTests.m */; };
 		C5616C341FA8777E00A9C033 /* funnyTryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C331FA8777E00A9C033 /* funnyTryUITests.m */; };
-		C5616C481FA9724500A9C033 /* FTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C471FA9724500A9C033 /* FTTabBarController.m */; };
-		C5616C4B1FA9992B00A9C033 /* FTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C4A1FA9992B00A9C033 /* FTBaseView.m */; };
-		C5616C4E1FA9B56000A9C033 /* FTNewFileOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C4D1FA9B56000A9C033 /* FTNewFileOne.m */; };
+		C5F5E5231FAC372B009FB8D3 /* FTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */; };
+		C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */; };
+		C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E52C1FAC3AAA009FB8D3 /* FTBaseTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +38,6 @@
 		C5616C0C1FA8777E00A9C033 /* funnyTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funnyTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5616C0F1FA8777E00A9C033 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5616C101FA8777E00A9C033 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; usesTabs = 0; };
-		C5616C121FA8777E00A9C033 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C5616C131FA8777E00A9C033 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C5616C181FA8777E00A9C033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5616C1D1FA8777E00A9C033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5616C1E1FA8777E00A9C033 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -50,12 +47,12 @@
 		C5616C2F1FA8777E00A9C033 /* funnyTryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = funnyTryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5616C331FA8777E00A9C033 /* funnyTryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = funnyTryUITests.m; sourceTree = "<group>"; };
 		C5616C351FA8777E00A9C033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5616C461FA9724500A9C033 /* FTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTabBarController.h; sourceTree = "<group>"; };
-		C5616C471FA9724500A9C033 /* FTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTabBarController.m; sourceTree = "<group>"; };
-		C5616C491FA9992B00A9C033 /* FTBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseView.h; sourceTree = "<group>"; };
-		C5616C4A1FA9992B00A9C033 /* FTBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBaseView.m; sourceTree = "<group>"; };
-		C5616C4C1FA9B56000A9C033 /* FTNewFileOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTNewFileOne.h; sourceTree = "<group>"; };
-		C5616C4D1FA9B56000A9C033 /* FTNewFileOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTNewFileOne.m; sourceTree = "<group>"; };
+		C5F5E5211FAC372B009FB8D3 /* FTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTabBarController.h; sourceTree = "<group>"; };
+		C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTabBarController.m; sourceTree = "<group>"; };
+		C5F5E5271FAC3A5E009FB8D3 /* FTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseViewController.h; sourceTree = "<group>"; };
+		C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBaseViewController.m; sourceTree = "<group>"; };
+		C5F5E52B1FAC3AAA009FB8D3 /* FTBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseTableViewController.h; sourceTree = "<group>"; };
+		C5F5E52C1FAC3AAA009FB8D3 /* FTBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBaseTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,16 +103,13 @@
 		C5616C0E1FA8777E00A9C033 /* funnyTry */ = {
 			isa = PBXGroup;
 			children = (
-				C5616C451FA9724500A9C033 /* TabBarController */,
 				C5616C0F1FA8777E00A9C033 /* AppDelegate.h */,
 				C5616C101FA8777E00A9C033 /* AppDelegate.m */,
-				C5616C121FA8777E00A9C033 /* ViewController.h */,
-				C5616C131FA8777E00A9C033 /* ViewController.m */,
+				C5F5E5251FAC386A009FB8D3 /* Source */,
+				C5F5E51F1FAC3683009FB8D3 /* Class */,
 				C5616C181FA8777E00A9C033 /* Assets.xcassets */,
 				C5616C1D1FA8777E00A9C033 /* Info.plist */,
 				C5616C1E1FA8777E00A9C033 /* main.m */,
-				C5616C4C1FA9B56000A9C033 /* FTNewFileOne.h */,
-				C5616C4D1FA9B56000A9C033 /* FTNewFileOne.m */,
 			);
 			path = funnyTry;
 			sourceTree = "<group>";
@@ -138,15 +132,48 @@
 			path = funnyTryUITests;
 			sourceTree = "<group>";
 		};
-		C5616C451FA9724500A9C033 /* TabBarController */ = {
+		C5F5E51F1FAC3683009FB8D3 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				C5616C461FA9724500A9C033 /* FTTabBarController.h */,
-				C5616C471FA9724500A9C033 /* FTTabBarController.m */,
-				C5616C491FA9992B00A9C033 /* FTBaseView.h */,
-				C5616C4A1FA9992B00A9C033 /* FTBaseView.m */,
+				C5F5E5241FAC3747009FB8D3 /* BaseUI */,
+				C5F5E5201FAC372B009FB8D3 /* TabBarController */,
+				C5F5E5261FAC3977009FB8D3 /* Vendor */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		C5F5E5201FAC372B009FB8D3 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				C5F5E5211FAC372B009FB8D3 /* FTTabBarController.h */,
+				C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */,
 			);
 			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		C5F5E5241FAC3747009FB8D3 /* BaseUI */ = {
+			isa = PBXGroup;
+			children = (
+				C5F5E5271FAC3A5E009FB8D3 /* FTBaseViewController.h */,
+				C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */,
+				C5F5E52B1FAC3AAA009FB8D3 /* FTBaseTableViewController.h */,
+				C5F5E52C1FAC3AAA009FB8D3 /* FTBaseTableViewController.m */,
+			);
+			path = BaseUI;
+			sourceTree = "<group>";
+		};
+		C5F5E5251FAC386A009FB8D3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C5F5E5261FAC3977009FB8D3 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,11 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5616C141FA8777E00A9C033 /* ViewController.m in Sources */,
-				C5616C481FA9724500A9C033 /* FTTabBarController.m in Sources */,
 				C5616C1F1FA8777E00A9C033 /* main.m in Sources */,
-				C5616C4E1FA9B56000A9C033 /* FTNewFileOne.m in Sources */,
-				C5616C4B1FA9992B00A9C033 /* FTBaseView.m in Sources */,
+				C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */,
+				C5F5E5231FAC372B009FB8D3 /* FTTabBarController.m in Sources */,
+				C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */,
 				C5616C111FA8777E00A9C033 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +458,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = funnyTry/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gaoqiang.funnyTry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,6 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = funnyTry/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gaoqiang.funnyTry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
