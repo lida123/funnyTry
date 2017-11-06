@@ -64,6 +64,7 @@
 		C576869C1FAFF8EB00066AA3 /* XMGWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686951FAFF8EB00066AA3 /* XMGWaterflowLayout.m */; };
 		C576869D1FAFF8EB00066AA3 /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57686971FAFF8EB00066AA3 /* 1.plist */; };
 		C576869E1FAFF8EB00066AA3 /* XMGShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686991FAFF8EB00066AA3 /* XMGShopCell.m */; };
+		C57686A51FB02D5000066AA3 /* planList.txt in Resources */ = {isa = PBXBuildFile; fileRef = C57686A41FB02D5000066AA3 /* planList.txt */; };
 		C5F5E5231FAC372B009FB8D3 /* FTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */; };
 		C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */; };
 		C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E52C1FAC3AAA009FB8D3 /* FTBaseTableViewController.m */; };
@@ -205,6 +206,7 @@
 		C57686991FAFF8EB00066AA3 /* XMGShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGShopCell.m; sourceTree = "<group>"; };
 		C576869F1FAFFFB400066AA3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C57686A31FB000C000066AA3 /* BaseMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseMacro.h; sourceTree = "<group>"; };
+		C57686A41FB02D5000066AA3 /* planList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = planList.txt; sourceTree = "<group>"; };
 		C5F5E5211FAC372B009FB8D3 /* FTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTabBarController.h; sourceTree = "<group>"; };
 		C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTabBarController.m; sourceTree = "<group>"; };
 		C5F5E5271FAC3A5E009FB8D3 /* FTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseViewController.h; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 		C5616C0E1FA8777E00A9C033 /* funnyTry */ = {
 			isa = PBXGroup;
 			children = (
+				C57686A41FB02D5000066AA3 /* planList.txt */,
 				C5616C1D1FA8777E00A9C033 /* Info.plist */,
 				C57686A01FAFFFD800066AA3 /* SupportFile */,
 				C5F5E5251FAC386A009FB8D3 /* Source */,
@@ -662,6 +665,7 @@
 				C576869B1FAFF8EB00066AA3 /* XMGShopCell.xib in Resources */,
 				C57686691FAFF66500066AA3 /* MJRefresh.bundle in Resources */,
 				C576869D1FAFF8EB00066AA3 /* 1.plist in Resources */,
+				C57686A51FB02D5000066AA3 /* planList.txt in Resources */,
 				C5616C191FA8777E00A9C033 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
