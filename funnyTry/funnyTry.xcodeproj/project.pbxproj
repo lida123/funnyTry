@@ -68,6 +68,9 @@
 		C57686AD1FB02E6000066AA3 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686AA1FB02E6000066AA3 /* FBShimmeringLayer.m */; };
 		C57686AE1FB02E6000066AA3 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686AC1FB02E6000066AA3 /* FBShimmeringView.m */; };
 		C57686B21FB0300B00066AA3 /* FTBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686B11FB0300B00066AA3 /* FTBaseCell.m */; };
+		C57686B61FB069BF00066AA3 /* FTUIListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686B51FB069BF00066AA3 /* FTUIListViewController.m */; };
+		C57686BF1FB07ADB00066AA3 /* FTUIListCellIem.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686BE1FB07ADA00066AA3 /* FTUIListCellIem.m */; };
+		C57686C21FB07B0500066AA3 /* FTUIListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686C11FB07B0500066AA3 /* FTUIListCell.m */; };
 		C5F5E5231FAC372B009FB8D3 /* FTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */; };
 		C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */; };
 		C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E52C1FAC3AAA009FB8D3 /* FTBaseTableViewController.m */; };
@@ -218,6 +221,12 @@
 		C57686B01FB0300B00066AA3 /* FTBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseCell.h; sourceTree = "<group>"; };
 		C57686B11FB0300B00066AA3 /* FTBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBaseCell.m; sourceTree = "<group>"; };
 		C57686B31FB0333500066AA3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C57686B41FB069BF00066AA3 /* FTUIListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTUIListViewController.h; sourceTree = "<group>"; };
+		C57686B51FB069BF00066AA3 /* FTUIListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTUIListViewController.m; sourceTree = "<group>"; };
+		C57686BD1FB07ADA00066AA3 /* FTUIListCellIem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTUIListCellIem.h; sourceTree = "<group>"; };
+		C57686BE1FB07ADA00066AA3 /* FTUIListCellIem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTUIListCellIem.m; sourceTree = "<group>"; };
+		C57686C01FB07B0500066AA3 /* FTUIListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTUIListCell.h; sourceTree = "<group>"; };
+		C57686C11FB07B0500066AA3 /* FTUIListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTUIListCell.m; sourceTree = "<group>"; };
 		C5F5E5211FAC372B009FB8D3 /* FTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTabBarController.h; sourceTree = "<group>"; };
 		C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTabBarController.m; sourceTree = "<group>"; };
 		C5F5E5271FAC3A5E009FB8D3 /* FTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseViewController.h; sourceTree = "<group>"; };
@@ -313,16 +322,9 @@
 		C57685F31FAFF62B00066AA3 /* WaterFlow */ = {
 			isa = PBXGroup;
 			children = (
-				C576868F1FAFF75C00066AA3 /* FTWaterfallViewController.h */,
-				C57686901FAFF75C00066AA3 /* FTWaterfallViewController.m */,
-				C57686971FAFF8EB00066AA3 /* 1.plist */,
-				C57686961FAFF8EB00066AA3 /* XMGShop.h */,
-				C57686921FAFF8EA00066AA3 /* XMGShop.m */,
-				C57686981FAFF8EB00066AA3 /* XMGShopCell.h */,
-				C57686991FAFF8EB00066AA3 /* XMGShopCell.m */,
-				C57686931FAFF8EA00066AA3 /* XMGShopCell.xib */,
-				C57686941FAFF8EA00066AA3 /* XMGWaterflowLayout.h */,
-				C57686951FAFF8EB00066AA3 /* XMGWaterflowLayout.m */,
+				C57686B91FB0743300066AA3 /* Controller */,
+				C57686BA1FB0746B00066AA3 /* View */,
+				C57686BB1FB0748500066AA3 /* Model */,
 			);
 			path = WaterFlow;
 			sourceTree = "<group>";
@@ -534,8 +536,69 @@
 		C57686AF1FB02E9A00066AA3 /* UIList */ = {
 			isa = PBXGroup;
 			children = (
+				C57686B71FB06D6300066AA3 /* Controller */,
+				C57686BC1FB07AA200066AA3 /* Model */,
+				C57686B81FB06D8300066AA3 /* View */,
 			);
 			path = UIList;
+			sourceTree = "<group>";
+		};
+		C57686B71FB06D6300066AA3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C57686B41FB069BF00066AA3 /* FTUIListViewController.h */,
+				C57686B51FB069BF00066AA3 /* FTUIListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C57686B81FB06D8300066AA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C57686C01FB07B0500066AA3 /* FTUIListCell.h */,
+				C57686C11FB07B0500066AA3 /* FTUIListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C57686B91FB0743300066AA3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C576868F1FAFF75C00066AA3 /* FTWaterfallViewController.h */,
+				C57686901FAFF75C00066AA3 /* FTWaterfallViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C57686BA1FB0746B00066AA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C57686941FAFF8EA00066AA3 /* XMGWaterflowLayout.h */,
+				C57686951FAFF8EB00066AA3 /* XMGWaterflowLayout.m */,
+				C57686981FAFF8EB00066AA3 /* XMGShopCell.h */,
+				C57686991FAFF8EB00066AA3 /* XMGShopCell.m */,
+				C57686931FAFF8EA00066AA3 /* XMGShopCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C57686BB1FB0748500066AA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C57686971FAFF8EB00066AA3 /* 1.plist */,
+				C57686961FAFF8EB00066AA3 /* XMGShop.h */,
+				C57686921FAFF8EA00066AA3 /* XMGShop.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C57686BC1FB07AA200066AA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C57686BD1FB07ADA00066AA3 /* FTUIListCellIem.h */,
+				C57686BE1FB07ADA00066AA3 /* FTUIListCellIem.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C5F5E51F1FAC3683009FB8D3 /* Class */ = {
@@ -658,7 +721,7 @@
 				TargetAttributes = {
 					C5616C0B1FA8777E00A9C033 = {
 						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					C5616C231FA8777E00A9C033 = {
 						CreatedOnToolsVersion = 9.0.1;
@@ -735,7 +798,9 @@
 				C57686751FAFF66500066AA3 /* SDWebImageManager.m in Sources */,
 				C57686681FAFF66500066AA3 /* MJRefreshStateHeader.m in Sources */,
 				C57686661FAFF66500066AA3 /* MJRefreshGifHeader.m in Sources */,
+				C57686C21FB07B0500066AA3 /* FTUIListCell.m in Sources */,
 				C576869E1FAFF8EB00066AA3 /* XMGShopCell.m in Sources */,
+				C57686B61FB069BF00066AA3 /* FTUIListViewController.m in Sources */,
 				C57686B21FB0300B00066AA3 /* FTBaseCell.m in Sources */,
 				C576866D1FAFF66500066AA3 /* UIView+MJExtension.m in Sources */,
 				C57686711FAFF66500066AA3 /* SDWebImageCompat.m in Sources */,
@@ -767,6 +832,7 @@
 				C5F5E5231FAC372B009FB8D3 /* FTTabBarController.m in Sources */,
 				C57686631FAFF66500066AA3 /* MJRefreshBackGifFooter.m in Sources */,
 				C576865F1FAFF66500066AA3 /* MJRefreshHeader.m in Sources */,
+				C57686BF1FB07ADB00066AA3 /* FTUIListCellIem.m in Sources */,
 				C576866E1FAFF66500066AA3 /* MKAnnotationView+WebCache.m in Sources */,
 				C57686621FAFF66500066AA3 /* MJRefreshAutoStateFooter.m in Sources */,
 				C57686731FAFF66500066AA3 /* SDWebImageDownloader.m in Sources */,
@@ -926,14 +992,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 3F3JZ3PCY9;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/SupportFile/PrefixHeader.pch";
 				INFOPLIST_FILE = funnyTry/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gaoqiang.funnyTry;
+				PRODUCT_BUNDLE_IDENTIFIER = com.9188lottery.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4d9ab345-55f6-450a-9184-0c205f75c43c";
+				PROVISIONING_PROFILE_SPECIFIER = 20161213_profile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -942,14 +1011,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/SupportFile/PrefixHeader.pch";
 				INFOPLIST_FILE = funnyTry/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gaoqiang.funnyTry;
+				PRODUCT_BUNDLE_IDENTIFIER = com.9188lottery.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

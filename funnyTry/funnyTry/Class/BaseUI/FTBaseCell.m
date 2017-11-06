@@ -14,8 +14,7 @@
 
 @implementation FTBaseCell
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         _separatorLine = [[CALayer alloc] init];
         _separatorLine.backgroundColor = FT_RGBCOLOR(232,232,234).CGColor;
@@ -25,10 +24,11 @@
     return self;
 }
 
-- (void)setItem:(FTBaseItem *)item {
+- (void)setItem:(id )item {
     if (item && [item isKindOfClass:[FTBaseItem class]]) {
-        self.accessoryType = item.accessoryType;
-        self.selectionStyle = item.selectionStyle;
+        FTBaseItem *obj = (FTBaseItem *)obj;
+        self.accessoryType = obj.accessoryType;
+        self.selectionStyle = obj.selectionStyle;
     }
 }
 

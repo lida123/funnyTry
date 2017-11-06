@@ -38,6 +38,12 @@ static NSString * const XMGShopId = @"shop";
     [self setupLayout];
     
     [self setupRefresh];
+    
+    UILabel *lb = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, 200, 20)];
+    NSNumber *num = [[NSUserDefaults standardUserDefaults] objectForKey:@"count"];
+    lb.text = num.stringValue;
+    lb.textColor = [UIColor purpleColor];
+    [self.view addSubview:lb];
 }
 
 - (void)setupRefresh
