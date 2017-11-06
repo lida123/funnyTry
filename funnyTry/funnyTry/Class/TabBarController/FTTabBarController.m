@@ -7,6 +7,7 @@
 //
 
 #import "FTTabBarController.h"
+#import "FTWaterfallViewController.h"
 
 @interface FTTabBarController ()
 
@@ -16,7 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor purpleColor];
+    UITabBarItem *item0 = [[UITabBarItem alloc] initWithTitle:@"waterfall" image:nil tag:0];
+    UITabBarItem *item1 = [[UITabBarItem alloc] initWithTitle:@"waterfall" image:nil tag:0];
+    
+    FTWaterfallViewController *waterfall0 = [[FTWaterfallViewController alloc] init];
+    waterfall0.tabBarItem = item0;
+    
+    FTWaterfallViewController *waterfall1 = [[FTWaterfallViewController alloc] init];
+    waterfall1.tabBarItem = item1;
+    [self setViewControllers:@[waterfall0,waterfall1] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
