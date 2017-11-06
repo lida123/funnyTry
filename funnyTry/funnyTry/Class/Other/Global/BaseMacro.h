@@ -11,9 +11,9 @@
 
 /* log */
 #ifdef DEBUG
-#define NOEEDPRINT(xx, ...)  NSLog(@"%s(%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define FTDPRINT(xx, ...)  NSLog(@"%s(%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #else
-#define NOEEDPRINT(xx, ...)  ((void)0)
+#define FTDPRINT(xx, ...)  ((void)0)
 #endif
 
 /* colors */
@@ -25,7 +25,7 @@ alpha:(a)]
 #define FT_LineHeight(font) (font.ascender - font.descender) + 1
 
 /* screenBounds */
-#define NOEEScreenBounds [UIScreen mainScreen].bounds
+#define FTScreenBounds [UIScreen mainScreen].bounds
 
 /* date */
 #define FT_MINUTE 60
@@ -56,6 +56,6 @@ alpha:(a)]
 #define WS(weakSelf) __weak typeof(self) weakSelf = self;
 
 /* one Pixel height */ 
-#define SINGLE_LINE_HIEGHT  (1.0 / [UIScreen mainScreen].scale > 0 ? [UIScreen mainScreen].scale : 1.0)
+#define FT_SINGLE_LINE_HIEGHT  (1.0 / [UIScreen mainScreen].scale > 0 ? [UIScreen mainScreen].scale : 1.0)
 
 #endif /* BaseMacro_h */

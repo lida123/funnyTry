@@ -65,6 +65,9 @@
 		C576869D1FAFF8EB00066AA3 /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57686971FAFF8EB00066AA3 /* 1.plist */; };
 		C576869E1FAFF8EB00066AA3 /* XMGShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686991FAFF8EB00066AA3 /* XMGShopCell.m */; };
 		C57686A51FB02D5000066AA3 /* planList.txt in Resources */ = {isa = PBXBuildFile; fileRef = C57686A41FB02D5000066AA3 /* planList.txt */; };
+		C57686AD1FB02E6000066AA3 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686AA1FB02E6000066AA3 /* FBShimmeringLayer.m */; };
+		C57686AE1FB02E6000066AA3 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686AC1FB02E6000066AA3 /* FBShimmeringView.m */; };
+		C57686B21FB0300B00066AA3 /* FTBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686B11FB0300B00066AA3 /* FTBaseCell.m */; };
 		C5F5E5231FAC372B009FB8D3 /* FTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */; };
 		C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */; };
 		C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E52C1FAC3AAA009FB8D3 /* FTBaseTableViewController.m */; };
@@ -204,9 +207,17 @@
 		C57686971FAFF8EB00066AA3 /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
 		C57686981FAFF8EB00066AA3 /* XMGShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGShopCell.h; sourceTree = "<group>"; };
 		C57686991FAFF8EB00066AA3 /* XMGShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGShopCell.m; sourceTree = "<group>"; };
-		C576869F1FAFFFB400066AA3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C57686A31FB000C000066AA3 /* BaseMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseMacro.h; sourceTree = "<group>"; };
 		C57686A41FB02D5000066AA3 /* planList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = planList.txt; sourceTree = "<group>"; };
+		C57686A71FB02E6000066AA3 /* FBShimmering-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBShimmering-Prefix.pch"; sourceTree = "<group>"; };
+		C57686A81FB02E6000066AA3 /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmering.h; sourceTree = "<group>"; };
+		C57686A91FB02E6000066AA3 /* FBShimmeringLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringLayer.h; sourceTree = "<group>"; };
+		C57686AA1FB02E6000066AA3 /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
+		C57686AB1FB02E6000066AA3 /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
+		C57686AC1FB02E6000066AA3 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
+		C57686B01FB0300B00066AA3 /* FTBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseCell.h; sourceTree = "<group>"; };
+		C57686B11FB0300B00066AA3 /* FTBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBaseCell.m; sourceTree = "<group>"; };
+		C57686B31FB0333500066AA3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C5F5E5211FAC372B009FB8D3 /* FTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTabBarController.h; sourceTree = "<group>"; };
 		C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTabBarController.m; sourceTree = "<group>"; };
 		C5F5E5271FAC3A5E009FB8D3 /* FTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseViewController.h; sourceTree = "<group>"; };
@@ -293,6 +304,7 @@
 		C57685F21FAFF5EA00066AA3 /* JustForFun */ = {
 			isa = PBXGroup;
 			children = (
+				C57686AF1FB02E9A00066AA3 /* UIList */,
 				C57685F31FAFF62B00066AA3 /* WaterFlow */,
 			);
 			path = JustForFun;
@@ -485,7 +497,7 @@
 				C5616C101FA8777E00A9C033 /* AppDelegate.m */,
 				C5616C181FA8777E00A9C033 /* Assets.xcassets */,
 				C5616C1E1FA8777E00A9C033 /* main.m */,
-				C576869F1FAFFFB400066AA3 /* PrefixHeader.pch */,
+				C57686B31FB0333500066AA3 /* PrefixHeader.pch */,
 			);
 			path = SupportFile;
 			sourceTree = "<group>";
@@ -504,6 +516,26 @@
 				C57686A31FB000C000066AA3 /* BaseMacro.h */,
 			);
 			path = Global;
+			sourceTree = "<group>";
+		};
+		C57686A61FB02E6000066AA3 /* FBShimmering */ = {
+			isa = PBXGroup;
+			children = (
+				C57686A71FB02E6000066AA3 /* FBShimmering-Prefix.pch */,
+				C57686A81FB02E6000066AA3 /* FBShimmering.h */,
+				C57686A91FB02E6000066AA3 /* FBShimmeringLayer.h */,
+				C57686AA1FB02E6000066AA3 /* FBShimmeringLayer.m */,
+				C57686AB1FB02E6000066AA3 /* FBShimmeringView.h */,
+				C57686AC1FB02E6000066AA3 /* FBShimmeringView.m */,
+			);
+			path = FBShimmering;
+			sourceTree = "<group>";
+		};
+		C57686AF1FB02E9A00066AA3 /* UIList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIList;
 			sourceTree = "<group>";
 		};
 		C5F5E51F1FAC3683009FB8D3 /* Class */ = {
@@ -534,6 +566,8 @@
 				C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */,
 				C5F5E52B1FAC3AAA009FB8D3 /* FTBaseTableViewController.h */,
 				C5F5E52C1FAC3AAA009FB8D3 /* FTBaseTableViewController.m */,
+				C57686B01FB0300B00066AA3 /* FTBaseCell.h */,
+				C57686B11FB0300B00066AA3 /* FTBaseCell.m */,
 			);
 			path = BaseUI;
 			sourceTree = "<group>";
@@ -548,6 +582,7 @@
 		C5F5E5261FAC3977009FB8D3 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C57686A61FB02E6000066AA3 /* FBShimmering */,
 				C57686431FAFF66500066AA3 /* MJExtension */,
 				C57685F41FAFF66500066AA3 /* MJRefresh */,
 				C57686211FAFF66500066AA3 /* SDWebImage */,
@@ -694,15 +729,18 @@
 				C57686721FAFF66500066AA3 /* SDWebImageDecoder.m in Sources */,
 				C57686911FAFF75C00066AA3 /* FTWaterfallViewController.m in Sources */,
 				C576867E1FAFF66500066AA3 /* MJArgument.m in Sources */,
+				C57686AE1FB02E6000066AA3 /* FBShimmeringView.m in Sources */,
 				C576867D1FAFF66500066AA3 /* UIView+WebCacheOperation.m in Sources */,
 				C57686671FAFF66500066AA3 /* MJRefreshNormalHeader.m in Sources */,
 				C57686751FAFF66500066AA3 /* SDWebImageManager.m in Sources */,
 				C57686681FAFF66500066AA3 /* MJRefreshStateHeader.m in Sources */,
 				C57686661FAFF66500066AA3 /* MJRefreshGifHeader.m in Sources */,
 				C576869E1FAFF8EB00066AA3 /* XMGShopCell.m in Sources */,
+				C57686B21FB0300B00066AA3 /* FTBaseCell.m in Sources */,
 				C576866D1FAFF66500066AA3 /* UIView+MJExtension.m in Sources */,
 				C57686711FAFF66500066AA3 /* SDWebImageCompat.m in Sources */,
 				C57686741FAFF66500066AA3 /* SDWebImageDownloaderOperation.m in Sources */,
+				C57686AD1FB02E6000066AA3 /* FBShimmeringLayer.m in Sources */,
 				C57686871FAFF66500066AA3 /* NSObject+MJKeyValue.m in Sources */,
 				C57686641FAFF66500066AA3 /* MJRefreshBackNormalFooter.m in Sources */,
 				C57686881FAFF66500066AA3 /* NSObject+MJMember.m in Sources */,
@@ -889,6 +927,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/SupportFile/PrefixHeader.pch";
 				INFOPLIST_FILE = funnyTry/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -903,6 +943,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/SupportFile/PrefixHeader.pch";
 				INFOPLIST_FILE = funnyTry/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
