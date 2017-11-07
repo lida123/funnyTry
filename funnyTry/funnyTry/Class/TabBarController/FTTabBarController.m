@@ -8,6 +8,8 @@
 
 #import "FTTabBarController.h"
 #import "FTWaterfallViewController.h"
+#import "FTUIListViewController.h"
+#import "FTBaseNavigationController.h"
 
 @interface FTTabBarController ()
 
@@ -17,15 +19,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UITabBarItem *item0 = [[UITabBarItem alloc] initWithTitle:@"waterfall" image:nil tag:0];
-    UITabBarItem *item1 = [[UITabBarItem alloc] initWithTitle:@"waterfall" image:nil tag:0];
+    UITabBarItem *item0 = [[UITabBarItem alloc] init];
+    item0.title = @"waterfall";
+    item0.image = [[UIImage imageNamed:@"tabbar_discover_nor"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item0.selectedImage = [[UIImage imageNamed:@"tabbar_discover_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [item0 setTitleTextAttributes:@{NSForegroundColorAttributeName:FT_RGBCOLOR(252, 86, 52)} forState:UIControlStateSelected];
     
-    FTWaterfallViewController *waterfall0 = [[FTWaterfallViewController alloc] init];
-    waterfall0.tabBarItem = item0;
+    UITabBarItem *item1 = [[UITabBarItem alloc] init];
+    item1.title = @"funnny";
+    item1.image = [[UIImage imageNamed:@"tabbar_discover_nor"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item1.selectedImage = [[UIImage imageNamed:@"tabbar_discover_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [item1 setTitleTextAttributes:@{NSForegroundColorAttributeName:FT_RGBCOLOR(252, 86, 52)} forState:UIControlStateSelected];
+
     
-    FTWaterfallViewController *waterfall1 = [[FTWaterfallViewController alloc] init];
-    waterfall1.tabBarItem = item1;
-    [self setViewControllers:@[waterfall0,waterfall1] animated:YES];
+    FTWaterfallViewController *waterfall = [[FTWaterfallViewController alloc] init];
+    FTBaseNavigationController *navi0 = [[FTBaseNavigationController alloc] initWithRootViewController:waterfall];
+    navi0.tabBarItem = item0;
+    
+    FTUIListViewController *uiListVC = [[FTUIListViewController alloc] init];
+    FTBaseNavigationController *navi1 = [[FTBaseNavigationController alloc] initWithRootViewController:uiListVC];
+    navi1.tabBarItem = item1;
+    [self setViewControllers:@[navi0,navi1] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface FTBaseCell : UITableViewCell
+/* 在子类的setItem方法中调用 obj == item */
+- (void)setObject:(id)obj;
 
 @end
 
@@ -24,5 +26,4 @@
 /* 可以设置左右两侧的间距 separatorInset有值时优先使用separatorInset*/
 @property (nonatomic, assign) UIEdgeInsets separatorInset;
 
-- (void)setItem:(id)item;
 @end

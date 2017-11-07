@@ -71,6 +71,19 @@
 		C57686B61FB069BF00066AA3 /* FTUIListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686B51FB069BF00066AA3 /* FTUIListViewController.m */; };
 		C57686BF1FB07ADB00066AA3 /* FTUIListCellIem.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686BE1FB07ADA00066AA3 /* FTUIListCellIem.m */; };
 		C57686C21FB07B0500066AA3 /* FTUIListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686C11FB07B0500066AA3 /* FTUIListCell.m */; };
+		C59D91B51FB15C5A004550D0 /* UIView+CutShape.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91B41FB15C5A004550D0 /* UIView+CutShape.m */; };
+		C59D91B81FB17DB2004550D0 /* FTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91B71FB17DB2004550D0 /* FTBaseNavigationController.m */; };
+		C59D91BF1FB18245004550D0 /* tabbar_discover_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D91BB1FB18245004550D0 /* tabbar_discover_nor@2x.png */; };
+		C59D91C01FB18245004550D0 /* tabbar_discover_sel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D91BC1FB18245004550D0 /* tabbar_discover_sel@3x.png */; };
+		C59D91C11FB18245004550D0 /* tabbar_discover_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D91BD1FB18245004550D0 /* tabbar_discover_nor@3x.png */; };
+		C59D91C21FB18245004550D0 /* tabbar_discover_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D91BE1FB18245004550D0 /* tabbar_discover_sel@2x.png */; };
+		C59D91CA1FB18B0E004550D0 /* FTScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91C91FB18B0E004550D0 /* FTScanViewController.m */; };
+		C59D91D11FB18D04004550D0 /* LJSaomiaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91CF1FB18D03004550D0 /* LJSaomiaoViewController.m */; };
+		C59D91DD1FB18DD3004550D0 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91D41FB18DD3004550D0 /* SVIndefiniteAnimatedView.m */; };
+		C59D91DE1FB18DD3004550D0 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91D61FB18DD3004550D0 /* SVProgressAnimatedView.m */; };
+		C59D91DF1FB18DD3004550D0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C59D91D81FB18DD3004550D0 /* SVProgressHUD.bundle */; };
+		C59D91E01FB18DD3004550D0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91DA1FB18DD3004550D0 /* SVProgressHUD.m */; };
+		C59D91E11FB18DD3004550D0 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91DC1FB18DD3004550D0 /* SVRadialGradientLayer.m */; };
 		C5F5E5231FAC372B009FB8D3 /* FTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */; };
 		C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */; };
 		C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E52C1FAC3AAA009FB8D3 /* FTBaseTableViewController.m */; };
@@ -227,6 +240,28 @@
 		C57686BE1FB07ADA00066AA3 /* FTUIListCellIem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTUIListCellIem.m; sourceTree = "<group>"; };
 		C57686C01FB07B0500066AA3 /* FTUIListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTUIListCell.h; sourceTree = "<group>"; };
 		C57686C11FB07B0500066AA3 /* FTUIListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTUIListCell.m; sourceTree = "<group>"; };
+		C59D91B31FB15C5A004550D0 /* UIView+CutShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CutShape.h"; sourceTree = "<group>"; };
+		C59D91B41FB15C5A004550D0 /* UIView+CutShape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CutShape.m"; sourceTree = "<group>"; };
+		C59D91B61FB17DB2004550D0 /* FTBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseNavigationController.h; sourceTree = "<group>"; };
+		C59D91B71FB17DB2004550D0 /* FTBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBaseNavigationController.m; sourceTree = "<group>"; };
+		C59D91BB1FB18245004550D0 /* tabbar_discover_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discover_nor@2x.png"; sourceTree = "<group>"; };
+		C59D91BC1FB18245004550D0 /* tabbar_discover_sel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discover_sel@3x.png"; sourceTree = "<group>"; };
+		C59D91BD1FB18245004550D0 /* tabbar_discover_nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discover_nor@3x.png"; sourceTree = "<group>"; };
+		C59D91BE1FB18245004550D0 /* tabbar_discover_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discover_sel@2x.png"; sourceTree = "<group>"; };
+		C59D91C81FB18B0E004550D0 /* FTScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTScanViewController.h; sourceTree = "<group>"; };
+		C59D91C91FB18B0E004550D0 /* FTScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTScanViewController.m; sourceTree = "<group>"; };
+		C59D91CF1FB18D03004550D0 /* LJSaomiaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJSaomiaoViewController.m; sourceTree = "<group>"; };
+		C59D91D01FB18D04004550D0 /* LJSaomiaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJSaomiaoViewController.h; sourceTree = "<group>"; };
+		C59D91D31FB18DD3004550D0 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		C59D91D41FB18DD3004550D0 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		C59D91D51FB18DD3004550D0 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		C59D91D61FB18DD3004550D0 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		C59D91D71FB18DD3004550D0 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		C59D91D81FB18DD3004550D0 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		C59D91D91FB18DD3004550D0 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		C59D91DA1FB18DD3004550D0 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		C59D91DB1FB18DD3004550D0 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		C59D91DC1FB18DD3004550D0 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		C5F5E5211FAC372B009FB8D3 /* FTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTabBarController.h; sourceTree = "<group>"; };
 		C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTabBarController.m; sourceTree = "<group>"; };
 		C5F5E5271FAC3A5E009FB8D3 /* FTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseViewController.h; sourceTree = "<group>"; };
@@ -313,6 +348,7 @@
 		C57685F21FAFF5EA00066AA3 /* JustForFun */ = {
 			isa = PBXGroup;
 			children = (
+				C59D91C71FB18965004550D0 /* Scan */,
 				C57686AF1FB02E9A00066AA3 /* UIList */,
 				C57685F31FAFF62B00066AA3 /* WaterFlow */,
 			);
@@ -507,6 +543,7 @@
 		C57686A11FB0004200066AA3 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				C59D91B11FB15C0F004550D0 /* Category */,
 				C57686A21FB0009700066AA3 /* Global */,
 			);
 			path = Other;
@@ -601,6 +638,70 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C59D91B11FB15C0F004550D0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C59D91B21FB15C1D004550D0 /* UIView */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C59D91B21FB15C1D004550D0 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				C59D91B31FB15C5A004550D0 /* UIView+CutShape.h */,
+				C59D91B41FB15C5A004550D0 /* UIView+CutShape.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		C59D91B91FB18230004550D0 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C59D91BA1FB18238004550D0 /* Tabbar */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		C59D91BA1FB18238004550D0 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				C59D91BB1FB18245004550D0 /* tabbar_discover_nor@2x.png */,
+				C59D91BD1FB18245004550D0 /* tabbar_discover_nor@3x.png */,
+				C59D91BE1FB18245004550D0 /* tabbar_discover_sel@2x.png */,
+				C59D91BC1FB18245004550D0 /* tabbar_discover_sel@3x.png */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		C59D91C71FB18965004550D0 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				C59D91C81FB18B0E004550D0 /* FTScanViewController.h */,
+				C59D91C91FB18B0E004550D0 /* FTScanViewController.m */,
+				C59D91D01FB18D04004550D0 /* LJSaomiaoViewController.h */,
+				C59D91CF1FB18D03004550D0 /* LJSaomiaoViewController.m */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		C59D91D21FB18DD3004550D0 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C59D91D31FB18DD3004550D0 /* SVIndefiniteAnimatedView.h */,
+				C59D91D41FB18DD3004550D0 /* SVIndefiniteAnimatedView.m */,
+				C59D91D51FB18DD3004550D0 /* SVProgressAnimatedView.h */,
+				C59D91D61FB18DD3004550D0 /* SVProgressAnimatedView.m */,
+				C59D91D71FB18DD3004550D0 /* SVProgressHUD-Prefix.pch */,
+				C59D91D81FB18DD3004550D0 /* SVProgressHUD.bundle */,
+				C59D91D91FB18DD3004550D0 /* SVProgressHUD.h */,
+				C59D91DA1FB18DD3004550D0 /* SVProgressHUD.m */,
+				C59D91DB1FB18DD3004550D0 /* SVRadialGradientLayer.h */,
+				C59D91DC1FB18DD3004550D0 /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		C5F5E51F1FAC3683009FB8D3 /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,6 +730,8 @@
 				C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */,
 				C5F5E52B1FAC3AAA009FB8D3 /* FTBaseTableViewController.h */,
 				C5F5E52C1FAC3AAA009FB8D3 /* FTBaseTableViewController.m */,
+				C59D91B61FB17DB2004550D0 /* FTBaseNavigationController.h */,
+				C59D91B71FB17DB2004550D0 /* FTBaseNavigationController.m */,
 				C57686B01FB0300B00066AA3 /* FTBaseCell.h */,
 				C57686B11FB0300B00066AA3 /* FTBaseCell.m */,
 			);
@@ -638,6 +741,7 @@
 		C5F5E5251FAC386A009FB8D3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				C59D91B91FB18230004550D0 /* Image */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -645,6 +749,7 @@
 		C5F5E5261FAC3977009FB8D3 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C59D91D21FB18DD3004550D0 /* SVProgressHUD */,
 				C57686A61FB02E6000066AA3 /* FBShimmering */,
 				C57686431FAFF66500066AA3 /* MJExtension */,
 				C57685F41FAFF66500066AA3 /* MJRefresh */,
@@ -760,9 +865,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59D91C11FB18245004550D0 /* tabbar_discover_nor@3x.png in Resources */,
 				C576869B1FAFF8EB00066AA3 /* XMGShopCell.xib in Resources */,
+				C59D91C21FB18245004550D0 /* tabbar_discover_sel@2x.png in Resources */,
 				C57686691FAFF66500066AA3 /* MJRefresh.bundle in Resources */,
+				C59D91C01FB18245004550D0 /* tabbar_discover_sel@3x.png in Resources */,
+				C59D91DF1FB18DD3004550D0 /* SVProgressHUD.bundle in Resources */,
 				C576869D1FAFF8EB00066AA3 /* 1.plist in Resources */,
+				C59D91BF1FB18245004550D0 /* tabbar_discover_nor@2x.png in Resources */,
 				C57686A51FB02D5000066AA3 /* planList.txt in Resources */,
 				C5616C191FA8777E00A9C033 /* Assets.xcassets in Resources */,
 			);
@@ -806,9 +916,12 @@
 				C57686711FAFF66500066AA3 /* SDWebImageCompat.m in Sources */,
 				C57686741FAFF66500066AA3 /* SDWebImageDownloaderOperation.m in Sources */,
 				C57686AD1FB02E6000066AA3 /* FBShimmeringLayer.m in Sources */,
+				C59D91E01FB18DD3004550D0 /* SVProgressHUD.m in Sources */,
 				C57686871FAFF66500066AA3 /* NSObject+MJKeyValue.m in Sources */,
+				C59D91D11FB18D04004550D0 /* LJSaomiaoViewController.m in Sources */,
 				C57686641FAFF66500066AA3 /* MJRefreshBackNormalFooter.m in Sources */,
 				C57686881FAFF66500066AA3 /* NSObject+MJMember.m in Sources */,
+				C59D91B81FB17DB2004550D0 /* FTBaseNavigationController.m in Sources */,
 				C576866A1FAFF66500066AA3 /* MJRefreshConst.m in Sources */,
 				C576867C1FAFF66500066AA3 /* UIImageView+WebCache.m in Sources */,
 				C576865D1FAFF66500066AA3 /* MJRefreshComponent.m in Sources */,
@@ -819,13 +932,16 @@
 				C576865C1FAFF66500066AA3 /* MJRefreshBackFooter.m in Sources */,
 				C576869A1FAFF8EB00066AA3 /* XMGShop.m in Sources */,
 				C576867B1FAFF66500066AA3 /* UIImageView+HighlightedWebCache.m in Sources */,
+				C59D91B51FB15C5A004550D0 /* UIView+CutShape.m in Sources */,
 				C5616C1F1FA8777E00A9C033 /* main.m in Sources */,
 				C576866B1FAFF66500066AA3 /* UIScrollView+MJExtension.m in Sources */,
+				C59D91DE1FB18DD3004550D0 /* SVProgressAnimatedView.m in Sources */,
 				C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */,
 				C57686781FAFF66500066AA3 /* UIImage+GIF.m in Sources */,
 				C57686791FAFF66500066AA3 /* UIImage+MultiFormat.m in Sources */,
 				C57686611FAFF66500066AA3 /* MJRefreshAutoNormalFooter.m in Sources */,
 				C576867A1FAFF66500066AA3 /* UIImage+WebP.m in Sources */,
+				C59D91DD1FB18DD3004550D0 /* SVIndefiniteAnimatedView.m in Sources */,
 				C57686841FAFF66500066AA3 /* MJType.m in Sources */,
 				C57686761FAFF66500066AA3 /* SDWebImagePrefetcher.m in Sources */,
 				C576866C1FAFF66500066AA3 /* UIScrollView+MJRefresh.m in Sources */,
@@ -838,6 +954,7 @@
 				C57686731FAFF66500066AA3 /* SDWebImageDownloader.m in Sources */,
 				C57686771FAFF66500066AA3 /* UIButton+WebCache.m in Sources */,
 				C576865E1FAFF66500066AA3 /* MJRefreshFooter.m in Sources */,
+				C59D91CA1FB18B0E004550D0 /* FTScanViewController.m in Sources */,
 				C576866F1FAFF66500066AA3 /* NSData+ImageContentType.m in Sources */,
 				C576867F1FAFF66500066AA3 /* MJConst.m in Sources */,
 				C57686831FAFF66500066AA3 /* MJMethod.m in Sources */,
@@ -845,6 +962,7 @@
 				C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */,
 				C57686701FAFF66500066AA3 /* SDImageCache.m in Sources */,
 				C57686861FAFF66500066AA3 /* NSObject+MJCoding.m in Sources */,
+				C59D91E11FB18DD3004550D0 /* SVRadialGradientLayer.m in Sources */,
 				C576865B1FAFF66500066AA3 /* MJRefreshAutoFooter.m in Sources */,
 				C5616C111FA8777E00A9C033 /* AppDelegate.m in Sources */,
 				C576869C1FAFF8EB00066AA3 /* XMGWaterflowLayout.m in Sources */,

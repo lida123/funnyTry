@@ -19,24 +19,32 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         _shimmeringView = [[FBShimmeringView alloc] initWithFrame:CGRectZero];
+        _shimmeringView.shimmering = YES;
+        _shimmeringView.shimmeringBeginFadeDuration = 0.3;
+        _shimmeringView.shimmeringOpacity = 0.3;
         [self.contentView addSubview:_shimmeringView];
         
         _shimmeringLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _shimmeringLabel.backgroundColor = [UIColor clearColor];
         _shimmeringLabel.textColor = [UIColor purpleColor];
         _shimmeringLabel.textAlignment = NSTextAlignmentLeft;
-        _shimmeringLabel.font = [UIFont systemFontOfSize:18];
-        [_shimmeringView addSubview:_shimmeringLabel];
+        _shimmeringLabel.font = [UIFont boldSystemFontOfSize:18];
     }
     return self;
 }
 
 - (void)setItem:(FTUIListCellIem *)item {
+    [self setObject:item];
     _item = item;
+    
+    self.shimmeringView.shimmering = item.shimmering;
+    self.shimmeringLabel.text = item.text;
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.shimmeringView.frame = CGRectMake(0,0, CGRectGetWidth(self.contentView.bounds),CGRectGetHeight(self.contentView.bounds));
+    self.shimmeringView.frame = CGRectMake(14,0, CGRectGetWidth(self.contentView.bounds) - 14 ,CGRectGetHeight(self.contentView.bounds));
+    _shimmeringView.contentView = _shimmeringLabel;
     self.shimmeringLabel.frame = self.shimmeringView.bounds;
 }
 @end

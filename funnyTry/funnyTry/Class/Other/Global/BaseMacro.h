@@ -20,6 +20,7 @@
 #define FT_RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 #define FT_RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f \
 alpha:(a)]
+#define AppDefaultBackgroundColor FT_RGBCOLOR(245,244,249)
 
 /* lineHeight */
 #define FT_LineHeight(font) (font.ascender - font.descender) + 1
@@ -56,6 +57,6 @@ alpha:(a)]
 #define WS(weakSelf) __weak typeof(self) weakSelf = self;
 
 /* one Pixel height */ 
-#define FT_SINGLE_LINE_HIEGHT  (1.0 / [UIScreen mainScreen].scale > 0 ? [UIScreen mainScreen].scale : 1.0)
+#define FT_SINGLE_LINE_HIEGHT  ([UIScreen mainScreen].scale> 0 ? 1.0/[UIScreen mainScreen].scale : 1.0)
 
 #endif /* BaseMacro_h */

@@ -10,4 +10,9 @@
 
 @implementation FTUIListCellIem
 
++ (instancetype)itemWithText:(NSString *)text {
+    FTUIListCellIem *item = [[self alloc] init];
+    item.text = text;
+    return item;
+}
 @end

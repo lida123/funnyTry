@@ -7,31 +7,75 @@
 //
 
 #import "FTUIListViewController.h"
+#import "FTUIListCell.h"
+#import "FBShimmeringView.h"
 
 @interface FTUIListViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *items;
 @end
 
 @implementation FTUIListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Shimmering" style:UIBarButtonItemStylePlain target:self action:@selector(turnShimmerOn:)];
+    
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+
+    NSMutableArray *items = [NSMutableArray array];
+    NSArray *texts = @[@"iPhone X 刘海儿打理指南",@"[Diving into WWDC 2017] 如期而至 不负众望"];
+    for (NSInteger i = 0; i < texts.count; i++) {
+        FTUIListCellIem *item = [FTUIListCellIem itemWithText:texts[i]];
+        item.separatorLeftMargin = 14;
+        item.shimmering = NO;
+        [items addObject:item];
+    }
+    self.items = items;
+}
+
+#pragma mark - rightItemAction
+- (void)turnShimmerOn:(UIBarButtonItem *)item {
+    if ([item.title isEqualToString:@"Shimmering"]) {
+         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"close" style:UIBarButtonItemStylePlain target:self action:@selector(turnShimmerOn:)];
+        
+        for (FTUIListCellIem *item in self.items) {
+            item.shimmering = YES;
+        }
+        [self.tableView reloadData];
+        
+    }else {
+          self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Shimmering" style:UIBarButtonItemStylePlain target:self action:@selector(turnShimmerOn:)];
+        
+        for (FTUIListCellIem *item in self.items) {
+            item.shimmering = NO;
+        }
+        [self.tableView reloadData];
+    }
 }
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    static NSString *cellID = @"FTUIListCellId";
+    FTUIListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        cell = [[FTUIListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    [cell setItem:self.items[indexPath.row]];
+    return cell;
 }
 
 #pragma mark - UITableViewDelegate
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
 
 @end

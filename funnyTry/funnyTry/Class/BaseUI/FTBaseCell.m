@@ -24,11 +24,14 @@
     return self;
 }
 
-- (void)setItem:(id )item {
-    if (item && [item isKindOfClass:[FTBaseItem class]]) {
-        FTBaseItem *obj = (FTBaseItem *)obj;
-        self.accessoryType = obj.accessoryType;
-        self.selectionStyle = obj.selectionStyle;
+- (void)setObject:(id)obj {
+    if (obj && [obj isKindOfClass:[FTBaseItem class]]) {
+        FTBaseItem *item = (FTBaseItem *)obj;
+        self.accessoryType = item.accessoryType;
+        self.selectionStyle = item.selectionStyle;
+        if (item.separatorColor) {
+            _separatorLine.backgroundColor = item.separatorColor.CGColor;
+        }
     }
 }
 
@@ -41,16 +44,23 @@
             if (item.separatorLeftMargin == -1) {
                 self.separatorLine.hidden = YES;
             }else {
+                self.separatorLine.hidden = NO;
                 /* 优先使用separatorInset */
-                if (!UIEdgeInsetsEqualToEdgeInsets(self.separatorInset, UIEdgeInsetsZero)) {
+                if (!UIEdgeInsetsEqualToEdgeInsets(item.separatorInset, UIEdgeInsetsZero)) {
                     CGFloat w = CGRectGetWidth(self.contentView.bounds) - item.separatorInset.left - item.separatorInset.right;
                     CGFloat h = FT_SINGLE_LINE_HIEGHT;
+#ifdef TARGET_OS_SIMULATOR
+                    h = 1;
+#endif
                     CGFloat y = CGRectGetHeight(self.contentView.bounds) - h;
                     CGFloat x = item.separatorInset.left;
                     self.separatorLine.frame = CGRectMake(x, y, w, h);
                 }else {
                     CGFloat w = CGRectGetWidth(self.contentView.bounds) - item.separatorLeftMargin;
                     CGFloat h = FT_SINGLE_LINE_HIEGHT;
+#ifdef TARGET_OS_SIMULATOR
+                    h = 1;
+#endif
                     CGFloat y = CGRectGetHeight(self.contentView.bounds) - h;
                     CGFloat x = item.separatorLeftMargin;
                     self.separatorLine.frame = CGRectMake(x, y, w, h);
