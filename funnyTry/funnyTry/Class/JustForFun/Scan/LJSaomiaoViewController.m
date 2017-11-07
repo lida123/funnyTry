@@ -118,57 +118,33 @@
     // 3.设置输入方式
     _output = [[AVCaptureMetadataOutput alloc] init];
     [_output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
-  
-    [_session setSessionPreset:AVCaptureSessionPresetHigh];
- 
-    
-    if ([_session canAddOutput:self.output])
-    {
+    if ([_session canAddOutput:self.output]) {
         [_session addOutput:self.output];
     }
-    //断点位置
     _output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode];
     
-    //preview
+    [_session setSessionPreset:AVCaptureSessionPresetHigh];
+ 
+    // 4.添加一个显示的layer
     _preview = [AVCaptureVideoPreviewLayer layerWithSession:_session];
     _preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
     _preview.frame =CGRectMake((self.view.bounds.size.width-280)/2,110,280,280);
-    //    _preview.frame = self.view.bounds;
     [self.view.layer insertSublayer:self.preview atIndex:0];
     
-    
-    // Start
+    // 5.开始扫描
     [_session startRunning];
-    [self performSelector:@selector(failure) withObject:nil afterDelay:20.0];
-}
-- (void)failure {
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-        @"二维码可能不够清晰,请重新扫描";
-        
-        if (self.resultBlock) {
-            self.resultBlock(nil);
-        }
-        
-    }];
-    
 }
 
-
+#pragma mark -AVCaptureMetadataOutputObjectsDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
-    
     NSString *stringValue;
-    
-    if ([metadataObjects count] >0)
-    {
+    if ([metadataObjects count] >0) {
         AVMetadataMachineReadableCodeObject * metadataObject = metadataObjects[0];
-        stringValue = [self base64DecodeWithString:metadataObject.stringValue];
+        stringValue = metadataObject.stringValue;
     }
     
     [_session stopRunning];
-    
-    [self dismissViewControllerAnimated:YES completion:^
-     {
+    [self dismissViewControllerAnimated:YES completion:^{
          [_timer invalidate];
          if (self.resultBlock) {
              self.resultBlock(stringValue);
@@ -176,8 +152,4 @@
      }];
 }
 
-- (NSString*)base64DecodeWithString:(NSString*)str{
-    NSData * data = [[NSData alloc] initWithBase64EncodedString:str options:0];
-    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-}
 @end
