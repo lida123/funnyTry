@@ -10,9 +10,17 @@
 
 @implementation FTUIListCellIem
 
-+ (instancetype)itemWithText:(NSString *)text {
++ (instancetype)itemWithClassString:(NSString *)classString shimmering:(BOOL)shimmering {
     FTUIListCellIem *item = [[self alloc] init];
-    item.text = text;
+    item.classString = classString;
+    item.shimmering = shimmering;
     return item;
+}
+
+- (NSString *)classDescription {
+    if ([self.classString isEqualToString:@"FTScanViewController"]) {
+        return @"scan or create two-dimension code";
+    }
+    return nil;
 }
 @end

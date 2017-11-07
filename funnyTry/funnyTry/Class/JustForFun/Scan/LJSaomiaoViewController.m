@@ -7,6 +7,7 @@
 //
 
 #import "LJSaomiaoViewController.h"
+#import "SVProgressHUD.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface LJSaomiaoViewController ()<AVCaptureMetadataOutputObjectsDelegate> {
@@ -15,11 +16,11 @@
     NSInteger _num;
     UIImageView * _line;
 }
-@property (strong,nonatomic)AVCaptureDevice * device;
-@property (strong,nonatomic)AVCaptureDeviceInput * input;
-@property (strong,nonatomic)AVCaptureMetadataOutput * output;
-@property (strong,nonatomic)AVCaptureSession * session;
-@property (strong,nonatomic)AVCaptureVideoPreviewLayer * preview;
+@property (strong, nonatomic) AVCaptureDevice *device;
+@property (strong, nonatomic) AVCaptureDeviceInput *input;
+@property (strong, nonatomic) AVCaptureMetadataOutput *output;
+@property (strong, nonatomic) AVCaptureSession *session;
+@property (strong, nonatomic) AVCaptureVideoPreviewLayer *preview;
 
 @end
 
@@ -27,27 +28,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self createUI];
+    self.navigationItem.title = @"二维码";
+    self.view.backgroundColor = [UIColor grayColor];
+    
+    [self setUpUI];
 }
 
-- (void)createUI {
-    self.view.backgroundColor = [UIColor grayColor];
-    // 取消按钮
-    UIButton * scanButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+- (void)setUpUI{
+    /* 取消按钮 */
+    UIButton *scanButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [scanButton setTitle:@"取消" forState:UIControlStateNormal];
     [scanButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    scanButton.frame = CGRectMake((self.view.bounds.size.width-120)/2, 420, 120, 40);
+    scanButton.frame = CGRectMake((self.view.bounds.size.width - 120)/2, 420, 120, 40);
     [scanButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:scanButton];
-    // 说明文字
-    UILabel * labIntroudction= [[UILabel alloc] initWithFrame:CGRectMake((self.view.bounds.size.width-290)/2, 40, 290, 50)];
-    labIntroudction.backgroundColor = [UIColor clearColor];
-    labIntroudction.numberOfLines=2;
-    labIntroudction.textColor=[UIColor whiteColor];
-    labIntroudction.text=@"将二维码图像置于矩形方框内，离手机摄像头10CM左右，系统会自动识别。";
-    [self.view addSubview:labIntroudction];
     
-    UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake((self.view.bounds.size.width-300)/2, 100, 300, 300)];
+    /* 说明文字 */
+    UILabel *promptLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.view.bounds.size.width - 290)/2, 40, 290, 50)];
+    promptLabel.backgroundColor = [UIColor clearColor];
+    promptLabel.numberOfLines = 1;
+    promptLabel.textColor = [UIColor whiteColor];
+    promptLabel.text = @"将二维码/条码放入框内,即可自动扫描";
+    [self.view addSubview:promptLabel];
+    
+    UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake((self.view.bounds.size.width - 300)/2, 100, 300, 300)];
     imageView.image = [UIImage imageNamed:@"pick_bg"];
     [self.view addSubview:imageView];
     
@@ -57,7 +61,6 @@
     _timer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(animation) userInfo:nil repeats:YES];
 }
 
-
 - (void)animation {
     if (_goUp == 0) {
         _num ++;
@@ -65,8 +68,7 @@
         if (2*_num >= 280) {
             _goUp = YES;
         }
-    }
-    else {
+    }else {
         _num --;
         _line.frame = CGRectMake((self.view.bounds.size.width-220)/2, 110+2*_num, 220, 2);
         if (_num <= 0) {
@@ -75,16 +77,17 @@
     }
 }
 
+#pragma mark - back
 - (void)backAction {
     [self dismissViewControllerAnimated:YES completion:^{
         [_timer invalidate];
     }];
 }
+
 - (void)viewWillDisappear:(BOOL)animated{
     [_session stopRunning];
     _session = nil;
     [_preview removeFromSuperlayer];
-
     [super viewWillDisappear:animated];
 }
 
@@ -94,32 +97,30 @@
     
 }
 - (void)setupCamera {
-    //device
+    // 1.创建捕捉会话
+    _session = [[AVCaptureSession alloc] init];
+    
+    // 2.设置输入设备
     _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    //input
-    NSError * error;
+    NSError *error;
     _input = [AVCaptureDeviceInput deviceInputWithDevice:_device error:&error];
     if (error) {
-        NSLog(@"%@",error.localizedDescription);
+        FTDPRINT(@"%@",error.localizedDescription);
         [self dismissViewControllerAnimated:YES completion:^{
-            
-            @"无法打开相机,请在设置->隐私->相机中打开程序的相机使用权限";
-            
+            [SVProgressHUD showErrorWithStatus:@"无法打开相机,请在设置->隐私->相机中打开程序的相机使用权限"];
         }];
         return;
-    }else {
-        NSLog(@"ok");
     }
-    //output
-    _output = [[AVCaptureMetadataOutput alloc] init];
-    [_output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
-    //session
-    _session = [[AVCaptureSession alloc] init];
-    [_session setSessionPreset:AVCaptureSessionPresetHigh];
-    if ([_session canAddInput:self.input])
-    {
+    if ([_session canAddInput:self.input]) {
         [_session addInput:self.input];
     }
+    
+    // 3.设置输入方式
+    _output = [[AVCaptureMetadataOutput alloc] init];
+    [_output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
+  
+    [_session setSessionPreset:AVCaptureSessionPresetHigh];
+ 
     
     if ([_session canAddOutput:self.output])
     {

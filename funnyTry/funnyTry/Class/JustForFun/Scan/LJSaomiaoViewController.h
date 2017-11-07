@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface LJSaomiaoViewController : UIViewController
+/* 扫描结果 */
 @property (nonatomic, copy) void (^resultBlock)(NSString *result);
 
 @end

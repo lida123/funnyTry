@@ -38,7 +38,7 @@
     _item = item;
     
     self.shimmeringView.shimmering = item.shimmering;
-    self.shimmeringLabel.text = item.text;
+    self.shimmeringLabel.text = item.classDescription;
 }
 
 - (void)layoutSubviews {

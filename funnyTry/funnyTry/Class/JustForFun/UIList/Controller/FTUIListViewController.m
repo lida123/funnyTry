@@ -10,6 +10,8 @@
 #import "FTUIListCell.h"
 #import "FBShimmeringView.h"
 
+#import "FTScanViewController.h" //扫码
+
 @interface FTUIListViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *items;
@@ -28,11 +30,10 @@
     [self.view addSubview:self.tableView];
 
     NSMutableArray *items = [NSMutableArray array];
-    NSArray *texts = @[@"iPhone X 刘海儿打理指南",@"[Diving into WWDC 2017] 如期而至 不负众望"];
-    for (NSInteger i = 0; i < texts.count; i++) {
-        FTUIListCellIem *item = [FTUIListCellIem itemWithText:texts[i]];
+    NSArray *classes = @[@"FTScanViewController"];
+    for (NSInteger i = 0; i < classes.count; i++) {
+        FTUIListCellIem *item = [FTUIListCellIem itemWithClassString:classes[i] shimmering:NO];
         item.separatorLeftMargin = 14;
-        item.shimmering = NO;
         [items addObject:item];
     }
     self.items = items;
@@ -76,6 +77,16 @@
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 44;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    FTUIListCellIem *item = self.items[indexPath.row];
+    Class class = NSClassFromString(item.classString);
+    if (class) {
+        UIViewController *vc = [[class alloc] init];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 @end

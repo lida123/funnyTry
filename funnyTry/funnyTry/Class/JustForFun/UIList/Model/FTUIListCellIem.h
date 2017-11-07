@@ -9,8 +9,10 @@
 #import "FTBaseCell.h"
 
 @interface FTUIListCellIem : FTBaseItem
-@property (nonatomic, copy) NSString *text;
+@property (nonatomic, copy) NSString *classString;
 @property (nonatomic, assign ,getter=isShimmering) BOOL shimmering;
 
-+ (instancetype)itemWithText:(NSString *)text;
++ (instancetype)itemWithClassString:(NSString *)classString shimmering:(BOOL)shimmering;
+
+- (NSString *)classDescription;
 @end
