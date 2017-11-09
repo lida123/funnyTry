@@ -10,14 +10,36 @@
 #import "LJSaomiaoViewController.h"
 
 @interface FTScanViewController ()
+
 @property (nonatomic, strong) UILabel *resultLabel;
+@property (nonatomic, strong) UITextField *textField;
+@property (nonatomic, strong) UIImageView *imageView;
+
 @end
 
 @implementation FTScanViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"start" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClick:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"scan" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClick:)];
+    
+    _textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 100, 100, 25)];
+    _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    _textField.rightViewMode = UITextFieldViewModeAlways;
+    _textField.borderStyle = UITextBorderStyleRoundedRect;
+    [self.view addSubview:_textField];
+    
+    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
+    self.imageView.center = self.view.center;
+    self.imageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
+    [self.imageView addGestureRecognizer:tap];
+    [self.view addSubview:self.imageView];
+}
+
+/* 给纯黑的二维码变色 */
+- (void)tap {
+    self.imageView.image =  [self imageBlackToTransparent:self.imageView.image withRed:arc4random_uniform(250) andGreen:arc4random_uniform(250) andBlue:arc4random_uniform(250)];
 }
 
 #pragma mark - rightItemAction
@@ -36,21 +58,21 @@
     self.resultLabel.frame = rect;
     self.resultLabel.center = self.view.center;
     [self.view addSubview:self.resultLabel];
-}
-
-#pragma mark - lazy initialize
--(UILabel *)resultLabel {
-    if (!_resultLabel) {
-        _resultLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 0)];
-        _resultLabel.textColor = [UIColor purpleColor];
-        _resultLabel.font = [UIFont systemFontOfSize:18];
-        _resultLabel.numberOfLines = 0;
-    }
-    return _resultLabel;
+    
+    [[UIPasteboard generalPasteboard] setString:self.resultLabel.text];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [self.textField endEditing:YES];
+    if (![self.textField hasText]) {
+        self.imageView.hidden = YES;
+        return;
+    }
+    self.imageView.userInteractionEnabled = YES;
+    self.imageView.layer.shadowColor = [[UIColor clearColor] CGColor];
+    self.imageView.hidden = NO;
+    
     // 1.创建过滤器
     CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
     
@@ -58,7 +80,7 @@
     [filter setDefaults];
     
     // 3.给过滤器添加数据(正则表达式/账号和密码)
-    NSString *dataString = @"http://www.520it.com";
+    NSString *dataString = self.textField.text;
     NSData *data = [dataString dataUsingEncoding:NSUTF8StringEncoding];
     [filter setValue:data forKeyPath:@"inputMessage"];
     
@@ -66,7 +88,7 @@
     CIImage *outputImage = [filter outputImage];
     
     // 5.显示二维码
-   // self.imageView.image = [self createNonInterpolatedUIImageFormCIImage:outputImage withSize:200];
+    self.imageView.image = [self createNonInterpolatedUIImageFormCIImage:outputImage withSize:200];
 }
 
 /**
@@ -96,5 +118,59 @@
     CGContextRelease(bitmapRef);
     CGImageRelease(bitmapImage);
     return [UIImage imageWithCGImage:scaledImage];
+}
+
+void ProviderReleaseData (void *info, const void *data, size_t size){
+    free((void*)data);
+}
+
+- (UIImage*)imageBlackToTransparent:(UIImage*)image withRed:(CGFloat)red andGreen:(CGFloat)green andBlue:(CGFloat)blue{
+    const int imageWidth = image.size.width;
+    const int imageHeight = image.size.height;
+    size_t      bytesPerRow = imageWidth * 4;
+    uint32_t* rgbImageBuf = (uint32_t*)malloc(bytesPerRow * imageHeight);
+    // create context
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef context = CGBitmapContextCreate(rgbImageBuf, imageWidth, imageHeight, 8, bytesPerRow, colorSpace,
+                                                 kCGBitmapByteOrder32Little | kCGImageAlphaNoneSkipLast);
+    CGContextDrawImage(context, CGRectMake(0, 0, imageWidth, imageHeight), image.CGImage);
+    // traverse pixe
+    int pixelNum = imageWidth * imageHeight;
+    uint32_t* pCurPtr = rgbImageBuf;
+    for (int i = 0; i < pixelNum; i++, pCurPtr++){
+        if ((*pCurPtr & 0xFFFFFF00) < 0x99999900){
+            // change color
+            uint8_t* ptr = (uint8_t*)pCurPtr;
+            ptr[3] = red; //0~255
+            ptr[2] = green;
+            ptr[1] = blue;
+        }else{
+            uint8_t* ptr = (uint8_t*)pCurPtr;
+            ptr[0] = 0;
+        }
+    }
+    // context to image
+    CGDataProviderRef dataProvider = CGDataProviderCreateWithData(NULL, rgbImageBuf, bytesPerRow * imageHeight, ProviderReleaseData);
+    CGImageRef imageRef = CGImageCreate(imageWidth, imageHeight, 8, 32, bytesPerRow, colorSpace,
+                                        kCGImageAlphaLast | kCGBitmapByteOrder32Little, dataProvider,
+                                        NULL, true, kCGRenderingIntentDefault);
+    CGDataProviderRelease(dataProvider);
+    UIImage* resultUIImage = [UIImage imageWithCGImage:imageRef];
+    // release
+    CGImageRelease(imageRef);
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    return resultUIImage;
+}
+
+#pragma mark - lazy initialize
+-(UILabel *)resultLabel {
+    if (!_resultLabel) {
+        _resultLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.imageView.bounds) + 10, CGRectGetWidth(self.view.bounds), 0)];
+        _resultLabel.textColor = [UIColor purpleColor];
+        _resultLabel.font = [UIFont systemFontOfSize:18];
+        _resultLabel.numberOfLines = 0;
+    }
+    return _resultLabel;
 }
 @end

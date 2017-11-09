@@ -10,8 +10,6 @@
 #import "FTUIListCell.h"
 #import "FBShimmeringView.h"
 
-#import "FTScanViewController.h" //扫码
-
 @interface FTUIListViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *items;
@@ -30,7 +28,7 @@
     [self.view addSubview:self.tableView];
 
     NSMutableArray *items = [NSMutableArray array];
-    NSArray *classes = @[@"FTScanViewController"];
+    NSArray *classes = @[@"FTScanViewController",@"FTFlowMountainViewController"];
     for (NSInteger i = 0; i < classes.count; i++) {
         FTUIListCellIem *item = [FTUIListCellIem itemWithClassString:classes[i] shimmering:NO];
         item.separatorLeftMargin = 14;

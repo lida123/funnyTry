@@ -20,6 +20,10 @@
 - (NSString *)classDescription {
     if ([self.classString isEqualToString:@"FTScanViewController"]) {
         return @"scan or create two-dimension code";
+    }else if([self.classString isEqualToString:@"FTFlowMountainViewController"]) {
+        return @"flow mountain";
+    }else {
+        
     }
     return nil;
 }

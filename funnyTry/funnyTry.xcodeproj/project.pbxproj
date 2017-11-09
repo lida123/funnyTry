@@ -84,6 +84,7 @@
 		C59D91DF1FB18DD3004550D0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C59D91D81FB18DD3004550D0 /* SVProgressHUD.bundle */; };
 		C59D91E01FB18DD3004550D0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91DA1FB18DD3004550D0 /* SVProgressHUD.m */; };
 		C59D91E11FB18DD3004550D0 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91DC1FB18DD3004550D0 /* SVRadialGradientLayer.m */; };
+		C59D91E51FB44998004550D0 /* FTFlowMountainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91E41FB44998004550D0 /* FTFlowMountainViewController.m */; };
 		C5F5E5231FAC372B009FB8D3 /* FTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */; };
 		C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */; };
 		C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E52C1FAC3AAA009FB8D3 /* FTBaseTableViewController.m */; };
@@ -262,6 +263,8 @@
 		C59D91DA1FB18DD3004550D0 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		C59D91DB1FB18DD3004550D0 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		C59D91DC1FB18DD3004550D0 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		C59D91E31FB44998004550D0 /* FTFlowMountainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFlowMountainViewController.h; sourceTree = "<group>"; };
+		C59D91E41FB44998004550D0 /* FTFlowMountainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFlowMountainViewController.m; sourceTree = "<group>"; };
 		C5F5E5211FAC372B009FB8D3 /* FTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTabBarController.h; sourceTree = "<group>"; };
 		C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTabBarController.m; sourceTree = "<group>"; };
 		C5F5E5271FAC3A5E009FB8D3 /* FTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseViewController.h; sourceTree = "<group>"; };
@@ -348,6 +351,7 @@
 		C57685F21FAFF5EA00066AA3 /* JustForFun */ = {
 			isa = PBXGroup;
 			children = (
+				C59D91E21FB448BC004550D0 /* FlowMountain */,
 				C59D91C71FB18965004550D0 /* Scan */,
 				C57686AF1FB02E9A00066AA3 /* UIList */,
 				C57685F31FAFF62B00066AA3 /* WaterFlow */,
@@ -702,6 +706,15 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		C59D91E21FB448BC004550D0 /* FlowMountain */ = {
+			isa = PBXGroup;
+			children = (
+				C59D91E31FB44998004550D0 /* FTFlowMountainViewController.h */,
+				C59D91E41FB44998004550D0 /* FTFlowMountainViewController.m */,
+			);
+			path = FlowMountain;
+			sourceTree = "<group>";
+		};
 		C5F5E51F1FAC3683009FB8D3 /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -920,6 +933,7 @@
 				C57686871FAFF66500066AA3 /* NSObject+MJKeyValue.m in Sources */,
 				C59D91D11FB18D04004550D0 /* LJSaomiaoViewController.m in Sources */,
 				C57686641FAFF66500066AA3 /* MJRefreshBackNormalFooter.m in Sources */,
+				C59D91E51FB44998004550D0 /* FTFlowMountainViewController.m in Sources */,
 				C57686881FAFF66500066AA3 /* NSObject+MJMember.m in Sources */,
 				C59D91B81FB17DB2004550D0 /* FTBaseNavigationController.m in Sources */,
 				C576866A1FAFF66500066AA3 /* MJRefreshConst.m in Sources */,
