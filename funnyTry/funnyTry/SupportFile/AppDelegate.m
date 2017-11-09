@@ -27,7 +27,6 @@
     //增加第四行注释 fixbug
     //fixbug2
     //git reset 单个文件
-    //git reset 再测试
     return YES;
 }
 
