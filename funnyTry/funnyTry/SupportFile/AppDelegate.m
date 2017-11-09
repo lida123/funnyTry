@@ -28,6 +28,7 @@
     //fixbug2
     //git reset 单个文件
     //git diff
+    //git stash
     return YES;
 }
 
