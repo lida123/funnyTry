@@ -37,6 +37,7 @@
         [items addObject:item];
     }
     self.items = items;
+    FTDPRINT(@"%@",NSStringFromCGRect(self.view.bounds));
 }
 
 #pragma mark - rightItemAction
