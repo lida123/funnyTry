@@ -324,11 +324,15 @@
 		C5616C0E1FA8777E00A9C033 /* funnyTry */ = {
 			isa = PBXGroup;
 			children = (
-				C57686A41FB02D5000066AA3 /* planList.txt */,
+				C5616C0F1FA8777E00A9C033 /* AppDelegate.h */,
+				C5616C101FA8777E00A9C033 /* AppDelegate.m */,
 				C5616C1D1FA8777E00A9C033 /* Info.plist */,
-				C57686A01FAFFFD800066AA3 /* SupportFile */,
-				C5F5E5251FAC386A009FB8D3 /* Source */,
 				C5F5E51F1FAC3683009FB8D3 /* Class */,
+				C59EFF1B1FB5A3BB0004E0D4 /* Custom */,
+				C5F5E5261FAC3977009FB8D3 /* Vendor */,
+				C5F5E5251FAC386A009FB8D3 /* Source */,
+				C5616C181FA8777E00A9C033 /* Assets.xcassets */,
+				C57686A01FAFFFD800066AA3 /* Supporting Files */,
 			);
 			path = funnyTry;
 			sourceTree = "<group>";
@@ -535,16 +539,14 @@
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
-		C57686A01FAFFFD800066AA3 /* SupportFile */ = {
+		C57686A01FAFFFD800066AA3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C5616C0F1FA8777E00A9C033 /* AppDelegate.h */,
-				C5616C101FA8777E00A9C033 /* AppDelegate.m */,
-				C5616C181FA8777E00A9C033 /* Assets.xcassets */,
+				C57686A41FB02D5000066AA3 /* planList.txt */,
 				C5616C1E1FA8777E00A9C033 /* main.m */,
 				C57686B31FB0333500066AA3 /* PrefixHeader.pch */,
 			);
-			path = SupportFile;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		C57686A11FB0004200066AA3 /* Other */ = {
@@ -736,13 +738,26 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		C59EFF1A1FB5A3930004E0D4 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		C59EFF1B1FB5A3BB0004E0D4 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		C5F5E51F1FAC3683009FB8D3 /* Class */ = {
 			isa = PBXGroup;
 			children = (
 				C57685F21FAFF5EA00066AA3 /* JustForFun */,
 				C5F5E5241FAC3747009FB8D3 /* BaseUI */,
 				C5F5E5201FAC372B009FB8D3 /* TabBarController */,
-				C5F5E5261FAC3977009FB8D3 /* Vendor */,
 				C57686A11FB0004200066AA3 /* Other */,
 			);
 			path = Class;
@@ -775,6 +790,7 @@
 		C5F5E5251FAC386A009FB8D3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				C59EFF1A1FB5A3930004E0D4 /* Sound */,
 				C59D91B91FB18230004550D0 /* Image */,
 			);
 			path = Source;
@@ -1149,7 +1165,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3F3JZ3PCY9;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/SupportFile/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = funnyTry/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1168,7 +1184,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/SupportFile/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = funnyTry/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
