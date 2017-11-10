@@ -21,9 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"scan" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClick:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ScanQRCodeAction"] style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClick:)];
     
-    _textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 100, 100, 25)];
+    _textField = [[UITextField alloc] initWithFrame:CGRectMake(15, 100, 100, 25)];
     _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     _textField.rightViewMode = UITextFieldViewModeAlways;
     _textField.borderStyle = UITextBorderStyleRoundedRect;
@@ -53,6 +53,8 @@
 }
 
 - (void)showResult:(NSString *)result {
+    self.imageView.hidden = YES;
+    self.resultLabel.hidden = NO;
     self.resultLabel.text = result.length > 0 ? result : @"null";
     CGRect rect = [self.resultLabel.text boundingRectWithSize:CGSizeMake(CGRectGetWidth(self.view.bounds), MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.resultLabel.font} context:nil];
     self.resultLabel.frame = rect;
@@ -64,6 +66,8 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    self.resultLabel.hidden = YES;
+    
     [self.textField endEditing:YES];
     if (![self.textField hasText]) {
         self.imageView.hidden = YES;

@@ -9,12 +9,14 @@
 #import "LJSaomiaoViewController.h"
 #import "SVProgressHUD.h"
 #import <AVFoundation/AVFoundation.h>
+#import "FTScanBackgroundView.h"
 
 @interface LJSaomiaoViewController ()<AVCaptureMetadataOutputObjectsDelegate> {
     NSTimer * _timer;
     BOOL _goUp;
     NSInteger _num;
     UIImageView * _line;
+    FTScanBackgroundView *_bgView;
 }
 @property (strong, nonatomic) AVCaptureDevice *device;
 @property (strong, nonatomic) AVCaptureDeviceInput *input;
@@ -29,48 +31,53 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"二维码";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"left" style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
     self.view.backgroundColor = [UIColor grayColor];
     
     [self setUpUI];
 }
 
 - (void)setUpUI{
+    CGFloat bgW = CGRectGetWidth(self.view.bounds) * 0.6875;
+    CGFloat bgH = bgW;
+    _bgView = [[FTScanBackgroundView alloc] initWithFrame:CGRectMake(0, 0, bgW, bgH)];
+    _bgView.center = self.view.center;
+    [self.view addSubview:_bgView];
+    
     /* 取消按钮 */
     UIButton *scanButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [scanButton setTitle:@"取消" forState:UIControlStateNormal];
-    [scanButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    scanButton.frame = CGRectMake((self.view.bounds.size.width - 120)/2, 420, 120, 40);
+    [scanButton setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
+    scanButton.frame = CGRectMake(_bgView.center.x - 60, CGRectGetMaxY(_bgView.frame) + 20, 120, 40);
     [scanButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:scanButton];
     
     /* 说明文字 */
-    UILabel *promptLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.view.bounds.size.width - 290)/2, 40, 290, 50)];
+    UILabel *promptLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     promptLabel.backgroundColor = [UIColor clearColor];
     promptLabel.numberOfLines = 1;
-    promptLabel.textColor = [UIColor whiteColor];
+    promptLabel.textColor = [UIColor purpleColor];
     promptLabel.text = @"将二维码/条码放入框内,即可自动扫描";
+    [promptLabel sizeToFit];
+    promptLabel.center = CGPointMake(_bgView.center.x, CGRectGetMinY(_bgView.frame) - 50);
     [self.view addSubview:promptLabel];
     
-    UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake((self.view.bounds.size.width - 300)/2, 100, 300, 300)];
-    imageView.image = [UIImage imageNamed:@"pick_bg"];
-    [self.view addSubview:imageView];
-    
-    _line = [[UIImageView alloc] initWithFrame:CGRectMake((self.view.bounds.size.width-220)/2, 110, 220, 2)];
-    _line.image = [UIImage imageNamed:@"line.png"];
+    _line = [[UIImageView alloc] initWithFrame:CGRectMake(0, CGRectGetMinY(_bgView.frame), CGRectGetWidth(self.view.frame),12)];
+    _line.image = [UIImage imageNamed:@"ff_QRCodeScanLine"];
     [self.view addSubview:_line];
     _timer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(animation) userInfo:nil repeats:YES];
 }
 
 - (void)animation {
-    if (_goUp == 0) {
+    if (!_goUp) {
         _num ++;
-        _line.frame = CGRectMake((self.view.bounds.size.width-220)/2, 110+2*_num, 220, 2);
-        if (2*_num >= 280) {
+        _line.frame = CGRectMake(CGRectGetMinX(_bgView.frame), CGRectGetMinY(_bgView.frame) + 2 *_num, CGRectGetWidth(_bgView.frame),6);
+        if (2*_num >= CGRectGetHeight(_bgView.frame) - 6) {
             _goUp = YES;
         }
     }else {
         _num --;
-        _line.frame = CGRectMake((self.view.bounds.size.width-220)/2, 110+2*_num, 220, 2);
+        _line.frame = CGRectMake(CGRectGetMinX(_bgView.frame), CGRectGetMinY(_bgView.frame) + 2 *_num, CGRectGetWidth(_bgView.frame),6);
         if (_num <= 0) {
             _goUp = NO;
         }
@@ -128,11 +135,43 @@
     // 4.添加一个显示的layer
     _preview = [AVCaptureVideoPreviewLayer layerWithSession:_session];
     _preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    _preview.frame =CGRectMake((self.view.bounds.size.width-280)/2,110,280,280);
+    _preview.frame = self.view.bounds;
+    [self addBackgroundLayer];
     [self.view.layer insertSublayer:self.preview atIndex:0];
     
     // 5.开始扫描
     [_session startRunning];
+}
+
+- (void)addBackgroundLayer {
+    CGFloat h1 = _bgView.frame.size.height - FTNavigationBarHeight;
+    CGFloat x = _bgView.frame.origin.x;
+    CGFloat opacity = 0.3;
+    
+    CALayer *backgroundLayer1 = [CALayer layer];
+    backgroundLayer1.frame = CGRectMake(0, 0, self.view.bounds.size.width, h1);
+    backgroundLayer1.backgroundColor = [UIColor blackColor].CGColor;
+    backgroundLayer1.opacity = opacity;
+    [_preview addSublayer:backgroundLayer1];
+    
+    CALayer *backgroundLayer2 = [CALayer layer];
+    backgroundLayer2.frame = CGRectMake(0, h1, x,_preview.bounds.size.height - h1);
+    backgroundLayer2.backgroundColor = [UIColor blackColor].CGColor;
+    backgroundLayer2.opacity = opacity;
+    [_preview addSublayer:backgroundLayer2];
+    
+    CALayer *backgroundLayer3 = [CALayer layer];
+    backgroundLayer3.frame = CGRectMake(x + CGRectGetWidth(_bgView.bounds), h1, x,_preview.bounds.size.height - h1);
+    backgroundLayer3.backgroundColor = [UIColor blackColor].CGColor;
+    backgroundLayer3.opacity = opacity;
+    [_preview addSublayer:backgroundLayer3];
+    
+    CALayer *backgroundLayer4 = [CALayer layer];
+    backgroundLayer4.frame = CGRectMake(x,CGRectGetMaxY(_bgView.frame), _bgView.bounds.size.width,_preview.bounds.size.height - h1 - _bgView.frame.size.height + 1);
+    backgroundLayer4.backgroundColor = [UIColor blackColor].CGColor;
+    backgroundLayer4.opacity = opacity;
+    [_preview addSublayer:backgroundLayer4];
+    
 }
 
 #pragma mark -AVCaptureMetadataOutputObjectsDelegate
