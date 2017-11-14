@@ -19,8 +19,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         _shimmeringView = [[FBShimmeringView alloc] initWithFrame:CGRectZero];
-        _shimmeringView.shimmering = YES;
-        _shimmeringView.shimmeringBeginFadeDuration = 0.3;
+        _shimmeringView.shimmering = NO;
         _shimmeringView.shimmeringOpacity = 0.3;
         [self.contentView addSubview:_shimmeringView];
         

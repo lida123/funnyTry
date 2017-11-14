@@ -59,4 +59,25 @@ alpha:(a)]
 /* one Pixel height */ 
 #define FT_SINGLE_LINE_HIEGHT  ([UIScreen mainScreen].scale> 0 ? 1.0/[UIScreen mainScreen].scale : 1.0)
 
+// 控制台输出
+#ifdef DEBUG
+
+#define GQLog(format,...) do{\
+fprintf(stderr, "---logging start--\n");\
+fprintf(stderr, "<%s :%d %s\n",[[[NSString stringWithFormat:@"%s",__FILE__] lastPathComponent] UTF8String],__LINE__,__FUNCTION__ );\
+NSLog(format,##__VA_ARGS__) ;\
+fprintf(stderr, "---logging end----\n\n");\
+fprintf(stderr, "          \\__/\n");\
+fprintf(stderr, "          (oo)\\_ _ _ _ _ _ _\n");\
+fprintf(stderr, "          (__)\\             )\\/\\\n");\
+fprintf(stderr, "              ||----vv-----||\n");\
+fprintf(stderr, "              ||           ||\n");\
+}while(0)
+
+#else
+
+#define GQLog(format,...)
+
+#endif
+
 #endif /* BaseMacro_h */

@@ -21,7 +21,7 @@
 #endif
 
 #if TARGET_IPHONE_SIMULATOR
-UIKIT_EXTERN CGFloat UIAnimationDragCoefficient(void); // UIKit private drag coeffient, use judiciously
+UIKIT_EXTERN CGFloat UIAnimationDragCoefficient(void); // UIKit private drag coefficient, use judiciously
 #endif
 
 static CGFloat FBShimmeringLayerDragCoefficient(void)
@@ -183,7 +183,7 @@ static CAAnimation *shimmer_slide_finish(CAAnimation *a)
   }
 }
 
-- (void)setShimmeringSpeed:(float)speed
+- (void)setShimmeringSpeed:(CGFloat)speed
 {
   if (speed != _shimmeringSpeed) {
     _shimmeringSpeed = speed;
@@ -226,12 +226,14 @@ static CAAnimation *shimmer_slide_finish(CAAnimation *a)
     return;
   }
 
+  // save state
   BOOL disableActions = [CATransaction disableActions];
   [CATransaction setDisableActions:YES];
 
   self.maskLayer = nil;
   _contentLayer.mask = nil;
   
+  // restore state
   [CATransaction setDisableActions:disableActions];
 }
 

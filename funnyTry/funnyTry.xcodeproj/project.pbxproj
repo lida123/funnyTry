@@ -86,6 +86,9 @@
 		C59D91E11FB18DD3004550D0 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91DC1FB18DD3004550D0 /* SVRadialGradientLayer.m */; };
 		C59D91E51FB44998004550D0 /* FTFlowMountainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91E41FB44998004550D0 /* FTFlowMountainViewController.m */; };
 		C59EFF191FB553730004E0D4 /* FTScanBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59EFF181FB553730004E0D4 /* FTScanBackgroundView.m */; };
+		C59EFF221FB5AC770004E0D4 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C59EFF1E1FB5AC770004E0D4 /* FLAnimatedImage.m */; };
+		C59EFF231FB5AC770004E0D4 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59EFF201FB5AC770004E0D4 /* FLAnimatedImageView.m */; };
+		C59EFF241FB5AC770004E0D4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C59EFF211FB5AC770004E0D4 /* Info.plist */; };
 		C5F5E5231FAC372B009FB8D3 /* FTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */; };
 		C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */; };
 		C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E52C1FAC3AAA009FB8D3 /* FTBaseTableViewController.m */; };
@@ -227,7 +230,6 @@
 		C57686991FAFF8EB00066AA3 /* XMGShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGShopCell.m; sourceTree = "<group>"; };
 		C57686A31FB000C000066AA3 /* BaseMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseMacro.h; sourceTree = "<group>"; };
 		C57686A41FB02D5000066AA3 /* planList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = planList.txt; sourceTree = "<group>"; };
-		C57686A71FB02E6000066AA3 /* FBShimmering-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBShimmering-Prefix.pch"; sourceTree = "<group>"; };
 		C57686A81FB02E6000066AA3 /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmering.h; sourceTree = "<group>"; };
 		C57686A91FB02E6000066AA3 /* FBShimmeringLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringLayer.h; sourceTree = "<group>"; };
 		C57686AA1FB02E6000066AA3 /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
@@ -268,6 +270,11 @@
 		C59D91E41FB44998004550D0 /* FTFlowMountainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFlowMountainViewController.m; sourceTree = "<group>"; };
 		C59EFF171FB553730004E0D4 /* FTScanBackgroundView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTScanBackgroundView.h; sourceTree = "<group>"; };
 		C59EFF181FB553730004E0D4 /* FTScanBackgroundView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTScanBackgroundView.m; sourceTree = "<group>"; };
+		C59EFF1D1FB5AC770004E0D4 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
+		C59EFF1E1FB5AC770004E0D4 /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
+		C59EFF1F1FB5AC770004E0D4 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
+		C59EFF201FB5AC770004E0D4 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
+		C59EFF211FB5AC770004E0D4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5F5E5211FAC372B009FB8D3 /* FTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTabBarController.h; sourceTree = "<group>"; };
 		C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTabBarController.m; sourceTree = "<group>"; };
 		C5F5E5271FAC3A5E009FB8D3 /* FTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseViewController.h; sourceTree = "<group>"; };
@@ -552,7 +559,6 @@
 		C57686A11FB0004200066AA3 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				C59D91B11FB15C0F004550D0 /* Category */,
 				C57686A21FB0009700066AA3 /* Global */,
 			);
 			path = Other;
@@ -569,7 +575,6 @@
 		C57686A61FB02E6000066AA3 /* FBShimmering */ = {
 			isa = PBXGroup;
 			children = (
-				C57686A71FB02E6000066AA3 /* FBShimmering-Prefix.pch */,
 				C57686A81FB02E6000066AA3 /* FBShimmering.h */,
 				C57686A91FB02E6000066AA3 /* FBShimmeringLayer.h */,
 				C57686AA1FB02E6000066AA3 /* FBShimmeringLayer.m */,
@@ -748,8 +753,21 @@
 		C59EFF1B1FB5A3BB0004E0D4 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				C59D91B11FB15C0F004550D0 /* Category */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		C59EFF1C1FB5AC770004E0D4 /* FLAnimatedImage */ = {
+			isa = PBXGroup;
+			children = (
+				C59EFF1D1FB5AC770004E0D4 /* FLAnimatedImage.h */,
+				C59EFF1E1FB5AC770004E0D4 /* FLAnimatedImage.m */,
+				C59EFF1F1FB5AC770004E0D4 /* FLAnimatedImageView.h */,
+				C59EFF201FB5AC770004E0D4 /* FLAnimatedImageView.m */,
+				C59EFF211FB5AC770004E0D4 /* Info.plist */,
+			);
+			path = FLAnimatedImage;
 			sourceTree = "<group>";
 		};
 		C5F5E51F1FAC3683009FB8D3 /* Class */ = {
@@ -799,6 +817,7 @@
 		C5F5E5261FAC3977009FB8D3 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C59EFF1C1FB5AC770004E0D4 /* FLAnimatedImage */,
 				C59D91D21FB18DD3004550D0 /* SVProgressHUD */,
 				C57686A61FB02E6000066AA3 /* FBShimmering */,
 				C57686431FAFF66500066AA3 /* MJExtension */,
@@ -923,6 +942,7 @@
 				C59D91DF1FB18DD3004550D0 /* SVProgressHUD.bundle in Resources */,
 				C576869D1FAFF8EB00066AA3 /* 1.plist in Resources */,
 				C59D91BF1FB18245004550D0 /* tabbar_discover_nor@2x.png in Resources */,
+				C59EFF241FB5AC770004E0D4 /* Info.plist in Resources */,
 				C57686A51FB02D5000066AA3 /* planList.txt in Resources */,
 				C5616C191FA8777E00A9C033 /* Assets.xcassets in Resources */,
 			);
@@ -960,6 +980,7 @@
 				C57686661FAFF66500066AA3 /* MJRefreshGifHeader.m in Sources */,
 				C57686C21FB07B0500066AA3 /* FTUIListCell.m in Sources */,
 				C576869E1FAFF8EB00066AA3 /* XMGShopCell.m in Sources */,
+				C59EFF231FB5AC770004E0D4 /* FLAnimatedImageView.m in Sources */,
 				C57686B61FB069BF00066AA3 /* FTUIListViewController.m in Sources */,
 				C57686B21FB0300B00066AA3 /* FTBaseCell.m in Sources */,
 				C576866D1FAFF66500066AA3 /* UIView+MJExtension.m in Sources */,
@@ -976,6 +997,7 @@
 				C59D91B81FB17DB2004550D0 /* FTBaseNavigationController.m in Sources */,
 				C576866A1FAFF66500066AA3 /* MJRefreshConst.m in Sources */,
 				C576867C1FAFF66500066AA3 /* UIImageView+WebCache.m in Sources */,
+				C59EFF221FB5AC770004E0D4 /* FLAnimatedImage.m in Sources */,
 				C576865D1FAFF66500066AA3 /* MJRefreshComponent.m in Sources */,
 				C57686601FAFF66500066AA3 /* MJRefreshAutoGifFooter.m in Sources */,
 				C57686801FAFF66500066AA3 /* MJFoundation.m in Sources */,
