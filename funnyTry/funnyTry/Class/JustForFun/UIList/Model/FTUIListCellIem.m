@@ -22,7 +22,10 @@
         return @"scan or create two-dimension code";
     }else if([self.classString isEqualToString:@"FTFlowMountainViewController"]) {
         return @"flow mountain";
-    }else {
+    }else if([self.classString isEqualToString:@"FTCircleLoadingViewController"]) {
+        return @"circle loading animation";
+    }
+    else {
         
     }
     return nil;

@@ -89,6 +89,9 @@
 		C59EFF221FB5AC770004E0D4 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C59EFF1E1FB5AC770004E0D4 /* FLAnimatedImage.m */; };
 		C59EFF231FB5AC770004E0D4 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C59EFF201FB5AC770004E0D4 /* FLAnimatedImageView.m */; };
 		C59EFF241FB5AC770004E0D4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C59EFF211FB5AC770004E0D4 /* Info.plist */; };
+		C5B8C4361FBD669800037249 /* FTCircleLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B8C4351FBD669800037249 /* FTCircleLoadingViewController.m */; };
+		C5B8C43B1FBD670200037249 /* FTCircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B8C43A1FBD670200037249 /* FTCircleLoadingView.m */; };
+		C5B8C43E1FBD9DF400037249 /* UIButton+CircleLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B8C43D1FBD9DF400037249 /* UIButton+CircleLoading.m */; };
 		C5F5E5231FAC372B009FB8D3 /* FTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */; };
 		C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */; };
 		C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E52C1FAC3AAA009FB8D3 /* FTBaseTableViewController.m */; };
@@ -275,6 +278,12 @@
 		C59EFF1F1FB5AC770004E0D4 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
 		C59EFF201FB5AC770004E0D4 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
 		C59EFF211FB5AC770004E0D4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5B8C4341FBD669800037249 /* FTCircleLoadingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCircleLoadingViewController.h; sourceTree = "<group>"; };
+		C5B8C4351FBD669800037249 /* FTCircleLoadingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTCircleLoadingViewController.m; sourceTree = "<group>"; };
+		C5B8C4391FBD670200037249 /* FTCircleLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCircleLoadingView.h; sourceTree = "<group>"; };
+		C5B8C43A1FBD670200037249 /* FTCircleLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTCircleLoadingView.m; sourceTree = "<group>"; };
+		C5B8C43C1FBD9DF400037249 /* UIButton+CircleLoading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CircleLoading.h"; sourceTree = "<group>"; };
+		C5B8C43D1FBD9DF400037249 /* UIButton+CircleLoading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CircleLoading.m"; sourceTree = "<group>"; };
 		C5F5E5211FAC372B009FB8D3 /* FTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTabBarController.h; sourceTree = "<group>"; };
 		C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTabBarController.m; sourceTree = "<group>"; };
 		C5F5E5271FAC3A5E009FB8D3 /* FTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseViewController.h; sourceTree = "<group>"; };
@@ -365,10 +374,11 @@
 		C57685F21FAFF5EA00066AA3 /* JustForFun */ = {
 			isa = PBXGroup;
 			children = (
+				C5B8C4331FBD663100037249 /* CircleLoadingView */,
 				C59D91E21FB448BC004550D0 /* FlowMountain */,
 				C59D91C71FB18965004550D0 /* Scan */,
-				C57686AF1FB02E9A00066AA3 /* UIList */,
 				C57685F31FAFF62B00066AA3 /* WaterFlow */,
+				C57686AF1FB02E9A00066AA3 /* UIList */,
 			);
 			path = JustForFun;
 			sourceTree = "<group>";
@@ -770,6 +780,35 @@
 			path = FLAnimatedImage;
 			sourceTree = "<group>";
 		};
+		C5B8C4331FBD663100037249 /* CircleLoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				C5B8C4381FBD66E700037249 /* Controller */,
+				C5B8C4371FBD66E500037249 /* View */,
+			);
+			path = CircleLoadingView;
+			sourceTree = "<group>";
+		};
+		C5B8C4371FBD66E500037249 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C5B8C4391FBD670200037249 /* FTCircleLoadingView.h */,
+				C5B8C43A1FBD670200037249 /* FTCircleLoadingView.m */,
+				C5B8C43C1FBD9DF400037249 /* UIButton+CircleLoading.h */,
+				C5B8C43D1FBD9DF400037249 /* UIButton+CircleLoading.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C5B8C4381FBD66E700037249 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C5B8C4341FBD669800037249 /* FTCircleLoadingViewController.h */,
+				C5B8C4351FBD669800037249 /* FTCircleLoadingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C5F5E51F1FAC3683009FB8D3 /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -971,6 +1010,7 @@
 			files = (
 				C57686721FAFF66500066AA3 /* SDWebImageDecoder.m in Sources */,
 				C57686911FAFF75C00066AA3 /* FTWaterfallViewController.m in Sources */,
+				C5B8C43E1FBD9DF400037249 /* UIButton+CircleLoading.m in Sources */,
 				C576867E1FAFF66500066AA3 /* MJArgument.m in Sources */,
 				C57686AE1FB02E6000066AA3 /* FBShimmeringView.m in Sources */,
 				C576867D1FAFF66500066AA3 /* UIView+WebCacheOperation.m in Sources */,
@@ -1006,6 +1046,7 @@
 				C576865C1FAFF66500066AA3 /* MJRefreshBackFooter.m in Sources */,
 				C576869A1FAFF8EB00066AA3 /* XMGShop.m in Sources */,
 				C576867B1FAFF66500066AA3 /* UIImageView+HighlightedWebCache.m in Sources */,
+				C5B8C4361FBD669800037249 /* FTCircleLoadingViewController.m in Sources */,
 				C59D91B51FB15C5A004550D0 /* UIView+CutShape.m in Sources */,
 				C5616C1F1FA8777E00A9C033 /* main.m in Sources */,
 				C576866B1FAFF66500066AA3 /* UIScrollView+MJExtension.m in Sources */,
@@ -1015,6 +1056,7 @@
 				C57686791FAFF66500066AA3 /* UIImage+MultiFormat.m in Sources */,
 				C57686611FAFF66500066AA3 /* MJRefreshAutoNormalFooter.m in Sources */,
 				C576867A1FAFF66500066AA3 /* UIImage+WebP.m in Sources */,
+				C5B8C43B1FBD670200037249 /* FTCircleLoadingView.m in Sources */,
 				C59D91DD1FB18DD3004550D0 /* SVIndefiniteAnimatedView.m in Sources */,
 				C57686841FAFF66500066AA3 /* MJType.m in Sources */,
 				C57686761FAFF66500066AA3 /* SDWebImagePrefetcher.m in Sources */,

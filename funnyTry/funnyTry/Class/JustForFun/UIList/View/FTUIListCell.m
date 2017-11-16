@@ -42,7 +42,8 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.shimmeringView.frame = CGRectMake(14,0, CGRectGetWidth(self.contentView.bounds) - 14 ,CGRectGetHeight(self.contentView.bounds));
+    CGFloat leftMargin = 14;
+    self.shimmeringView.frame = CGRectMake(leftMargin,0, CGRectGetWidth(self.contentView.bounds) - leftMargin ,CGRectGetHeight(self.contentView.bounds));
     _shimmeringView.contentView = _shimmeringLabel;
     self.shimmeringLabel.frame = self.shimmeringView.bounds;
 }
