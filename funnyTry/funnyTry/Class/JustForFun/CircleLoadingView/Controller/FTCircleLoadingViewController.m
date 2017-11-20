@@ -25,7 +25,7 @@
     _loadingView.center = self.view.center;
     [self.view addSubview:_loadingView];
     _loadingView.endBlock = ^() {
-        FTDPRINT(@"");
+
     };
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -55,7 +55,7 @@ static NSInteger a = 0;
 }
 
 - (void)end {
-    FTDPRINT(@"");
+    //FTDPRINT(@"");
 }
 
 #pragma mark - rightItemAction

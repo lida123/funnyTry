@@ -9,20 +9,33 @@
 #import "FTBaseViewController.h"
 
 @interface FTBaseViewController ()
-
+@property (nonatomic, assign) NSUInteger countOfInVieWillAppear;
+@property (nonatomic, assign) NSUInteger countOfInViewDidAppear;
 @end
 
 @implementation FTBaseViewController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        _countOfInVieWillAppear = 0;
+        _countOfInViewDidAppear = 0;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = AppDefaultBackgroundColor;
-    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.countOfInVieWillAppear ++;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.countOfInViewDidAppear ++;
 }
 
 /*

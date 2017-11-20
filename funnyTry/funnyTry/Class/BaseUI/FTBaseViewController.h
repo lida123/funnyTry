@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface FTBaseViewController : UIViewController
+/**
+ * record the count of call back 'viewWillAppear'
+ */
+@property (nonatomic, readonly) NSUInteger countOfInVieWillAppear;
+
+/**
+ * record the count of call back 'viewDidAppear'
+ */
+@property (nonatomic, readonly) NSUInteger countOfInViewDidAppear;
 
 @end

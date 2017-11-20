@@ -31,6 +31,7 @@ static CABasicAnimation *loadingView_animation(CFTimeInterval duration,id delega
 @property (nonatomic, assign) CGFloat endAngle;
 @property (nonatomic, assign) CGFloat progress;
 
+@property (nonatomic, assign) BOOL isExecutingSuccessAnim;
 @end
 
 @implementation FTCircleLoadingView
@@ -50,6 +51,9 @@ static CABasicAnimation *loadingView_animation(CFTimeInterval duration,id delega
 }
 
 - (void)startLoading {
+    if (self.isExecutingSuccessAnim) {
+        return;
+    }
     if (_tickLayer && _tickLayer.superlayer ) {
         [_tickLayer removeFromSuperlayer];
         _tickLayer = nil;
@@ -60,7 +64,12 @@ static CABasicAnimation *loadingView_animation(CFTimeInterval duration,id delega
 }
 
 - (void)endLoadingSucceed {
+    if (self.isExecutingSuccessAnim) {
+        return;
+    }
+    self.isExecutingSuccessAnim = YES;
     [self endCircleAnimation];
+    
     [self successCircleAnimation];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * successCircleDuriation * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self successTickAnimation];
@@ -104,8 +113,8 @@ static CABasicAnimation *loadingView_animation(CFTimeInterval duration,id delega
         CGFloat progress1 = 1 - (1 - _progress)/0.25;
         _startAngle = -M_PI_2 + progress1 * M_PI * 2;
     }
-    CGFloat w = CGRectGetWidth(self.circleLayer.bounds);
-    CGFloat h = CGRectGetHeight(self.circleLayer.bounds);
+    CGFloat w = CGRectGetWidth(self.bounds);
+    CGFloat h = CGRectGetHeight(self.bounds);
     
     CGFloat r = w/2.0f - self.layerWidth/2.0f;
     CGFloat centerX = w/2.0f;
@@ -130,19 +139,20 @@ static CABasicAnimation *loadingView_animation(CFTimeInterval duration,id delega
 
 // 成功circleLayer动画
 - (void)successCircleAnimation {
-    CGFloat w = CGRectGetWidth(self.circleLayer.bounds);
-    CGFloat h = CGRectGetHeight(self.circleLayer.bounds);
+    CGFloat w = CGRectGetWidth(self.bounds);
+    CGFloat h = CGRectGetHeight(self.bounds);
     CGFloat r = w/2.0f - self.layerWidth/2.0f;
     CGFloat centerX = w/2.0f;
     CGFloat centerY = h/2.0f;
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(centerX, centerY) radius:r startAngle:-M_PI/2 endAngle:M_PI*3/2 clockwise:YES];
     self.circleLayer.path = path.CGPath;
+    [self setUpCircleLayerPropety:self.circleLayer];
     [self.circleLayer addAnimation:loadingView_animation(successCircleDuriation, nil) forKey:@"successCircleAnimationKey"];
 }
 
 // 成功tickLayer动画
 - (void)successTickAnimation {
-    CGFloat w = CGRectGetWidth(self.circleLayer.bounds);
+    CGFloat w = CGRectGetWidth(self.bounds);
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(w*2.7/10,w*5.4/10)];
     [path addLineToPoint:CGPointMake(w*4.5/10,w*7/10)];
@@ -208,12 +218,16 @@ static CABasicAnimation *loadingView_animation(CFTimeInterval duration,id delega
 #pragma mark - CAAnimationDelegate
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag; {
     if (flag && self.endBlock) {
-        self.endBlock();
-        [self.circleLayer removeFromSuperlayer];
-        self.circleLayer = nil;
-        
-        [self.tickLayer removeFromSuperlayer];
-        self.tickLayer = nil;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.circleLayer removeFromSuperlayer];
+            self.circleLayer = nil;
+            
+            [self.tickLayer removeFromSuperlayer];
+            self.tickLayer = nil;
+            
+            self.endBlock();
+            self.isExecutingSuccessAnim = NO;
+        });
     }
 }
 
