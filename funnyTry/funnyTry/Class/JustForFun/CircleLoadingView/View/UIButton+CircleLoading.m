@@ -57,9 +57,12 @@ static const void * loadingViewKey = &loadingViewKey;
 - (void)cl_endLoadingSucceedWithEndBlock:(void (^)(void))endBlock{
     FTCircleLoadingView *loadingView = [self cl_loadingView];
     if (!loadingView) {
-        return;
+        loadingView  = [[FTCircleLoadingView alloc] initWithFrame:CGRectZero];
+        [self setCl_loadingView:loadingView];
+        [self addSubview:loadingView];
     }
     __weak typeof(loadingView) weakLoadingView = loadingView;
+    loadingView.frame = [self loadingViewFrame];
     loadingView.endBlock = ^{
         weakLoadingView.hidden = YES;
         endBlock();
