@@ -8,8 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FTTabBarController.h"
-// 增加二两
-// 增加二两
+
 @interface AppDelegate ()
 
 @end
@@ -23,13 +22,6 @@
     self.window.rootViewController = tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    //增加了一行注释
-    //git diff命令可以看到的增加文字
-    //增加另一行注释
-    //增加第四行注释 fixbug
-    //fixbug2
-    //git reset 单个文件
-    //git diff
     return YES;
 }
 
