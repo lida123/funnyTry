@@ -53,7 +53,7 @@
                 
                 /* 优先使用separatorInset */
                 if (!UIEdgeInsetsEqualToEdgeInsets(item.separatorInset, UIEdgeInsetsZero)) {
-                    CGFloat w = CGRectGetWidth(self.contentView.bounds) - item.separatorInset.left - item.separatorInset.right;
+                    CGFloat w = CGRectGetWidth(self.bounds) - item.separatorInset.left - item.separatorInset.right;
                     CGFloat h = FT_SINGLE_LINE_HIEGHT;
 #if TARGET_OS_SIMULATOR
                     h = 1;
@@ -62,7 +62,7 @@
                     CGFloat x = item.separatorInset.left;
                     self.separatorLine.frame = CGRectMake(x, y, w, h);
                 }else {
-                    CGFloat w = CGRectGetWidth(self.contentView.bounds) - item.separatorLeftMargin;
+                    CGFloat w = CGRectGetWidth(self.bounds) - item.separatorLeftMargin;
                     CGFloat h = FT_SINGLE_LINE_HIEGHT;
 #if TARGET_OS_SIMULATOR
                     h = 1;
