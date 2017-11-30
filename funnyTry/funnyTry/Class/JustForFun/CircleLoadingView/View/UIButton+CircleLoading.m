@@ -71,7 +71,7 @@ static const void * loadingViewKey = &loadingViewKey;
 }
 
 - (CGRect)loadingViewFrame  {
-    CGFloat h = CGRectGetHeight(self.bounds) * 0.7;
+    CGFloat h = CGRectGetHeight(self.bounds) * 0.5;
     CGFloat w = h;
     CGRect titleRect = [self titleRectForContentRect:self.bounds];
     CGFloat x = titleRect.origin.x - w - 8;

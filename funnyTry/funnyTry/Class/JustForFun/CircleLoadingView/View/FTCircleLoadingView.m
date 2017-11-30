@@ -39,7 +39,7 @@ static CABasicAnimation *loadingView_animation(CFTimeInterval duration,id delega
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         _layerColor = FT_RGBCOLOR(16, 142, 233);
-        _layerWidth = 3.0;
+        _layerWidth = 2.0;
     }
     return self;
 }
