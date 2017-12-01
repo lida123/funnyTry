@@ -105,17 +105,22 @@ static NSUInteger a;
 }
 
 - (void)playMusic {
-    // 1.获取要播放音频文件的URL
-    NSString *name = [NSString stringWithFormat:@"%zd",a];
-    NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"m4a"];;
-    NSURL *fileURL =  [NSURL fileURLWithPath:path];
-    // 2.创建 AVAudioPlayer 对象
-    self.audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:fileURL error:nil];
-    self.audioPlayer.volume = 1;
-    // 4.设置循环播放
-    self.audioPlayer.delegate = self;
-    // 5.开始播放
-    [self.audioPlayer play];
+    if (a < 16) {
+        // 1.获取要播放音频文件的URL
+        NSString *name = [NSString stringWithFormat:@"%zd",a];
+        NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"m4a"];;
+        NSURL *fileURL =  [NSURL fileURLWithPath:path];
+        // 2.创建 AVAudioPlayer 对象
+        self.audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:fileURL error:nil];
+        self.audioPlayer.volume = 1;
+        // 4.设置循环播放
+        self.audioPlayer.delegate = self;
+        // 5.开始播放
+        [self.audioPlayer play];
+    }else {
+        [self yellTogetherB];
+        [self yellTogetherC];
+    }
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
