@@ -14,15 +14,21 @@
 
 @interface FTLoginViewController () <AVAudioPlayerDelegate>
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
-@property (nonatomic, assign) NSUInteger a;
-@property (nonatomic, assign) BOOL second;
-@end
+@property (nonatomic, strong) AVAudioPlayer *audioPlayerA;
+@property (nonatomic, strong) AVAudioPlayer *audioPlayerB;
+@property (nonatomic, strong) AVAudioPlayer *audioPlayerC;
 
+@property (nonatomic, assign) NSUInteger b;
+@property (nonatomic, assign) NSUInteger c;
+@end
+static NSUInteger a;
 @implementation FTLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.a = 1;
+    a = 1;
+    self.b = 1;
+    self.c = 2;
     self.navigationItem.title = @"Login";
     
     // 渐变背景
@@ -33,6 +39,7 @@
     gradientLayer.endPoint = CGPointMake(0.5, 1);
     gradientLayer.locations = @[@0.65,@1];
     [self.view.layer addSublayer:gradientLayer];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -99,7 +106,7 @@
 
 - (void)playMusic {
     // 1.获取要播放音频文件的URL
-    NSString *name = [NSString stringWithFormat:@"%zd",self.a];
+    NSString *name = [NSString stringWithFormat:@"%zd",a];
     NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"m4a"];;
     NSURL *fileURL =  [NSURL fileURLWithPath:path];
     // 2.创建 AVAudioPlayer 对象
@@ -112,22 +119,60 @@
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
-    _a++;
-    if (!self.second) {
-        if (_a < 16) {
+    if (player == self.audioPlayer) {
+        a++;
+        if (a < 16) {
             [self playMusic];
         }else {
-            self.second = YES;
-            _a = 1;
-            [self playMusic];
+            [self yellTogetherB];
+            [self yellTogetherC];
         }
-    }else {
-        if (_a < 13) {
-            [self playMusic];
-        }else {
-            _a = 1;
-            [self playMusic];
-        }
+    }else if(player == self.audioPlayerB) {
+        [self yellTogetherB];
+    }else if(player == self.audioPlayerC) {
+        [self yellTogetherC];
+    }
+}
+
+- (void)yellTogetherB {
+    
+    // 1.获取要播放音频文件的URL
+    NSString *name = [NSString stringWithFormat:@"%zd",self.b];
+    NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"m4a"];;
+    NSURL *fileURL =  [NSURL fileURLWithPath:path];
+    // 2.创建 AVAudioPlayer 对象
+    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:fileURL error:nil];
+    audioPlayer.volume = 1;
+    // 4.设置循环播放
+    audioPlayer.delegate = self;
+    // 5.开始播放
+    [audioPlayer play];
+    self.audioPlayerB = audioPlayer;
+    
+    self.b += 2;
+    if (self.b > 11) {
+        self.b = 1;
+    }
+
+}
+
+- (void)yellTogetherC {
+    
+    // 1.获取要播放音频文件的URL
+    NSString *name = [NSString stringWithFormat:@"%zd",self.c];
+    NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"m4a"];;
+    NSURL *fileURL =  [NSURL fileURLWithPath:path];
+    // 2.创建 AVAudioPlayer 对象
+    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:fileURL error:nil];
+    audioPlayer.volume = 1;
+    // 4.设置循环播放
+    audioPlayer.delegate = self;
+    // 5.开始播放
+    [audioPlayer play];
+    self.audioPlayerC = audioPlayer;
+    self.c += 2;
+    if (self.c > 12) {
+        self.c = 2;
     }
 }
 
