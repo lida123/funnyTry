@@ -39,7 +39,7 @@ static NSUInteger a;
     gradientLayer.endPoint = CGPointMake(0.5, 1);
     gradientLayer.locations = @[@0.65,@1];
     [self.view.layer addSublayer:gradientLayer];
-
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
