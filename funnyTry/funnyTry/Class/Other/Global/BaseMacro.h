@@ -35,12 +35,6 @@ alpha:(a)]
 #define FT_5_DAYS (5  * FT_DAY)
 #define FT_WEEK   (7  * FT_DAY)
 
-/* tabbarHeight */
-#define FTTabbarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83.0f:49.0f)
-
-/* statusBarHeight */
-#define FTStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
-
 /* navigationBarHeight */
 #define FTNavigationBarHeight 44.0f
 
@@ -49,6 +43,12 @@ alpha:(a)]
 
 /* isIPhone X ? */
 #define isiPhoneX FTScreenBounds.size.width >= 375.0f && FTScreenBounds.size.height >= 812.0f && isiPhone
+
+/* statusBarHeight */
+#define FTStatusBarHeight (isiPhoneX?44.0f:20.0f)
+
+/* tabbarHeight */
+#define FTTabbarHeight (isiPhoneX?83.0f:49.0f)
 
 /*add*/
 #define ADDSelectorForButton(btn,target,selector) [btn addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside]

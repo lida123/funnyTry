@@ -52,6 +52,7 @@ static const void * loadingViewKey = &loadingViewKey;
     loadingView.hidden = NO;
     loadingView.frame = [self loadingViewFrame];
     [loadingView startLoading];
+    self.userInteractionEnabled = NO;
 }
 
 - (void)cl_endLoadingSucceedWithEndBlock:(void (^)(void))endBlock{
@@ -62,10 +63,12 @@ static const void * loadingViewKey = &loadingViewKey;
         [self addSubview:loadingView];
     }
     __weak typeof(loadingView) weakLoadingView = loadingView;
+    __weak typeof (self) weakself = self;
     loadingView.frame = [self loadingViewFrame];
     loadingView.endBlock = ^{
         weakLoadingView.hidden = YES;
         endBlock();
+        weakself.userInteractionEnabled = YES;
     };;
     [loadingView endLoadingSucceed];
 }

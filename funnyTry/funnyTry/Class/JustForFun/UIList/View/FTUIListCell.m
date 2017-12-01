@@ -27,6 +27,7 @@
         _shimmeringLabel.backgroundColor = [UIColor clearColor];
         _shimmeringLabel.textColor = [UIColor purpleColor];
         _shimmeringLabel.textAlignment = NSTextAlignmentLeft;
+        _shimmeringLabel.numberOfLines = 0;
         _shimmeringLabel.font = [UIFont boldSystemFontOfSize:18];
     }
     return self;
@@ -42,8 +43,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    CGFloat leftMargin = 14;
-    self.shimmeringView.frame = CGRectMake(leftMargin,0, CGRectGetWidth(self.contentView.bounds) - leftMargin ,CGRectGetHeight(self.contentView.bounds));
+    self.shimmeringView.frame = self.item.shimmeringViewFrame;
     _shimmeringView.contentView = _shimmeringLabel;
     self.shimmeringLabel.frame = self.shimmeringView.bounds;
 }

@@ -35,28 +35,18 @@
     btn.tag = 199;
     [self.view addSubview:btn];
     [btn cl_setLayerColor:[UIColor whiteColor]];
+    
+    [btn addTarget:btn action:@selector(cl_startLoading) forControlEvents:UIControlEventTouchUpInside];
 
 }
 
-static NSInteger a = 0;
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     UIButton *btn = [self.view viewWithTag:199];
-    WS(weakSelf)
-    if ((a % 2) == 0) {
-          [btn cl_startLoading];
-    }else {
-        [btn cl_endLoadingSucceedWithEndBlock:^{
-            [weakSelf end];
-        }];
-    }
-    a++;
-    
-    
+    [btn cl_endLoadingSucceedWithEndBlock:^{
+
+    }];
 }
 
-- (void)end {
-    //FTDPRINT(@"");
-}
 
 #pragma mark - rightItemAction
 - (void)startLoading:(UIBarButtonItem *)item {

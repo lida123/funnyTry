@@ -15,4 +15,8 @@
 + (instancetype)itemWithClassString:(NSString *)classString shimmering:(BOOL)shimmering;
 
 - (NSString *)classDescription;
+
+// VM
+@property (nonatomic, assign)CGRect shimmeringViewFrame;
+
 @end
