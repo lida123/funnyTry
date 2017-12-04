@@ -7,7 +7,8 @@
 //
 
 #import "FTBaseViewController.h"
+#import "FTCustomTransitioning.h"
 
-@interface FTLoginViewController : FTBaseViewController
+@interface FTLoginViewController : FTBaseViewController <FTCustomTransitioning>
 
 @end

@@ -12,6 +12,8 @@
 		C5616C1F1FA8777E00A9C033 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C1E1FA8777E00A9C033 /* main.m */; };
 		C5616C291FA8777E00A9C033 /* funnyTryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C281FA8777E00A9C033 /* funnyTryTests.m */; };
 		C5616C341FA8777E00A9C033 /* funnyTryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C331FA8777E00A9C033 /* funnyTryUITests.m */; };
+		C574DBAF1FD4DFBB0003F827 /* FTLoginNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C574DBAE1FD4DFBB0003F827 /* FTLoginNextViewController.m */; };
+		C574DBB21FD4E29D0003F827 /* FTCustomTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = C574DBB11FD4E29D0003F827 /* FTCustomTransitioning.m */; };
 		C576865B1FAFF66500066AA3 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C57685F71FAFF66500066AA3 /* MJRefreshAutoFooter.m */; };
 		C576865C1FAFF66500066AA3 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C57685F91FAFF66500066AA3 /* MJRefreshBackFooter.m */; };
 		C576865D1FAFF66500066AA3 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C57685FB1FAFF66500066AA3 /* MJRefreshComponent.m */; };
@@ -149,6 +151,10 @@
 		C5616C2F1FA8777E00A9C033 /* funnyTryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = funnyTryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5616C331FA8777E00A9C033 /* funnyTryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = funnyTryUITests.m; sourceTree = "<group>"; };
 		C5616C351FA8777E00A9C033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C574DBAD1FD4DFBB0003F827 /* FTLoginNextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLoginNextViewController.h; sourceTree = "<group>"; };
+		C574DBAE1FD4DFBB0003F827 /* FTLoginNextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLoginNextViewController.m; sourceTree = "<group>"; };
+		C574DBB01FD4E29D0003F827 /* FTCustomTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCustomTransitioning.h; sourceTree = "<group>"; };
+		C574DBB11FD4E29D0003F827 /* FTCustomTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTCustomTransitioning.m; sourceTree = "<group>"; };
 		C57685F61FAFF66500066AA3 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		C57685F71FAFF66500066AA3 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		C57685F81FAFF66500066AA3 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -861,6 +867,8 @@
 			children = (
 				C5AD1A511FD14D9400A7EE86 /* FourPingTransition.h */,
 				C5AD1A521FD14D9400A7EE86 /* FourPingTransition.m */,
+				C574DBB01FD4E29D0003F827 /* FTCustomTransitioning.h */,
+				C574DBB11FD4E29D0003F827 /* FTCustomTransitioning.m */,
 			);
 			path = Transitioning;
 			sourceTree = "<group>";
@@ -920,6 +928,8 @@
 				C5D138161FCFFA1E009EC87E /* FTLoginViewController.m */,
 				C5AD1A4D1FD14D1D00A7EE86 /* NextViewController.h */,
 				C5AD1A4E1FD14D1D00A7EE86 /* NextViewController.m */,
+				C574DBAD1FD4DFBB0003F827 /* FTLoginNextViewController.h */,
+				C574DBAE1FD4DFBB0003F827 /* FTLoginNextViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1221,9 +1231,11 @@
 				C576865F1FAFF66500066AA3 /* MJRefreshHeader.m in Sources */,
 				C57686BF1FB07ADB00066AA3 /* FTUIListCellIem.m in Sources */,
 				C576866E1FAFF66500066AA3 /* MKAnnotationView+WebCache.m in Sources */,
+				C574DBAF1FD4DFBB0003F827 /* FTLoginNextViewController.m in Sources */,
 				C57686621FAFF66500066AA3 /* MJRefreshAutoStateFooter.m in Sources */,
 				C57686731FAFF66500066AA3 /* SDWebImageDownloader.m in Sources */,
 				C57686771FAFF66500066AA3 /* UIButton+WebCache.m in Sources */,
+				C574DBB21FD4E29D0003F827 /* FTCustomTransitioning.m in Sources */,
 				C576865E1FAFF66500066AA3 /* MJRefreshFooter.m in Sources */,
 				C59D91CA1FB18B0E004550D0 /* FTScanViewController.m in Sources */,
 				C576866F1FAFF66500066AA3 /* NSData+ImageContentType.m in Sources */,

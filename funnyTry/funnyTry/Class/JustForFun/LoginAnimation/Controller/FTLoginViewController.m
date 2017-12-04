@@ -11,6 +11,7 @@
 #import "LYTextField.h"
 #import <AVFoundation/AVFoundation.h>
 #import "NextViewController.h"
+#import "FTLoginNextViewController.h"
 
 @interface FTLoginViewController () <AVAudioPlayerDelegate>
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
@@ -98,10 +99,14 @@ static NSUInteger a;
         NSLog(@"跳转了哦");
         button.bounds = CGRectMake(0, 0, 44, 44);
         button.layer.cornerRadius = 22;
-        NextViewController *nextVC = [[NextViewController alloc]init];
+        FTLoginNextViewController *nextVC = [[FTLoginNextViewController alloc]init];
         [self.navigationController presentViewController:nextVC animated:YES completion:nil];
         
     };
+}
+
+- (CGRect)circleAnimationStartRect {
+    return self.view.subviews.lastObject.frame;
 }
 
 - (void)playMusic {
