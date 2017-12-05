@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C51112C71FD5595E008AD74F /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C51112C61FD5595E008AD74F /* UIView+Screenshot.m */; };
+		C51112CA1FD63800008AD74F /* FTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = C51112C91FD63800008AD74F /* FTGlobal.m */; };
 		C5616C111FA8777E00A9C033 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C101FA8777E00A9C033 /* AppDelegate.m */; };
 		C5616C191FA8777E00A9C033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5616C181FA8777E00A9C033 /* Assets.xcassets */; };
 		C5616C1F1FA8777E00A9C033 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C1E1FA8777E00A9C033 /* main.m */; };
 		C5616C291FA8777E00A9C033 /* funnyTryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C281FA8777E00A9C033 /* funnyTryTests.m */; };
 		C5616C341FA8777E00A9C033 /* funnyTryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C331FA8777E00A9C033 /* funnyTryUITests.m */; };
+		C5715C3A1FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5715C391FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.m */; };
 		C574DBAF1FD4DFBB0003F827 /* FTLoginNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C574DBAE1FD4DFBB0003F827 /* FTLoginNextViewController.m */; };
 		C574DBB21FD4E29D0003F827 /* FTCustomTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = C574DBB11FD4E29D0003F827 /* FTCustomTransitioning.m */; };
 		C576865B1FAFF66500066AA3 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C57685F71FAFF66500066AA3 /* MJRefreshAutoFooter.m */; };
@@ -106,8 +109,6 @@
 		C5AD1A4A1FD1389700A7EE86 /* 7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C5AD1A3B1FD1389600A7EE86 /* 7.m4a */; };
 		C5AD1A4B1FD1389700A7EE86 /* 8.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C5AD1A3C1FD1389600A7EE86 /* 8.m4a */; };
 		C5AD1A4C1FD1389700A7EE86 /* 9.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C5AD1A3D1FD1389600A7EE86 /* 9.m4a */; };
-		C5AD1A4F1FD14D1E00A7EE86 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AD1A4E1FD14D1D00A7EE86 /* NextViewController.m */; };
-		C5AD1A531FD14D9400A7EE86 /* FourPingTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AD1A521FD14D9400A7EE86 /* FourPingTransition.m */; };
 		C5AD1A551FD14DF100A7EE86 /* pic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5AD1A541FD14DF000A7EE86 /* pic1.jpg */; };
 		C5B497FC1FD00BD100C6B6B4 /* UIViewController+FTBaseNavigationControllerNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B497FB1FD00BD100C6B6B4 /* UIViewController+FTBaseNavigationControllerNotice.m */; };
 		C5B8C4361FBD669800037249 /* FTCircleLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B8C4351FBD669800037249 /* FTCircleLoadingViewController.m */; };
@@ -139,6 +140,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C51112C51FD5595E008AD74F /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
+		C51112C61FD5595E008AD74F /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
+		C51112C81FD63800008AD74F /* FTGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTGlobal.h; sourceTree = "<group>"; };
+		C51112C91FD63800008AD74F /* FTGlobal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTGlobal.m; sourceTree = "<group>"; };
 		C5616C0C1FA8777E00A9C033 /* funnyTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funnyTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5616C0F1FA8777E00A9C033 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5616C101FA8777E00A9C033 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; usesTabs = 0; };
@@ -151,6 +156,8 @@
 		C5616C2F1FA8777E00A9C033 /* funnyTryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = funnyTryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5616C331FA8777E00A9C033 /* funnyTryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = funnyTryUITests.m; sourceTree = "<group>"; };
 		C5616C351FA8777E00A9C033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5715C381FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTTransitionTypeChooseVC.h; sourceTree = "<group>"; };
+		C5715C391FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTTransitionTypeChooseVC.m; sourceTree = "<group>"; };
 		C574DBAD1FD4DFBB0003F827 /* FTLoginNextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLoginNextViewController.h; sourceTree = "<group>"; };
 		C574DBAE1FD4DFBB0003F827 /* FTLoginNextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLoginNextViewController.m; sourceTree = "<group>"; };
 		C574DBB01FD4E29D0003F827 /* FTCustomTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCustomTransitioning.h; sourceTree = "<group>"; };
@@ -321,10 +328,6 @@
 		C5AD1A3B1FD1389600A7EE86 /* 7.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 7.m4a; sourceTree = "<group>"; };
 		C5AD1A3C1FD1389600A7EE86 /* 8.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8.m4a; sourceTree = "<group>"; };
 		C5AD1A3D1FD1389600A7EE86 /* 9.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9.m4a; sourceTree = "<group>"; };
-		C5AD1A4D1FD14D1D00A7EE86 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
-		C5AD1A4E1FD14D1D00A7EE86 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
-		C5AD1A511FD14D9400A7EE86 /* FourPingTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourPingTransition.h; sourceTree = "<group>"; };
-		C5AD1A521FD14D9400A7EE86 /* FourPingTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourPingTransition.m; sourceTree = "<group>"; };
 		C5AD1A541FD14DF000A7EE86 /* pic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpg; sourceTree = "<group>"; };
 		C5B497FA1FD00BD100C6B6B4 /* UIViewController+FTBaseNavigationControllerNotice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+FTBaseNavigationControllerNotice.h"; sourceTree = "<group>"; };
 		C5B497FB1FD00BD100C6B6B4 /* UIViewController+FTBaseNavigationControllerNotice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+FTBaseNavigationControllerNotice.m"; sourceTree = "<group>"; };
@@ -636,6 +639,8 @@
 			isa = PBXGroup;
 			children = (
 				C57686A31FB000C000066AA3 /* BaseMacro.h */,
+				C51112C81FD63800008AD74F /* FTGlobal.h */,
+				C51112C91FD63800008AD74F /* FTGlobal.m */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -732,6 +737,8 @@
 		C59D91B21FB15C1D004550D0 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				C51112C51FD5595E008AD74F /* UIView+Screenshot.h */,
+				C51112C61FD5595E008AD74F /* UIView+Screenshot.m */,
 				C59D91B31FB15C5A004550D0 /* UIView+CutShape.h */,
 				C59D91B41FB15C5A004550D0 /* UIView+CutShape.m */,
 			);
@@ -865,8 +872,6 @@
 		C5AD1A501FD14D7A00A7EE86 /* Transitioning */ = {
 			isa = PBXGroup;
 			children = (
-				C5AD1A511FD14D9400A7EE86 /* FourPingTransition.h */,
-				C5AD1A521FD14D9400A7EE86 /* FourPingTransition.m */,
 				C574DBB01FD4E29D0003F827 /* FTCustomTransitioning.h */,
 				C574DBB11FD4E29D0003F827 /* FTCustomTransitioning.m */,
 			);
@@ -926,10 +931,10 @@
 			children = (
 				C5D138151FCFFA1E009EC87E /* FTLoginViewController.h */,
 				C5D138161FCFFA1E009EC87E /* FTLoginViewController.m */,
-				C5AD1A4D1FD14D1D00A7EE86 /* NextViewController.h */,
-				C5AD1A4E1FD14D1D00A7EE86 /* NextViewController.m */,
 				C574DBAD1FD4DFBB0003F827 /* FTLoginNextViewController.h */,
 				C574DBAE1FD4DFBB0003F827 /* FTLoginNextViewController.m */,
+				C5715C381FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.h */,
+				C5715C391FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1182,6 +1187,7 @@
 				C576869E1FAFF8EB00066AA3 /* XMGShopCell.m in Sources */,
 				C59EFF231FB5AC770004E0D4 /* FLAnimatedImageView.m in Sources */,
 				C57686B61FB069BF00066AA3 /* FTUIListViewController.m in Sources */,
+				C5715C3A1FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.m in Sources */,
 				C57686B21FB0300B00066AA3 /* FTBaseCell.m in Sources */,
 				C576866D1FAFF66500066AA3 /* UIView+MJExtension.m in Sources */,
 				C57686711FAFF66500066AA3 /* SDWebImageCompat.m in Sources */,
@@ -1195,6 +1201,7 @@
 				C57686641FAFF66500066AA3 /* MJRefreshBackNormalFooter.m in Sources */,
 				C59D91E51FB44998004550D0 /* FTFlowMountainViewController.m in Sources */,
 				C57686881FAFF66500066AA3 /* NSObject+MJMember.m in Sources */,
+				C51112CA1FD63800008AD74F /* FTGlobal.m in Sources */,
 				C59D91B81FB17DB2004550D0 /* FTBaseNavigationController.m in Sources */,
 				C576866A1FAFF66500066AA3 /* MJRefreshConst.m in Sources */,
 				C576867C1FAFF66500066AA3 /* UIImageView+WebCache.m in Sources */,
@@ -1211,9 +1218,9 @@
 				C5D138171FCFFA1E009EC87E /* FTLoginViewController.m in Sources */,
 				C59D91B51FB15C5A004550D0 /* UIView+CutShape.m in Sources */,
 				C5616C1F1FA8777E00A9C033 /* main.m in Sources */,
+				C51112C71FD5595E008AD74F /* UIView+Screenshot.m in Sources */,
 				C5D1380D1FCFF9BF009EC87E /* LYButton.m in Sources */,
 				C5B497FC1FD00BD100C6B6B4 /* UIViewController+FTBaseNavigationControllerNotice.m in Sources */,
-				C5AD1A4F1FD14D1E00A7EE86 /* NextViewController.m in Sources */,
 				C576866B1FAFF66500066AA3 /* UIScrollView+MJExtension.m in Sources */,
 				C59D91DE1FB18DD3004550D0 /* SVProgressAnimatedView.m in Sources */,
 				C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */,
@@ -1241,7 +1248,6 @@
 				C576866F1FAFF66500066AA3 /* NSData+ImageContentType.m in Sources */,
 				C576867F1FAFF66500066AA3 /* MJConst.m in Sources */,
 				C57686831FAFF66500066AA3 /* MJMethod.m in Sources */,
-				C5AD1A531FD14D9400A7EE86 /* FourPingTransition.m in Sources */,
 				C57686651FAFF66500066AA3 /* MJRefreshBackStateFooter.m in Sources */,
 				C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */,
 				C57686701FAFF66500066AA3 /* SDImageCache.m in Sources */,

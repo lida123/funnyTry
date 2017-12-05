@@ -10,4 +10,6 @@
 
 @interface FTLoginNextViewController : FTBaseViewController
 
+- (instancetype)initWithAnimationType:(NSString*)type;
+
 @end

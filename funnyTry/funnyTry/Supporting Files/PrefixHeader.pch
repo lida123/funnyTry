@@ -11,5 +11,6 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseMacro.h"
+#import "FTGlobal.h"
 
 #endif /* PrefixHeader_pch */

@@ -10,8 +10,9 @@
 #import "LYButton.h"
 #import "LYTextField.h"
 #import <AVFoundation/AVFoundation.h>
-#import "NextViewController.h"
 #import "FTLoginNextViewController.h"
+#import "FTTransitionTypeChooseVC.h"
+#import "FTBaseNavigationController.h"
 
 @interface FTLoginViewController () <AVAudioPlayerDelegate>
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
@@ -21,6 +22,8 @@
 
 @property (nonatomic, assign) NSUInteger b;
 @property (nonatomic, assign) NSUInteger c;
+
+@property (nonatomic, copy) NSString *animationType;
 @end
 static NSUInteger a;
 @implementation FTLoginViewController
@@ -41,6 +44,9 @@ static NSUInteger a;
     gradientLayer.locations = @[@0.65,@1];
     [self.view.layer addSublayer:gradientLayer];
     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"type" style:UIBarButtonItemStyleDone target:self action:@selector(typeChoose)];
+    self.animationType = @"circelScale";
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -81,28 +87,34 @@ static NSUInteger a;
     username.center = CGPointMake(self.view.center.x, 350);
     username.ly_placeholder = @"Username";
     username.tag = 0;
+    username.userInteractionEnabled = NO;
     [self.view addSubview:username];
     
     LYTextField *password = [[LYTextField alloc]initWithFrame:CGRectMake(0, 0, 270, 30)];
     password.center = CGPointMake(self.view.center.x, username.center.y+60);
     password.ly_placeholder = @"Password";
     password.tag = 1;
+    password.userInteractionEnabled = NO;
     [self.view addSubview:password];
     
     LYButton *login = [[LYButton alloc]initWithFrame:CGRectMake(0, 0, 200, 44)];
     login.center = CGPointMake(self.view.center.x, password.center.y+100);
     [self.view addSubview:login];
     
-    __block LYButton *button = login;
-    
     login.translateBlock = ^{
-        NSLog(@"跳转了哦");
-        button.bounds = CGRectMake(0, 0, 44, 44);
-        button.layer.cornerRadius = 22;
-        FTLoginNextViewController *nextVC = [[FTLoginNextViewController alloc]init];
+        FTLoginNextViewController *nextVC = [[FTLoginNextViewController alloc] initWithAnimationType:self.animationType];
         [self.navigationController presentViewController:nextVC animated:YES completion:nil];
         
     };
+}
+
+- (void)typeChoose {
+    FTTransitionTypeChooseVC *choose = [[FTTransitionTypeChooseVC alloc] init];
+    WS(weakSelf)
+    choose.CompletionBlock = ^(NSString *type) {
+        weakSelf.animationType = type;
+    };
+    [self.navigationController pushViewController:choose animated:YES];
 }
 
 - (CGRect)circleAnimationStartRect {

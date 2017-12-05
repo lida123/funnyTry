@@ -10,7 +10,7 @@
 #import "FTUIListCell.h"
 #import "FBShimmeringView.h"
 
-@interface FTUIListViewController () <UITableViewDelegate,UITableViewDataSource>
+@interface FTUIListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *items;
 @end
@@ -35,7 +35,6 @@
         [items addObject:item];
     }
     self.items = items;
-    FTDPRINT(@"%@",NSStringFromCGRect(self.view.bounds));
 }
 
 #pragma mark - rightItemAction

@@ -53,6 +53,7 @@
 
 -(void)clickBtn{
     [self clickAnimation];
+    self.userInteractionEnabled = NO;
 }
 
 //点击出现白色圆形
@@ -180,6 +181,7 @@
     [_maskLayer removeFromSuperlayer];
     [_loadingLayer removeFromSuperlayer];
     [_clickCicrleLayer removeFromSuperlayer];
+    self.userInteractionEnabled = YES;
 }
 
 -(void)removeAllAnimation{
