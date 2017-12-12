@@ -44,6 +44,10 @@
         return @"circle loading animation";
     }else if ([self.classString isEqualToString:@"FTLoginViewController"]) {
         return @"custom login animation & custom present_pop transitioning animation";
+    }else if ([self.classString isEqualToString:@"FTCustomPushTransitionFirstVC"]) {
+        return @"custom push pop interactive transtioning";
+    }else if ([self.classString isEqualToString:@"FTDragCellViewController"]) {
+        return @"tencent news's chanel manager view";
     }
     else {
         

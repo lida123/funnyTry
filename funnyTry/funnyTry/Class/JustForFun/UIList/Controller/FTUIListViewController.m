@@ -28,7 +28,7 @@
     [self.view addSubview:self.tableView];
 
     NSMutableArray *items = [NSMutableArray array];
-    NSArray *classes = @[@"FTScanViewController",@"FTFlowMountainViewController",@"FTCircleLoadingViewController",@"FTLoginViewController"];
+    NSArray *classes = @[@"FTScanViewController",@"FTFlowMountainViewController",@"FTCircleLoadingViewController",@"FTLoginViewController",@"FTCustomPushTransitionFirstVC",@"FTDragCellViewController"];
     for (NSInteger i = 0; i < classes.count; i++) {
         FTUIListCellIem *item = [FTUIListCellIem itemWithClassString:classes[i] shimmering:NO];
         item.separatorLeftMargin = 14;

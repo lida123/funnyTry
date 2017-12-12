@@ -9,12 +9,21 @@
 /* Begin PBXBuildFile section */
 		C51112C71FD5595E008AD74F /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C51112C61FD5595E008AD74F /* UIView+Screenshot.m */; };
 		C51112CA1FD63800008AD74F /* FTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = C51112C91FD63800008AD74F /* FTGlobal.m */; };
+		C525646E1FDFAB9E00BF0EB7 /* FTDragCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C525646D1FDFAB9E00BF0EB7 /* FTDragCellViewController.m */; };
+		C52564741FDFAE8300BF0EB7 /* FTChannelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C52564731FDFAE8300BF0EB7 /* FTChannelManager.m */; };
+		C525647A1FDFB0AF00BF0EB7 /* FTChannelCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52564791FDFB0AF00BF0EB7 /* FTChannelCollectionView.m */; };
+		C525647D1FDFB9AD00BF0EB7 /* FTChannelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C525647C1FDFB9AD00BF0EB7 /* FTChannelCollectionViewCell.m */; };
+		C52564801FDFC80E00BF0EB7 /* FTChannelHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C525647F1FDFC80E00BF0EB7 /* FTChannelHeaderView.m */; };
 		C5616C111FA8777E00A9C033 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C101FA8777E00A9C033 /* AppDelegate.m */; };
 		C5616C191FA8777E00A9C033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5616C181FA8777E00A9C033 /* Assets.xcassets */; };
 		C5616C1F1FA8777E00A9C033 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C1E1FA8777E00A9C033 /* main.m */; };
 		C5616C291FA8777E00A9C033 /* funnyTryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C281FA8777E00A9C033 /* funnyTryTests.m */; };
 		C5616C341FA8777E00A9C033 /* funnyTryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C331FA8777E00A9C033 /* funnyTryUITests.m */; };
 		C5715C3A1FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5715C391FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.m */; };
+		C5736A951FD945290018BA92 /* FTCustomPushTransitionFirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5736A941FD945290018BA92 /* FTCustomPushTransitionFirstVC.m */; };
+		C5736A981FD945410018BA92 /* FTCustomPushTransitionSecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5736A971FD945410018BA92 /* FTCustomPushTransitionSecondVC.m */; };
+		C5736A9C1FD945D60018BA92 /* pic2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C5736A9B1FD945D60018BA92 /* pic2.jpeg */; };
+		C5736A9F1FD9486A0018BA92 /* FTCustomInteractiveTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = C5736A9E1FD9486A0018BA92 /* FTCustomInteractiveTransitioning.m */; };
 		C574DBAF1FD4DFBB0003F827 /* FTLoginNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C574DBAE1FD4DFBB0003F827 /* FTLoginNextViewController.m */; };
 		C574DBB21FD4E29D0003F827 /* FTCustomTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = C574DBB11FD4E29D0003F827 /* FTCustomTransitioning.m */; };
 		C576865B1FAFF66500066AA3 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C57685F71FAFF66500066AA3 /* MJRefreshAutoFooter.m */; };
@@ -144,6 +153,16 @@
 		C51112C61FD5595E008AD74F /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
 		C51112C81FD63800008AD74F /* FTGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTGlobal.h; sourceTree = "<group>"; };
 		C51112C91FD63800008AD74F /* FTGlobal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTGlobal.m; sourceTree = "<group>"; };
+		C525646C1FDFAB9E00BF0EB7 /* FTDragCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTDragCellViewController.h; sourceTree = "<group>"; };
+		C525646D1FDFAB9E00BF0EB7 /* FTDragCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTDragCellViewController.m; sourceTree = "<group>"; };
+		C52564721FDFAE8300BF0EB7 /* FTChannelManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTChannelManager.h; sourceTree = "<group>"; };
+		C52564731FDFAE8300BF0EB7 /* FTChannelManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTChannelManager.m; sourceTree = "<group>"; };
+		C52564781FDFB0AF00BF0EB7 /* FTChannelCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTChannelCollectionView.h; sourceTree = "<group>"; };
+		C52564791FDFB0AF00BF0EB7 /* FTChannelCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTChannelCollectionView.m; sourceTree = "<group>"; };
+		C525647B1FDFB9AD00BF0EB7 /* FTChannelCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTChannelCollectionViewCell.h; sourceTree = "<group>"; };
+		C525647C1FDFB9AD00BF0EB7 /* FTChannelCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTChannelCollectionViewCell.m; sourceTree = "<group>"; };
+		C525647E1FDFC80E00BF0EB7 /* FTChannelHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTChannelHeaderView.h; sourceTree = "<group>"; };
+		C525647F1FDFC80E00BF0EB7 /* FTChannelHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTChannelHeaderView.m; sourceTree = "<group>"; };
 		C5616C0C1FA8777E00A9C033 /* funnyTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funnyTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5616C0F1FA8777E00A9C033 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5616C101FA8777E00A9C033 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; usesTabs = 0; };
@@ -158,6 +177,13 @@
 		C5616C351FA8777E00A9C033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5715C381FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTTransitionTypeChooseVC.h; sourceTree = "<group>"; };
 		C5715C391FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTTransitionTypeChooseVC.m; sourceTree = "<group>"; };
+		C5736A931FD945290018BA92 /* FTCustomPushTransitionFirstVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCustomPushTransitionFirstVC.h; sourceTree = "<group>"; };
+		C5736A941FD945290018BA92 /* FTCustomPushTransitionFirstVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTCustomPushTransitionFirstVC.m; sourceTree = "<group>"; };
+		C5736A961FD945410018BA92 /* FTCustomPushTransitionSecondVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCustomPushTransitionSecondVC.h; sourceTree = "<group>"; };
+		C5736A971FD945410018BA92 /* FTCustomPushTransitionSecondVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTCustomPushTransitionSecondVC.m; sourceTree = "<group>"; };
+		C5736A9B1FD945D60018BA92 /* pic2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpeg; sourceTree = "<group>"; };
+		C5736A9D1FD9486A0018BA92 /* FTCustomInteractiveTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCustomInteractiveTransitioning.h; sourceTree = "<group>"; };
+		C5736A9E1FD9486A0018BA92 /* FTCustomInteractiveTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTCustomInteractiveTransitioning.m; sourceTree = "<group>"; };
 		C574DBAD1FD4DFBB0003F827 /* FTLoginNextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLoginNextViewController.h; sourceTree = "<group>"; };
 		C574DBAE1FD4DFBB0003F827 /* FTLoginNextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLoginNextViewController.m; sourceTree = "<group>"; };
 		C574DBB01FD4E29D0003F827 /* FTCustomTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCustomTransitioning.h; sourceTree = "<group>"; };
@@ -376,6 +402,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C525646B1FDFAB7000BF0EB7 /* DragCell */ = {
+			isa = PBXGroup;
+			children = (
+				C525646F1FDFAE2D00BF0EB7 /* Controller */,
+				C52564701FDFAE4100BF0EB7 /* View */,
+				C52564711FDFAE5D00BF0EB7 /* Other */,
+			);
+			path = DragCell;
+			sourceTree = "<group>";
+		};
+		C525646F1FDFAE2D00BF0EB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C525646C1FDFAB9E00BF0EB7 /* FTDragCellViewController.h */,
+				C525646D1FDFAB9E00BF0EB7 /* FTDragCellViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C52564701FDFAE4100BF0EB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C52564781FDFB0AF00BF0EB7 /* FTChannelCollectionView.h */,
+				C52564791FDFB0AF00BF0EB7 /* FTChannelCollectionView.m */,
+				C525647B1FDFB9AD00BF0EB7 /* FTChannelCollectionViewCell.h */,
+				C525647C1FDFB9AD00BF0EB7 /* FTChannelCollectionViewCell.m */,
+				C525647E1FDFC80E00BF0EB7 /* FTChannelHeaderView.h */,
+				C525647F1FDFC80E00BF0EB7 /* FTChannelHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C52564711FDFAE5D00BF0EB7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				C52564721FDFAE8300BF0EB7 /* FTChannelManager.h */,
+				C52564731FDFAE8300BF0EB7 /* FTChannelManager.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		C5616C031FA8777E00A9C033 = {
 			isa = PBXGroup;
 			children = (
@@ -431,9 +498,39 @@
 			path = funnyTryUITests;
 			sourceTree = "<group>";
 		};
+		C5736A921FD944CB0018BA92 /* PushAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C5736A9A1FD945C70018BA92 /* Controller */,
+				C5736A991FD945BE0018BA92 /* Src */,
+			);
+			path = PushAnimation;
+			sourceTree = "<group>";
+		};
+		C5736A991FD945BE0018BA92 /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				C5736A9B1FD945D60018BA92 /* pic2.jpeg */,
+			);
+			path = Src;
+			sourceTree = "<group>";
+		};
+		C5736A9A1FD945C70018BA92 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C5736A931FD945290018BA92 /* FTCustomPushTransitionFirstVC.h */,
+				C5736A941FD945290018BA92 /* FTCustomPushTransitionFirstVC.m */,
+				C5736A961FD945410018BA92 /* FTCustomPushTransitionSecondVC.h */,
+				C5736A971FD945410018BA92 /* FTCustomPushTransitionSecondVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C57685F21FAFF5EA00066AA3 /* JustForFun */ = {
 			isa = PBXGroup;
 			children = (
+				C525646B1FDFAB7000BF0EB7 /* DragCell */,
+				C5736A921FD944CB0018BA92 /* PushAnimation */,
 				C5D138031FCFF8EC009EC87E /* LoginAnimation */,
 				C5B8C4331FBD663100037249 /* CircleLoadingView */,
 				C59D91E21FB448BC004550D0 /* FlowMountain */,
@@ -874,6 +971,8 @@
 			children = (
 				C574DBB01FD4E29D0003F827 /* FTCustomTransitioning.h */,
 				C574DBB11FD4E29D0003F827 /* FTCustomTransitioning.m */,
+				C5736A9D1FD9486A0018BA92 /* FTCustomInteractiveTransitioning.h */,
+				C5736A9E1FD9486A0018BA92 /* FTCustomInteractiveTransitioning.m */,
 			);
 			path = Transitioning;
 			sourceTree = "<group>";
@@ -1125,6 +1224,7 @@
 				C5AD1A481FD1389700A7EE86 /* 5.m4a in Resources */,
 				C5AD1A491FD1389700A7EE86 /* 6.m4a in Resources */,
 				C5AD1A451FD1389700A7EE86 /* 2.m4a in Resources */,
+				C5736A9C1FD945D60018BA92 /* pic2.jpeg in Resources */,
 				C5AD1A3F1FD1389700A7EE86 /* 10.m4a in Resources */,
 				C59D91C11FB18245004550D0 /* tabbar_discover_nor@3x.png in Resources */,
 				C576869B1FAFF8EB00066AA3 /* XMGShopCell.xib in Resources */,
@@ -1174,6 +1274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C57686721FAFF66500066AA3 /* SDWebImageDecoder.m in Sources */,
+				C52564741FDFAE8300BF0EB7 /* FTChannelManager.m in Sources */,
 				C57686911FAFF75C00066AA3 /* FTWaterfallViewController.m in Sources */,
 				C5B8C43E1FBD9DF400037249 /* UIButton+CircleLoading.m in Sources */,
 				C576867E1FAFF66500066AA3 /* MJArgument.m in Sources */,
@@ -1203,6 +1304,7 @@
 				C57686881FAFF66500066AA3 /* NSObject+MJMember.m in Sources */,
 				C51112CA1FD63800008AD74F /* FTGlobal.m in Sources */,
 				C59D91B81FB17DB2004550D0 /* FTBaseNavigationController.m in Sources */,
+				C525647D1FDFB9AD00BF0EB7 /* FTChannelCollectionViewCell.m in Sources */,
 				C576866A1FAFF66500066AA3 /* MJRefreshConst.m in Sources */,
 				C576867C1FAFF66500066AA3 /* UIImageView+WebCache.m in Sources */,
 				C59EFF221FB5AC770004E0D4 /* FLAnimatedImage.m in Sources */,
@@ -1213,9 +1315,11 @@
 				C57686851FAFF66500066AA3 /* MJTypeEncoding.m in Sources */,
 				C576865C1FAFF66500066AA3 /* MJRefreshBackFooter.m in Sources */,
 				C576869A1FAFF8EB00066AA3 /* XMGShop.m in Sources */,
+				C5736A981FD945410018BA92 /* FTCustomPushTransitionSecondVC.m in Sources */,
 				C576867B1FAFF66500066AA3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				C5B8C4361FBD669800037249 /* FTCircleLoadingViewController.m in Sources */,
 				C5D138171FCFFA1E009EC87E /* FTLoginViewController.m in Sources */,
+				C525646E1FDFAB9E00BF0EB7 /* FTDragCellViewController.m in Sources */,
 				C59D91B51FB15C5A004550D0 /* UIView+CutShape.m in Sources */,
 				C5616C1F1FA8777E00A9C033 /* main.m in Sources */,
 				C51112C71FD5595E008AD74F /* UIView+Screenshot.m in Sources */,
@@ -1224,6 +1328,7 @@
 				C576866B1FAFF66500066AA3 /* UIScrollView+MJExtension.m in Sources */,
 				C59D91DE1FB18DD3004550D0 /* SVProgressAnimatedView.m in Sources */,
 				C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */,
+				C525647A1FDFB0AF00BF0EB7 /* FTChannelCollectionView.m in Sources */,
 				C57686781FAFF66500066AA3 /* UIImage+GIF.m in Sources */,
 				C57686791FAFF66500066AA3 /* UIImage+MultiFormat.m in Sources */,
 				C57686611FAFF66500066AA3 /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -1239,9 +1344,11 @@
 				C57686BF1FB07ADB00066AA3 /* FTUIListCellIem.m in Sources */,
 				C576866E1FAFF66500066AA3 /* MKAnnotationView+WebCache.m in Sources */,
 				C574DBAF1FD4DFBB0003F827 /* FTLoginNextViewController.m in Sources */,
+				C5736A9F1FD9486A0018BA92 /* FTCustomInteractiveTransitioning.m in Sources */,
 				C57686621FAFF66500066AA3 /* MJRefreshAutoStateFooter.m in Sources */,
 				C57686731FAFF66500066AA3 /* SDWebImageDownloader.m in Sources */,
 				C57686771FAFF66500066AA3 /* UIButton+WebCache.m in Sources */,
+				C52564801FDFC80E00BF0EB7 /* FTChannelHeaderView.m in Sources */,
 				C574DBB21FD4E29D0003F827 /* FTCustomTransitioning.m in Sources */,
 				C576865E1FAFF66500066AA3 /* MJRefreshFooter.m in Sources */,
 				C59D91CA1FB18B0E004550D0 /* FTScanViewController.m in Sources */,
@@ -1250,6 +1357,7 @@
 				C57686831FAFF66500066AA3 /* MJMethod.m in Sources */,
 				C57686651FAFF66500066AA3 /* MJRefreshBackStateFooter.m in Sources */,
 				C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */,
+				C5736A951FD945290018BA92 /* FTCustomPushTransitionFirstVC.m in Sources */,
 				C57686701FAFF66500066AA3 /* SDImageCache.m in Sources */,
 				C57686861FAFF66500066AA3 /* NSObject+MJCoding.m in Sources */,
 				C59D91E11FB18DD3004550D0 /* SVRadialGradientLayer.m in Sources */,
