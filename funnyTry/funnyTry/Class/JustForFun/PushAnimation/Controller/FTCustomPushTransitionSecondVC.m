@@ -8,55 +8,58 @@
 
 #import "FTCustomPushTransitionSecondVC.h"
 #import "FTCustomTransitioning.h"
+#import "Masonry.h"
 
 @interface FTCustomPushTransitionSecondVC ()
 @property (nonatomic, assign) UINavigationControllerOperation operation;
-@property (nonatomic, strong) FTCustomInteractiveTransitioning *interactiveTranstioning;
+@property (nonatomic, strong) FTCustomInteractiveTransitioning *interactiveTransitionPop;
 @end
 
 @implementation FTCustomPushTransitionSecondVC
 
+- (void)dealloc{
+    FTDPRINT(@"销毁了");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"second";
-    
+    self.title = @"second";
+    self.view.backgroundColor = [UIColor grayColor];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pic1.jpg"]];
     [self.view addSubview:imageView];
     imageView.frame = self.view.frame;
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(0, 0, 200, 30);
-    button.backgroundColor = [UIColor greenColor];
-    button.center = self.view.center;
     [button setTitle:@"点我或向右滑动pop" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.view addSubview:button];
     [button addTarget:self action:@selector(pop) forControlEvents:UIControlEventTouchUpInside];
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.view.mas_centerX);
+        make.top.equalTo(self.view.mas_top).offset(74);
+    }];
     
-    self.interactiveTranstioning = [FTCustomInteractiveTransitioning interactiveTransitioningWithType:FTCustomInteractiveTransitioningTypePop];
-    [self.interactiveTranstioning addPanGestureForViewController:self];
+    //初始化手势过渡的代理
+    _interactiveTransitionPop = [FTCustomInteractiveTransitioning interactiveTransitioningWithType:FTCustomInteractiveTransitioningTypePop];
+    //给当前控制器的视图添加手势
+    [_interactiveTransitionPop addPanGestureForViewController:self];
 }
 
-- (void)pop {
+- (void)pop{
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
-    self.operation = operation;
-    if (operation == UINavigationControllerOperationPush) {
-        return [FTCustomTransitioning transitioningWithType:FTCustomTransitioningPageCurl actionType:@"push"];
-    }else if(operation == UINavigationControllerOperationPop){
-        return [FTCustomTransitioning transitioningWithType:FTCustomTransitioningPageUnCurl actionType:@"pop"];
-    }
-    return nil;
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
+    _operation = operation;
+    //分pop和push两种情况分别返回动画过渡代理相应不同的动画操作
+    return [FTCustomTransitioning transitioningWithType:FTCustomTransitioningCube actionType:operation == UINavigationControllerOperationPush ? @"push" : @"pop"];
 }
 
-- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController  {
-    if (self.operation == UINavigationControllerOperationPush) {
-        return self.lastInteractiveTranstioning;
-    }else if(self.operation == UINavigationControllerOperationPop){
-        return self.interactiveTranstioning;
+- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
+    if (_operation == UINavigationControllerOperationPush) {
+        return _lastInteractiveTranstioning.interation ? _lastInteractiveTranstioning:nil;
+    }else{
+        return _interactiveTransitionPop.interation ? _interactiveTransitionPop:nil;
     }
-    return nil;
 }
-
 @end

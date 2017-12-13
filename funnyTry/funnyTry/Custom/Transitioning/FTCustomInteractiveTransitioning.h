@@ -19,6 +19,8 @@ typedef NS_ENUM(NSUInteger,FTCustomInteractiveTransitioningType) {
 
 @property (nonatomic, copy) void (^PushBlock)(void);
 @property (nonatomic, copy) void (^PresentBlock)(void);
+/**记录是否开始手势，判断pop操作是手势触发还是返回键触发*/
+@property (nonatomic, assign) BOOL interation;
 
 + (instancetype)interactiveTransitioningWithType:(FTCustomInteractiveTransitioningType)type;
 

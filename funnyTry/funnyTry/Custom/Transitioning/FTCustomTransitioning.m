@@ -8,6 +8,7 @@
 
 #import "FTCustomTransitioning.h"
 #import "UIView+Screenshot.h"
+#import "UIView+anchorPoint.h"
 
 @interface FTCustomTransitioning ()<CAAnimationDelegate>
 @property (nonatomic, assign) FTCustomTransitioningType type;
@@ -33,6 +34,14 @@
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
+    if ([self.actionType isEqualToString:@"push"]) {
+        [self doPushAnimation:transitionContext];
+        return;
+    }else if ([self.actionType isEqualToString:@"pop"]) {
+        [self doPopAnimation:transitionContext];
+        return;
+    }
+    
     switch (_type) {
         case FTCustomTransitioningCircleShrink:
             [self circleShrinkAnimation:transitionContext];
@@ -59,6 +68,85 @@
     }
 }
 
+/**
+ *  执行push过渡动画
+ */
+- (void)doPushAnimation:(id<UIViewControllerContextTransitioning>)transitionContext{
+    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    //对tempView做动画，避免bug;
+    UIView *tempView = [fromVC.view snapshotViewAfterScreenUpdates:NO];
+    tempView.frame = fromVC.view.frame;
+    UIView *containerView = [transitionContext containerView];
+    [containerView addSubview:toVC.view];
+    [containerView addSubview:tempView];
+    fromVC.view.hidden = YES;
+    [containerView insertSubview:toVC.view atIndex:0];
+    [tempView setAnchorPointTo:CGPointMake(0, 0.5)];
+    CATransform3D transfrom3d = CATransform3DIdentity;
+    transfrom3d.m34 = -0.002;
+    containerView.layer.sublayerTransform = transfrom3d;
+    //增加阴影
+    CAGradientLayer *fromGradient = [CAGradientLayer layer];
+    fromGradient.frame = fromVC.view.bounds;
+    fromGradient.colors = @[(id)[UIColor blackColor].CGColor,
+                            (id)[UIColor blackColor].CGColor];
+    fromGradient.startPoint = CGPointMake(0.0, 0.5);
+    fromGradient.endPoint = CGPointMake(0.8, 0.5);
+    UIView *fromShadow = [[UIView alloc]initWithFrame:fromVC.view.bounds];
+    fromShadow.backgroundColor = [UIColor clearColor];
+    [fromShadow.layer insertSublayer:fromGradient atIndex:1];
+    fromShadow.alpha = 0.0;
+    [tempView addSubview:fromShadow];
+    CAGradientLayer *toGradient = [CAGradientLayer layer];
+    toGradient.frame = fromVC.view.bounds;
+    toGradient.colors = @[(id)[UIColor blackColor].CGColor,
+                          (id)[UIColor blackColor].CGColor];
+    toGradient.startPoint = CGPointMake(0.0, 0.5);
+    toGradient.endPoint = CGPointMake(0.8, 0.5);
+    UIView *toShadow = [[UIView alloc]initWithFrame:fromVC.view.bounds];
+    toShadow.backgroundColor = [UIColor clearColor];
+    [toShadow.layer insertSublayer:toGradient atIndex:1];
+    toShadow.alpha = 1.0;
+    [toVC.view addSubview:toShadow];
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+        tempView.layer.transform = CATransform3DMakeRotation(-M_PI_2, 0, 1, 0);
+        fromShadow.alpha = 1.0;
+        toShadow.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+        if ([transitionContext transitionWasCancelled]) {
+            [tempView removeFromSuperview];
+            fromVC.view.hidden = NO;
+        }
+    }];
+}
+/**
+ *  执行pop过渡动画
+ */
+- (void)doPopAnimation:(id<UIViewControllerContextTransitioning>)transitionContext{
+    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIView *containerView = [transitionContext containerView];
+    //拿到push时候的
+    UIView *tempView = containerView.subviews.lastObject;
+    [containerView addSubview:toVC.view];
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+        tempView.layer.transform = CATransform3DIdentity;
+        fromVC.view.subviews.lastObject.alpha = 1.0;
+        tempView.subviews.lastObject.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        if ([transitionContext transitionWasCancelled]) {
+            [transitionContext completeTransition:NO];
+        }else{
+            [transitionContext completeTransition:YES];
+            [tempView removeFromSuperview];
+            toVC.view.hidden = NO;
+        }
+    }];
+    
+}
+
 #pragma mark - 圆形放大
 - (void)circleMagnifyAnimation:(id<UIViewControllerContextTransitioning>)transitionContext {
     // 起始vc topVC (本项目这个present行为实际上是tabbarController执行的)
@@ -72,13 +160,9 @@
     [containerView addSubview:toVC.view];
     
     //创建动画
-    CGRect fromRect;
-    if ([fromVC respondsToSelector:@selector(circleAnimationStartRect)]) {
-        fromRect = [fromVC circleAnimationStartRect];
-    }else {
-        fromRect = CGRectMake(0, 0, 40, 40);
-        fromRect.origin = fromVC.view.center;
-    }
+    CGRect fromRect = CGRectMake(0, 0, 40, 40);
+    fromRect.origin = fromVC.view.center;
+    
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"path"];
     UIBezierPath *fromValue = [UIBezierPath bezierPathWithOvalInRect:fromRect];
@@ -109,22 +193,13 @@
 
     // 将最终view位置放到0以便于在fromView消失的时候能看到最终view
     UIView *containerView = transitionContext.containerView;
-    if (toVC.tabBarController) {
-        [containerView insertSubview:toVC.tabBarController.view atIndex:0];
-    }else if (toVC.navigationController) {
-        [containerView insertSubview:toVC.navigationController.view atIndex:0];
-    }else {
-        [containerView insertSubview:toVC.view atIndex:0];
-    }
+    [containerView insertSubview:toVC.view atIndex:0];
+    
     
     // 创建动画
-    CGRect toRect;
-    if ([toVC respondsToSelector:@selector(circleAnimationStartRect)]) {
-        toRect = [toVC circleAnimationStartRect];
-    }else {
-        toRect = CGRectMake(0, 0, 40, 40);
-        toRect.origin = toVC.view.center;
-    }
+    CGRect  toRect = CGRectMake(0, 0, 40, 40);
+    toRect.origin = toVC.view.center;
+  
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"path"];
     CGFloat x = MAX(toRect.origin.x, containerView.bounds.size.width - toRect.origin.x);
     CGFloat y = MAX(toRect.origin.y, containerView.bounds.size.height - toRect.origin.y);
@@ -150,49 +225,32 @@
     UIViewController *fromVC = [self fromVC:transitionContext];
     
     // 最终vc的topVC (本项目这个present行为实际上是tabbarController执行的)
-    UIViewController<FTCustomTransitioning>*toVC = (UIViewController<FTCustomTransitioning>*)[self toVC:transitionContext];
+    UIViewController *toVC = [self toVC:transitionContext];
     
     // 将最终视图添加到containerView上
-    if ([self.actionType isEqualToString:@"present"]) {
+    if ([self.actionType isEqualToString:@"present"] || [self.actionType isEqualToString:@"push"]) {
         UIView *containerView = transitionContext.containerView;
         [containerView addSubview:toVC.view];
     
-    }else if ([self.actionType isEqualToString:@"dismiss"]) {
+    }else if ([self.actionType isEqualToString:@"dismiss"] || [self.actionType isEqualToString:@"pop"]) {
         UIView *containerView = transitionContext.containerView;
-        if (toVC.tabBarController) {
-            [containerView insertSubview:toVC.tabBarController.view atIndex:0];
-        }else if (toVC.navigationController) {
-            [containerView insertSubview:toVC.navigationController.view atIndex:0];
-        }else {
-            [containerView insertSubview:toVC.view atIndex:0];
-        }
+        [containerView insertSubview:toVC.view atIndex:0];
     }
     
     //创建动画附属imageView
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:transitionContext.containerView.bounds];
-    UIImage *fromImage = nil;
-    if (fromVC.navigationController) {
-       fromImage = [fromVC.navigationController.view convertViewToImage];
-    }else {
-        fromImage = [fromVC.view convertViewToImage];
-    }
-    
-    UIImage *toImage = nil;
-    if (toVC.navigationController) {
-        toImage =  [toVC.navigationController.view convertViewToImage];
-    }else {
-        toImage =  [toVC.view convertViewToImage];
-    }
+    UIImage *fromImage = [fromVC.view convertViewToImage];
+    UIImage *toImage =  [toVC.view convertViewToImage];
     imageView.image = fromImage;
     [transitionContext.containerView addSubview:imageView];
+
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self addSystemTransitionWithToImage:toImage context:transitionContext];
+        [self addSystemTransitionWithToImage:toImage tempImageV:imageView context:transitionContext];
     });
 }
     
 
-- (void)addSystemTransitionWithToImage:(UIImage *)toImage context:(id<UIViewControllerContextTransitioning>)transitionContext {
-    UIImageView *imageView = transitionContext.containerView.subviews.lastObject;
+- (void)addSystemTransitionWithToImage:(UIImage *)toImage tempImageV:(UIImageView*)tempImageV context:(id<UIViewControllerContextTransitioning>)transitionContext {
     CATransition *animation = [CATransition animation];
     animation.duration = [self transitionDuration:transitionContext] - 0.05;
     switch (self.type) {
@@ -235,45 +293,27 @@
         default:
             break;
     }
-    if ([self.actionType isEqualToString:@"present"]) {
+    if ([self.actionType isEqualToString:@"present"] || [self.actionType isEqualToString:@"push"]) {
         animation.subtype = kCATransitionFromRight;
-    }else if ([self.actionType isEqualToString:@"dismiss"]) {
+    }else if ([self.actionType isEqualToString:@"dismiss"] || [self.actionType isEqualToString:@"pop"]) {
         animation.subtype = kCATransitionFromLeft;
     }
     animation.delegate = self;
-    [animation setValue:imageView forKey:@"imageViewKey"];
+    [animation setValue:tempImageV forKey:@"imageViewKey"];
     [animation setValue:transitionContext forKey:@"transitionContext"];
-    [imageView.layer addAnimation:animation forKey:nil];
-    imageView.image = toImage;
+    [tempImageV.layer addAnimation:animation forKey:@"animationkey"];
+    tempImageV.image = toImage;
 }
 
-// 起始vc的topVC(本项目这个present行为实际上是tabbarController执行的)
 - (UIViewController *)fromVC:(id<UIViewControllerContextTransitioning>)transitionContext{
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    fromVC = [self topViewControllerForController:fromVC];
     return fromVC;
 }
 
 // 最终vc
 - (UIViewController*)toVC:(id<UIViewControllerContextTransitioning>)transitionContext {
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    toVC = [self topViewControllerForController:toVC];
     return toVC;
-}
-
-- (UIViewController*)topViewControllerForController:(UIViewController *)controller {
-    UIViewController *topViewController = controller;
-    if ([controller isKindOfClass:[UITabBarController class]]) {
-        UIViewController *navi = [(UITabBarController*)controller selectedViewController];
-        if ([navi isKindOfClass:[UINavigationController class]]) {
-            topViewController = [(UINavigationController*)navi topViewController];
-        }else {
-            topViewController = navi;
-        }
-    }else if ([controller isKindOfClass:[UINavigationController class] ]) {
-        topViewController = [(UINavigationController*)controller topViewController];
-    }
-    return topViewController;
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
@@ -282,8 +322,7 @@
             id<UIViewControllerContextTransitioning> transitionContext = [anim valueForKey:@"transitionContext"];
             [transitionContext completeTransition:YES];
             
-            UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-            toVC = [self topViewControllerForController:toVC];
+            UIViewController *toVC = [self toVC:transitionContext];
             toVC.view.layer.mask = nil;
         }
             break;
@@ -292,8 +331,7 @@
             [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
             if ([transitionContext transitionWasCancelled]) {
                 // 起始vc
-                UIViewController<FTCustomTransitioning> *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-                fromVC = (UIViewController<FTCustomTransitioning> *)[self topViewControllerForController:fromVC];
+                UIViewController *fromVC = [self fromVC:transitionContext];
                 fromVC.view.layer.mask = nil;
             }
         }

@@ -76,8 +76,11 @@ static const void * loadingViewKey = &loadingViewKey;
 - (CGRect)loadingViewFrame  {
     CGFloat h = CGRectGetHeight(self.bounds) * 0.5;
     CGFloat w = h;
-    CGRect titleRect = [self titleRectForContentRect:self.bounds];
-    CGFloat x = titleRect.origin.x - w - 8;
+    UIFont *font = self.titleLabel.font;
+    NSString *text = [self titleForState:UIControlStateNormal];
+    CGRect titleBounds = [text boundingRectWithSize:CGSizeMake(MAXFLOAT, self.bounds.size.height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
+    titleBounds.origin.x = (self.bounds.size.width - titleBounds.size.width) / 2.0;
+    CGFloat x = titleBounds.origin.x - w - 8;
     CGFloat y = (CGRectGetHeight(self.bounds) - h ) / 2.0;
     return CGRectMake(x, y, w, h);
 }

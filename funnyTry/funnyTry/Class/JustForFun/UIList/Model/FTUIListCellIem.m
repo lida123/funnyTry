@@ -48,6 +48,8 @@
         return @"custom push pop interactive transtioning";
     }else if ([self.classString isEqualToString:@"FTDragCellViewController"]) {
         return @"tencent news's chanel manager view";
+    }else if ([self.classString isEqualToString:@"XWPageCoverController"]) {
+        return @"XWPageCoverController";
     }
     else {
         

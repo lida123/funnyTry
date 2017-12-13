@@ -8,7 +8,7 @@
 
 #import "FTCustomPushTransitionFirstVC.h"
 #import "FTCustomPushTransitionSecondVC.h"
-
+#import "Masonry.h"
 
 @interface FTCustomPushTransitionFirstVC ()
 @property (nonatomic, strong) FTCustomInteractiveTransitioning *interactiveTranstioning;
@@ -23,15 +23,15 @@
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pic2.jpeg"]];
     [self.view addSubview:imageView];
     imageView.frame = self.view.frame;
-    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(0, 0, 200, 30);
-    button.center = self.view.center;
     [button setTitle:@"点我或向左滑动push" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    button.backgroundColor = [UIColor redColor];
-    ADDSelectorForButton(button, self, @selector(push));
     [self.view addSubview:button];
+    [button addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.view.mas_centerX);
+        make.top.equalTo(self.view.mas_top).offset(74);
+    }];
     
     self.interactiveTranstioning = [FTCustomInteractiveTransitioning interactiveTransitioningWithType:FTCustomInteractiveTransitioningTypePush];
     WS(weakSelf)
