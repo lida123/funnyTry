@@ -50,6 +50,8 @@
         return @"tencent news's chanel manager view";
     }else if ([self.classString isEqualToString:@"XWPageCoverController"]) {
         return @"XWPageCoverController";
+    }else if ([self.classString isEqualToString:@"FTPausePlayAnimationVC"]) {
+        return @"iQiYiPlayButton & youKuPlayButon";
     }
     else {
         

@@ -96,6 +96,9 @@
 		C598FBF11FE0F67F00B67823 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FBE51FE0F67F00B67823 /* View+MASAdditions.m */; };
 		C598FBF21FE0F67F00B67823 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FBE81FE0F67F00B67823 /* ViewController+MASAdditions.m */; };
 		C598FBFB1FE1238100B67823 /* UIView+anchorPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FBF91FE1238100B67823 /* UIView+anchorPoint.m */; };
+		C598FC021FE2268800B67823 /* FTPausePlayAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FC011FE2268800B67823 /* FTPausePlayAnimationVC.m */; };
+		C598FC081FE2279400B67823 /* IQiYIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FC071FE2279400B67823 /* IQiYIButton.m */; };
+		C598FC0B1FE2678C00B67823 /* YouKuPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FC0A1FE2678C00B67823 /* YouKuPlayButton.m */; };
 		C59D91B51FB15C5A004550D0 /* UIView+CutShape.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91B41FB15C5A004550D0 /* UIView+CutShape.m */; };
 		C59D91B81FB17DB2004550D0 /* FTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91B71FB17DB2004550D0 /* FTBaseNavigationController.m */; };
 		C59D91BF1FB18245004550D0 /* tabbar_discover_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C59D91BB1FB18245004550D0 /* tabbar_discover_nor@2x.png */; };
@@ -346,6 +349,12 @@
 		C598FBE81FE0F67F00B67823 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		C598FBF91FE1238100B67823 /* UIView+anchorPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+anchorPoint.m"; sourceTree = "<group>"; };
 		C598FBFA1FE1238100B67823 /* UIView+anchorPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+anchorPoint.h"; sourceTree = "<group>"; };
+		C598FC001FE2268800B67823 /* FTPausePlayAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPausePlayAnimationVC.h; sourceTree = "<group>"; };
+		C598FC011FE2268800B67823 /* FTPausePlayAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPausePlayAnimationVC.m; sourceTree = "<group>"; };
+		C598FC061FE2279400B67823 /* IQiYIButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IQiYIButton.h; sourceTree = "<group>"; };
+		C598FC071FE2279400B67823 /* IQiYIButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IQiYIButton.m; sourceTree = "<group>"; };
+		C598FC091FE2678C00B67823 /* YouKuPlayButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouKuPlayButton.h; sourceTree = "<group>"; };
+		C598FC0A1FE2678C00B67823 /* YouKuPlayButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YouKuPlayButton.m; sourceTree = "<group>"; };
 		C59D91B31FB15C5A004550D0 /* UIView+CutShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CutShape.h"; sourceTree = "<group>"; };
 		C59D91B41FB15C5A004550D0 /* UIView+CutShape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CutShape.m"; sourceTree = "<group>"; };
 		C59D91B61FB17DB2004550D0 /* FTBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseNavigationController.h; sourceTree = "<group>"; };
@@ -567,6 +576,7 @@
 		C57685F21FAFF5EA00066AA3 /* JustForFun */ = {
 			isa = PBXGroup;
 			children = (
+				C598FBFF1FE2263400B67823 /* PausePlayAnimation */,
 				C525646B1FDFAB7000BF0EB7 /* DragCell */,
 				C5736A921FD944CB0018BA92 /* PushAnimation */,
 				C5D138031FCFF8EC009EC87E /* LoginAnimation */,
@@ -890,6 +900,19 @@
 				C598FBE81FE0F67F00B67823 /* ViewController+MASAdditions.m */,
 			);
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		C598FBFF1FE2263400B67823 /* PausePlayAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C598FC001FE2268800B67823 /* FTPausePlayAnimationVC.h */,
+				C598FC011FE2268800B67823 /* FTPausePlayAnimationVC.m */,
+				C598FC061FE2279400B67823 /* IQiYIButton.h */,
+				C598FC071FE2279400B67823 /* IQiYIButton.m */,
+				C598FC091FE2678C00B67823 /* YouKuPlayButton.h */,
+				C598FC0A1FE2678C00B67823 /* YouKuPlayButton.m */,
+			);
+			path = PausePlayAnimation;
 			sourceTree = "<group>";
 		};
 		C59D91B11FB15C0F004550D0 /* Category */ = {
@@ -1355,6 +1378,7 @@
 				C576867D1FAFF66500066AA3 /* UIView+WebCacheOperation.m in Sources */,
 				C57686671FAFF66500066AA3 /* MJRefreshNormalHeader.m in Sources */,
 				C57686751FAFF66500066AA3 /* SDWebImageManager.m in Sources */,
+				C598FC0B1FE2678C00B67823 /* YouKuPlayButton.m in Sources */,
 				C57686681FAFF66500066AA3 /* MJRefreshStateHeader.m in Sources */,
 				C57686661FAFF66500066AA3 /* MJRefreshGifHeader.m in Sources */,
 				C598FBEA1FE0F67F00B67823 /* MASConstraint.m in Sources */,
@@ -1439,6 +1463,7 @@
 				C57686831FAFF66500066AA3 /* MJMethod.m in Sources */,
 				C57686651FAFF66500066AA3 /* MJRefreshBackStateFooter.m in Sources */,
 				C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */,
+				C598FC081FE2279400B67823 /* IQiYIButton.m in Sources */,
 				C5736A951FD945290018BA92 /* FTCustomPushTransitionFirstVC.m in Sources */,
 				C57686701FAFF66500066AA3 /* SDImageCache.m in Sources */,
 				C598FBEC1FE0F67F00B67823 /* MASLayoutConstraint.m in Sources */,
@@ -1449,6 +1474,7 @@
 				C576869C1FAFF8EB00066AA3 /* XMGWaterflowLayout.m in Sources */,
 				C598FBFB1FE1238100B67823 /* UIView+anchorPoint.m in Sources */,
 				C57686811FAFF66500066AA3 /* MJIvar.m in Sources */,
+				C598FC021FE2268800B67823 /* FTPausePlayAnimationVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

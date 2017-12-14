@@ -23,6 +23,7 @@
     
     _loadingView = [[FTCircleLoadingView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     _loadingView.center = self.view.center;
+    [_loadingView setLayerWidth:10];
     [self.view addSubview:_loadingView];
     _loadingView.endBlock = ^() {
 
