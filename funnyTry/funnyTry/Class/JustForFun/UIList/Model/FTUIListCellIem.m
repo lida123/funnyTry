@@ -52,6 +52,8 @@
         return @"XWPageCoverController";
     }else if ([self.classString isEqualToString:@"FTPausePlayAnimationVC"]) {
         return @"iQiYiPlayButton & youKuPlayButon";
+    }else if ([self.classString isEqualToString:@"FTOneLoadingAnimationVC"]) {
+        return @"an interesting animation";
     }
     else {
         

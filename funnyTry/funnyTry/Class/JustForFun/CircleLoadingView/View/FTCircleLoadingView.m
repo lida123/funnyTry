@@ -91,6 +91,7 @@ static CABasicAnimation *loadingView_animation(CFTimeInterval duration,id delega
     layer.lineWidth = self.layerWidth;
     layer.lineCap = kCALineCapRound;
     layer.frame = self.bounds;
+    layer.contentsScale = [UIScreen mainScreen].scale;
 }
 
 // 更新progress

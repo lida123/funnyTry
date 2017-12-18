@@ -85,6 +85,9 @@
 		C57686B61FB069BF00066AA3 /* FTUIListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686B51FB069BF00066AA3 /* FTUIListViewController.m */; };
 		C57686BF1FB07ADB00066AA3 /* FTUIListCellIem.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686BE1FB07ADA00066AA3 /* FTUIListCellIem.m */; };
 		C57686C21FB07B0500066AA3 /* FTUIListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686C11FB07B0500066AA3 /* FTUIListCell.m */; };
+		C58AB6311FE7675900139498 /* FTOneLoadingAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6301FE7675900139498 /* FTOneLoadingAnimationVC.m */; };
+		C58AB6361FE7682F00139498 /* FTOneLoadingAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6351FE7682F00139498 /* FTOneLoadingAnimationView.m */; };
+		C58AB6391FE768B800139498 /* FTLoadingCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6381FE768B800139498 /* FTLoadingCircleLayer.m */; };
 		C598FBE91FE0F67F00B67823 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FBD11FE0F67F00B67823 /* MASCompositeConstraint.m */; };
 		C598FBEA1FE0F67F00B67823 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FBD41FE0F67F00B67823 /* MASConstraint.m */; };
 		C598FBEB1FE0F67F00B67823 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FBD61FE0F67F00B67823 /* MASConstraintMaker.m */; };
@@ -322,6 +325,12 @@
 		C57686BE1FB07ADA00066AA3 /* FTUIListCellIem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTUIListCellIem.m; sourceTree = "<group>"; };
 		C57686C01FB07B0500066AA3 /* FTUIListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTUIListCell.h; sourceTree = "<group>"; };
 		C57686C11FB07B0500066AA3 /* FTUIListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTUIListCell.m; sourceTree = "<group>"; };
+		C58AB62F1FE7675900139498 /* FTOneLoadingAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTOneLoadingAnimationVC.h; sourceTree = "<group>"; };
+		C58AB6301FE7675900139498 /* FTOneLoadingAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTOneLoadingAnimationVC.m; sourceTree = "<group>"; };
+		C58AB6341FE7682F00139498 /* FTOneLoadingAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTOneLoadingAnimationView.h; sourceTree = "<group>"; };
+		C58AB6351FE7682F00139498 /* FTOneLoadingAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTOneLoadingAnimationView.m; sourceTree = "<group>"; };
+		C58AB6371FE768B800139498 /* FTLoadingCircleLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLoadingCircleLayer.h; sourceTree = "<group>"; };
+		C58AB6381FE768B800139498 /* FTLoadingCircleLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLoadingCircleLayer.m; sourceTree = "<group>"; };
 		C598FBD01FE0F67F00B67823 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		C598FBD11FE0F67F00B67823 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		C598FBD21FE0F67F00B67823 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -576,6 +585,7 @@
 		C57685F21FAFF5EA00066AA3 /* JustForFun */ = {
 			isa = PBXGroup;
 			children = (
+				C58AB62E1FE7670E00139498 /* OneLoadingAnimation */,
 				C598FBFF1FE2263400B67823 /* PausePlayAnimation */,
 				C525646B1FDFAB7000BF0EB7 /* DragCell */,
 				C5736A921FD944CB0018BA92 /* PushAnimation */,
@@ -868,6 +878,35 @@
 				C57686BE1FB07ADA00066AA3 /* FTUIListCellIem.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C58AB62E1FE7670E00139498 /* OneLoadingAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C58AB6331FE7676900139498 /* View */,
+				C58AB6321FE7675F00139498 /* Controller */,
+			);
+			path = OneLoadingAnimation;
+			sourceTree = "<group>";
+		};
+		C58AB6321FE7675F00139498 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C58AB62F1FE7675900139498 /* FTOneLoadingAnimationVC.h */,
+				C58AB6301FE7675900139498 /* FTOneLoadingAnimationVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C58AB6331FE7676900139498 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C58AB6341FE7682F00139498 /* FTOneLoadingAnimationView.h */,
+				C58AB6351FE7682F00139498 /* FTOneLoadingAnimationView.m */,
+				C58AB6371FE768B800139498 /* FTLoadingCircleLayer.h */,
+				C58AB6381FE768B800139498 /* FTLoadingCircleLayer.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C598FBCF1FE0F67F00B67823 /* Masonry */ = {
@@ -1408,7 +1447,9 @@
 				C525647D1FDFB9AD00BF0EB7 /* FTChannelCollectionViewCell.m in Sources */,
 				C576866A1FAFF66500066AA3 /* MJRefreshConst.m in Sources */,
 				C576867C1FAFF66500066AA3 /* UIImageView+WebCache.m in Sources */,
+				C58AB6361FE7682F00139498 /* FTOneLoadingAnimationView.m in Sources */,
 				C598FBF01FE0F67F00B67823 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				C58AB6391FE768B800139498 /* FTLoadingCircleLayer.m in Sources */,
 				C59EFF221FB5AC770004E0D4 /* FLAnimatedImage.m in Sources */,
 				C576865D1FAFF66500066AA3 /* MJRefreshComponent.m in Sources */,
 				C57686601FAFF66500066AA3 /* MJRefreshAutoGifFooter.m in Sources */,
@@ -1443,6 +1484,7 @@
 				C57686761FAFF66500066AA3 /* SDWebImagePrefetcher.m in Sources */,
 				C576866C1FAFF66500066AA3 /* UIScrollView+MJRefresh.m in Sources */,
 				C5F5E5231FAC372B009FB8D3 /* FTTabBarController.m in Sources */,
+				C58AB6311FE7675900139498 /* FTOneLoadingAnimationVC.m in Sources */,
 				C57686631FAFF66500066AA3 /* MJRefreshBackGifFooter.m in Sources */,
 				C576865F1FAFF66500066AA3 /* MJRefreshHeader.m in Sources */,
 				C57686BF1FB07ADB00066AA3 /* FTUIListCellIem.m in Sources */,
