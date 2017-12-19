@@ -54,6 +54,8 @@
         return @"iQiYiPlayButton & youKuPlayButon";
     }else if ([self.classString isEqualToString:@"FTOneLoadingAnimationVC"]) {
         return @"an interesting animation";
+    }else if ([self.classString isEqualToString:@"FTLetterPathViewController"]) {
+        return  @"writing path animation";
     }
     else {
         

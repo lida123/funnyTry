@@ -14,6 +14,9 @@
 		C525647A1FDFB0AF00BF0EB7 /* FTChannelCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52564791FDFB0AF00BF0EB7 /* FTChannelCollectionView.m */; };
 		C525647D1FDFB9AD00BF0EB7 /* FTChannelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C525647C1FDFB9AD00BF0EB7 /* FTChannelCollectionViewCell.m */; };
 		C52564801FDFC80E00BF0EB7 /* FTChannelHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C525647F1FDFC80E00BF0EB7 /* FTChannelHeaderView.m */; };
+		C52BACBA1FE8F98900ED9E10 /* FTLetterPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C52BACB91FE8F98900ED9E10 /* FTLetterPathViewController.m */; };
+		C52BACBC1FE8FE1500ED9E10 /* noun_project_347_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C52BACBB1FE8FE1500ED9E10 /* noun_project_347_2.png */; };
+		C52BACC01FE902C300ED9E10 /* GQPlayGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52BACBF1FE902C300ED9E10 /* GQPlayGifView.m */; };
 		C5616C111FA8777E00A9C033 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C101FA8777E00A9C033 /* AppDelegate.m */; };
 		C5616C191FA8777E00A9C033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5616C181FA8777E00A9C033 /* Assets.xcassets */; };
 		C5616C1F1FA8777E00A9C033 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C1E1FA8777E00A9C033 /* main.m */; };
@@ -180,6 +183,11 @@
 		C525647C1FDFB9AD00BF0EB7 /* FTChannelCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTChannelCollectionViewCell.m; sourceTree = "<group>"; };
 		C525647E1FDFC80E00BF0EB7 /* FTChannelHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTChannelHeaderView.h; sourceTree = "<group>"; };
 		C525647F1FDFC80E00BF0EB7 /* FTChannelHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTChannelHeaderView.m; sourceTree = "<group>"; };
+		C52BACB81FE8F98900ED9E10 /* FTLetterPathViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLetterPathViewController.h; sourceTree = "<group>"; };
+		C52BACB91FE8F98900ED9E10 /* FTLetterPathViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLetterPathViewController.m; sourceTree = "<group>"; };
+		C52BACBB1FE8FE1500ED9E10 /* noun_project_347_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noun_project_347_2.png; sourceTree = "<group>"; };
+		C52BACBE1FE902C300ED9E10 /* GQPlayGifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPlayGifView.h; sourceTree = "<group>"; };
+		C52BACBF1FE902C300ED9E10 /* GQPlayGifView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQPlayGifView.m; sourceTree = "<group>"; };
 		C5616C0C1FA8777E00A9C033 /* funnyTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funnyTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5616C0F1FA8777E00A9C033 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5616C101FA8777E00A9C033 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; usesTabs = 0; };
@@ -499,6 +507,25 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		C52BACB71FE8F8AE00ED9E10 /* LetterPath */ = {
+			isa = PBXGroup;
+			children = (
+				C52BACBB1FE8FE1500ED9E10 /* noun_project_347_2.png */,
+				C52BACB81FE8F98900ED9E10 /* FTLetterPathViewController.h */,
+				C52BACB91FE8F98900ED9E10 /* FTLetterPathViewController.m */,
+			);
+			path = LetterPath;
+			sourceTree = "<group>";
+		};
+		C52BACBD1FE902B500ED9E10 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				C52BACBE1FE902C300ED9E10 /* GQPlayGifView.h */,
+				C52BACBF1FE902C300ED9E10 /* GQPlayGifView.m */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
 		C5616C031FA8777E00A9C033 = {
 			isa = PBXGroup;
 			children = (
@@ -585,6 +612,7 @@
 		C57685F21FAFF5EA00066AA3 /* JustForFun */ = {
 			isa = PBXGroup;
 			children = (
+				C52BACB71FE8F8AE00ED9E10 /* LetterPath */,
 				C58AB62E1FE7670E00139498 /* OneLoadingAnimation */,
 				C598FBFF1FE2263400B67823 /* PausePlayAnimation */,
 				C525646B1FDFAB7000BF0EB7 /* DragCell */,
@@ -1060,6 +1088,7 @@
 		C59EFF1B1FB5A3BB0004E0D4 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				C52BACBD1FE902B500ED9E10 /* UIImageView */,
 				C5AD1A501FD14D7A00A7EE86 /* Transitioning */,
 				C59D91B11FB15C0F004550D0 /* Category */,
 			);
@@ -1359,6 +1388,7 @@
 				C5AD1A481FD1389700A7EE86 /* 5.m4a in Resources */,
 				C5AD1A491FD1389700A7EE86 /* 6.m4a in Resources */,
 				C5AD1A451FD1389700A7EE86 /* 2.m4a in Resources */,
+				C52BACBC1FE8FE1500ED9E10 /* noun_project_347_2.png in Resources */,
 				C5736A9C1FD945D60018BA92 /* pic2.jpeg in Resources */,
 				C5AD1A3F1FD1389700A7EE86 /* 10.m4a in Resources */,
 				C59D91C11FB18245004550D0 /* tabbar_discover_nor@3x.png in Resources */,
@@ -1459,6 +1489,7 @@
 				C576865C1FAFF66500066AA3 /* MJRefreshBackFooter.m in Sources */,
 				C576869A1FAFF8EB00066AA3 /* XMGShop.m in Sources */,
 				C5736A981FD945410018BA92 /* FTCustomPushTransitionSecondVC.m in Sources */,
+				C52BACBA1FE8F98900ED9E10 /* FTLetterPathViewController.m in Sources */,
 				C576867B1FAFF66500066AA3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				C5B8C4361FBD669800037249 /* FTCircleLoadingViewController.m in Sources */,
 				C5D138171FCFFA1E009EC87E /* FTLoginViewController.m in Sources */,
@@ -1509,6 +1540,7 @@
 				C5736A951FD945290018BA92 /* FTCustomPushTransitionFirstVC.m in Sources */,
 				C57686701FAFF66500066AA3 /* SDImageCache.m in Sources */,
 				C598FBEC1FE0F67F00B67823 /* MASLayoutConstraint.m in Sources */,
+				C52BACC01FE902C300ED9E10 /* GQPlayGifView.m in Sources */,
 				C57686861FAFF66500066AA3 /* NSObject+MJCoding.m in Sources */,
 				C59D91E11FB18DD3004550D0 /* SVRadialGradientLayer.m in Sources */,
 				C576865B1FAFF66500066AA3 /* MJRefreshAutoFooter.m in Sources */,
