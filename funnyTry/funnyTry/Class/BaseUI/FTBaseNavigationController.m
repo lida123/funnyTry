@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    self.interactivePopGestureRecognizer.delegate = nil;
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
@@ -59,15 +59,17 @@
             [disappearController performSelector:@selector(ft_navigationControllerDidHideMe)];
         }
     }
+    
+    BOOL isRootVC = (viewController == navigationController.viewControllers.firstObject);
+    navigationController.interactivePopGestureRecognizer.enabled = !isRootVC;
+    
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (self.childViewControllers.count > 0) {
         viewController.hidesBottomBarWhenPushed = YES;
-        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
-    }else {
-        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     }
+    
     [super pushViewController:viewController animated:animated];
 }
 

@@ -19,10 +19,8 @@ static NSString * const GQGifAnimationKey = @"GQGifAnimationKey";
     CGFloat _gifHeight;
 }
 
-static void getFrameInfo(CGImageSourceRef CF_RELEASES_ARGUMENT source,NSMutableArray* frames,NSMutableArray* framesDelayTimes,CGFloat* totalTime ,CGFloat * gifWidth,CGFloat * gifHeight) {
-    if (source == NULL || frames == NULL || framesDelayTimes == NULL || totalTime == NULL || gifWidth == NULL || gifWidth == NULL) {
-        return;
-    }
+static void getFrameInfo(CGImageSourceRef CF_RELEASES_ARGUMENT source, NSMutableArray *frames, NSMutableArray *framesDelayTimes, CGFloat *totalTime, CGFloat *gifWidth, CGFloat *gifHeight) {
+    if (source == NULL || frames == NULL || framesDelayTimes == NULL || totalTime == NULL || gifWidth == NULL || gifWidth == NULL) { return; }
     
     size_t imageCount = CGImageSourceGetCount(source);
     for (NSInteger i = 0; i < imageCount; i++) {
@@ -30,20 +28,30 @@ static void getFrameInfo(CGImageSourceRef CF_RELEASES_ARGUMENT source,NSMutableA
         if (frame) {
             [frames addObject:(__bridge id _Nonnull)(frame)];
         }
-        CGImageRelease(frame);
         
-        NSDictionary * dic = (NSDictionary*)CFBridgingRelease(CGImageSourceCopyPropertiesAtIndex(source, i, NULL));
-        NSDictionary * gifDic = dic[(NSString*)kCGImagePropertyGIFDictionary];
-    
-        *gifWidth = [dic[(NSString*)kCGImagePropertyPixelWidth] floatValue];
-        *gifHeight = [dic[(NSString*)kCGImagePropertyPixelHeight] floatValue];
+        CFDictionaryRef sourcePropertyRef = CGImageSourceCopyPropertiesAtIndex(source, i, NULL);
+        CFDictionaryRef gifPropertyRef = CFDictionaryGetValue(sourcePropertyRef, kCGImagePropertyGIFDictionary);
         
-        NSString * delayTime = gifDic[(NSString*)kCGImagePropertyGIFDelayTime];
-        if (delayTime) {
-            NSLog(@"%@",delayTime);
-            [framesDelayTimes addObject:delayTime];
-            *totalTime = *totalTime + delayTime.floatValue;
+        CFTypeRef width = CFDictionaryGetValue(sourcePropertyRef, kCGImagePropertyPixelWidth);
+        if (width) {
+            CFNumberGetValue(width, kCFNumberLongType, gifWidth);
         }
+        
+        CFTypeRef height = CFDictionaryGetValue(sourcePropertyRef, kCGImagePropertyPixelHeight);
+        if (height) {
+            CFNumberGetValue(height, kCFNumberLongType, gifWidth);
+        }
+        
+        if (gifPropertyRef) {
+            NSString* time = (NSString*)CFDictionaryGetValue(gifPropertyRef, kCGImagePropertyGIFDelayTime);
+            if (time.floatValue > 0) {
+                NSLog(@"%@",time);
+                [framesDelayTimes addObject:time];
+                *totalTime = *totalTime + time.floatValue;
+            }
+        }
+        CGImageRelease(frame);
+        CFRelease(sourcePropertyRef);
     }
     CFRelease(source);
 }
@@ -64,7 +72,7 @@ static void getFrameInfo(CGImageSourceRef CF_RELEASES_ARGUMENT source,NSMutableA
         _frames = [NSMutableArray array];
         _framesDelayTimes = [NSMutableArray array];
         // 填充属性
-         getFrameInfo(CGImageSourceCreateWithData((CFDataRef)gifData, NULL), _frames, _framesDelayTimes, &_totalTime, &_gifWidth, &_gifHeight);
+        getFrameInfo(CGImageSourceCreateWithData((CFDataRef)gifData, NULL), _frames, _framesDelayTimes, &_totalTime, &_gifWidth, &_gifHeight);
         self.bounds = CGRectMake(0, 0, _gifWidth, _gifHeight);
     }
     return self;

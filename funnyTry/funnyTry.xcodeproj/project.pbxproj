@@ -16,7 +16,8 @@
 		C52564801FDFC80E00BF0EB7 /* FTChannelHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C525647F1FDFC80E00BF0EB7 /* FTChannelHeaderView.m */; };
 		C52BACBA1FE8F98900ED9E10 /* FTLetterPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C52BACB91FE8F98900ED9E10 /* FTLetterPathViewController.m */; };
 		C52BACBC1FE8FE1500ED9E10 /* noun_project_347_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C52BACBB1FE8FE1500ED9E10 /* noun_project_347_2.png */; };
-		C52BACC01FE902C300ED9E10 /* GQPlayGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52BACBF1FE902C300ED9E10 /* GQPlayGifView.m */; };
+		C52BACE21FE9310200ED9E10 /* BLEH.gif in Resources */ = {isa = PBXBuildFile; fileRef = C52BACE11FE9310200ED9E10 /* BLEH.gif */; };
+		C52BACEE1FEA464100ED9E10 /* GQPlayGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52BACEC1FEA464100ED9E10 /* GQPlayGifView.m */; };
 		C5616C111FA8777E00A9C033 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C101FA8777E00A9C033 /* AppDelegate.m */; };
 		C5616C191FA8777E00A9C033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5616C181FA8777E00A9C033 /* Assets.xcassets */; };
 		C5616C1F1FA8777E00A9C033 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C1E1FA8777E00A9C033 /* main.m */; };
@@ -186,8 +187,9 @@
 		C52BACB81FE8F98900ED9E10 /* FTLetterPathViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLetterPathViewController.h; sourceTree = "<group>"; };
 		C52BACB91FE8F98900ED9E10 /* FTLetterPathViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLetterPathViewController.m; sourceTree = "<group>"; };
 		C52BACBB1FE8FE1500ED9E10 /* noun_project_347_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noun_project_347_2.png; sourceTree = "<group>"; };
-		C52BACBE1FE902C300ED9E10 /* GQPlayGifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPlayGifView.h; sourceTree = "<group>"; };
-		C52BACBF1FE902C300ED9E10 /* GQPlayGifView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQPlayGifView.m; sourceTree = "<group>"; };
+		C52BACE11FE9310200ED9E10 /* BLEH.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BLEH.gif; sourceTree = "<group>"; };
+		C52BACEC1FEA464100ED9E10 /* GQPlayGifView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQPlayGifView.m; sourceTree = "<group>"; };
+		C52BACED1FEA464100ED9E10 /* GQPlayGifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPlayGifView.h; sourceTree = "<group>"; };
 		C5616C0C1FA8777E00A9C033 /* funnyTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funnyTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5616C0F1FA8777E00A9C033 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5616C101FA8777E00A9C033 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; usesTabs = 0; };
@@ -510,6 +512,7 @@
 		C52BACB71FE8F8AE00ED9E10 /* LetterPath */ = {
 			isa = PBXGroup;
 			children = (
+				C52BACE11FE9310200ED9E10 /* BLEH.gif */,
 				C52BACBB1FE8FE1500ED9E10 /* noun_project_347_2.png */,
 				C52BACB81FE8F98900ED9E10 /* FTLetterPathViewController.h */,
 				C52BACB91FE8F98900ED9E10 /* FTLetterPathViewController.m */,
@@ -520,8 +523,8 @@
 		C52BACBD1FE902B500ED9E10 /* UIImageView */ = {
 			isa = PBXGroup;
 			children = (
-				C52BACBE1FE902C300ED9E10 /* GQPlayGifView.h */,
-				C52BACBF1FE902C300ED9E10 /* GQPlayGifView.m */,
+				C52BACED1FEA464100ED9E10 /* GQPlayGifView.h */,
+				C52BACEC1FEA464100ED9E10 /* GQPlayGifView.m */,
 			);
 			path = UIImageView;
 			sourceTree = "<group>";
@@ -1408,6 +1411,7 @@
 				C5AD1A421FD1389700A7EE86 /* 13.m4a in Resources */,
 				C59D91BF1FB18245004550D0 /* tabbar_discover_nor@2x.png in Resources */,
 				C5AD1A471FD1389700A7EE86 /* 4.m4a in Resources */,
+				C52BACE21FE9310200ED9E10 /* BLEH.gif in Resources */,
 				C59EFF241FB5AC770004E0D4 /* Info.plist in Resources */,
 				C5AD1A551FD14DF100A7EE86 /* pic1.jpg in Resources */,
 				C5AD1A441FD1389700A7EE86 /* 15.m4a in Resources */,
@@ -1540,7 +1544,7 @@
 				C5736A951FD945290018BA92 /* FTCustomPushTransitionFirstVC.m in Sources */,
 				C57686701FAFF66500066AA3 /* SDImageCache.m in Sources */,
 				C598FBEC1FE0F67F00B67823 /* MASLayoutConstraint.m in Sources */,
-				C52BACC01FE902C300ED9E10 /* GQPlayGifView.m in Sources */,
+				C52BACEE1FEA464100ED9E10 /* GQPlayGifView.m in Sources */,
 				C57686861FAFF66500066AA3 /* NSObject+MJCoding.m in Sources */,
 				C59D91E11FB18DD3004550D0 /* SVRadialGradientLayer.m in Sources */,
 				C576865B1FAFF66500066AA3 /* MJRefreshAutoFooter.m in Sources */,

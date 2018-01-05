@@ -35,6 +35,13 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
     [self.imageView addGestureRecognizer:tap];
     [self.view addSubview:self.imageView];
+    
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ScanQRCodeAction"] style:UIBarButtonItemStylePlain target:self action:@selector(leftItemClick)];
+}
+
+- (void)leftItemClick {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /* 给纯黑的二维码变色 */

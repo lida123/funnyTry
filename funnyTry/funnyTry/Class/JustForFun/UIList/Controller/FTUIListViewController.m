@@ -9,6 +9,7 @@
 #import "FTUIListViewController.h"
 #import "FTUIListCell.h"
 #import "FBShimmeringView.h"
+#import "FTBaseNavigationController.h"
 
 @interface FTUIListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
