@@ -27,9 +27,6 @@
     imageView.image = [UIImage sd_animatedGIFNamed:@"BLEH"];
     [self.view addSubview:imageView];
     [self addShadowToView:imageView withOpacity:1 shadowRadius:10 andCornerRadius:10];
-    
-    
-    
 }
 
 /*

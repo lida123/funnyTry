@@ -7,7 +7,7 @@
 //
 
 #import "FTBaseNavigationController.h"
-#import "UIViewController+FTBaseNavigationControllerNotice.h"
+#import "FTBaseNavigationControllerNotice.h"
 
 @interface FTBaseNavigationController ()<UINavigationControllerDelegate>
 
@@ -41,7 +41,6 @@
         if ([disappearController respondsToSelector:@selector(ft_navigationControllerWillHideMe)]) {
             [disappearController performSelector:@selector(ft_navigationControllerWillHideMe)];
         }
-        
     }
 }
 
