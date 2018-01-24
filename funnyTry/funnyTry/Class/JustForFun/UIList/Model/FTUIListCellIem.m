@@ -56,6 +56,8 @@
         return @"an interesting animation";
     }else if ([self.classString isEqualToString:@"FTLetterPathViewController"]) {
         return  @"writing path animation";
+    }else if ([self.classString isEqualToString:@"FTCornerRadiusController test"]) {
+        return  @"writing path animation";
     }
     else {
         
