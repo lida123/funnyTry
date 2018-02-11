@@ -8,8 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FTTabBarController.h"
-// m增加了一行
-// m又增加了一行
+
 @interface AppDelegate ()
 
 @end

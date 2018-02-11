@@ -89,6 +89,8 @@
 		C57686B61FB069BF00066AA3 /* FTUIListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686B51FB069BF00066AA3 /* FTUIListViewController.m */; };
 		C57686BF1FB07ADB00066AA3 /* FTUIListCellIem.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686BE1FB07ADA00066AA3 /* FTUIListCellIem.m */; };
 		C57686C21FB07B0500066AA3 /* FTUIListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686C11FB07B0500066AA3 /* FTUIListCell.m */; };
+		C57B970E2030086C009568CA /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = C57B970D2030086C009568CA /* abc.png */; };
+		C57B971020300D49009568CA /* ftkaiti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C57B970F20300D49009568CA /* ftkaiti.ttf */; };
 		C58AB6311FE7675900139498 /* FTOneLoadingAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6301FE7675900139498 /* FTOneLoadingAnimationVC.m */; };
 		C58AB6361FE7682F00139498 /* FTOneLoadingAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6351FE7682F00139498 /* FTOneLoadingAnimationView.m */; };
 		C58AB6391FE768B800139498 /* FTLoadingCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6381FE768B800139498 /* FTLoadingCircleLayer.m */; };
@@ -336,6 +338,8 @@
 		C57686BE1FB07ADA00066AA3 /* FTUIListCellIem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTUIListCellIem.m; sourceTree = "<group>"; };
 		C57686C01FB07B0500066AA3 /* FTUIListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTUIListCell.h; sourceTree = "<group>"; };
 		C57686C11FB07B0500066AA3 /* FTUIListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTUIListCell.m; sourceTree = "<group>"; };
+		C57B970D2030086C009568CA /* abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc.png; sourceTree = "<group>"; };
+		C57B970F20300D49009568CA /* ftkaiti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ftkaiti.ttf; sourceTree = "<group>"; };
 		C58AB62F1FE7675900139498 /* FTOneLoadingAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTOneLoadingAnimationVC.h; sourceTree = "<group>"; };
 		C58AB6301FE7675900139498 /* FTOneLoadingAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTOneLoadingAnimationVC.m; sourceTree = "<group>"; };
 		C58AB6341FE7682F00139498 /* FTOneLoadingAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTOneLoadingAnimationView.h; sourceTree = "<group>"; };
@@ -516,6 +520,7 @@
 		C52BACB71FE8F8AE00ED9E10 /* LetterPath */ = {
 			isa = PBXGroup;
 			children = (
+				C57B970D2030086C009568CA /* abc.png */,
 				C52BACE11FE9310200ED9E10 /* BLEH.gif */,
 				C52BACBB1FE8FE1500ED9E10 /* noun_project_347_2.png */,
 				C52BACB81FE8F98900ED9E10 /* FTLetterPathViewController.h */,
@@ -556,6 +561,7 @@
 		C5616C0E1FA8777E00A9C033 /* funnyTry */ = {
 			isa = PBXGroup;
 			children = (
+				C57B970F20300D49009568CA /* ftkaiti.ttf */,
 				C5AD1A2E1FD1389600A7EE86 /* video */,
 				C5616C0F1FA8777E00A9C033 /* AppDelegate.h */,
 				C5616C101FA8777E00A9C033 /* AppDelegate.m */,
@@ -1414,6 +1420,7 @@
 				C5AD1A481FD1389700A7EE86 /* 5.m4a in Resources */,
 				C5AD1A491FD1389700A7EE86 /* 6.m4a in Resources */,
 				C5AD1A451FD1389700A7EE86 /* 2.m4a in Resources */,
+				C57B971020300D49009568CA /* ftkaiti.ttf in Resources */,
 				C52BACBC1FE8FE1500ED9E10 /* noun_project_347_2.png in Resources */,
 				C5736A9C1FD945D60018BA92 /* pic2.jpeg in Resources */,
 				C5AD1A3F1FD1389700A7EE86 /* 10.m4a in Resources */,
@@ -1422,6 +1429,7 @@
 				C59D91C21FB18245004550D0 /* tabbar_discover_sel@2x.png in Resources */,
 				C57686691FAFF66500066AA3 /* MJRefresh.bundle in Resources */,
 				C5AD1A411FD1389700A7EE86 /* 12.m4a in Resources */,
+				C57B970E2030086C009568CA /* abc.png in Resources */,
 				C59D91C01FB18245004550D0 /* tabbar_discover_sel@3x.png in Resources */,
 				C5AD1A461FD1389700A7EE86 /* 3.m4a in Resources */,
 				C59D91DF1FB18DD3004550D0 /* SVProgressHUD.bundle in Resources */,
