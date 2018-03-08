@@ -8,12 +8,13 @@
 
 #import "FTWaterfallViewController.h"
 #import "XMGWaterflowLayout.h"
+#import "FTWaterfallLayout.h"
 #import "XMGShop.h"
 #import "MJExtension.h"
 #import "MJRefresh.h"
 #import "XMGShopCell.h"
 
-@interface FTWaterfallViewController () <UICollectionViewDataSource, XMGWaterflowLayoutDelegate>
+@interface FTWaterfallViewController () <UICollectionViewDataSource, FTWaterfallLayoutDelegate>
 /** 所有的商品数据 */
 @property (nonatomic, strong) NSMutableArray *shops;
 
@@ -32,18 +33,13 @@
 
 static NSString * const XMGShopId = @"shop";
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     [self setupLayout];
     
     [self setupRefresh];
-    
-    UILabel *lb = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, 200, 20)];
-    NSNumber *num = [[NSUserDefaults standardUserDefaults] objectForKey:@"count"];
-    lb.text = num.stringValue;
-    lb.textColor = [UIColor purpleColor];
-    [self.view addSubview:lb];
 }
 
 - (void)setupRefresh
@@ -85,7 +81,7 @@ static NSString * const XMGShopId = @"shop";
 - (void)setupLayout
 {
     // 创建布局
-    XMGWaterflowLayout *layout = [[XMGWaterflowLayout alloc] init];
+    FTWaterfallLayout *layout = [[FTWaterfallLayout alloc] init];
     layout.delegate = self;
     
     // 创建CollectionView
@@ -117,24 +113,26 @@ static NSString * const XMGShopId = @"shop";
 }
 
 #pragma mark - <XMGWaterflowLayoutDelegate>
-- (CGFloat)waterflowLayout:(XMGWaterflowLayout *)waterflowLayout heightForItemAtIndex:(NSUInteger)index itemWidth:(CGFloat)itemWidth
+- (CGFloat)waterfallLayout:(FTWaterfallLayout *)waterfallLayout heightForItemAtIndexPath:(NSIndexPath *)indexPath itemWidth:(CGFloat)itemWidth
 {
-    XMGShop *shop = self.shops[index];
-    
-    return itemWidth * shop.h / shop.w;
+    if (indexPath.item < self.shops.count) {
+        XMGShop *shop = self.shops[indexPath.item];
+        return itemWidth * shop.h / shop.w;
+    }
+    return 1;
 }
 
-- (CGFloat)rowMarginInWaterflowLayout:(XMGWaterflowLayout *)waterflowLayout
+- (CGFloat)rowMarginInWaterfallLayout:(FTWaterfallLayout *)waterfallLayout
 {
     return 20;
 }
 
-- (CGFloat)columnCountInWaterflowLayout:(XMGWaterflowLayout *)waterflowLayout
+- (CGFloat)columnMarginInWaterfallLayout:(FTWaterfallLayout *)waterfallLayout
 {
     return 3;
 }
 
-- (UIEdgeInsets)edgeInsetsInWaterflowLayout:(XMGWaterflowLayout *)waterflowLayout
+- (UIEdgeInsets)edgeInsetsInWaterfallLayout:(FTWaterfallLayout *)waterfallLayout
 {
     return UIEdgeInsetsMake(10, 10, 10, 10);
 }

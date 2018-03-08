@@ -18,6 +18,7 @@
 		C52BACBC1FE8FE1500ED9E10 /* noun_project_347_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C52BACBB1FE8FE1500ED9E10 /* noun_project_347_2.png */; };
 		C52BACE21FE9310200ED9E10 /* BLEH.gif in Resources */ = {isa = PBXBuildFile; fileRef = C52BACE11FE9310200ED9E10 /* BLEH.gif */; };
 		C52BACEE1FEA464100ED9E10 /* GQPlayGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52BACEC1FEA464100ED9E10 /* GQPlayGifView.m */; };
+		C54E4A5D2050DDC8001F17D7 /* FTWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C54E4A5C2050DDC8001F17D7 /* FTWaterfallLayout.m */; };
 		C5616C111FA8777E00A9C033 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C101FA8777E00A9C033 /* AppDelegate.m */; };
 		C5616C191FA8777E00A9C033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5616C181FA8777E00A9C033 /* Assets.xcassets */; };
 		C5616C1F1FA8777E00A9C033 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C1E1FA8777E00A9C033 /* main.m */; };
@@ -191,6 +192,8 @@
 		C52BACE11FE9310200ED9E10 /* BLEH.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BLEH.gif; sourceTree = "<group>"; };
 		C52BACEC1FEA464100ED9E10 /* GQPlayGifView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQPlayGifView.m; sourceTree = "<group>"; };
 		C52BACED1FEA464100ED9E10 /* GQPlayGifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPlayGifView.h; sourceTree = "<group>"; };
+		C54E4A5B2050DDC8001F17D7 /* FTWaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTWaterfallLayout.h; sourceTree = "<group>"; };
+		C54E4A5C2050DDC8001F17D7 /* FTWaterfallLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTWaterfallLayout.m; sourceTree = "<group>"; };
 		C5616C0C1FA8777E00A9C033 /* funnyTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funnyTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5616C0F1FA8777E00A9C033 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5616C101FA8777E00A9C033 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; usesTabs = 0; };
@@ -888,6 +891,8 @@
 		C57686BA1FB0746B00066AA3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C54E4A5B2050DDC8001F17D7 /* FTWaterfallLayout.h */,
+				C54E4A5C2050DDC8001F17D7 /* FTWaterfallLayout.m */,
 				C57686941FAFF8EA00066AA3 /* XMGWaterflowLayout.h */,
 				C57686951FAFF8EB00066AA3 /* XMGWaterflowLayout.m */,
 				C57686981FAFF8EB00066AA3 /* XMGShopCell.h */,
@@ -1502,6 +1507,7 @@
 				C51112CA1FD63800008AD74F /* FTGlobal.m in Sources */,
 				C59D91B81FB17DB2004550D0 /* FTBaseNavigationController.m in Sources */,
 				C525647D1FDFB9AD00BF0EB7 /* FTChannelCollectionViewCell.m in Sources */,
+				C54E4A5D2050DDC8001F17D7 /* FTWaterfallLayout.m in Sources */,
 				C576866A1FAFF66500066AA3 /* MJRefreshConst.m in Sources */,
 				C576867C1FAFF66500066AA3 /* UIImageView+WebCache.m in Sources */,
 				C58AB6361FE7682F00139498 /* FTOneLoadingAnimationView.m in Sources */,
