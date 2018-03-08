@@ -79,8 +79,8 @@ static const CGFloat FTDefaultColumnMargin = 10;
 
     UICollectionViewLayoutAttributes *attri = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     attri.frame = CGRectMake(x, y, width, height);
-    NSLog(@"%zd",destIndex);
-    // 更新最短那列的高度
+    
+    // update minimum column height
     self.columnMaxYArray[destIndex] = @(CGRectGetMaxY(attri.frame));
     
     return attri;
@@ -91,6 +91,7 @@ static const CGFloat FTDefaultColumnMargin = 10;
         return CGSizeZero;
     }
     
+    // find out maximum column
     CGFloat destHieght = [self.columnMaxYArray[0] floatValue];
     for (NSInteger i = 1; i < self.columnMaxYArray.count; i++) {
         CGFloat columnMaxY = [self.columnMaxYArray[i] floatValue];
@@ -137,6 +138,7 @@ static const CGFloat FTDefaultColumnMargin = 10;
     
     return FTDefaultColumnMargin;
 }
+
 #pragma mark -lazy initialize
 - (NSMutableArray *)layoutAttributesArray
 {
@@ -152,10 +154,6 @@ static const CGFloat FTDefaultColumnMargin = 10;
         _columnMaxYArray = [NSMutableArray array];
     }
     return _columnMaxYArray;
-}
-
--(void)dealloc {
-    
 }
 
 @end

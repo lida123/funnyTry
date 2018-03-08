@@ -80,7 +80,6 @@
 		C57686911FAFF75C00066AA3 /* FTWaterfallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686901FAFF75C00066AA3 /* FTWaterfallViewController.m */; };
 		C576869A1FAFF8EB00066AA3 /* XMGShop.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686921FAFF8EA00066AA3 /* XMGShop.m */; };
 		C576869B1FAFF8EB00066AA3 /* XMGShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C57686931FAFF8EA00066AA3 /* XMGShopCell.xib */; };
-		C576869C1FAFF8EB00066AA3 /* XMGWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686951FAFF8EB00066AA3 /* XMGWaterflowLayout.m */; };
 		C576869D1FAFF8EB00066AA3 /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57686971FAFF8EB00066AA3 /* 1.plist */; };
 		C576869E1FAFF8EB00066AA3 /* XMGShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686991FAFF8EB00066AA3 /* XMGShopCell.m */; };
 		C57686A51FB02D5000066AA3 /* planList.txt in Resources */ = {isa = PBXBuildFile; fileRef = C57686A41FB02D5000066AA3 /* planList.txt */; };
@@ -317,8 +316,6 @@
 		C57686901FAFF75C00066AA3 /* FTWaterfallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTWaterfallViewController.m; sourceTree = "<group>"; };
 		C57686921FAFF8EA00066AA3 /* XMGShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGShop.m; sourceTree = "<group>"; };
 		C57686931FAFF8EA00066AA3 /* XMGShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGShopCell.xib; sourceTree = "<group>"; };
-		C57686941FAFF8EA00066AA3 /* XMGWaterflowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWaterflowLayout.h; sourceTree = "<group>"; };
-		C57686951FAFF8EB00066AA3 /* XMGWaterflowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWaterflowLayout.m; sourceTree = "<group>"; };
 		C57686961FAFF8EB00066AA3 /* XMGShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGShop.h; sourceTree = "<group>"; };
 		C57686971FAFF8EB00066AA3 /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
 		C57686981FAFF8EB00066AA3 /* XMGShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGShopCell.h; sourceTree = "<group>"; };
@@ -632,20 +629,20 @@
 				C5B8C4331FBD663100037249 /* CircleLoadingView */,
 				C59D91E21FB448BC004550D0 /* FlowMountain */,
 				C59D91C71FB18965004550D0 /* Scan */,
-				C57685F31FAFF62B00066AA3 /* WaterFlow */,
+				C57685F31FAFF62B00066AA3 /* WaterfallLayout */,
 				C57686AF1FB02E9A00066AA3 /* UIList */,
 			);
 			path = JustForFun;
 			sourceTree = "<group>";
 		};
-		C57685F31FAFF62B00066AA3 /* WaterFlow */ = {
+		C57685F31FAFF62B00066AA3 /* WaterfallLayout */ = {
 			isa = PBXGroup;
 			children = (
 				C57686B91FB0743300066AA3 /* Controller */,
 				C57686BA1FB0746B00066AA3 /* View */,
 				C57686BB1FB0748500066AA3 /* Model */,
 			);
-			path = WaterFlow;
+			path = WaterfallLayout;
 			sourceTree = "<group>";
 		};
 		C57685F41FAFF66500066AA3 /* MJRefresh */ = {
@@ -893,8 +890,6 @@
 			children = (
 				C54E4A5B2050DDC8001F17D7 /* FTWaterfallLayout.h */,
 				C54E4A5C2050DDC8001F17D7 /* FTWaterfallLayout.m */,
-				C57686941FAFF8EA00066AA3 /* XMGWaterflowLayout.h */,
-				C57686951FAFF8EB00066AA3 /* XMGWaterflowLayout.m */,
 				C57686981FAFF8EB00066AA3 /* XMGShopCell.h */,
 				C57686991FAFF8EB00066AA3 /* XMGShopCell.m */,
 				C57686931FAFF8EA00066AA3 /* XMGShopCell.xib */,
@@ -1579,7 +1574,6 @@
 				C576865B1FAFF66500066AA3 /* MJRefreshAutoFooter.m in Sources */,
 				C5F4811D2006329F00A8BE97 /* FTCornerRadiusController.m in Sources */,
 				C5616C111FA8777E00A9C033 /* AppDelegate.m in Sources */,
-				C576869C1FAFF8EB00066AA3 /* XMGWaterflowLayout.m in Sources */,
 				C598FBFB1FE1238100B67823 /* UIView+anchorPoint.m in Sources */,
 				C57686811FAFF66500066AA3 /* MJIvar.m in Sources */,
 				C598FC021FE2268800B67823 /* FTPausePlayAnimationVC.m in Sources */,

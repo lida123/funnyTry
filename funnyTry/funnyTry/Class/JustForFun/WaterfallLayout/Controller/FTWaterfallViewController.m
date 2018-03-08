@@ -15,27 +15,19 @@
 #import "XMGShopCell.h"
 
 @interface FTWaterfallViewController () <UICollectionViewDataSource, FTWaterfallLayoutDelegate>
-/** 所有的商品数据 */
 @property (nonatomic, strong) NSMutableArray *shops;
-
 @property (nonatomic, weak) UICollectionView *collectionView;
 @end
 
 @implementation FTWaterfallViewController
-
-- (NSMutableArray *)shops
-{
-    if (!_shops) {
-        _shops = [NSMutableArray array];
-    }
-    return _shops;
-}
 
 static NSString * const XMGShopId = @"shop";
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    _shops = [NSMutableArray array];
     
     [self setupLayout];
     
@@ -58,7 +50,6 @@ static NSString * const XMGShopId = @"shop";
         [self.shops removeAllObjects];
         [self.shops addObjectsFromArray:shops];
         
-        // 刷新数据
         [self.collectionView reloadData];
         
         [self.collectionView.header endRefreshing];
@@ -71,7 +62,6 @@ static NSString * const XMGShopId = @"shop";
         NSArray *shops = [XMGShop objectArrayWithFilename:@"1.plist"];
         [self.shops addObjectsFromArray:shops];
         
-        // 刷新数据
         [self.collectionView reloadData];
         
         [self.collectionView.footer endRefreshing];
@@ -80,17 +70,14 @@ static NSString * const XMGShopId = @"shop";
 
 - (void)setupLayout
 {
-    // 创建布局
     FTWaterfallLayout *layout = [[FTWaterfallLayout alloc] init];
     layout.delegate = self;
     
-    // 创建CollectionView
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     collectionView.backgroundColor = [UIColor whiteColor];
     collectionView.dataSource = self;
     [self.view addSubview:collectionView];
     
-    // 注册
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([XMGShopCell class]) bundle:nil] forCellWithReuseIdentifier:XMGShopId];
     
     self.collectionView = collectionView;
