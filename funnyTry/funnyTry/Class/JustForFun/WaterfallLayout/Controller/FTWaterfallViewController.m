@@ -7,7 +7,6 @@
 //
 
 #import "FTWaterfallViewController.h"
-#import "XMGWaterflowLayout.h"
 #import "FTWaterfallLayout.h"
 #import "XMGShop.h"
 #import "MJExtension.h"

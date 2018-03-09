@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C4C6EF953234755E7DDA6D0 /* libPods-funnyTry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B31141A503542081989F8C /* libPods-funnyTry.a */; };
 		C51112C71FD5595E008AD74F /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C51112C61FD5595E008AD74F /* UIView+Screenshot.m */; };
 		C51112CA1FD63800008AD74F /* FTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = C51112C91FD63800008AD74F /* FTGlobal.m */; };
 		C525646E1FDFAB9E00BF0EB7 /* FTDragCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C525646D1FDFAB9E00BF0EB7 /* FTDragCellViewController.m */; };
@@ -19,6 +20,9 @@
 		C52BACE21FE9310200ED9E10 /* BLEH.gif in Resources */ = {isa = PBXBuildFile; fileRef = C52BACE11FE9310200ED9E10 /* BLEH.gif */; };
 		C52BACEE1FEA464100ED9E10 /* GQPlayGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52BACEC1FEA464100ED9E10 /* GQPlayGifView.m */; };
 		C54E4A5D2050DDC8001F17D7 /* FTWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C54E4A5C2050DDC8001F17D7 /* FTWaterfallLayout.m */; };
+		C54E4A6120513E64001F17D7 /* FTKnockoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C54E4A6020513E64001F17D7 /* FTKnockoutVC.m */; };
+		C54E4A6620513EA0001F17D7 /* FTKnockoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54E4A6520513EA0001F17D7 /* FTKnockoutView.m */; };
+		C54E4A682051405E001F17D7 /* finnalWiner.png in Resources */ = {isa = PBXBuildFile; fileRef = C54E4A672051405E001F17D7 /* finnalWiner.png */; };
 		C5616C111FA8777E00A9C033 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C101FA8777E00A9C033 /* AppDelegate.m */; };
 		C5616C191FA8777E00A9C033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5616C181FA8777E00A9C033 /* Assets.xcassets */; };
 		C5616C1F1FA8777E00A9C033 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C1E1FA8777E00A9C033 /* main.m */; };
@@ -171,6 +175,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31B31141A503542081989F8C /* libPods-funnyTry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-funnyTry.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34E765B0ECA9913D4F7D8C93 /* Pods-funnyTry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funnyTry.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-funnyTry/Pods-funnyTry.debug.xcconfig"; sourceTree = "<group>"; };
+		B88E524ACBCD5678496AA835 /* Pods-funnyTry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funnyTry.release.xcconfig"; path = "../Pods/Target Support Files/Pods-funnyTry/Pods-funnyTry.release.xcconfig"; sourceTree = "<group>"; };
 		C51112C51FD5595E008AD74F /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
 		C51112C61FD5595E008AD74F /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
 		C51112C81FD63800008AD74F /* FTGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTGlobal.h; sourceTree = "<group>"; };
@@ -193,6 +200,11 @@
 		C52BACED1FEA464100ED9E10 /* GQPlayGifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPlayGifView.h; sourceTree = "<group>"; };
 		C54E4A5B2050DDC8001F17D7 /* FTWaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTWaterfallLayout.h; sourceTree = "<group>"; };
 		C54E4A5C2050DDC8001F17D7 /* FTWaterfallLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTWaterfallLayout.m; sourceTree = "<group>"; };
+		C54E4A5F20513E64001F17D7 /* FTKnockoutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTKnockoutVC.h; sourceTree = "<group>"; };
+		C54E4A6020513E64001F17D7 /* FTKnockoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTKnockoutVC.m; sourceTree = "<group>"; };
+		C54E4A6420513EA0001F17D7 /* FTKnockoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTKnockoutView.h; sourceTree = "<group>"; };
+		C54E4A6520513EA0001F17D7 /* FTKnockoutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTKnockoutView.m; sourceTree = "<group>"; };
+		C54E4A672051405E001F17D7 /* finnalWiner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finnalWiner.png; sourceTree = "<group>"; };
 		C5616C0C1FA8777E00A9C033 /* funnyTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funnyTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5616C0F1FA8777E00A9C033 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5616C101FA8777E00A9C033 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; usesTabs = 0; };
@@ -452,6 +464,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C4C6EF953234755E7DDA6D0 /* libPods-funnyTry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +485,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3813FAA1150E0681C068AE20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31B31141A503542081989F8C /* libPods-funnyTry.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5CD006325D82C76E18F9CCD3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34E765B0ECA9913D4F7D8C93 /* Pods-funnyTry.debug.xcconfig */,
+				B88E524ACBCD5678496AA835 /* Pods-funnyTry.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C525646B1FDFAB7000BF0EB7 /* DragCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -533,6 +563,34 @@
 			path = UIImageView;
 			sourceTree = "<group>";
 		};
+		C54E4A5E20513E2F001F17D7 /* KnockoutView */ = {
+			isa = PBXGroup;
+			children = (
+				C54E4A6220513E69001F17D7 /* Controller */,
+				C54E4A6320513E7A001F17D7 /* View */,
+			);
+			path = KnockoutView;
+			sourceTree = "<group>";
+		};
+		C54E4A6220513E69001F17D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C54E4A5F20513E64001F17D7 /* FTKnockoutVC.h */,
+				C54E4A6020513E64001F17D7 /* FTKnockoutVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C54E4A6320513E7A001F17D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C54E4A6420513EA0001F17D7 /* FTKnockoutView.h */,
+				C54E4A6520513EA0001F17D7 /* FTKnockoutView.m */,
+				C54E4A672051405E001F17D7 /* finnalWiner.png */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C5616C031FA8777E00A9C033 = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +598,8 @@
 				C5616C271FA8777E00A9C033 /* funnyTryTests */,
 				C5616C321FA8777E00A9C033 /* funnyTryUITests */,
 				C5616C0D1FA8777E00A9C033 /* Products */,
+				5CD006325D82C76E18F9CCD3 /* Pods */,
+				3813FAA1150E0681C068AE20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -619,6 +679,7 @@
 		C57685F21FAFF5EA00066AA3 /* JustForFun */ = {
 			isa = PBXGroup;
 			children = (
+				C54E4A5E20513E2F001F17D7 /* KnockoutView */,
 				C5F4811A2006324200A8BE97 /* CornerRadius */,
 				C52BACB71FE8F8AE00ED9E10 /* LetterPath */,
 				C58AB62E1FE7670E00139498 /* OneLoadingAnimation */,
@@ -1311,9 +1372,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5616C381FA8777E00A9C033 /* Build configuration list for PBXNativeTarget "funnyTry" */;
 			buildPhases = (
+				8F176EA34A53F7102939BC6F /* [CP] Check Pods Manifest.lock */,
 				C5616C081FA8777E00A9C033 /* Sources */,
 				C5616C091FA8777E00A9C033 /* Frameworks */,
 				C5616C0A1FA8777E00A9C033 /* Resources */,
+				902DF7A9A701E23AAAAACCF7 /* [CP] Embed Pods Frameworks */,
+				BC1D5B1025A90D0C5B104DF2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1428,6 +1492,7 @@
 				C5AD1A4A1FD1389700A7EE86 /* 7.m4a in Resources */,
 				C5AD1A4B1FD1389700A7EE86 /* 8.m4a in Resources */,
 				C5AD1A3E1FD1389700A7EE86 /* 1.m4a in Resources */,
+				C54E4A682051405E001F17D7 /* finnalWiner.png in Resources */,
 				C576869D1FAFF8EB00066AA3 /* 1.plist in Resources */,
 				C5AD1A4C1FD1389700A7EE86 /* 9.m4a in Resources */,
 				C5AD1A431FD1389700A7EE86 /* 14.m4a in Resources */,
@@ -1459,6 +1524,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8F176EA34A53F7102939BC6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-funnyTry-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		902DF7A9A701E23AAAAACCF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-funnyTry/Pods-funnyTry-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC1D5B1025A90D0C5B104DF2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-funnyTry/Pods-funnyTry-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C5616C081FA8777E00A9C033 /* Sources */ = {
@@ -1549,6 +1665,7 @@
 				C57686BF1FB07ADB00066AA3 /* FTUIListCellIem.m in Sources */,
 				C576866E1FAFF66500066AA3 /* MKAnnotationView+WebCache.m in Sources */,
 				C574DBAF1FD4DFBB0003F827 /* FTLoginNextViewController.m in Sources */,
+				C54E4A6620513EA0001F17D7 /* FTKnockoutView.m in Sources */,
 				C5736A9F1FD9486A0018BA92 /* FTCustomInteractiveTransitioning.m in Sources */,
 				C57686621FAFF66500066AA3 /* MJRefreshAutoStateFooter.m in Sources */,
 				C57686731FAFF66500066AA3 /* SDWebImageDownloader.m in Sources */,
@@ -1565,6 +1682,7 @@
 				C57686651FAFF66500066AA3 /* MJRefreshBackStateFooter.m in Sources */,
 				C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */,
 				C598FC081FE2279400B67823 /* IQiYIButton.m in Sources */,
+				C54E4A6120513E64001F17D7 /* FTKnockoutVC.m in Sources */,
 				C5736A951FD945290018BA92 /* FTCustomPushTransitionFirstVC.m in Sources */,
 				C57686701FAFF66500066AA3 /* SDImageCache.m in Sources */,
 				C598FBEC1FE0F67F00B67823 /* MASLayoutConstraint.m in Sources */,
@@ -1718,6 +1836,7 @@
 		};
 		C5616C391FA8777E00A9C033 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34E765B0ECA9913D4F7D8C93 /* Pods-funnyTry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -1737,6 +1856,7 @@
 		};
 		C5616C3A1FA8777E00A9C033 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B88E524ACBCD5678496AA835 /* Pods-funnyTry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
