@@ -8,84 +8,104 @@
 
 #import "FTWaterfallViewController.h"
 #import "FTWaterfallLayout.h"
+#import "FTPagedScaleLayout.h"
 #import "XMGShop.h"
 #import "MJExtension.h"
 #import "MJRefresh.h"
 #import "XMGShopCell.h"
 
-@interface FTWaterfallViewController () <UICollectionViewDataSource, FTWaterfallLayoutDelegate>
+@interface FTWaterfallViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FTWaterfallLayoutDelegate>
 @property (nonatomic, strong) NSMutableArray *shops;
-@property (nonatomic, weak) UICollectionView *collectionView;
+@property (nonatomic, strong) UICollectionView *waterfallCollectionView;
+@property (nonatomic, strong) UICollectionView *pagedScaleCollectionView;
 @end
 
 @implementation FTWaterfallViewController
 
 static NSString * const XMGShopId = @"shop";
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        _shops = [NSMutableArray array];
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    _shops = [NSMutableArray array];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"change" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClicked:)];
     
-    [self setupLayout];
+    [self setupWaterfallLayout];
     
-    [self setupRefresh];
+    [self loadData];
 }
 
-- (void)setupRefresh
+- (void)loadData
 {
-    self.collectionView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewShops)];
-    [self.collectionView.header beginRefreshing];
+    NSArray *shops = [XMGShop objectArrayWithFilename:@"1.plist"];
+    [self.shops removeAllObjects];
+    [self.shops addObjectsFromArray:shops];
     
-    self.collectionView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreShops)];
-    self.collectionView.footer.hidden = YES;
+    [self.waterfallCollectionView reloadData];
 }
 
-- (void)loadNewShops
-{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSArray *shops = [XMGShop objectArrayWithFilename:@"1.plist"];
-        [self.shops removeAllObjects];
-        [self.shops addObjectsFromArray:shops];
-        
-        [self.collectionView reloadData];
-        
-        [self.collectionView.header endRefreshing];
-    });
-}
-
-- (void)loadMoreShops
-{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSArray *shops = [XMGShop objectArrayWithFilename:@"1.plist"];
-        [self.shops addObjectsFromArray:shops];
-        
-        [self.collectionView reloadData];
-        
-        [self.collectionView.footer endRefreshing];
-    });
-}
-
-- (void)setupLayout
+- (void)setupWaterfallLayout
 {
     FTWaterfallLayout *layout = [[FTWaterfallLayout alloc] init];
     layout.delegate = self;
+  
+    _waterfallCollectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    _waterfallCollectionView.backgroundColor = [UIColor whiteColor];
+    _waterfallCollectionView.dataSource = self;
+    _waterfallCollectionView.delegate = self;
+    _waterfallCollectionView.showsHorizontalScrollIndicator = NO;
+    [self.view addSubview:_waterfallCollectionView];
+
+    [_waterfallCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([XMGShopCell class]) bundle:nil] forCellWithReuseIdentifier:XMGShopId];
+}
+
+- (void)setupPagedScalefallLayout
+{
+    FTPagedScaleLayout *lineScaleLayout = [[FTPagedScaleLayout alloc] init];
     
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
-    collectionView.backgroundColor = [UIColor whiteColor];
-    collectionView.dataSource = self;
-    [self.view addSubview:collectionView];
+    CGFloat collectionW = self.view.frame.size.width;
+    CGFloat collectionH = 200;
+    lineScaleLayout.itemSize = CGSizeMake(collectionW - 60, collectionH - 20);
     
-    [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([XMGShopCell class]) bundle:nil] forCellWithReuseIdentifier:XMGShopId];
+    _pagedScaleCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 150, collectionW, collectionH) collectionViewLayout:lineScaleLayout];
+    _pagedScaleCollectionView.backgroundColor = [UIColor blackColor];;
+    _pagedScaleCollectionView.dataSource = self;
+    _pagedScaleCollectionView.delegate = self;
+    _pagedScaleCollectionView.showsHorizontalScrollIndicator = YES;
+    _pagedScaleCollectionView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
+    [self.view addSubview:_pagedScaleCollectionView];
     
-    self.collectionView = collectionView;
+    [_pagedScaleCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([XMGShopCell class]) bundle:nil] forCellWithReuseIdentifier:XMGShopId];
+}
+
+- (void)rightBarButtonItemClicked:(UIBarButtonItem*)item
+{
+    if (self.waterfallCollectionView.hidden == NO) {
+        if (!self.pagedScaleCollectionView) {
+            [self setupPagedScalefallLayout];
+        }
+        
+        self.waterfallCollectionView.hidden = YES;
+        self.pagedScaleCollectionView.hidden = NO;
+    }
+    
+    else  {
+        self.waterfallCollectionView.hidden = NO;
+        self.pagedScaleCollectionView.hidden = YES;
+    }
 }
 
 #pragma mark - <UICollectionViewDataSource>
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    self.collectionView.footer.hidden = self.shops.count == 0;
     return self.shops.count;
 }
 
@@ -94,8 +114,26 @@ static NSString * const XMGShopId = @"shop";
     XMGShopCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:XMGShopId forIndexPath:indexPath];
     
     cell.shop = self.shops[indexPath.item];
-    
     return cell;
+}
+
+#pragma mark - <UICollectionViewDelegate>
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%zd",indexPath.item);
+    if (collectionView == self.pagedScaleCollectionView) {
+        FTPagedScaleLayout *layout = (FTPagedScaleLayout*)collectionView.collectionViewLayout;
+        if (![layout isItemInTheMiddle:indexPath]) {
+            [collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+        } else {
+            NSLog(@"in the middle");
+        }
+    }
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    
 }
 
 #pragma mark - <XMGWaterflowLayoutDelegate>

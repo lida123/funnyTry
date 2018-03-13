@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C4C6EF953234755E7DDA6D0 /* libPods-funnyTry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B31141A503542081989F8C /* libPods-funnyTry.a */; };
+		C502174D20561EAC00F2FF77 /* FTPagedScaleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C502174C20561EAC00F2FF77 /* FTPagedScaleLayout.m */; };
 		C51112C71FD5595E008AD74F /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C51112C61FD5595E008AD74F /* UIView+Screenshot.m */; };
 		C51112CA1FD63800008AD74F /* FTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = C51112C91FD63800008AD74F /* FTGlobal.m */; };
 		C525646E1FDFAB9E00BF0EB7 /* FTDragCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C525646D1FDFAB9E00BF0EB7 /* FTDragCellViewController.m */; };
@@ -178,6 +179,8 @@
 		31B31141A503542081989F8C /* libPods-funnyTry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-funnyTry.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34E765B0ECA9913D4F7D8C93 /* Pods-funnyTry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funnyTry.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-funnyTry/Pods-funnyTry.debug.xcconfig"; sourceTree = "<group>"; };
 		B88E524ACBCD5678496AA835 /* Pods-funnyTry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funnyTry.release.xcconfig"; path = "../Pods/Target Support Files/Pods-funnyTry/Pods-funnyTry.release.xcconfig"; sourceTree = "<group>"; };
+		C502174B20561EAC00F2FF77 /* FTPagedScaleLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPagedScaleLayout.h; sourceTree = "<group>"; };
+		C502174C20561EAC00F2FF77 /* FTPagedScaleLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPagedScaleLayout.m; sourceTree = "<group>"; };
 		C51112C51FD5595E008AD74F /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
 		C51112C61FD5595E008AD74F /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
 		C51112C81FD63800008AD74F /* FTGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTGlobal.h; sourceTree = "<group>"; };
@@ -951,6 +954,8 @@
 			children = (
 				C54E4A5B2050DDC8001F17D7 /* FTWaterfallLayout.h */,
 				C54E4A5C2050DDC8001F17D7 /* FTWaterfallLayout.m */,
+				C502174B20561EAC00F2FF77 /* FTPagedScaleLayout.h */,
+				C502174C20561EAC00F2FF77 /* FTPagedScaleLayout.m */,
 				C57686981FAFF8EB00066AA3 /* XMGShopCell.h */,
 				C57686991FAFF8EB00066AA3 /* XMGShopCell.m */,
 				C57686931FAFF8EA00066AA3 /* XMGShopCell.xib */,
@@ -1618,6 +1623,7 @@
 				C51112CA1FD63800008AD74F /* FTGlobal.m in Sources */,
 				C59D91B81FB17DB2004550D0 /* FTBaseNavigationController.m in Sources */,
 				C525647D1FDFB9AD00BF0EB7 /* FTChannelCollectionViewCell.m in Sources */,
+				C502174D20561EAC00F2FF77 /* FTPagedScaleLayout.m in Sources */,
 				C54E4A5D2050DDC8001F17D7 /* FTWaterfallLayout.m in Sources */,
 				C576866A1FAFF66500066AA3 /* MJRefreshConst.m in Sources */,
 				C576867C1FAFF66500066AA3 /* UIImageView+WebCache.m in Sources */,
