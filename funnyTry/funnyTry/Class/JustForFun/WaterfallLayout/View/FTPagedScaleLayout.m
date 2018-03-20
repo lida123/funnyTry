@@ -92,7 +92,6 @@
     rect.size = self.collectionView.frame.size;
     NSArray *attributes = [super layoutAttributesForElementsInRect:rect];
     
-    
     CGFloat centerX = self.collectionView.contentOffset.x + self.collectionView.frame.size.width * 0.5;;
     NSIndexPath *centerIndexPath = nil;
     for (UICollectionViewLayoutAttributes *attribute in attributes) {

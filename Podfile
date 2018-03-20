@@ -4,4 +4,5 @@ xcodeproj 'funnyTry/funnyTry.xcodeproj'
 
 target 'funnyTry' do
 pod "AFNetworking"
+pod "MJExtension"
 end

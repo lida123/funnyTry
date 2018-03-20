@@ -10,9 +10,11 @@
 #import "FTWaterfallLayout.h"
 #import "FTPagedScaleLayout.h"
 #import "XMGShop.h"
-#import "MJExtension.h"
+#import <MJExtension.h>
 #import "MJRefresh.h"
 #import "XMGShopCell.h"
+#import "Person.h"
+#import "Student.h"
 
 @interface FTWaterfallViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FTWaterfallLayoutDelegate>
 @property (nonatomic, strong) NSMutableArray *shops;
@@ -45,11 +47,11 @@ static NSString * const XMGShopId = @"shop";
 
 - (void)loadData
 {
-    NSArray *shops = [XMGShop objectArrayWithFilename:@"1.plist"];
-    [self.shops removeAllObjects];
-    [self.shops addObjectsFromArray:shops];
-    
-    [self.waterfallCollectionView reloadData];
+//    NSArray *shops = [XMGShop mj_objectArrayWithFilename:@"1.plist"];
+//    [self.shops removeAllObjects];
+//    [self.shops addObjectsFromArray:shops];
+//
+//    [self.waterfallCollectionView reloadData];
 }
 
 - (void)setupWaterfallLayout
@@ -88,6 +90,13 @@ static NSString * const XMGShopId = @"shop";
 
 - (void)rightBarButtonItemClicked:(UIBarButtonItem*)item
 {
+    NSDictionary *dic = @{@"school":@"qinghua",@"books":@[@"yuwen",@"shuxue"],@"name":@"HuWeiwei",@"age":@25,@"fashionable":@"true"};
+    Student *student = [Student mj_objectWithKeyValues:dic];
+    
+    return;
+    
+    
+    
     if (self.waterfallCollectionView.hidden == NO) {
         if (!self.pagedScaleCollectionView) {
             [self setupPagedScalefallLayout];
