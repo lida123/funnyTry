@@ -1,0 +1,4 @@
+date     name               author        state
+20171106 FBShimmering       Facebook      finished
+20180109 RESideMenu         Roman Efimov  finished
+20180306 MJExtension        MJ            finished

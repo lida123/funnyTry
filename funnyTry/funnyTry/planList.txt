@@ -1,2 +1,0 @@
-date     name               author        state
-20171106 FBShimmering       Facebook      unfinished

@@ -15,10 +15,15 @@
 @end
 
 @interface FTBaseItem : NSObject
+/* 默认44 */
+@property (nonatomic, assign) CGFloat cellHeight;
+/* 当cellHeight动态变化时,子类可在cellWidth的setter方法里面计算cellHieght */
+@property (nonatomic, assign) CGFloat cellWidth;
 
 @property (nonatomic, assign) UITableViewCellAccessoryType accessoryType;
 @property (nonatomic, assign) UITableViewCellSelectionStyle selectionStyle;
 @property (nonatomic, strong) NSIndexPath *indexPath;
+
 /* 分割线颜色 default:RGB(232,232,234) */
 @property (nonatomic, strong) UIColor *separatorColor;
 /* 分割线左侧间距,延伸至最右侧 -1 表示隐藏分割线 */

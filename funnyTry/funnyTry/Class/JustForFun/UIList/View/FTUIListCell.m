@@ -19,8 +19,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         _shimmeringView = [[FBShimmeringView alloc] initWithFrame:CGRectZero];
-        _shimmeringView.shimmering = YES;
-        _shimmeringView.shimmeringBeginFadeDuration = 0.3;
+        _shimmeringView.shimmering = NO;
         _shimmeringView.shimmeringOpacity = 0.3;
         [self.contentView addSubview:_shimmeringView];
         
@@ -28,6 +27,7 @@
         _shimmeringLabel.backgroundColor = [UIColor clearColor];
         _shimmeringLabel.textColor = [UIColor purpleColor];
         _shimmeringLabel.textAlignment = NSTextAlignmentLeft;
+        _shimmeringLabel.numberOfLines = 0;
         _shimmeringLabel.font = [UIFont boldSystemFontOfSize:18];
     }
     return self;
@@ -43,7 +43,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.shimmeringView.frame = CGRectMake(14,0, CGRectGetWidth(self.contentView.bounds) - 14 ,CGRectGetHeight(self.contentView.bounds));
+    self.shimmeringView.frame = self.item.shimmeringViewFrame;
     _shimmeringView.contentView = _shimmeringLabel;
     self.shimmeringLabel.frame = self.shimmeringView.bounds;
 }

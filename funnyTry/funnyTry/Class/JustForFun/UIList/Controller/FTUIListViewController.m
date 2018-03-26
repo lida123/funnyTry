@@ -9,10 +9,9 @@
 #import "FTUIListViewController.h"
 #import "FTUIListCell.h"
 #import "FBShimmeringView.h"
+#import "FTBaseNavigationController.h"
 
-#import "FTScanViewController.h" //扫码
-
-@interface FTUIListViewController () <UITableViewDelegate,UITableViewDataSource>
+@interface FTUIListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *items;
 @end
@@ -30,14 +29,13 @@
     [self.view addSubview:self.tableView];
 
     NSMutableArray *items = [NSMutableArray array];
-    NSArray *classes = @[@"FTScanViewController"];
+    NSArray *classes = @[@"FTScanViewController",@"FTFlowMountainViewController",@"FTCircleLoadingViewController",@"FTLoginViewController",@"FTCustomPushTransitionFirstVC",@"FTDragCellViewController",@"FTPausePlayAnimationVC",@"FTOneLoadingAnimationVC",@"FTLetterPathViewController",@"FTKnockoutVC"];
     for (NSInteger i = 0; i < classes.count; i++) {
         FTUIListCellIem *item = [FTUIListCellIem itemWithClassString:classes[i] shimmering:NO];
         item.separatorLeftMargin = 14;
         [items addObject:item];
     }
     self.items = items;
-    FTDPRINT(@"%@",NSStringFromCGRect(self.view.bounds));
 }
 
 #pragma mark - rightItemAction
@@ -45,9 +43,11 @@
     if ([item.title isEqualToString:@"Shimmering"]) {
          self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"close" style:UIBarButtonItemStylePlain target:self action:@selector(turnShimmerOn:)];
         
-        for (FTUIListCellIem *item in self.items) {
+        for (NSInteger i = 0; i < self.items.count && i < 1; i++) {
+            FTUIListCellIem * item = self.items[i];
             item.shimmering = YES;
         }
+
         [self.tableView reloadData];
         
     }else {
@@ -71,13 +71,17 @@
     if (!cell) {
         cell = [[FTUIListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
-    [cell setItem:self.items[indexPath.row]];
+    
+    FTUIListCellIem *item = self.items[indexPath.row];
+    [item setCellWidth:CGRectGetWidth(tableView.bounds)];
+    [cell setItem:item];
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+     FTUIListCellIem *item = self.items[indexPath.row];
+    return item.cellHeight;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -85,7 +89,6 @@
     Class class = NSClassFromString(item.classString);
     if (class) {
         UIViewController *vc = [[class alloc] init];
-        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
