@@ -12,9 +12,9 @@
 @implementation Student
 MJLogAllIvars
 
-+ (NSArray *)mj_allowedPropertyNames {
-    return @[@"books",@"school"];
-}
+//+ (NSArray *)mj_allowedPropertyNames {
+//    return @[@"books",@"school"];
+//}
 //
 //- (id)mj_newValueFromOldValue:(id)oldValue property:(MJProperty *)property {
 //    if ([property.name isEqualToString:@"school"] && [oldValue isEqualToString:@"qinghua"]) {

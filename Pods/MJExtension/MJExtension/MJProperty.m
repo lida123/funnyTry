@@ -31,6 +31,7 @@
 #pragma mark - 缓存
 + (instancetype)cachedPropertyWithProperty:(objc_property_t)property
 {
+    // 这个关联必要性不大,因为已经将每个类的总的property缓存起来了.这里还缓存每单个属性,感觉重复了
     MJProperty *propertyObj = objc_getAssociatedObject(self, property);
     if (propertyObj == nil) {
         propertyObj = [[self alloc] init];

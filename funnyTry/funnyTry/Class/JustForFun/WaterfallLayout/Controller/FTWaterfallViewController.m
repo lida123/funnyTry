@@ -15,6 +15,7 @@
 #import "XMGShopCell.h"
 #import "Person.h"
 #import "Student.h"
+#import "Book.h"
 
 @interface FTWaterfallViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FTWaterfallLayoutDelegate>
 @property (nonatomic, strong) NSMutableArray *shops;
@@ -47,11 +48,11 @@ static NSString * const XMGShopId = @"shop";
 
 - (void)loadData
 {
-//    NSArray *shops = [XMGShop mj_objectArrayWithFilename:@"1.plist"];
-//    [self.shops removeAllObjects];
-//    [self.shops addObjectsFromArray:shops];
-//
-//    [self.waterfallCollectionView reloadData];
+    NSArray *shops = [XMGShop mj_objectArrayWithFilename:@"1.plist"];
+    [self.shops removeAllObjects];
+    [self.shops addObjectsFromArray:shops];
+
+    [self.waterfallCollectionView reloadData];
 }
 
 - (void)setupWaterfallLayout
@@ -90,11 +91,13 @@ static NSString * const XMGShopId = @"shop";
 
 - (void)rightBarButtonItemClicked:(UIBarButtonItem*)item
 {
-    NSDictionary *dic = @{@"school":@"qinghua",@"books":@[@"yuwen",@"shuxue"],@"name":@"HuWeiwei",@"age":@25,@"fashionable":@"true"};
+    NSDictionary *dic = @{@"school":@"qinghua",@"books":@[@"yuwen",@"shuxue"],@"name":@"HuWeiwei",@"age":@25,@"fashionable":@2};
     Student *student = [Student mj_objectWithKeyValues:dic];
     
+//    Book *book = [Book mj_objectWithKeyValues:dic];
+
     return;
-    
+
     
     
     if (self.waterfallCollectionView.hidden == NO) {
@@ -104,12 +107,11 @@ static NSString * const XMGShopId = @"shop";
         
         self.waterfallCollectionView.hidden = YES;
         self.pagedScaleCollectionView.hidden = NO;
-    }
-    
-    else  {
+    } else  {
         self.waterfallCollectionView.hidden = NO;
         self.pagedScaleCollectionView.hidden = YES;
     }
+    
 }
 
 #pragma mark - <UICollectionViewDataSource>

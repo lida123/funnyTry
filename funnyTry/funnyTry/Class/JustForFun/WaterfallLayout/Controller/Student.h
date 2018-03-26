@@ -10,7 +10,7 @@
 
 @interface Student : Person
 
-@property (nonatomic, strong) NSArray *books;
-@property (nonatomic, copy) NSString *school;
-@property (nonatomic, assign) BOOL fashionable;
+@property (nonatomic, strong) NSMutableArray *books;
+//@property (nonatomic, copy) NSString *school;
+//@property (nonatomic, assign) BOOL fashionable;
 @end

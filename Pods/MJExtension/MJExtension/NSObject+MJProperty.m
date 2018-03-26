@@ -60,7 +60,9 @@ static NSMutableDictionary *cachedPropertiesDict_;
     MJExtensionAssertParamNotNil2(propertyName, nil);
     
     __block id key = nil;
-    // 查看有没有需要替换的key
+    
+   /* 先查询121 方法和block两种方式 */
+    // 1.调用方法直接拿替换的key
     if ([self respondsToSelector:@selector(mj_replacedKeyFromPropertyName121:)]) {
         key = [self mj_replacedKeyFromPropertyName121:propertyName];
     }
@@ -69,7 +71,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
         key = [self performSelector:@selector(replacedKeyFromPropertyName121) withObject:propertyName];
     }
     
-    // 调用block
+    // 2.调用block直接拿替换的key
     if (!key) {
         [self mj_enumerateAllClasses:^(__unsafe_unretained Class c, BOOL *stop) {
             MJReplacedKeyFromPropertyName121 block = objc_getAssociatedObject(c, &MJReplacedKeyFromPropertyName121Key);
@@ -80,7 +82,8 @@ static NSMutableDictionary *cachedPropertiesDict_;
         }];
     }
     
-    // 查看有没有需要替换的key
+  /* 再查询字典模式的 方法和block两种方式 */
+    // 1.从方法返回的字典里面拿替换的key
     if ((!key || [key isEqual:propertyName]) && [self respondsToSelector:@selector(mj_replacedKeyFromPropertyName)]) {
         key = [self mj_replacedKeyFromPropertyName][propertyName];
     }
@@ -89,6 +92,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
         key = [self performSelector:@selector(replacedKeyFromPropertyName)][propertyName];
     }
     
+    // 2.从block中获取的字典中拿替换的key
     if (!key || [key isEqual:propertyName]) {
         [self mj_enumerateAllClasses:^(__unsafe_unretained Class c, BOOL *stop) {
             NSDictionary *dict = objc_getAssociatedObject(c, &MJReplacedKeyFromPropertyNameKey);
@@ -99,7 +103,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
         }];
     }
     
-    // 2.用属性名作为key
+    // 以上都没拿到替换的key则用属性名作为key
     if (!key) key = propertyName;
     
     return key;
@@ -108,6 +112,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
 + (Class)propertyObjectClassInArray:(NSString *)propertyName
 {
     __block id clazz = nil;
+    // 1.先从方法拿
     if ([self respondsToSelector:@selector(mj_objectClassInArray)]) {
         clazz = [self mj_objectClassInArray][propertyName];
     }
@@ -116,6 +121,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
         clazz = [self performSelector:@selector(objectClassInArray)][propertyName];
     }
     
+    // 2.没拿到再遍历子类到父类尝试从类绑定的字典中拿
     if (!clazz) {
         [self mj_enumerateAllClasses:^(__unsafe_unretained Class c, BOOL *stop) {
             NSDictionary *dict = objc_getAssociatedObject(c, &MJObjectClassInArrayKey);
@@ -163,7 +169,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
             // 2.遍历每一个成员变量
             for (unsigned int i = 0; i<outCount; i++) {
                 MJProperty *property = [MJProperty cachedPropertyWithProperty:properties[i]];
-                // 过滤掉Foundation框架类里面的属性
+                // 过滤掉Foundation框架类里面的属性 (然先判断,再赋值?)
                 if ([MJFoundation isClassFromFoundation:property.srcClass]) continue;
                 property.srcClass = c;
                 [property setOriginKey:[self propertyKey:property.name] forClass:self];

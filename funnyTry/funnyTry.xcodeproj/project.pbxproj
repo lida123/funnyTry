@@ -85,6 +85,7 @@
 		C57686B61FB069BF00066AA3 /* FTUIListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686B51FB069BF00066AA3 /* FTUIListViewController.m */; };
 		C57686BF1FB07ADB00066AA3 /* FTUIListCellIem.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686BE1FB07ADA00066AA3 /* FTUIListCellIem.m */; };
 		C57686C21FB07B0500066AA3 /* FTUIListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686C11FB07B0500066AA3 /* FTUIListCell.m */; };
+		C585851C2063CA8900AF70B2 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = C585851B2063CA8900AF70B2 /* Book.m */; };
 		C58AB6311FE7675900139498 /* FTOneLoadingAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6301FE7675900139498 /* FTOneLoadingAnimationVC.m */; };
 		C58AB6361FE7682F00139498 /* FTOneLoadingAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6351FE7682F00139498 /* FTOneLoadingAnimationView.m */; };
 		C58AB6391FE768B800139498 /* FTLoadingCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6381FE768B800139498 /* FTLoadingCircleLayer.m */; };
@@ -142,8 +143,6 @@
 		C5D1380D1FCFF9BF009EC87E /* LYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D138091FCFF9BE009EC87E /* LYButton.m */; };
 		C5D1380E1FCFF9BF009EC87E /* LYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D1380B1FCFF9BE009EC87E /* LYTextField.m */; };
 		C5D138171FCFFA1E009EC87E /* FTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D138161FCFFA1E009EC87E /* FTLoginViewController.m */; };
-		C5F4811D2006329F00A8BE97 /* FTCornerRadiusController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4811C2006329F00A8BE97 /* FTCornerRadiusController.m */; };
-		C5F481202006336E00A8BE97 /* FTCornerRadiusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F4811F2006336E00A8BE97 /* FTCornerRadiusCell.m */; };
 		C5F5E5231FAC372B009FB8D3 /* FTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */; };
 		C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */; };
 		C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E52C1FAC3AAA009FB8D3 /* FTBaseTableViewController.m */; };
@@ -323,6 +322,8 @@
 		C57686BE1FB07ADA00066AA3 /* FTUIListCellIem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTUIListCellIem.m; sourceTree = "<group>"; };
 		C57686C01FB07B0500066AA3 /* FTUIListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTUIListCell.h; sourceTree = "<group>"; };
 		C57686C11FB07B0500066AA3 /* FTUIListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTUIListCell.m; sourceTree = "<group>"; };
+		C585851A2063CA8900AF70B2 /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		C585851B2063CA8900AF70B2 /* Book.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		C58AB62F1FE7675900139498 /* FTOneLoadingAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTOneLoadingAnimationVC.h; sourceTree = "<group>"; };
 		C58AB6301FE7675900139498 /* FTOneLoadingAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTOneLoadingAnimationVC.m; sourceTree = "<group>"; };
 		C58AB6341FE7682F00139498 /* FTOneLoadingAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTOneLoadingAnimationView.h; sourceTree = "<group>"; };
@@ -422,10 +423,6 @@
 		C5D1380C1FCFF9BF009EC87E /* LYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYButton.h; sourceTree = "<group>"; };
 		C5D138151FCFFA1E009EC87E /* FTLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLoginViewController.h; sourceTree = "<group>"; };
 		C5D138161FCFFA1E009EC87E /* FTLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLoginViewController.m; sourceTree = "<group>"; };
-		C5F4811B2006329F00A8BE97 /* FTCornerRadiusController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCornerRadiusController.h; sourceTree = "<group>"; };
-		C5F4811C2006329F00A8BE97 /* FTCornerRadiusController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTCornerRadiusController.m; sourceTree = "<group>"; };
-		C5F4811E2006336E00A8BE97 /* FTCornerRadiusCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCornerRadiusCell.h; sourceTree = "<group>"; };
-		C5F4811F2006336E00A8BE97 /* FTCornerRadiusCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTCornerRadiusCell.m; sourceTree = "<group>"; };
 		C5F5E5211FAC372B009FB8D3 /* FTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTabBarController.h; sourceTree = "<group>"; };
 		C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTabBarController.m; sourceTree = "<group>"; };
 		C5F5E5271FAC3A5E009FB8D3 /* FTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseViewController.h; sourceTree = "<group>"; };
@@ -655,7 +652,6 @@
 			isa = PBXGroup;
 			children = (
 				C54E4A5E20513E2F001F17D7 /* KnockoutView */,
-				C5F4811A2006324200A8BE97 /* CornerRadius */,
 				C52BACB71FE8F8AE00ED9E10 /* LetterPath */,
 				C58AB62E1FE7670E00139498 /* OneLoadingAnimation */,
 				C598FBFF1FE2263400B67823 /* PausePlayAnimation */,
@@ -891,6 +887,8 @@
 				C5423ED2205A40B700D027EB /* Person.m */,
 				C5423EF4205A619900D027EB /* Student.h */,
 				C5423EF5205A619900D027EB /* Student.m */,
+				C585851A2063CA8900AF70B2 /* Book.h */,
+				C585851B2063CA8900AF70B2 /* Book.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1247,17 +1245,6 @@
 			path = src;
 			sourceTree = "<group>";
 		};
-		C5F4811A2006324200A8BE97 /* CornerRadius */ = {
-			isa = PBXGroup;
-			children = (
-				C5F4811B2006329F00A8BE97 /* FTCornerRadiusController.h */,
-				C5F4811C2006329F00A8BE97 /* FTCornerRadiusController.m */,
-				C5F4811E2006336E00A8BE97 /* FTCornerRadiusCell.h */,
-				C5F4811F2006336E00A8BE97 /* FTCornerRadiusCell.m */,
-			);
-			path = CornerRadius;
-			sourceTree = "<group>";
-		};
 		C5F5E51F1FAC3683009FB8D3 /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -1571,6 +1558,7 @@
 				C576866A1FAFF66500066AA3 /* MJRefreshConst.m in Sources */,
 				C576867C1FAFF66500066AA3 /* UIImageView+WebCache.m in Sources */,
 				C58AB6361FE7682F00139498 /* FTOneLoadingAnimationView.m in Sources */,
+				C585851C2063CA8900AF70B2 /* Book.m in Sources */,
 				C598FBF01FE0F67F00B67823 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				C58AB6391FE768B800139498 /* FTLoadingCircleLayer.m in Sources */,
 				C59EFF221FB5AC770004E0D4 /* FLAnimatedImage.m in Sources */,
@@ -1586,7 +1574,6 @@
 				C525646E1FDFAB9E00BF0EB7 /* FTDragCellViewController.m in Sources */,
 				C59D91B51FB15C5A004550D0 /* UIView+CutShape.m in Sources */,
 				C5616C1F1FA8777E00A9C033 /* main.m in Sources */,
-				C5F481202006336E00A8BE97 /* FTCornerRadiusCell.m in Sources */,
 				C51112C71FD5595E008AD74F /* UIView+Screenshot.m in Sources */,
 				C5D1380D1FCFF9BF009EC87E /* LYButton.m in Sources */,
 				C576866B1FAFF66500066AA3 /* UIScrollView+MJExtension.m in Sources */,
@@ -1633,7 +1620,6 @@
 				C52BACEE1FEA464100ED9E10 /* GQPlayGifView.m in Sources */,
 				C59D91E11FB18DD3004550D0 /* SVRadialGradientLayer.m in Sources */,
 				C576865B1FAFF66500066AA3 /* MJRefreshAutoFooter.m in Sources */,
-				C5F4811D2006329F00A8BE97 /* FTCornerRadiusController.m in Sources */,
 				C5616C111FA8777E00A9C033 /* AppDelegate.m in Sources */,
 				C598FBFB1FE1238100B67823 /* UIView+anchorPoint.m in Sources */,
 				C598FC021FE2268800B67823 /* FTPausePlayAnimationVC.m in Sources */,
