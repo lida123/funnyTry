@@ -56,8 +56,8 @@
         return @"an interesting animation";
     }else if ([self.classString isEqualToString:@"FTLetterPathViewController"]) {
         return  @"writing path animation";
-    }else if([self.classString isEqualToString:@"FTKnockoutVC"]) {
-        return @"kockout view draw";
+    }else if([self.classString isEqualToString:@"FTChangeFileNameVC"]) {
+        return @"change file name";
     }
     else {
         

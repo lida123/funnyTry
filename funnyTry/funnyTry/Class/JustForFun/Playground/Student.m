@@ -12,6 +12,11 @@
 @implementation Student
 MJLogAllIvars
 
++ (NSDictionary *)mj_objectClassInArray
+{
+    return @{@"books":@"Book"};
+}
+
 //+ (NSArray *)mj_allowedPropertyNames {
 //    return @[@"books",@"school"];
 //}

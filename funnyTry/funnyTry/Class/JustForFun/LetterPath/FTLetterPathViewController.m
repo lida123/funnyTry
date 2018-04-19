@@ -10,6 +10,7 @@
 #import <CoreText/CoreText.h>
 #import <ImageIO/ImageIO.h>
 #import "UIImage+GIF.h"
+#import <math.h>
 
 @interface FTLetterPathViewController ()<CAAnimationDelegate>
 @property (nonatomic, strong) CAShapeLayer *pathLayer;
@@ -24,9 +25,9 @@
     self.navigationItem.title = @"写空心字";
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 200, 200, 200)];
-    imageView.image = [UIImage sd_animatedGIFNamed:@"BLEH"];
+    imageView.image = [UIImage imageNamed:@"Group 49.svg"];
+    imageView.backgroundColor = [UIColor redColor];
     [self.view addSubview:imageView];
-    [self addShadowToView:imageView withOpacity:1 shadowRadius:10 andCornerRadius:10];
 }
 
 /*
@@ -73,7 +74,7 @@
     //设置阴影路径
     shadowLayer.shadowPath = path.CGPath;
     
-    //////// cornerRadius /////////
+    ////// cornerRadius /////////
     view.layer.cornerRadius = cornerRadius;
     view.layer.masksToBounds = YES;
     view.layer.shouldRasterize = YES;

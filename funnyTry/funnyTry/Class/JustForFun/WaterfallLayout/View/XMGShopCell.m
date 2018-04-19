@@ -27,4 +27,10 @@
     // 2.价格
     self.priceLabel.text = shop.price;
 }
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+}
 @end

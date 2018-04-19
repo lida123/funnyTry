@@ -10,27 +10,26 @@
 #import "FTWaterfallLayout.h"
 #import "FTPagedScaleLayout.h"
 #import "XMGShop.h"
-#import <MJExtension.h>
+#import "MJExtension.h"
 #import "MJRefresh.h"
 #import "XMGShopCell.h"
-#import "Person.h"
-#import "Student.h"
-#import "Book.h"
+#import "UIImage+Function.h"
+
+static NSString * const XMGShopId = @"shop";
 
 @interface FTWaterfallViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FTWaterfallLayoutDelegate>
 @property (nonatomic, strong) NSMutableArray *shops;
 @property (nonatomic, strong) UICollectionView *waterfallCollectionView;
 @property (nonatomic, strong) UICollectionView *pagedScaleCollectionView;
+
 @end
 
 @implementation FTWaterfallViewController
 
-static NSString * const XMGShopId = @"shop";
-
+#pragma mark -Life cycle
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        _shops = [NSMutableArray array];
     }
     return self;
 }
@@ -46,27 +45,19 @@ static NSString * const XMGShopId = @"shop";
     [self loadData];
 }
 
-- (void)loadData
-{
-    NSArray *shops = [XMGShop mj_objectArrayWithFilename:@"1.plist"];
-    [self.shops removeAllObjects];
-    [self.shops addObjectsFromArray:shops];
-
-    [self.waterfallCollectionView reloadData];
-}
-
+#pragma mark -Private
 - (void)setupWaterfallLayout
 {
     FTWaterfallLayout *layout = [[FTWaterfallLayout alloc] init];
     layout.delegate = self;
-  
+    
     _waterfallCollectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     _waterfallCollectionView.backgroundColor = [UIColor whiteColor];
     _waterfallCollectionView.dataSource = self;
     _waterfallCollectionView.delegate = self;
     _waterfallCollectionView.showsHorizontalScrollIndicator = NO;
     [self.view addSubview:_waterfallCollectionView];
-
+    
     [_waterfallCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([XMGShopCell class]) bundle:nil] forCellWithReuseIdentifier:XMGShopId];
 }
 
@@ -89,17 +80,18 @@ static NSString * const XMGShopId = @"shop";
     [_pagedScaleCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([XMGShopCell class]) bundle:nil] forCellWithReuseIdentifier:XMGShopId];
 }
 
+- (void)loadData
+{
+    NSArray *shops = [XMGShop mj_objectArrayWithFilename:@"1.plist"];
+    [self.shops removeAllObjects];
+    [self.shops addObjectsFromArray:shops];
+    
+    [self.waterfallCollectionView reloadData];
+}
+
+#pragma mark -Click Event
 - (void)rightBarButtonItemClicked:(UIBarButtonItem*)item
 {
-    NSDictionary *dic = @{@"school":@"qinghua",@"books":@[@"yuwen",@"shuxue"],@"name":@"HuWeiwei",@"age":@25,@"fashionable":@2};
-    Student *student = [Student mj_objectWithKeyValues:dic];
-    
-//    Book *book = [Book mj_objectWithKeyValues:dic];
-
-    return;
-
-    
-    
     if (self.waterfallCollectionView.hidden == NO) {
         if (!self.pagedScaleCollectionView) {
             [self setupPagedScalefallLayout];
@@ -111,10 +103,18 @@ static NSString * const XMGShopId = @"shop";
         self.waterfallCollectionView.hidden = NO;
         self.pagedScaleCollectionView.hidden = YES;
     }
-    
 }
 
-#pragma mark - <UICollectionViewDataSource>
+#pragma mark -UISrollViewDelegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    if (!_pagedScaleCollectionView.hidden) {
+        FTPagedScaleLayout *lineScaleLayout = (FTPagedScaleLayout*)self.pagedScaleCollectionView.collectionViewLayout;
+        [lineScaleLayout scrollViewWillBeginDragging];
+    };
+}
+
+#pragma mark -UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.shops.count;
@@ -123,8 +123,9 @@ static NSString * const XMGShopId = @"shop";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     XMGShopCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:XMGShopId forIndexPath:indexPath];
-    
-    cell.shop = self.shops[indexPath.item];
+    XMGShop *shop = self.shops[indexPath.item];
+    shop.price = [@(indexPath.item) stringValue];
+    cell.shop = shop;
     return cell;
 }
 
@@ -140,11 +141,6 @@ static NSString * const XMGShopId = @"shop";
             NSLog(@"in the middle");
         }
     }
-}
-
-- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
-{
-    
 }
 
 #pragma mark - <XMGWaterflowLayoutDelegate>

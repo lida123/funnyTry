@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface FTPagedScaleLayout : UICollectionViewFlowLayout
 
 /**
@@ -21,6 +20,8 @@
  */
 @property (nonatomic, assign) CGFloat nearbyScale;
 
+// send scrollView event here
+- (void)scrollViewWillBeginDragging;
 
 /**
  * 判断该indexPath是否处于中间位置(一般来说,点击中间的item会push到下级界面,而点击两侧的item,会将item滚到中间)

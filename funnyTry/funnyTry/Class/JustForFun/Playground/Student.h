@@ -11,6 +11,7 @@
 @interface Student : Person
 
 @property (nonatomic, strong) NSMutableArray *books;
+@property (nonatomic, strong) id idName;
 //@property (nonatomic, copy) NSString *school;
 //@property (nonatomic, assign) BOOL fashionable;
 @end
