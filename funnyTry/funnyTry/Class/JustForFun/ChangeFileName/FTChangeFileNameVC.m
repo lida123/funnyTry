@@ -17,7 +17,7 @@
 @end
 
 @implementation FTChangeFileNameVC
-
+#pragma mark -Life cycle
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
@@ -30,7 +30,6 @@
     }
     return self;
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,6 +50,7 @@
 
 static NSString *suffix = @"SUFFIX";
 
+#pragma mark -Private
 - (void )pickoutChangeableFileWithPath:(NSString *)path
 {
     NSDirectoryEnumerator *fileEnumerator = [_fileManager enumeratorAtPath:path];
@@ -215,7 +215,6 @@ static NSString *suffix = @"SUFFIX";
     }
 
     return stringM;
-    
 }
 
 @end

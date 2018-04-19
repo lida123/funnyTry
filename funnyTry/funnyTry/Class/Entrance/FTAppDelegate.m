@@ -6,13 +6,13 @@
 //  Copyright © 2017年 GQ. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "FTAppDelegate.h"
 #import "FTTabBarController.h"
-@interface AppDelegate ()
+@interface FTAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation FTAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  FTAppDelegate.h
 //  funnyTry
 //
 //  Created by SGQ on 2017/10/31.
@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface FTAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-//  zanhuan
-//  stash
 @end
 
