@@ -129,7 +129,7 @@ static NSMutableDictionary *ignoredCodingPropertyNamesDict_;
     return [self mj_totalObjectsWithSelector:@selector(mj_allowedCodingPropertyNames) key:&MJAllowedCodingPropertyNamesKey];
 }
 #pragma mark - block和方法处理:存储block的返回值
-+ (void)mj_setupBlockReturnValue:(id (^)())block key:(const char *)key
++ (void)mj_setupBlockReturnValue:(id (^)(void))block key:(const char *)key
 {
     if (block) {
         objc_setAssociatedObject(self, key, block(), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -137,7 +137,10 @@ static NSMutableDictionary *ignoredCodingPropertyNamesDict_;
         objc_setAssociatedObject(self, key, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     
-    // 清空数据 ?:这意味着在缓存一个类的数据时,为了更新操作,而将其它类缓存的数据清除了
+    /* 在静态设置allowedProperty或者ignoredPorperty后,清空字典中的数据,那么下一次取空的时候,才能通过动态方法和静态方法重新获取一遍,添加到掉全局静态字典中.
+        弊端是为了更新A类的缓存,把B类的缓存也清除了.
+        Q:在字典中,明明以每个类的class为key,为何不单独去除掉这个类的焕缓存数据呢?A:因为父类子类的相互影响.父类添加静态设置,子类也需要重新生成数据.如果每添加一个类,就遍历所有key,查询是否有当前类的父类或者子类,这样带来的消耗高于直接去掉所有的缓存.
+     */
     [[self dictForKey:key] removeAllObjects];
 }
 

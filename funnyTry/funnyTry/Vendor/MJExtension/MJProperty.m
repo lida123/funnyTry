@@ -36,9 +36,12 @@
 }
 
 #pragma mark - 缓存
+
+/* 这个方法将每个类下面的属性都缓存在MJPrperty中,但是在NSObject+MJProperty这个类中,NSObject+MJProperty这个类的
+   + (NSMutableArray *)properties{...}中又尝试将一个类的所有属性缓存在静态的全局字典中.重复缓存了.
+ */
 + (instancetype)cachedPropertyWithProperty:(objc_property_t)property
 {
-    // 把 objc_property_t 关联在MJProperty这个类里面.
     MJProperty *propertyObj = objc_getAssociatedObject(self, property);
     if (propertyObj == nil) {
         propertyObj = [[self alloc] init];
@@ -135,12 +138,18 @@
 /** 对应着字典中的key */
 - (void)setOriginKey:(id)originKey forClass:(Class)c
 {
+    // NSString类型的key是一般情况
     if ([originKey isKindOfClass:[NSString class]]) { // 字符串类型的key
         NSArray *propertyKeys = [self propertyKeysWithStringKey:originKey];
         if (propertyKeys.count) {
             [self setPorpertyKeys:@[propertyKeys] forClass:c];
         }
-    } else if ([originKey isKindOfClass:[NSArray class]]) {
+    }
+    
+    /* NSArray类型的key,是应对服务端多人开发且不规范操作导致使用不同字段表达同一个意思.
+     比如为了表示一个ID,可能有这些不同字段返回给客户端:id Id Id ID
+     */
+    else if ([originKey isKindOfClass:[NSArray class]]) {
         NSMutableArray *keyses = [NSMutableArray array];
         for (NSString *stringKey in originKey) {
             NSArray *propertyKeys = [self propertyKeysWithStringKey:stringKey];
@@ -160,6 +169,7 @@
     if (propertyKeys.count == 0) return;
     self.propertyKeysDict[NSStringFromClass(c)] = propertyKeys;
 }
+
 - (NSArray *)propertyKeysForClass:(Class)c
 {
     return self.propertyKeysDict[NSStringFromClass(c)];

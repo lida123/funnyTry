@@ -62,11 +62,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
     if ([self respondsToSelector:@selector(mj_replacedKeyFromPropertyName121:)]) {
         key = [self mj_replacedKeyFromPropertyName121:propertyName];
     }
-    // 兼容旧版本
-    if ([self respondsToSelector:@selector(replacedKeyFromPropertyName121:)]) {
-        key = [self performSelector:@selector(replacedKeyFromPropertyName121) withObject:propertyName];
-    }
-    
+
     // 调用block
     if (!key) {
         [self mj_enumerateAllClasses:^(__unsafe_unretained Class c, BOOL *stop) {
@@ -74,7 +70,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
             if (block) {
                 key = block(propertyName);
             }
-            if (key) *stop = YES;
+            if (key) {*stop = YES;}
         }];
     }
     
@@ -82,11 +78,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
     if (!key && [self respondsToSelector:@selector(mj_replacedKeyFromPropertyName)]) {
         key = [self mj_replacedKeyFromPropertyName][propertyName];
     }
-    // 兼容旧版本
-    if (!key && [self respondsToSelector:@selector(replacedKeyFromPropertyName)]) {
-        key = [self performSelector:@selector(replacedKeyFromPropertyName)][propertyName];
-    }
-    
+
     if (!key) {
         [self mj_enumerateAllClasses:^(__unsafe_unretained Class c, BOOL *stop) {
             NSDictionary *dict = objc_getAssociatedObject(c, &MJReplacedKeyFromPropertyNameKey);
@@ -109,11 +101,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
     if ([self respondsToSelector:@selector(mj_objectClassInArray)]) {
         clazz = [self mj_objectClassInArray][propertyName];
     }
-    // 兼容旧版本
-    if ([self respondsToSelector:@selector(objectClassInArray)]) {
-        clazz = [self performSelector:@selector(objectClassInArray)][propertyName];
-    }
-    
+
     if (!clazz) {
         [self mj_enumerateAllClasses:^(__unsafe_unretained Class c, BOOL *stop) {
             NSDictionary *dict = objc_getAssociatedObject(c, &MJObjectClassInArrayKey);
@@ -124,7 +112,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
         }];
     }
     
-    // 如果是NSString类型
+    // 如果是NSString类型(允许开发者直接简单的返回字符串代表一个类,这里进行转换)
     if ([clazz isKindOfClass:[NSString class]]) {
         clazz = NSClassFromString(clazz);
     }
@@ -178,6 +166,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
             free(properties);
         }];
         
+        // 将一个类的所有属性缓存在静态的全局字典中
         [self dictForKey:&MJCachedPropertiesKey][NSStringFromClass(self)] = cachedProperties;
     }
     
@@ -195,11 +184,7 @@ static NSMutableDictionary *cachedPropertiesDict_;
     if ([object respondsToSelector:@selector(mj_newValueFromOldValue:property:)]) {
         return [object mj_newValueFromOldValue:oldValue property:property];
     }
-    // 兼容旧版本
-    if ([self respondsToSelector:@selector(newValueFromOldValue:property:)]) {
-        return [self performSelector:@selector(newValueFromOldValue:property:)  withObject:oldValue  withObject:property];
-    }
-    
+
     // 查看静态设置
     __block id newValue = oldValue;
     [self mj_enumerateAllClasses:^(__unsafe_unretained Class c, BOOL *stop) {
@@ -233,38 +218,6 @@ static NSMutableDictionary *cachedPropertiesDict_;
     objc_setAssociatedObject(self, &MJReplacedKeyFromPropertyName121Key, replacedKeyFromPropertyName121, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
     [[self dictForKey:&MJCachedPropertiesKey] removeAllObjects];
-}
-@end
-
-@implementation NSObject (MJPropertyDeprecated_v_2_5_16)
-+ (void)enumerateProperties:(MJPropertiesEnumeration)enumeration
-{
-    [self mj_enumerateProperties:enumeration];
-}
-
-+ (void)setupNewValueFromOldValue:(MJNewValueFromOldValue)newValueFormOldValue
-{
-    [self mj_setupNewValueFromOldValue:newValueFormOldValue];
-}
-
-+ (id)getNewValueFromObject:(__unsafe_unretained id)object oldValue:(__unsafe_unretained id)oldValue property:(__unsafe_unretained MJProperty *)property
-{
-    return [self mj_getNewValueFromObject:object oldValue:oldValue property:property];
-}
-
-+ (void)setupReplacedKeyFromPropertyName:(MJReplacedKeyFromPropertyName)replacedKeyFromPropertyName
-{
-    [self mj_setupReplacedKeyFromPropertyName:replacedKeyFromPropertyName];
-}
-
-+ (void)setupReplacedKeyFromPropertyName121:(MJReplacedKeyFromPropertyName121)replacedKeyFromPropertyName121
-{
-    [self mj_setupReplacedKeyFromPropertyName121:replacedKeyFromPropertyName121];
-}
-
-+ (void)setupObjectClassInArray:(MJObjectClassInArray)objectClassInArray
-{
-    [self mj_setupObjectClassInArray:objectClassInArray];
 }
 @end
 

@@ -18,14 +18,9 @@
 
 @implementation FTPlaygroundVC
 
+#pragma mark -Life cycle
 - (void)viewDidLoad
 {
     self.navigationItem.title = @"Have fun";
-
-    NSDictionary *dic = @{@"school":@"qinghua",@"books":@[@"yuwen",@"shuxue"],@"name":@"HuWeiwei",@"age":@25,@"fashionable":@2,@"pointer":@"0x1111111111",@"id":@"idName"};
-    Student *student = [Student mj_objectWithKeyValues:dic];
-    
-    //    Book *book = [Book mj_objectWithKeyValues:dic];
-    return;
 }
 @end

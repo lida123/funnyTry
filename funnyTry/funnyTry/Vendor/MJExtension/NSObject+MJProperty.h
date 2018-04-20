@@ -4,7 +4,9 @@
 //
 //  Created by MJ Lee on 15/4/17.
 //  Copyright (c) 2015年 小码哥. All rights reserved.
-//
+///---------------
+/// 提供 新key替换原key,新值过滤旧值 ,遍历所有属性的方法
+///---------------
 
 #import <Foundation/Foundation.h>
 #import "MJExtensionConst.h"
@@ -20,10 +22,10 @@
 typedef void (^MJPropertiesEnumeration)(MJProperty *property, BOOL *stop);
 
 /** 将属性名换为其他key去字典中取值 */
-typedef NSDictionary * (^MJReplacedKeyFromPropertyName)();
+typedef NSDictionary * (^MJReplacedKeyFromPropertyName)(void);
 typedef NSString * (^MJReplacedKeyFromPropertyName121)(NSString *propertyName);
 /** 数组中需要转换的模型类 */
-typedef NSDictionary * (^MJObjectClassInArray)();
+typedef NSDictionary * (^MJObjectClassInArray)(void);
 /** 用于过滤字典中的值 */
 typedef id (^MJNewValueFromOldValue)(id object, id oldValue, MJProperty *property);
 
@@ -67,13 +69,5 @@ typedef id (^MJNewValueFromOldValue)(id object, id oldValue, MJProperty *propert
  *  @param objectClassInArray          数组中需要转换的模型类
  */
 + (void)mj_setupObjectClassInArray:(MJObjectClassInArray)objectClassInArray;
-@end
 
-@interface NSObject (MJPropertyDeprecated_v_2_5_16)
-+ (void)enumerateProperties:(MJPropertiesEnumeration)enumeration MJExtensionDeprecated("请在方法名前面加上mj_前缀，使用mj_***");
-+ (void)setupNewValueFromOldValue:(MJNewValueFromOldValue)newValueFormOldValue MJExtensionDeprecated("请在方法名前面加上mj_前缀，使用mj_***");
-+ (id)getNewValueFromObject:(__unsafe_unretained id)object oldValue:(__unsafe_unretained id)oldValue property:(__unsafe_unretained MJProperty *)property MJExtensionDeprecated("请在方法名前面加上mj_前缀，使用mj_***");
-+ (void)setupReplacedKeyFromPropertyName:(MJReplacedKeyFromPropertyName)replacedKeyFromPropertyName MJExtensionDeprecated("请在方法名前面加上mj_前缀，使用mj_***");
-+ (void)setupReplacedKeyFromPropertyName121:(MJReplacedKeyFromPropertyName121)replacedKeyFromPropertyName121 MJExtensionDeprecated("请在方法名前面加上mj_前缀，使用mj_***");
-+ (void)setupObjectClassInArray:(MJObjectClassInArray)objectClassInArray MJExtensionDeprecated("请在方法名前面加上mj_前缀，使用mj_***");
 @end
