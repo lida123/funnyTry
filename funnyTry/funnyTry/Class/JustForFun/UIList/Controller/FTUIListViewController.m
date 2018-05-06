@@ -10,8 +10,9 @@
 #import "FTUIListCell.h"
 #import "FBShimmeringView.h"
 #import "FTBaseNavigationController.h"
+#import "FTUIListPreViewVC.h"
 
-@interface FTUIListViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface FTUIListViewController ()<UITableViewDelegate, UITableViewDataSource, UIViewControllerPreviewingDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *items;
 @end
@@ -103,6 +104,11 @@
     FTUIListCellIem *item = self.items[indexPath.row];
     [item setCellWidth:CGRectGetWidth(tableView.bounds)];
     [cell setItem:item];
+    
+    if ([self respondsToSelector:@selector(traitCollection)] && [self.traitCollection respondsToSelector:@selector(forceTouchCapability)] && self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable) {
+        [self registerForPreviewingWithDelegate:self sourceView:cell];
+    }
+    
     return cell;
 }
 
@@ -121,6 +127,22 @@
         UIViewController *vc = [[class alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
+}
+
+#pragma mark -UIViewControllerPreviewingDelegate
+-(void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit
+{
+    [self showViewController:viewControllerToCommit sender:self];
+}
+
+- (UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell*)[previewingContext sourceView]];
+    FTUIListCellIem *item = self.items[indexPath.row];
+    FTUIListPreViewVC *previewVC = [[FTUIListPreViewVC alloc] init];
+    previewVC.item = item;
+    previewingContext.sourceRect = CGRectMake(0, 0, previewingContext.sourceView.frame.size.width, previewingContext.sourceView.frame.size.height);
+    return previewVC;
 }
 
 @end

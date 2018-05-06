@@ -25,7 +25,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.interactivePopGestureRecognizer.delegate = nil;
+    
+    [self.navigationBar setBarStyle:UIBarStyleDefault];
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
@@ -71,5 +74,7 @@
     
     [super pushViewController:viewController animated:animated];
 }
+
+#pragma mark - Getter
 
 @end

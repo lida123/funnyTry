@@ -11,6 +11,9 @@
 		C502174D20561EAC00F2FF77 /* FTPagedScaleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C502174C20561EAC00F2FF77 /* FTPagedScaleLayout.m */; };
 		C509172520883E78000F38D2 /* 添加的代码.txt in Resources */ = {isa = PBXBuildFile; fileRef = C509172420883E78000F38D2 /* 添加的代码.txt */; };
 		C509172920883F3C000F38D2 /* FTPlaygroundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C509172820883F3C000F38D2 /* FTPlaygroundVC.m */; };
+		C509172D2089FC9B000F38D2 /* FTTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = C509172C2089FC9B000F38D2 /* FTTouchView.m */; };
+		C5091730208DB858000F38D2 /* FTUIListPreViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C509172F208DB858000F38D2 /* FTUIListPreViewVC.m */; };
+		C509173720906558000F38D2 /* UIScrollView+Moving.m in Sources */ = {isa = PBXBuildFile; fileRef = C509173620906558000F38D2 /* UIScrollView+Moving.m */; };
 		C509D5E620871D57000F38D2 /* FTChangeFileNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C509D5E520871D57000F38D2 /* FTChangeFileNameVC.m */; };
 		C51112C71FD5595E008AD74F /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C51112C61FD5595E008AD74F /* UIView+Screenshot.m */; };
 		C51112CA1FD63800008AD74F /* FTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = C51112C91FD63800008AD74F /* FTGlobal.m */; };
@@ -96,6 +99,8 @@
 		C57686BF1FB07ADB00066AA3 /* FTUIListCellIem.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686BE1FB07ADA00066AA3 /* FTUIListCellIem.m */; };
 		C57686C21FB07B0500066AA3 /* FTUIListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C57686C11FB07B0500066AA3 /* FTUIListCell.m */; };
 		C585851C2063CA8900AF70B2 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = C585851B2063CA8900AF70B2 /* Book.m */; };
+		C58618FF2091B65B00B49D4C /* FTPlayroundTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58618FD2091B65B00B49D4C /* FTPlayroundTwoVC.m */; };
+		C58619002091B65B00B49D4C /* FTPlayroundTwoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C58618FE2091B65B00B49D4C /* FTPlayroundTwoVC.xib */; };
 		C58AB6311FE7675900139498 /* FTOneLoadingAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6301FE7675900139498 /* FTOneLoadingAnimationVC.m */; };
 		C58AB6361FE7682F00139498 /* FTOneLoadingAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6351FE7682F00139498 /* FTOneLoadingAnimationView.m */; };
 		C58AB6391FE768B800139498 /* FTLoadingCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6381FE768B800139498 /* FTLoadingCircleLayer.m */; };
@@ -185,6 +190,12 @@
 		C509172420883E78000F38D2 /* 添加的代码.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "添加的代码.txt"; sourceTree = "<group>"; };
 		C509172720883F3C000F38D2 /* FTPlaygroundVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPlaygroundVC.h; sourceTree = "<group>"; };
 		C509172820883F3C000F38D2 /* FTPlaygroundVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPlaygroundVC.m; sourceTree = "<group>"; };
+		C509172B2089FC9B000F38D2 /* FTTouchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTTouchView.h; sourceTree = "<group>"; };
+		C509172C2089FC9B000F38D2 /* FTTouchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTTouchView.m; sourceTree = "<group>"; };
+		C509172E208DB858000F38D2 /* FTUIListPreViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTUIListPreViewVC.h; sourceTree = "<group>"; };
+		C509172F208DB858000F38D2 /* FTUIListPreViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTUIListPreViewVC.m; sourceTree = "<group>"; };
+		C509173520906558000F38D2 /* UIScrollView+Moving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Moving.h"; sourceTree = "<group>"; };
+		C509173620906558000F38D2 /* UIScrollView+Moving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Moving.m"; sourceTree = "<group>"; };
 		C509D5E420871D57000F38D2 /* FTChangeFileNameVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTChangeFileNameVC.h; sourceTree = "<group>"; };
 		C509D5E520871D57000F38D2 /* FTChangeFileNameVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTChangeFileNameVC.m; sourceTree = "<group>"; };
 		C51112C51FD5595E008AD74F /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
@@ -356,6 +367,9 @@
 		C57686C11FB07B0500066AA3 /* FTUIListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTUIListCell.m; sourceTree = "<group>"; };
 		C585851A2063CA8900AF70B2 /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		C585851B2063CA8900AF70B2 /* Book.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		C58618FC2091B65B00B49D4C /* FTPlayroundTwoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPlayroundTwoVC.h; sourceTree = "<group>"; };
+		C58618FD2091B65B00B49D4C /* FTPlayroundTwoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPlayroundTwoVC.m; sourceTree = "<group>"; };
+		C58618FE2091B65B00B49D4C /* FTPlayroundTwoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTPlayroundTwoVC.xib; sourceTree = "<group>"; };
 		C58AB62F1FE7675900139498 /* FTOneLoadingAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTOneLoadingAnimationVC.h; sourceTree = "<group>"; };
 		C58AB6301FE7675900139498 /* FTOneLoadingAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTOneLoadingAnimationVC.m; sourceTree = "<group>"; };
 		C58AB6341FE7682F00139498 /* FTOneLoadingAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTOneLoadingAnimationView.h; sourceTree = "<group>"; };
@@ -519,6 +533,11 @@
 				C5423EF5205A619900D027EB /* Student.m */,
 				C585851A2063CA8900AF70B2 /* Book.h */,
 				C585851B2063CA8900AF70B2 /* Book.m */,
+				C509172B2089FC9B000F38D2 /* FTTouchView.h */,
+				C509172C2089FC9B000F38D2 /* FTTouchView.m */,
+				C58618FC2091B65B00B49D4C /* FTPlayroundTwoVC.h */,
+				C58618FD2091B65B00B49D4C /* FTPlayroundTwoVC.m */,
+				C58618FE2091B65B00B49D4C /* FTPlayroundTwoVC.xib */,
 			);
 			path = Playground;
 			sourceTree = "<group>";
@@ -533,6 +552,15 @@
 				C57686A41FB02D5000066AA3 /* planList.txt */,
 			);
 			path = Entrance;
+			sourceTree = "<group>";
+		};
+		C50917342090653A000F38D2 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				C509173520906558000F38D2 /* UIScrollView+Moving.h */,
+				C509173620906558000F38D2 /* UIScrollView+Moving.m */,
+			);
+			path = UIScrollView;
 			sourceTree = "<group>";
 		};
 		C509D5E320871CCF000F38D2 /* ChangeFileName */ = {
@@ -923,6 +951,8 @@
 			children = (
 				C57686B41FB069BF00066AA3 /* FTUIListViewController.h */,
 				C57686B51FB069BF00066AA3 /* FTUIListViewController.m */,
+				C509172E208DB858000F38D2 /* FTUIListPreViewVC.h */,
+				C509172F208DB858000F38D2 /* FTUIListPreViewVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1063,6 +1093,7 @@
 		C59D91B11FB15C0F004550D0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C50917342090653A000F38D2 /* UIScrollView */,
 				C5F09B7F2085FA9800BB2341 /* UIImage */,
 				C5B497F91FD008F100C6B6B4 /* UIViewController */,
 				C59D91B21FB15C1D004550D0 /* UIView */,
@@ -1493,6 +1524,7 @@
 				C59D91DF1FB18DD3004550D0 /* SVProgressHUD.bundle in Resources */,
 				C5AD1A4A1FD1389700A7EE86 /* 7.m4a in Resources */,
 				C5AD1A4B1FD1389700A7EE86 /* 8.m4a in Resources */,
+				C58619002091B65B00B49D4C /* FTPlayroundTwoVC.xib in Resources */,
 				C5AD1A3E1FD1389700A7EE86 /* 1.m4a in Resources */,
 				C576869D1FAFF8EB00066AA3 /* 1.plist in Resources */,
 				C5AD1A4C1FD1389700A7EE86 /* 9.m4a in Resources */,
@@ -1603,11 +1635,13 @@
 				C576869E1FAFF8EB00066AA3 /* XMGShopCell.m in Sources */,
 				C59EFF231FB5AC770004E0D4 /* FLAnimatedImageView.m in Sources */,
 				C57686B61FB069BF00066AA3 /* FTUIListViewController.m in Sources */,
+				C509173720906558000F38D2 /* UIScrollView+Moving.m in Sources */,
 				C5715C3A1FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.m in Sources */,
 				C57686B21FB0300B00066AA3 /* FTBaseCell.m in Sources */,
 				C576866D1FAFF66500066AA3 /* UIView+MJExtension.m in Sources */,
 				C57686711FAFF66500066AA3 /* SDWebImageCompat.m in Sources */,
 				C5F09B822085FAC600BB2341 /* UIImage+Function.m in Sources */,
+				C5091730208DB858000F38D2 /* FTUIListPreViewVC.m in Sources */,
 				C5423ED3205A40B700D027EB /* Person.m in Sources */,
 				C57686741FAFF66500066AA3 /* SDWebImageDownloaderOperation.m in Sources */,
 				C5D1380E1FCFF9BF009EC87E /* LYTextField.m in Sources */,
@@ -1626,6 +1660,7 @@
 				C502174D20561EAC00F2FF77 /* FTPagedScaleLayout.m in Sources */,
 				C54E4A5D2050DDC8001F17D7 /* FTWaterfallLayout.m in Sources */,
 				C576866A1FAFF66500066AA3 /* MJRefreshConst.m in Sources */,
+				C509172D2089FC9B000F38D2 /* FTTouchView.m in Sources */,
 				C576867C1FAFF66500066AA3 /* UIImageView+WebCache.m in Sources */,
 				C58AB6361FE7682F00139498 /* FTOneLoadingAnimationView.m in Sources */,
 				C585851C2063CA8900AF70B2 /* Book.m in Sources */,
@@ -1692,6 +1727,7 @@
 				C57686701FAFF66500066AA3 /* SDImageCache.m in Sources */,
 				C598FBEC1FE0F67F00B67823 /* MASLayoutConstraint.m in Sources */,
 				C52BACEE1FEA464100ED9E10 /* GQPlayGifView.m in Sources */,
+				C58618FF2091B65B00B49D4C /* FTPlayroundTwoVC.m in Sources */,
 				C59D91E11FB18DD3004550D0 /* SVRadialGradientLayer.m in Sources */,
 				C56EE5242084820A005186DD /* MJProperty.m in Sources */,
 				C576865B1FAFF66500066AA3 /* MJRefreshAutoFooter.m in Sources */,
@@ -1844,16 +1880,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = BRZ859V993;
+				DEVELOPMENT_TEAM = U7F2PF4JVH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/Class/Entrance/PrefixHeader.pch";
 				INFOPLIST_FILE = funnyTry/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.funnytry;
+				PRODUCT_BUNDLE_IDENTIFIER = com.9188.liaodaoBundleId;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "83132954-b1bb-4ea8-b284-4fc10ca1d548";
-				PROVISIONING_PROFILE_SPECIFIER = shigaoqiangtestProfile;
+				PROVISIONING_PROFILE = "d5f30af5-3306-46f6-856d-5669008802d0";
+				PROVISIONING_PROFILE_SPECIFIER = 9188universalProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1863,16 +1899,18 @@
 			baseConfigurationReference = B88E524ACBCD5678496AA835 /* Pods-funnyTry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shiyu Zha (7JSV7DSMFR)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U7F2PF4JVH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/Class/Entrance/PrefixHeader.pch";
 				INFOPLIST_FILE = funnyTry/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.funnytry;
+				PRODUCT_BUNDLE_IDENTIFIER = com.9188.liaodaoBundleId;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "d5f30af5-3306-46f6-856d-5669008802d0";
+				PROVISIONING_PROFILE_SPECIFIER = 9188universalProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

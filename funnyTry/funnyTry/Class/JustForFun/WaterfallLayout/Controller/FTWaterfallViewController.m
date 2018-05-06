@@ -30,6 +30,7 @@ static NSString * const XMGShopId = @"shop";
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        _shops = [NSMutableArray array];
     }
     return self;
 }
