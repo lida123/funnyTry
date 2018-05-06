@@ -11,4 +11,5 @@
 @interface Person : NSObject
 //@property (nonatomic, copy) NSString *name;
 //@property (nonatomic, strong) NSNumber *age;
+// tijiao 1
 @end
