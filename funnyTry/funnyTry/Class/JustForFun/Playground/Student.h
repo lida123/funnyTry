@@ -12,8 +12,5 @@
 
 @property (nonatomic, strong) NSMutableArray *books;
 @property (nonatomic, strong) id idName;
-@property (nonatomic, copy) NSString *price;
-//@property (nonatomic, copy) NSString *school;
-//@property (nonatomic, assign) BOOL fashionable;
-//tijiao2	
+
 @end

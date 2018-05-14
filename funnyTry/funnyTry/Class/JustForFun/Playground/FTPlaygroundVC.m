@@ -18,6 +18,7 @@
 #import <UIKit/UIFeedbackGenerator.h>
 #import "FTPlayroundTwoVC.h"
 #import <YYKit.h>
+#import "MJRefresh.h"
 
 @interface FTPlaygroundVC ()<UIScrollViewDelegate>
 @property (nonatomic, strong) dispatch_queue_t queue;
@@ -38,7 +39,32 @@
     _redView.tintColor = [UIColor redColor];
     _redView.layoutMargins = UIEdgeInsetsMake(100, 100, 100, 100);
     [self.view addSubview:_redView];
+    
+    NSDictionary *jsonDic = @{@"name":@"sgq",@"age":@"18",@"books":@[@{@"name":@"Chinese"},@{@"name":@"math"}]};
+    Student *stu = [Student modelWithJSON:jsonDic];
+    
+//    NSLog(@"%@",stu);
+//
+//    NSString *url=@"http://unmi.cc?p1=%+&sd &p2=中文";
+//    NSString *encodedValue = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//    NSLog(@"%@",encodedValue);
+    
+    
+    NSString *param = @"%+&sd f";
+//    param = @"https://t2015.9188.com/?lotteryflag=1#/lsjWanFa";
+    
+    NSLog(@"%@",[param stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]);
+    
+    
+    NSString * urlString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)param, (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]", NULL,kCFStringEncodingUTF8));
+    NSLog(@"%@",urlString);
+    
+    NSString *encodedValue2 = (NSString*)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(nil,                                    (CFStringRef)param, nil,                                 (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
+     NSLog(@"%@",encodedValue2);
+    
+    
 
+    
 }
 
 - (NSString *)hexString:(NSData *)data{

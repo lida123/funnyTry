@@ -31,9 +31,6 @@ alpha:(a)]
 /* screenBounds.size.width */
 #define FTScreenWidth [UIScreen mainScreen].bounds.size.width
 
-/* screenBounds.size.height */
-#define FTScreenWidth [UIScreen mainScreen].bounds.size.height
-
 /* date */
 #define FT_MINUTE 60
 #define FT_HOUR   (60 * FT_MINUTE)

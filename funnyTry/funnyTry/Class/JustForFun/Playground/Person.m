@@ -12,10 +12,5 @@
 
 @implementation Person
 
-//+ (void)load {
-//    [self mj_setupAllowedPropertyNames:^NSArray *{
-//        return @[@"name"];
-//    }];
-//}
 
 @end

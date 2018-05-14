@@ -11,6 +11,7 @@
 #import "FBShimmeringView.h"
 #import "FTBaseNavigationController.h"
 #import "FTUIListPreViewVC.h"
+#import "MJRefresh.h"
 
 @interface FTUIListViewController ()<UITableViewDelegate, UITableViewDataSource, UIViewControllerPreviewingDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -39,28 +40,38 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+    
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+    
 }
 
 - (void)loadData
 {
-    NSMutableArray *items = [NSMutableArray array];
-    NSArray *classes = @[@"FTScanViewController",
-                         @"FTFlowMountainViewController",
-                         @"FTCircleLoadingViewController",
-                         @"FTLoginViewController",
-                         @"FTCustomPushTransitionFirstVC",
-                         @"FTDragCellViewController",
-                         @"FTPausePlayAnimationVC",
-                         @"FTOneLoadingAnimationVC",
-                         @"FTLetterPathViewController",
-                         @"FTChangeFileNameVC"];
-    
-    for (NSInteger i = 0; i < classes.count; i++) {
-        FTUIListCellIem *item = [FTUIListCellIem itemWithClassString:classes[i] shimmering:NO];
-        item.separatorLeftMargin = 14;
-        [items addObject:item];
-    }
-    self.items = items;
+    [self.tableView.mj_header beginRefreshing];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        NSMutableArray *items = [NSMutableArray array];
+        NSArray *classes = @[@"FTScanViewController",
+                             @"FTFlowMountainViewController",
+                             @"FTCircleLoadingViewController",
+                             @"FTLoginViewController",
+                             @"FTCustomPushTransitionFirstVC",
+                             @"FTDragCellViewController",
+                             @"FTPausePlayAnimationVC",
+                             @"FTOneLoadingAnimationVC",
+                             @"FTLetterPathViewController",
+                             @"FTChangeFileNameVC"];
+        
+        for (NSInteger i = 0; i < classes.count; i++) {
+            FTUIListCellIem *item = [FTUIListCellIem itemWithClassString:classes[i] shimmering:NO];
+            item.separatorLeftMargin = 14;
+            [items addObject:item];
+        }
+        self.items = items;
+        
+        [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
+    });
 }
 
 
