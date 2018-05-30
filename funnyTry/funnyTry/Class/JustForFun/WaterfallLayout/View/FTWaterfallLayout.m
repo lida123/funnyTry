@@ -24,6 +24,7 @@ static const CGFloat FTDefaultColumnMargin = 10;
 
 @implementation FTWaterfallLayout
 
+#pragma mark -Super
 - (void)prepareLayout
 {
     // super do nothing
@@ -43,14 +44,15 @@ static const CGFloat FTDefaultColumnMargin = 10;
         UICollectionViewLayoutAttributes *attri = [self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
         [self.layoutAttributesArray addObject:attri];
     }
-    
 }
 
-- (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
+- (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect
+{
     return self.layoutAttributesArray;
 }
 
-- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
+{
     UIEdgeInsets edgeInsets = [self edgeInsets];
     NSUInteger columnCount = [self columnCount];
     CGFloat rowMargin = [self rowMargin];
@@ -86,7 +88,8 @@ static const CGFloat FTDefaultColumnMargin = 10;
     return attri;
 }
 
-- (CGSize)collectionViewContentSize {
+- (CGSize)collectionViewContentSize
+{
     if (!self.columnMaxYArray.count) {
         return CGSizeZero;
     }
@@ -103,6 +106,7 @@ static const CGFloat FTDefaultColumnMargin = 10;
     return CGSizeMake(0, destHieght + [self edgeInsets].bottom);
 }
 
+#pragma mark -Private
 - (UIEdgeInsets)edgeInsets
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(edgeInsetsInWaterfallLayout:)]) {
@@ -139,7 +143,7 @@ static const CGFloat FTDefaultColumnMargin = 10;
     return FTDefaultColumnMargin;
 }
 
-#pragma mark -lazy initialize
+#pragma mark -Getter
 - (NSMutableArray *)layoutAttributesArray
 {
     if (!_layoutAttributesArray) {

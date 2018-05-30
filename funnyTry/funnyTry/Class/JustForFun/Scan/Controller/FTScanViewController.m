@@ -40,6 +40,12 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ScanQRCodeAction"] style:UIBarButtonItemStylePlain target:self action:@selector(leftItemClick)];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    NSLog(@"ftscna viewWillAppear");
+}
+
 - (void)leftItemClick {
     [self.navigationController popViewControllerAnimated:YES];
 }

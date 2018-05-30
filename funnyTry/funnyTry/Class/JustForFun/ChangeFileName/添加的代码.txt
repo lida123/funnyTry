@@ -1,0 +1,520 @@
++ (UIColor *)colorAtPoint:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint2:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint3:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint4:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint5:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint6:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint7:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint8:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint9:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint10:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint11:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint12:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint13:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint14:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint15:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint16:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint17:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint18:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint19:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+
++ (UIColor *)colorAtPoint20:(CGPoint)point {
+UIImage *image;
+if (!CGRectContainsPoint(CGRectMake(0, 0, image.size.width, image.size.height), point)) {
+return nil;
+}
+
+CGFloat pointX = truncf(point.x);
+CGFloat pointY = truncf(point.y);
+CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+
+unsigned char pixelData[4];
+CGContextRef context =  CGBitmapContextCreate(&pixelData, 1, 1, 8, 4, colorSpaceRef, kCGImageAlphaPremultipliedLast);
+CGColorSpaceRelease(colorSpaceRef);
+
+CGContextSetBlendMode(context, kCGBlendModeCopy);
+CGContextTranslateCTM(context, -pointX, pointY - image.size.height);
+CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+CGFloat r = pixelData[0]/255.0;
+CGFloat g = pixelData[1]/255.0;
+CGFloat b = pixelData[2]/255.0;
+CGFloat a = pixelData[3]/255.0;
+UIColor * color = [UIColor colorWithRed:r green:g blue:b alpha:a];
+CGContextRelease(context);
+return color;
+}
+@end

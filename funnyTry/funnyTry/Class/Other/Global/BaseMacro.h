@@ -28,6 +28,9 @@ alpha:(a)]
 /* screenBounds */
 #define FTScreenBounds [UIScreen mainScreen].bounds
 
+/* screenBounds.size.width */
+#define FTScreenWidth [UIScreen mainScreen].bounds.size.width
+
 /* date */
 #define FT_MINUTE 60
 #define FT_HOUR   (60 * FT_MINUTE)
@@ -46,6 +49,12 @@ alpha:(a)]
 
 /* statusBarHeight */
 #define FTStatusBarHeight (isiPhoneX?44.0f:20.0f)
+
+/* navigationBar height*/
+#define FTNavigationBarHeight 44.0f
+
+/* navigationBar height + statusBarHeight*/
+#define FTNavigationBarPlusStatusBarHeight (FTNavigationBarHeight + FTStatusBarHeight)
 
 /* tabbarHeight */
 #define FTTabbarHeight (isiPhoneX?83.0f:49.0f)

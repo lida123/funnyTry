@@ -7,6 +7,7 @@
 //
 
 #import "FTTabBarController.h"
+#import "FTPlaygroundVC.h"
 #import "FTWaterfallViewController.h"
 #import "FTUIListViewController.h"
 #import "FTBaseNavigationController.h"
@@ -17,44 +18,45 @@
 
 @implementation FTTabBarController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    
+    [self setUpsetViewControllers];
+}
+
+- (void)setUpsetViewControllers
+{
     UITabBarItem *item0 = [[UITabBarItem alloc] init];
-    item0.title = @"waterfall";
+    item0.title = @"playground";
     item0.image = [[UIImage imageNamed:@"tabbar_discover_nor"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     item0.selectedImage = [[UIImage imageNamed:@"tabbar_discover_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     [item0 setTitleTextAttributes:@{NSForegroundColorAttributeName:FT_RGBCOLOR(252, 86, 52)} forState:UIControlStateSelected];
     
     UITabBarItem *item1 = [[UITabBarItem alloc] init];
-    item1.title = @"funnny";
+    item1.title = @"waterfall";
     item1.image = [[UIImage imageNamed:@"tabbar_discover_nor"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     item1.selectedImage = [[UIImage imageNamed:@"tabbar_discover_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     [item1 setTitleTextAttributes:@{NSForegroundColorAttributeName:FT_RGBCOLOR(252, 86, 52)} forState:UIControlStateSelected];
-
     
-    FTWaterfallViewController *waterfall = [[FTWaterfallViewController alloc] init];
-    FTBaseNavigationController *navi0 = [[FTBaseNavigationController alloc] initWithRootViewController:waterfall];
+    UITabBarItem *item2 = [[UITabBarItem alloc] init];
+    item2.title = @"funnny";
+    item2.image = [[UIImage imageNamed:@"tabbar_discover_nor"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item2.selectedImage = [[UIImage imageNamed:@"tabbar_discover_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName:FT_RGBCOLOR(252, 86, 52)} forState:UIControlStateSelected];
+    
+    FTPlaygroundVC *playground = [[FTPlaygroundVC alloc] init];
+    FTBaseNavigationController *navi0 = [[FTBaseNavigationController alloc] initWithRootViewController:playground];
     navi0.tabBarItem = item0;
     
-    FTUIListViewController *uiListVC = [[FTUIListViewController alloc] init];
-    FTBaseNavigationController *navi1 = [[FTBaseNavigationController alloc] initWithRootViewController:uiListVC];
+    FTWaterfallViewController *waterfall = [[FTWaterfallViewController alloc] init];
+    FTBaseNavigationController *navi1 = [[FTBaseNavigationController alloc] initWithRootViewController:waterfall];
     navi1.tabBarItem = item1;
-    [self setViewControllers:@[navi0,navi1] animated:YES];
+    
+    FTUIListViewController *uiListVC = [[FTUIListViewController alloc] init];
+    FTBaseNavigationController *navi2 = [[FTBaseNavigationController alloc] initWithRootViewController:uiListVC];
+    navi2.tabBarItem = item2;
+    [self setViewControllers:@[navi0,navi1,navi2] animated:YES];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
