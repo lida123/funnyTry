@@ -24,7 +24,7 @@
         _fileManager = [NSFileManager defaultManager];
         _allFiles = [NSMutableArray array];
         _allNewFiles = [NSMutableArray array];
-        _filePath = @"/Users/wen/Desktop/测试修改/替换的/Lottery3.0.0/Lottery/Classes";
+        _filePath = @"/Users/wen/Desktop/各种打包/小九彩票/Lottery3.0.0/Lottery/Classes";
         NSString *appendPath = [[NSBundle mainBundle] pathForResource:@"添加的代码.txt" ofType:nil];
         _appendStr = [NSString stringWithContentsOfFile:appendPath encoding:NSUTF8StringEncoding error:nil];
     }
@@ -43,8 +43,11 @@
     /*
      1.需要修改OpenedUDID的运行环境 文件 -fno-objc-arc
      2.CustomLineStyleItem可能会报错,直接删除
-     3. [NSKeyedArchiver archiveRootObject..修改掉原来的path
-     4. 删除NSString+MD5文件
+     3.[NSKeyedArchiver archiveRootObject..修改掉原来的path
+     4.删除NSString+MD5文件
+     5.地理位置授权增加key
+     6.UITextfield+NumberLimit assign->retain
+     7.删除Global目录下logoManager
      */
 }
 

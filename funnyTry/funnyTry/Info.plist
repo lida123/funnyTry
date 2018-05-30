@@ -48,6 +48,12 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>use your camera</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BebasNeue.otf</string>
+		<string>MFBanHei_Noncommercial-Regular.otf</string>
+		<string>Meslo LG M Italic for Powerline.ttf</string>
+	</array>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>

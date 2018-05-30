@@ -19,12 +19,14 @@
 #import "FTPlayroundTwoVC.h"
 #import <YYKit.h>
 #import "MJRefresh.h"
+#import "NOEELeftTitleBtn.h"
 
 @interface FTPlaygroundVC ()<UIScrollViewDelegate>
 @property (nonatomic, strong) dispatch_queue_t queue;
 @property (nonatomic, strong) FTTouchView *redView;
 @property (nonatomic, strong) FTTouchView *touchView;
 @property (nonatomic, strong) UIScrollView *sr;
+@property (nonatomic, strong) UIButton *button;
 @end
 
 @implementation FTPlaygroundVC
@@ -38,34 +40,154 @@
     _redView.backgroundColor = [UIColor grayColor];
     _redView.tintColor = [UIColor redColor];
     _redView.layoutMargins = UIEdgeInsetsMake(100, 100, 100, 100);
-    [self.view addSubview:_redView];
+//    [self.view addSubview:_redView];
     
     NSDictionary *jsonDic = @{@"name":@"sgq",@"age":@"18",@"books":@[@{@"name":@"Chinese"},@{@"name":@"math"}]};
     Student *stu = [Student modelWithJSON:jsonDic];
     
+    
+    NSLog(@"%@",[NSString stringWithFormat:@"%.2f",4.566]);
 //    NSLog(@"%@",stu);
 //
 //    NSString *url=@"http://unmi.cc?p1=%+&sd &p2=中文";
 //    NSString *encodedValue = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 //    NSLog(@"%@",encodedValue);
     
-    
-    NSString *param = @"%+&sd f";
-//    param = @"https://t2015.9188.com/?lotteryflag=1#/lsjWanFa";
-    
-    NSLog(@"%@",[param stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]);
-    
-    
-    NSString * urlString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)param, (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]", NULL,kCFStringEncodingUTF8));
-    NSLog(@"%@",urlString);
-    
-    NSString *encodedValue2 = (NSString*)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(nil,                                    (CFStringRef)param, nil,                                 (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
-     NSLog(@"%@",encodedValue2);
-    
-    
 
     
+//    CAGradientLayer *gradient = [CAGradientLayer layer];
+//    gradient.frame = CGRectMake(100, 100, 200, 200);
+//    gradient.colors = [NSArray arrayWithObjects:
+//                       (id)[UIColor redColor].CGColor,
+//                       (id)[UIColor greenColor].CGColor,
+//                       nil];
+//    gradient.locations = @[@0.5,@1];
+//    gradient.startPoint = CGPointMake(0, 1);
+//    gradient.endPoint = CGPointMake(1, 0);
+//    [self.view.layer insertSublayer:gradient atIndex:0];
+
+    //创建CGContextRef
+//
+//    UIGraphicsBeginImageContext(self.view.bounds.size);
+//
+//    CGContextRef gc = UIGraphicsGetCurrentContext();
+//
+//    //创建CGMutablePathRef
+//
+//    CGMutablePathRef path = CGPathCreateMutable();
+//
+//    //绘制Path
+//
+//    CGRect rect = CGRectInset(self.view.bounds, 1, 30);
+//
+//    CGPathMoveToPoint(path, NULL, CGRectGetMinX(rect), CGRectGetMinY(rect));
+//
+//    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(rect), CGRectGetHeight(rect));
+//
+//    CGPathAddLineToPoint(path, NULL, CGRectGetWidth(rect), CGRectGetHeight(rect) * 2 / 3);
+//
+//    CGPathCloseSubpath(path);
+//
+//    //绘制渐变
+//
+//    [self drawLinearGradient:gc path:path startColor:[UIColor greenColor].CGColor endColor:[UIColor redColor].CGColor];
+//
+//    //注意释放CGMutablePathRef
+//
+//    CGPathRelease(path);
+//
+//    //从Context中获取图像，并显示在界面上
+//
+//    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+//
+//    UIGraphicsEndImageContext();
+//
+//    UIImageView *imgView = [[UIImageView alloc] initWithImage:img];
+//
+//    [self.view addSubview:imgView];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"贝格尔来德" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"c"] forState:UIControlStateNormal];
+    [button sizeToFit];
+    button.frame = CGRectMake(0, 0, button.frame.size.width + 50, 30);
+    [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 30)];
+    [button setTitleEdgeInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
+    button.center = self.view.center;
+    button.layer.cornerRadius = 2;
+    button.backgroundColor = [UIColor redColor];
+    
+    button.titleLabel.font = [UIFont systemFontOfSize:18];
+
+    [self.view addSubview:button];
+    _button = button;
+    
+    UIFont *font = [UIFont italicSystemFontOfSize:15];
+    NSLog(@"%@",font.fontName);
 }
+
+- (NSAttributedString *)rankStringForSHow {
+    NSString * levelTitle= @"V8-一代彩神";
+  
+    NSArray * arr = [levelTitle componentsSeparatedByString:@"-"];
+    if (arr.count != 2) {
+        return nil;
+    }
+    
+    NSString *rank = arr[0];
+    NSString *desc = arr[1];
+    NSString *whole = [NSString stringWithFormat:@"%@%@",rank,desc];
+    NSMutableAttributedString *attri = [[NSMutableAttributedString alloc] initWithString:whole attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:12]}];
+    [attri setAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:16],NSForegroundColorAttributeName:[UIColor whiteColor]} range:[whole rangeOfString:rank]];
+    [attri addAttribute:NSBaselineOffsetAttributeName value:@(0.36 * (16 - 12)) range:NSMakeRange(rank.length, whole.length - rank.length)];
+    return attri;
+    
+}
+
+- (void)drawLinearGradient:(CGContextRef)context
+
+                      path:(CGPathRef)path
+
+                startColor:(CGColorRef)startColor
+
+                  endColor:(CGColorRef)endColor
+
+{
+    
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    
+    CGFloat locations[] = { 0.0, 1.0 };
+    
+    NSArray *colors = @[(__bridge id) startColor, (__bridge id) endColor];
+    
+    CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef) colors, locations);
+    
+    CGRect pathRect = CGPathGetBoundingBox(path);
+    
+    //具体方向可根据需求修改
+    
+    CGPoint startPoint = CGPointMake(CGRectGetMidX(pathRect), CGRectGetMinY(pathRect));
+    
+    CGPoint endPoint = CGPointMake(CGRectGetMidX(pathRect), CGRectGetMaxY(pathRect));
+    
+    CGContextSaveGState(context);
+    
+    CGContextAddPath(context, path);
+    
+    CGContextClip(context);
+    
+    CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, 0);
+    
+    CGContextRestoreGState(context);
+    
+    CGGradientRelease(gradient);
+    
+    CGColorSpaceRelease(colorSpace);
+    
+}
+
+
 
 - (NSString *)hexString:(NSData *)data{
     NSUInteger length = data.length;
@@ -90,9 +212,8 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    char * a =  @encode(id);
-
+{    
+    _button.titleLabel.font = [UIFont fontWithName:@"PingFang SC" size:18];
 }
 
 #pragma mark -Private

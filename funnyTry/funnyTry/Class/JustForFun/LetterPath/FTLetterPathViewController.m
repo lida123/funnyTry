@@ -28,6 +28,15 @@
     imageView.image = [UIImage imageNamed:@"Group 49.svg"];
     imageView.backgroundColor = [UIColor redColor];
     [self.view addSubview:imageView];
+    
+    imageView.layer.shadowOffset = CGSizeMake(2,5);
+    imageView.layer.shadowOpacity = 1;
+    imageView.layer.shadowRadius = 5;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
 }
 
 /*

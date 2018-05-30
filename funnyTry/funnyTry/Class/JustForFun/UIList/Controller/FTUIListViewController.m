@@ -45,6 +45,16 @@
     
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSLog(@"UI viewWillDisappear");
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
+}
+
 - (void)loadData
 {
     [self.tableView.mj_header beginRefreshing];

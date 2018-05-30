@@ -22,9 +22,30 @@
     self.window.rootViewController = tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    NSArray *arr = [UIFont familyNames];
+    
+    NSLog(@"%@",arr);
+    
+    UIFont *font = [UIFont systemFontOfSize:18 weight:UIFontWeightMedium];
+    
+    UIFont *font1 = [UIFont systemFontOfSize:18];
     return YES;
 }
 
+- (UIFont *)font {
+    NSString *fontPath = [[NSBundle mainBundle] pathForResource:@"BebasNeue" ofType:@"otf"];
+    NSURL *url = [NSURL fileURLWithPath:fontPath];
+    CGDataProviderRef fontDataProvider = CGDataProviderCreateWithURL((__bridge CFURLRef)url);
+    if (fontDataProvider == NULL)        return nil;
+    CGFontRef newFont = CGFontCreateWithDataProvider(fontDataProvider);
+    CGDataProviderRelease(fontDataProvider);
+    if (newFont == NULL) return nil;
+    NSString *fontName = (__bridge NSString *)CGFontCopyFullName(newFont);
+    UIFont *font = [UIFont fontWithName:fontName size:12];
+    CGFontRelease(newFont);
+    return font;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
