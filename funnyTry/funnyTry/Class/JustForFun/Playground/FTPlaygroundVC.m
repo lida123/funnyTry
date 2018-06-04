@@ -18,6 +18,7 @@
 #import <UIKit/UIFeedbackGenerator.h>
 #import "FTPlayroundTwoVC.h"
 #import <YYKit.h>
+#import <objc/runtime.h>
 #import "MJRefresh.h"
 #import "NOEELeftTitleBtn.h"
 
@@ -125,6 +126,8 @@
     
     UIFont *font = [UIFont italicSystemFontOfSize:15];
     NSLog(@"%@",font.fontName);
+    
+
 }
 
 - (NSAttributedString *)rankStringForSHow {

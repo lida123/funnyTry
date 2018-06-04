@@ -24,7 +24,7 @@
         _fileManager = [NSFileManager defaultManager];
         _allFiles = [NSMutableArray array];
         _allNewFiles = [NSMutableArray array];
-        _filePath = @"/Users/wen/Desktop/各种打包/小九彩票/Lottery3.0.0/Lottery/Classes";
+        _filePath = @"/Users/wen/Desktop/各种打包/酷彩/酷彩打包477/混淆的/Lottery3.0.0/Lottery/Classes";
         NSString *appendPath = [[NSBundle mainBundle] pathForResource:@"添加的代码.txt" ofType:nil];
         _appendStr = [NSString stringWithContentsOfFile:appendPath encoding:NSUTF8StringEncoding error:nil];
     }

@@ -5,4 +5,5 @@ xcodeproj 'funnyTry/funnyTry.xcodeproj'
 target 'funnyTry' do
 pod "AFNetworking"
 pod "YYKit"
+pod "NOEEBaseFramework"
 end
