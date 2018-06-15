@@ -106,6 +106,8 @@
 		C58AB6311FE7675900139498 /* FTOneLoadingAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6301FE7675900139498 /* FTOneLoadingAnimationVC.m */; };
 		C58AB6361FE7682F00139498 /* FTOneLoadingAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6351FE7682F00139498 /* FTOneLoadingAnimationView.m */; };
 		C58AB6391FE768B800139498 /* FTLoadingCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6381FE768B800139498 /* FTLoadingCircleLayer.m */; };
+		C592ACCA20D105EB00D90E3D /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = C592ACC920D105EB00D90E3D /* NSObject+DLIntrospection.m */; };
+		C592ACD120D27F9300D90E3D /* MoreViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C592ACD020D27F9300D90E3D /* MoreViewTest.m */; };
 		C598FBE91FE0F67F00B67823 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FBD11FE0F67F00B67823 /* MASCompositeConstraint.m */; };
 		C598FBEA1FE0F67F00B67823 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FBD41FE0F67F00B67823 /* MASConstraint.m */; };
 		C598FBEB1FE0F67F00B67823 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FBD61FE0F67F00B67823 /* MASConstraintMaker.m */; };
@@ -160,6 +162,7 @@
 		C5BB762F20BE58E100BC1B3A /* MFBanHei_Noncommercial-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C5BB762E20BE58E100BC1B3A /* MFBanHei_Noncommercial-Regular.otf */; };
 		C5BB763120BE598500BC1B3A /* Meslo LG M Italic for Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5BB763020BE598500BC1B3A /* Meslo LG M Italic for Powerline.ttf */; };
 		C5BB763720BE5F6D00BC1B3A /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = C5BB763620BE5F6D00BC1B3A /* BebasNeue.otf */; };
+		C5BB8DCD20C68F4300BC1B3A /* NSObject+Sark.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BB8DCC20C68F4300BC1B3A /* NSObject+Sark.m */; };
 		C5D1380D1FCFF9BF009EC87E /* LYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D138091FCFF9BE009EC87E /* LYButton.m */; };
 		C5D1380E1FCFF9BF009EC87E /* LYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D1380B1FCFF9BE009EC87E /* LYTextField.m */; };
 		C5D138171FCFFA1E009EC87E /* FTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D138161FCFFA1E009EC87E /* FTLoginViewController.m */; };
@@ -385,6 +388,10 @@
 		C58AB6351FE7682F00139498 /* FTOneLoadingAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTOneLoadingAnimationView.m; sourceTree = "<group>"; };
 		C58AB6371FE768B800139498 /* FTLoadingCircleLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLoadingCircleLayer.h; sourceTree = "<group>"; };
 		C58AB6381FE768B800139498 /* FTLoadingCircleLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLoadingCircleLayer.m; sourceTree = "<group>"; };
+		C592ACC820D105EB00D90E3D /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
+		C592ACC920D105EB00D90E3D /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
+		C592ACCF20D27F9300D90E3D /* MoreViewTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreViewTest.h; sourceTree = "<group>"; };
+		C592ACD020D27F9300D90E3D /* MoreViewTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreViewTest.m; sourceTree = "<group>"; };
 		C594A4221FFF79B3006699A6 /* FTBaseNavigationControllerNotice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseNavigationControllerNotice.h; sourceTree = "<group>"; };
 		C598FBD01FE0F67F00B67823 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		C598FBD11FE0F67F00B67823 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
@@ -475,6 +482,8 @@
 		C5BB762E20BE58E100BC1B3A /* MFBanHei_Noncommercial-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFBanHei_Noncommercial-Regular.otf"; sourceTree = "<group>"; };
 		C5BB763020BE598500BC1B3A /* Meslo LG M Italic for Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Meslo LG M Italic for Powerline.ttf"; sourceTree = "<group>"; };
 		C5BB763620BE5F6D00BC1B3A /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
+		C5BB8DCB20C68F4300BC1B3A /* NSObject+Sark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Sark.h"; sourceTree = "<group>"; };
+		C5BB8DCC20C68F4300BC1B3A /* NSObject+Sark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Sark.m"; sourceTree = "<group>"; };
 		C5D138091FCFF9BE009EC87E /* LYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYButton.m; sourceTree = "<group>"; };
 		C5D1380A1FCFF9BE009EC87E /* LYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTextField.h; sourceTree = "<group>"; };
 		C5D1380B1FCFF9BE009EC87E /* LYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTextField.m; sourceTree = "<group>"; };
@@ -552,6 +561,8 @@
 				C58618FC2091B65B00B49D4C /* FTPlayroundTwoVC.h */,
 				C58618FD2091B65B00B49D4C /* FTPlayroundTwoVC.m */,
 				C58618FE2091B65B00B49D4C /* FTPlayroundTwoVC.xib */,
+				C5BB8DCB20C68F4300BC1B3A /* NSObject+Sark.h */,
+				C5BB8DCC20C68F4300BC1B3A /* NSObject+Sark.m */,
 			);
 			path = Playground;
 			sourceTree = "<group>";
@@ -583,6 +594,8 @@
 				C509172420883E78000F38D2 /* 添加的代码.txt */,
 				C509D5E420871D57000F38D2 /* FTChangeFileNameVC.h */,
 				C509D5E520871D57000F38D2 /* FTChangeFileNameVC.m */,
+				C592ACCF20D27F9300D90E3D /* MoreViewTest.h */,
+				C592ACD020D27F9300D90E3D /* MoreViewTest.m */,
 			);
 			path = ChangeFileName;
 			sourceTree = "<group>";
@@ -1053,6 +1066,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C592ACC720D105EB00D90E3D /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				C592ACC820D105EB00D90E3D /* NSObject+DLIntrospection.h */,
+				C592ACC920D105EB00D90E3D /* NSObject+DLIntrospection.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
 		C594A4231FFF7A01006699A6 /* Protocal */ = {
 			isa = PBXGroup;
 			children = (
@@ -1109,6 +1131,7 @@
 		C59D91B11FB15C0F004550D0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C592ACC720D105EB00D90E3D /* NSObject */,
 				C50917342090653A000F38D2 /* UIScrollView */,
 				C5F09B7F2085FA9800BB2341 /* UIImage */,
 				C5B497F91FD008F100C6B6B4 /* UIViewController */,
@@ -1618,6 +1641,7 @@
 				C5726D96209EEA570037DA02 /* MJRefreshAutoNormalFooter.m in Sources */,
 				C57686911FAFF75C00066AA3 /* FTWaterfallViewController.m in Sources */,
 				C5B8C43E1FBD9DF400037249 /* UIButton+CircleLoading.m in Sources */,
+				C592ACCA20D105EB00D90E3D /* NSObject+DLIntrospection.m in Sources */,
 				C57686AE1FB02E6000066AA3 /* FBShimmeringView.m in Sources */,
 				C56EE5262084820A005186DD /* MJPropertyType.m in Sources */,
 				C576867D1FAFF66500066AA3 /* UIView+WebCacheOperation.m in Sources */,
@@ -1650,6 +1674,7 @@
 				C56EE5282084820A005186DD /* NSObject+MJCoding.m in Sources */,
 				C59EFF191FB553730004E0D4 /* FTScanBackgroundView.m in Sources */,
 				C5726D92209EEA570037DA02 /* MJRefreshComponent.m in Sources */,
+				C5BB8DCD20C68F4300BC1B3A /* NSObject+Sark.m in Sources */,
 				C5726DA1209EEA570037DA02 /* UIScrollView+MJExtension.m in Sources */,
 				C59D91E01FB18DD3004550D0 /* SVProgressHUD.m in Sources */,
 				C534B7A820BC031B00651271 /* NOEELeftTitleBtn.m in Sources */,
@@ -1670,6 +1695,7 @@
 				C5726DA3209EEA570037DA02 /* UIView+MJExtension.m in Sources */,
 				C59EFF221FB5AC770004E0D4 /* FLAnimatedImage.m in Sources */,
 				C576869A1FAFF8EB00066AA3 /* XMGShop.m in Sources */,
+				C592ACD120D27F9300D90E3D /* MoreViewTest.m in Sources */,
 				C5736A981FD945410018BA92 /* FTCustomPushTransitionSecondVC.m in Sources */,
 				C52BACBA1FE8F98900ED9E10 /* FTLetterPathViewController.m in Sources */,
 				C576867B1FAFF66500066AA3 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -1883,6 +1909,10 @@
 				DEVELOPMENT_TEAM = U7F2PF4JVH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/Class/Entrance/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=100",
+				);
 				INFOPLIST_FILE = funnyTry/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

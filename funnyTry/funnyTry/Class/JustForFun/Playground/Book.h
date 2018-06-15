@@ -10,4 +10,9 @@
 
 @interface Book : NSObject
 @property (nonatomic, strong) NSString *name;
+
+- (void)onePage:(NSString *)line;
+
+- :_;
+
 @end

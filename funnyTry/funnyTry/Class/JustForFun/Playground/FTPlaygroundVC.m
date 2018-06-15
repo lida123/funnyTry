@@ -21,6 +21,39 @@
 #import <objc/runtime.h>
 #import "MJRefresh.h"
 #import "NOEELeftTitleBtn.h"
+#import "NSObject+Sark.h"
+
+
+//父结构体
+struct father
+{
+    int f1;
+    int f2;
+};
+
+//子结构体
+struct son
+{
+    //子结构体里定义一个父结构体变量，必须放在子结构体里的第一位
+    struct father fn;
+    //子结构体的扩展变量
+    int s1;
+    int s2;
+};
+
+#define FTA 0
+#define FTB 1
+
+#ifndef FTA
+  #define FTABC 1
+#elif FTB
+  #define FTABC 0
+#endif
+
+int a = 6;
+
+
+
 
 @interface FTPlaygroundVC ()<UIScrollViewDelegate>
 @property (nonatomic, strong) dispatch_queue_t queue;
@@ -46,7 +79,7 @@
     NSDictionary *jsonDic = @{@"name":@"sgq",@"age":@"18",@"books":@[@{@"name":@"Chinese"},@{@"name":@"math"}]};
     Student *stu = [Student modelWithJSON:jsonDic];
     
-    
+    Category c;
     NSLog(@"%@",[NSString stringWithFormat:@"%.2f",4.566]);
 //    NSLog(@"%@",stu);
 //
@@ -54,80 +87,138 @@
 //    NSString *encodedValue = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 //    NSLog(@"%@",encodedValue);
     
-
     
-//    CAGradientLayer *gradient = [CAGradientLayer layer];
-//    gradient.frame = CGRectMake(100, 100, 200, 200);
-//    gradient.colors = [NSArray arrayWithObjects:
-//                       (id)[UIColor redColor].CGColor,
-//                       (id)[UIColor greenColor].CGColor,
-//                       nil];
-//    gradient.locations = @[@0.5,@1];
-//    gradient.startPoint = CGPointMake(0, 1);
-//    gradient.endPoint = CGPointMake(1, 0);
-//    [self.view.layer insertSublayer:gradient atIndex:0];
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = CGRectMake(100, 100, 200, 200);
+    gradient.colors = [NSArray arrayWithObjects:
+                       (id)[UIColor redColor].CGColor,
+                       (id)[UIColor greenColor].CGColor,
+                       nil];
+    gradient.locations = @[@0.5,@1];
+    gradient.startPoint = CGPointMake(0, 1);
+    gradient.endPoint = CGPointMake(1, 0);
+    [self.view.layer insertSublayer:gradient atIndex:0];
 
     //创建CGContextRef
-//
-//    UIGraphicsBeginImageContext(self.view.bounds.size);
-//
-//    CGContextRef gc = UIGraphicsGetCurrentContext();
-//
-//    //创建CGMutablePathRef
-//
-//    CGMutablePathRef path = CGPathCreateMutable();
-//
-//    //绘制Path
-//
-//    CGRect rect = CGRectInset(self.view.bounds, 1, 30);
-//
-//    CGPathMoveToPoint(path, NULL, CGRectGetMinX(rect), CGRectGetMinY(rect));
-//
-//    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(rect), CGRectGetHeight(rect));
-//
-//    CGPathAddLineToPoint(path, NULL, CGRectGetWidth(rect), CGRectGetHeight(rect) * 2 / 3);
-//
-//    CGPathCloseSubpath(path);
-//
-//    //绘制渐变
-//
-//    [self drawLinearGradient:gc path:path startColor:[UIColor greenColor].CGColor endColor:[UIColor redColor].CGColor];
-//
-//    //注意释放CGMutablePathRef
-//
-//    CGPathRelease(path);
-//
-//    //从Context中获取图像，并显示在界面上
-//
-//    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-//
-//    UIGraphicsEndImageContext();
-//
-//    UIImageView *imgView = [[UIImageView alloc] initWithImage:img];
-//
-//    [self.view addSubview:imgView];
+
+    UIGraphicsBeginImageContext(self.view.bounds.size);
+
+    CGContextRef gc = UIGraphicsGetCurrentContext();
+
+    //创建CGMutablePathRef
+
+    CGMutablePathRef path = CGPathCreateMutable();
+
+    //绘制Path
+
+    CGRect rect = CGRectInset(self.view.bounds, 1, 30);
+
+    CGPathMoveToPoint(path, NULL, CGRectGetMinX(rect), CGRectGetMinY(rect));
+
+    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(rect), CGRectGetHeight(rect));
+
+    CGPathAddLineToPoint(path, NULL, CGRectGetWidth(rect), CGRectGetHeight(rect) * 2 / 3);
+
+    CGPathCloseSubpath(path);
+
+    //绘制渐变
+
+    [self drawLinearGradient:gc path:path startColor:[UIColor greenColor].CGColor endColor:[UIColor redColor].CGColor];
+
+    //注意释放CGMutablePathRef
+
+    CGPathRelease(path);
+
+    //从Context中获取图像，并显示在界面上
+
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+
+    UIGraphicsEndImageContext();
+
+    UIImageView *imgView = [[UIImageView alloc] initWithImage:img];
+
+    [self.view addSubview:imgView];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:@"贝格尔来德" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setImage:[UIImage imageNamed:@"c"] forState:UIControlStateNormal];
     [button sizeToFit];
-    button.frame = CGRectMake(0, 0, button.frame.size.width + 50, 30);
+    button.frame = CGRectMake(0, 0, button.frame.size.width, 30);
     [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 30)];
     [button setTitleEdgeInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
     button.center = self.view.center;
     button.layer.cornerRadius = 2;
     button.backgroundColor = [UIColor redColor];
-    
+
     button.titleLabel.font = [UIFont systemFontOfSize:18];
 
     [self.view addSubview:button];
-    _button = button;
+//    _button = button;
     
-    UIFont *font = [UIFont italicSystemFontOfSize:15];
-    NSLog(@"%@",font.fontName);
+//    UIFont *font = [UIFont italicSystemFontOfSize:15];
+//    NSLog(@"%@",font.fontName);
+//    struct son s;
+//    s.fn.f1 = 10;
+//    s.fn.f2 = 20;
+//
+//    test(&s);
+//    //打印修改后的值
+//    printf("s.fn.f1 = %d\n",s.fn.f1);
+//    printf("s.fn.f2 = %d\n",s.fn.f2);
     
+//    Book *book = [[Book alloc] init];
+//    void(*function)(id, SEL) = (void(*)(id, SEL))class_getMethodImplementation([Book class], @selector(onePage));
+//    function(book, @selector(onePage));
+    
+//
+//    Book *book1 = [[Book alloc] init];
+//    const char * name =  object_getClassName(book1);
+    CGSize size = {2,4};
+    CGRect fr = {1,2,size};
 
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"one %s",__func__);
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+     NSLog(@"one %s",__func__);
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+     NSLog(@"one %s",__func__);
+    
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    NSLog(@"one %s",__func__);
+}
+
+- (void)willChangeValueForKey:(NSString *)key {
+    
+}
+
+- (void)didChangeValueForKey:(NSString *)key {
+    
+}
+
+void test(struct son *t)
+{
+    //将子结构体指针强制转换成父结构体指针
+    struct father *f = (struct father *)t;
+    //打印原始值
+    printf("f->f1 = %d\n",f->f1);
+    printf("f->f2 = %d\n",f->f2);
+    //修改原始值
+    f->f1 = 30;
+    f->f2 = 40;
 }
 
 - (NSAttributedString *)rankStringForSHow {
@@ -208,15 +299,10 @@
     
 }
 
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    _sr.isMoving = NO;
-}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {    
-    _button.titleLabel.font = [UIFont fontWithName:@"PingFang SC" size:18];
+    
 }
 
 #pragma mark -Private
@@ -233,7 +319,9 @@
 
 - (void)rightBarButtonClick
 {
+ 
     FTPlayroundTwoVC *vc = [[FTPlayroundTwoVC alloc] init];
+//    vc.view.frame = CGRectMake(0, 0, 100, 100);
     [self.navigationController pushViewController:vc animated:YES];
 }
 

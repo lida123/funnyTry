@@ -32,9 +32,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>caiyi9188Lottery15697game</string>
-			</array>
+			<array/>
 		</dict>
 		<dict/>
 	</array>

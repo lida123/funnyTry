@@ -24,13 +24,17 @@
         _fileManager = [NSFileManager defaultManager];
         _allFiles = [NSMutableArray array];
         _allNewFiles = [NSMutableArray array];
-        _filePath = @"/Users/wen/Desktop/各种打包/酷彩/酷彩打包477/混淆的/Lottery3.0.0/Lottery/Classes";
+        _filePath = @"/Users/wen/Desktop/needX/funnyTry/funnyTry/funnyTry/Class";
         NSString *appendPath = [[NSBundle mainBundle] pathForResource:@"添加的代码.txt" ofType:nil];
         _appendStr = [NSString stringWithContentsOfFile:appendPath encoding:NSUTF8StringEncoding error:nil];
     }
     return self;
 }
 
+static NSString *suffix = @"HUHUWEI";
+static NSString *moreFileName = @"TSRJCell";
+static NSInteger moreFileCount = 100;
+static NSString *methodMark = @"mj_";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -39,7 +43,8 @@
     [self changeFileName];
     
     [self changeFileText];
-    
+
+    [self addMoreFile];
     /*
      1.需要修改OpenedUDID的运行环境 文件 -fno-objc-arc
      2.CustomLineStyleItem可能会报错,直接删除
@@ -48,10 +53,9 @@
      5.地理位置授权增加key
      6.UITextfield+NumberLimit assign->retain
      7.删除Global目录下logoManager
+     8.地理位置限制文件的替换
      */
 }
-
-static NSString *suffix = @"SUFFIX";
 
 #pragma mark -Private
 - (void )pickoutChangeableFileWithPath:(NSString *)path
@@ -136,7 +140,8 @@ static NSString *suffix = @"SUFFIX";
             if (isM) {
                 NSRange endRange = [string rangeOfString:@"@end" options:NSBackwardsSearch range:NSMakeRange(0, string.length)];
                 if (endRange.location != NSNotFound) {
-                    [string replaceCharactersInRange:endRange withString:self.appendStr];
+                    
+                    [string replaceCharactersInRange:endRange withString:[self appendStringAddCount]];
                 }
             }
             
@@ -219,5 +224,74 @@ static NSString *suffix = @"SUFFIX";
 
     return stringM;
 }
+
+- (void)addMoreFile {
+    NSFileManager *mgr = [NSFileManager defaultManager];
+    NSString *dirPath = [_filePath stringByAppendingPathComponent:@"More"];
+    NSError *error;
+    [mgr createDirectoryAtPath:dirPath withIntermediateDirectories:YES attributes:nil error:&error];
+    
+    if (!error) {
+        NSLog(@"创建目录成功");
+    } else {
+        NSLog(@"创建目录失败");
+        return;
+    }
+    
+    NSString *lastFileName = nil;
+    for (NSInteger i = 0; i < moreFileCount; i++) {
+        NSString *fileName = [NSString stringWithFormat:@"%@%zd",moreFileName,i];
+        [self createOneFileWithFileName:fileName atdirPath:dirPath mgr:mgr lastFileName:lastFileName];
+        NSLog(@"%@",fileName);
+        lastFileName = fileName;
+    }
+
+}
+
+/*
+ #import <Foundation/Foundation.h>
+ 
+ @interface MoreViewTest : NSObject
+ 
+ @end
+
+ 
+ 
+ #import "MoreViewTest.h"
+ 
+ @implementation MoreViewTest
+ 
+ */
+- (void)createOneFileWithFileName:(NSString *)fileName atdirPath:(NSString *)dirPath mgr:(NSFileManager *)mgr lastFileName:(NSString *)lastFileName {
+    NSString *hString = [NSString stringWithFormat:@"#import <Foundation/Foundation.h> \n@interface %@ : NSObject \n@end",fileName];
+    NSString *hPath = [NSString stringWithFormat:@"%@/%@.h",dirPath,fileName];
+    [mgr createFileAtPath:hPath contents:[hString dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+    
+    NSString *mString = nil;
+    NSString *appendString = [self appendStringForClass:fileName];
+    if (!lastFileName) {
+        mString = [NSString stringWithFormat:@"#import \"%@.h\" \n@implementation %@ \n %@",fileName,fileName,appendString];
+    } else {
+        mString = [NSString stringWithFormat:@"#import \"%@.h\" \n#import \"%@.h\"  \n@implementation %@ \n %@",fileName,lastFileName,fileName,appendString];
+    }
+    NSString *mPath = [NSString stringWithFormat:@"%@/%@.m",dirPath,fileName];
+    [mgr createFileAtPath:mPath contents:[mString dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+    
+}
+
+
+- (NSString *)appendStringForClass:(NSString *)className {
+    NSString *string = [_appendStr stringByReplacingOccurrencesOfString:methodMark withString:className];
+    return string;
+}
+
+NSInteger count = 1;
+- (NSString *)appendStringAddCount {
+    NSString *countString = [NSString stringWithFormat:@"noee_%zd",count];
+    NSString *string = [_appendStr stringByReplacingOccurrencesOfString:methodMark withString:countString];
+    count++;
+    return string;
+}
+
 
 @end

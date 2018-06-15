@@ -10,4 +10,13 @@
 
 @implementation Book
 
+- (void)onePage:(NSString *)line {
+    FTDPRINT(@"%@",line);
+}
+
+
+- :_ {
+    NSLog(@"hehe");
+    return nil;
+}
 @end
