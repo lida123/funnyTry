@@ -172,11 +172,10 @@ int a = 6;
 //    void(*function)(id, SEL) = (void(*)(id, SEL))class_getMethodImplementation([Book class], @selector(onePage));
 //    function(book, @selector(onePage));
     
-//
-//    Book *book1 = [[Book alloc] init];
-//    const char * name =  object_getClassName(book1);
-    CGSize size = {2,4};
-    CGRect fr = {1,2,size};
+    Person *p = [[Person alloc] init];
+    [p setValue:@2 forKey:@"count"];
+    
+    NSLog(@"%zd",p.count);
 
 }
 

@@ -1,0 +1,1029 @@
+- (NSString *)mj_underlineFromCamel11
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel12
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel13
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel14
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel15
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel16
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel17
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel18
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel19
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel120
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel121
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel122
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel123
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel124
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel125
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel126
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel127
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel128
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel129
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel130
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+- (NSString *)mj_underlineFromCamel131
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+
+- (NSString *)mj_underlineFromCamel132
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+
+- (NSString *)mj_underlineFromCamel133
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+
+- (NSString *)mj_underlineFromCamel134
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+
+
+- (NSString *)mj_underlineFromCamel135
+{
+NSString *ori = @"good luck";
+if (ori.length == 0) return ori;
+NSMutableString *string = [NSMutableString string];
+for (NSUInteger i = 0; i<ori.length; i++) {
+unichar c = [string characterAtIndex:i];
+NSString *cString = [NSString stringWithFormat:@"%c", c];
+NSString *cStringLower = [cString lowercaseString];
+if ([cString isEqualToString:cStringLower]) {
+[string appendString:cStringLower];
+} else {
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+[string appendString:@"_"];
+[string appendString:cStringLower];
+}
+}
+return string;
+}
+@end

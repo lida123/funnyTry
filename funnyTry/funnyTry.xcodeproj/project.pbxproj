@@ -35,6 +35,7 @@
 		C5616C1F1FA8777E00A9C033 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C1E1FA8777E00A9C033 /* main.m */; };
 		C5616C291FA8777E00A9C033 /* funnyTryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C281FA8777E00A9C033 /* funnyTryTests.m */; };
 		C5616C341FA8777E00A9C033 /* funnyTryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C331FA8777E00A9C033 /* funnyTryUITests.m */; };
+		C56D5FB620D9042700C8BC44 /* 添加的代码的副本.txt in Resources */ = {isa = PBXBuildFile; fileRef = C56D5FB520D9042600C8BC44 /* 添加的代码的副本.txt */; };
 		C56EE5222084820A005186DD /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C56EE50F2084820A005186DD /* MJExtensionConst.m */; };
 		C56EE5232084820A005186DD /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = C56EE5112084820A005186DD /* MJFoundation.m */; };
 		C56EE5242084820A005186DD /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = C56EE5132084820A005186DD /* MJProperty.m */; };
@@ -246,6 +247,7 @@
 		C5616C2F1FA8777E00A9C033 /* funnyTryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = funnyTryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5616C331FA8777E00A9C033 /* funnyTryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = funnyTryUITests.m; sourceTree = "<group>"; };
 		C5616C351FA8777E00A9C033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C56D5FB520D9042600C8BC44 /* 添加的代码的副本.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "添加的代码的副本.txt"; sourceTree = "<group>"; };
 		C56EE50D2084820A005186DD /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
 		C56EE50E2084820A005186DD /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
 		C56EE50F2084820A005186DD /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
@@ -591,6 +593,7 @@
 		C509D5E320871CCF000F38D2 /* ChangeFileName */ = {
 			isa = PBXGroup;
 			children = (
+				C56D5FB520D9042600C8BC44 /* 添加的代码的副本.txt */,
 				C509172420883E78000F38D2 /* 添加的代码.txt */,
 				C509D5E420871D57000F38D2 /* FTChangeFileNameVC.h */,
 				C509D5E520871D57000F38D2 /* FTChangeFileNameVC.m */,
@@ -1556,6 +1559,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C56D5FB620D9042700C8BC44 /* 添加的代码的副本.txt in Resources */,
 				C5AD1A481FD1389700A7EE86 /* 5.m4a in Resources */,
 				C5AD1A491FD1389700A7EE86 /* 6.m4a in Resources */,
 				C5AD1A451FD1389700A7EE86 /* 2.m4a in Resources */,

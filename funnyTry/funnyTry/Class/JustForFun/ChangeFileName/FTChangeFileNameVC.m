@@ -31,7 +31,7 @@
     return self;
 }
 
-static NSString *suffix = @"HUHUWEI";
+static NSString *suffix = @"SUFFIX";
 static NSString *moreFileName = @"TSRJCell";
 static NSInteger moreFileCount = 100;
 static NSString *methodMark = @"mj_";
@@ -44,7 +44,8 @@ static NSString *methodMark = @"mj_";
     
     [self changeFileText];
 
-    [self addMoreFile];
+//    [self addMoreFile];
+    
     /*
      1.需要修改OpenedUDID的运行环境 文件 -fno-objc-arc
      2.CustomLineStyleItem可能会报错,直接删除
