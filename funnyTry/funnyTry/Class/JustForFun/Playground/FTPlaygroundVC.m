@@ -22,6 +22,7 @@
 #import "MJRefresh.h"
 #import "NOEELeftTitleBtn.h"
 #import "NSObject+Sark.h"
+#import "UIViewController+Association.h"
 
 
 //父结构体
@@ -79,16 +80,8 @@ int a = 6;
     NSDictionary *jsonDic = @{@"name":@"sgq",@"age":@"18",@"books":@[@{@"name":@"Chinese"},@{@"name":@"math"}]};
     Student *stu = [Student modelWithJSON:jsonDic];
     
-    Category c;
-    NSLog(@"%@",[NSString stringWithFormat:@"%.2f",4.566]);
-//    NSLog(@"%@",stu);
-//
-//    NSString *url=@"http://unmi.cc?p1=%+&sd &p2=中文";
-//    NSString *encodedValue = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//    NSLog(@"%@",encodedValue);
-    
-    
-    
+
+
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = CGRectMake(100, 100, 200, 200);
     gradient.colors = [NSArray arrayWithObjects:
@@ -155,27 +148,16 @@ int a = 6;
     button.titleLabel.font = [UIFont systemFontOfSize:18];
 
     [self.view addSubview:button];
-//    _button = button;
+
+    unsigned int count;
+    objc_property_t * list1 = class_copyPropertyList([UIViewController class], &count);
     
-//    UIFont *font = [UIFont italicSystemFontOfSize:15];
-//    NSLog(@"%@",font.fontName);
-//    struct son s;
-//    s.fn.f1 = 10;
-//    s.fn.f2 = 20;
-//
-//    test(&s);
-//    //打印修改后的值
-//    printf("s.fn.f1 = %d\n",s.fn.f1);
-//    printf("s.fn.f2 = %d\n",s.fn.f2);
     
-//    Book *book = [[Book alloc] init];
-//    void(*function)(id, SEL) = (void(*)(id, SEL))class_getMethodImplementation([Book class], @selector(onePage));
-//    function(book, @selector(onePage));
-    
-    Person *p = [[Person alloc] init];
-    [p setValue:@2 forKey:@"count"];
-    
-    NSLog(@"%zd",p.count);
+    for (NSInteger i = 0; i < count; i++) {
+        objc_property_t p = list1[i];
+        NSLog(@"----%s",property_getName(p));
+    }
+
 
 }
 

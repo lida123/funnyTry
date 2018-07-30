@@ -70,7 +70,8 @@
                              @"FTPausePlayAnimationVC",
                              @"FTOneLoadingAnimationVC",
                              @"FTLetterPathViewController",
-                             @"FTChangeFileNameVC"];
+                             @"FTChangeFileNameVC",
+                             @"FTPackImageViewController"];
         
         for (NSInteger i = 0; i < classes.count; i++) {
             FTUIListCellIem *item = [FTUIListCellIem itemWithClassString:classes[i] shimmering:NO];

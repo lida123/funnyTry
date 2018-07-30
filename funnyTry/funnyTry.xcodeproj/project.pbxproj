@@ -27,6 +27,9 @@
 		C52BACE21FE9310200ED9E10 /* BLEH.gif in Resources */ = {isa = PBXBuildFile; fileRef = C52BACE11FE9310200ED9E10 /* BLEH.gif */; };
 		C52BACEE1FEA464100ED9E10 /* GQPlayGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52BACEC1FEA464100ED9E10 /* GQPlayGifView.m */; };
 		C534B7A820BC031B00651271 /* NOEELeftTitleBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C534B7A620BC031B00651271 /* NOEELeftTitleBtn.m */; };
+		C534FBEF21080CE7004002A3 /* FTPackImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C534FBEE21080CE7004002A3 /* FTPackImageViewController.m */; };
+		C534FBF121080E4B004002A3 /* xunwei_launch.png in Resources */ = {isa = PBXBuildFile; fileRef = C534FBF021080E4A004002A3 /* xunwei_launch.png */; };
+		C534FBF321080E53004002A3 /* xunwei_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C534FBF221080E52004002A3 /* xunwei_logo.png */; };
 		C5423ED3205A40B700D027EB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C5423ED2205A40B700D027EB /* Person.m */; };
 		C5423EF6205A619900D027EB /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = C5423EF5205A619900D027EB /* Student.m */; };
 		C54E4A5D2050DDC8001F17D7 /* FTWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C54E4A5C2050DDC8001F17D7 /* FTWaterfallLayout.m */; };
@@ -109,6 +112,7 @@
 		C58AB6391FE768B800139498 /* FTLoadingCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6381FE768B800139498 /* FTLoadingCircleLayer.m */; };
 		C592ACCA20D105EB00D90E3D /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = C592ACC920D105EB00D90E3D /* NSObject+DLIntrospection.m */; };
 		C592ACD120D27F9300D90E3D /* MoreViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C592ACD020D27F9300D90E3D /* MoreViewTest.m */; };
+		C59518BA21097A17001C1BC1 /* UIViewController+Association.m in Sources */ = {isa = PBXBuildFile; fileRef = C59518B921097A17001C1BC1 /* UIViewController+Association.m */; };
 		C598FBE91FE0F67F00B67823 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FBD11FE0F67F00B67823 /* MASCompositeConstraint.m */; };
 		C598FBEA1FE0F67F00B67823 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FBD41FE0F67F00B67823 /* MASConstraint.m */; };
 		C598FBEB1FE0F67F00B67823 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FBD61FE0F67F00B67823 /* MASConstraintMaker.m */; };
@@ -229,6 +233,10 @@
 		C52BACED1FEA464100ED9E10 /* GQPlayGifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPlayGifView.h; sourceTree = "<group>"; };
 		C534B7A620BC031B00651271 /* NOEELeftTitleBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOEELeftTitleBtn.m; sourceTree = "<group>"; };
 		C534B7A720BC031B00651271 /* NOEELeftTitleBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOEELeftTitleBtn.h; sourceTree = "<group>"; };
+		C534FBED21080CE7004002A3 /* FTPackImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPackImageViewController.h; sourceTree = "<group>"; };
+		C534FBEE21080CE7004002A3 /* FTPackImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPackImageViewController.m; sourceTree = "<group>"; };
+		C534FBF021080E4A004002A3 /* xunwei_launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xunwei_launch.png; sourceTree = "<group>"; };
+		C534FBF221080E52004002A3 /* xunwei_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xunwei_logo.png; sourceTree = "<group>"; };
 		C5423ED1205A40B700D027EB /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		C5423ED2205A40B700D027EB /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		C5423EF4205A619900D027EB /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
@@ -395,6 +403,8 @@
 		C592ACCF20D27F9300D90E3D /* MoreViewTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreViewTest.h; sourceTree = "<group>"; };
 		C592ACD020D27F9300D90E3D /* MoreViewTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreViewTest.m; sourceTree = "<group>"; };
 		C594A4221FFF79B3006699A6 /* FTBaseNavigationControllerNotice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseNavigationControllerNotice.h; sourceTree = "<group>"; };
+		C59518B821097A17001C1BC1 /* UIViewController+Association.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Association.h"; sourceTree = "<group>"; };
+		C59518B921097A17001C1BC1 /* UIViewController+Association.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Association.m"; sourceTree = "<group>"; };
 		C598FBD01FE0F67F00B67823 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		C598FBD11FE0F67F00B67823 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		C598FBD21FE0F67F00B67823 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -548,10 +558,10 @@
 		C509172620883F08000F38D2 /* Playground */ = {
 			isa = PBXGroup;
 			children = (
-				C534B7A720BC031B00651271 /* NOEELeftTitleBtn.h */,
-				C534B7A620BC031B00651271 /* NOEELeftTitleBtn.m */,
 				C509172720883F3C000F38D2 /* FTPlaygroundVC.h */,
 				C509172820883F3C000F38D2 /* FTPlaygroundVC.m */,
+				C534B7A720BC031B00651271 /* NOEELeftTitleBtn.h */,
+				C534B7A620BC031B00651271 /* NOEELeftTitleBtn.m */,
 				C5423ED1205A40B700D027EB /* Person.h */,
 				C5423ED2205A40B700D027EB /* Person.m */,
 				C5423EF4205A619900D027EB /* Student.h */,
@@ -565,6 +575,8 @@
 				C58618FE2091B65B00B49D4C /* FTPlayroundTwoVC.xib */,
 				C5BB8DCB20C68F4300BC1B3A /* NSObject+Sark.h */,
 				C5BB8DCC20C68F4300BC1B3A /* NSObject+Sark.m */,
+				C59518B821097A17001C1BC1 /* UIViewController+Association.h */,
+				C59518B921097A17001C1BC1 /* UIViewController+Association.m */,
 			);
 			path = Playground;
 			sourceTree = "<group>";
@@ -662,6 +674,17 @@
 				C52BACEC1FEA464100ED9E10 /* GQPlayGifView.m */,
 			);
 			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		C534FBEC21080CC1004002A3 /* createPackImg */ = {
+			isa = PBXGroup;
+			children = (
+				C534FBF221080E52004002A3 /* xunwei_logo.png */,
+				C534FBF021080E4A004002A3 /* xunwei_launch.png */,
+				C534FBED21080CE7004002A3 /* FTPackImageViewController.h */,
+				C534FBEE21080CE7004002A3 /* FTPackImageViewController.m */,
+			);
+			path = createPackImg;
 			sourceTree = "<group>";
 		};
 		C5616C031FA8777E00A9C033 = {
@@ -872,6 +895,7 @@
 			isa = PBXGroup;
 			children = (
 				C509172620883F08000F38D2 /* Playground */,
+				C534FBEC21080CC1004002A3 /* createPackImg */,
 				C509D5E320871CCF000F38D2 /* ChangeFileName */,
 				C52BACB71FE8F8AE00ED9E10 /* LetterPath */,
 				C58AB62E1FE7670E00139498 /* OneLoadingAnimation */,
@@ -1462,6 +1486,7 @@
 				C5616C081FA8777E00A9C033 /* Sources */,
 				C5616C091FA8777E00A9C033 /* Frameworks */,
 				C5616C0A1FA8777E00A9C033 /* Resources */,
+				C5EE2B18210CA3610046B38A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1571,7 +1596,9 @@
 				C59D91C21FB18245004550D0 /* tabbar_discover_sel@2x.png in Resources */,
 				C5AD1A411FD1389700A7EE86 /* 12.m4a in Resources */,
 				C59D91C01FB18245004550D0 /* tabbar_discover_sel@3x.png in Resources */,
+				C534FBF321080E53004002A3 /* xunwei_logo.png in Resources */,
 				C5AD1A461FD1389700A7EE86 /* 3.m4a in Resources */,
+				C534FBF121080E4B004002A3 /* xunwei_launch.png in Resources */,
 				C59D91DF1FB18DD3004550D0 /* SVProgressHUD.bundle in Resources */,
 				C5BB762F20BE58E100BC1B3A /* MFBanHei_Noncommercial-Regular.otf in Resources */,
 				C5AD1A4A1FD1389700A7EE86 /* 7.m4a in Resources */,
@@ -1632,6 +1659,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C5EE2B18210CA3610046B38A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /usr/local/bin/python3;
+			shellScript = "# -*- coding:utf-8 -*-\n\nfrom biplist import *\nimport time\nimport os\n\n\ntry:\n    # 当前目录\n    curdir = os.getcwd()\n\n    # 文件路径\n    app_info_path = curdir + '/funnyTry/Info.plist'\n\n\n    print(app_info_path)\n\n    # 读取Info.plist文件和ProjectSettings.plist\n    app_info = readPlist(app_info_path)\n\n    print(app_info)\n\n    # 读取版本号\n    app_version = app_info['CFBundleVersion'].split('.')\n\nexcept BaseException as e:\n    print(str(e))";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1715,6 +1755,7 @@
 				C598FBEE1FE0F67F00B67823 /* MASViewConstraint.m in Sources */,
 				C5726DA2209EEA570037DA02 /* UIScrollView+MJRefresh.m in Sources */,
 				C59D91DE1FB18DD3004550D0 /* SVProgressAnimatedView.m in Sources */,
+				C534FBEF21080CE7004002A3 /* FTPackImageViewController.m in Sources */,
 				C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */,
 				C525647A1FDFB0AF00BF0EB7 /* FTChannelCollectionView.m in Sources */,
 				C57686781FAFF66500066AA3 /* UIImage+GIF.m in Sources */,
@@ -1755,6 +1796,7 @@
 				C5726D9F209EEA570037DA02 /* MJRefreshConst.m in Sources */,
 				C598FC081FE2279400B67823 /* IQiYIButton.m in Sources */,
 				C5736A951FD945290018BA92 /* FTCustomPushTransitionFirstVC.m in Sources */,
+				C59518BA21097A17001C1BC1 /* UIViewController+Association.m in Sources */,
 				C57686701FAFF66500066AA3 /* SDImageCache.m in Sources */,
 				C598FBEC1FE0F67F00B67823 /* MASLayoutConstraint.m in Sources */,
 				C52BACEE1FEA464100ED9E10 /* GQPlayGifView.m in Sources */,
@@ -1909,6 +1951,7 @@
 			baseConfigurationReference = 34E765B0ECA9913D4F7D8C93 /* Pods-funnyTry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shiyu Zha (7JSV7DSMFR)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = U7F2PF4JVH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1920,9 +1963,9 @@
 				INFOPLIST_FILE = funnyTry/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.9188.liaodaoBundleId;
+				PRODUCT_BUNDLE_IDENTIFIER = com.funnyTry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d5f30af5-3306-46f6-856d-5669008802d0";
+				PROVISIONING_PROFILE = "8f922747-a158-471d-9867-c94220c345eb";
 				PROVISIONING_PROFILE_SPECIFIER = 9188universalProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1935,16 +1978,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Shiyu Zha (7JSV7DSMFR)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = U7F2PF4JVH;
+				DEVELOPMENT_TEAM = 747363KXQ6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/Class/Entrance/PrefixHeader.pch";
 				INFOPLIST_FILE = funnyTry/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.9188.liaodaoBundleId;
+				PRODUCT_BUNDLE_IDENTIFIER = com.funnyTry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d5f30af5-3306-46f6-856d-5669008802d0";
-				PROVISIONING_PROFILE_SPECIFIER = 9188universalProfile;
+				PROVISIONING_PROFILE = "35e19a95-5c2b-4fe2-81fd-78c2b649c827";
+				PROVISIONING_PROFILE_SPECIFIER = liaodao_enterprize_adhot_profile_;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

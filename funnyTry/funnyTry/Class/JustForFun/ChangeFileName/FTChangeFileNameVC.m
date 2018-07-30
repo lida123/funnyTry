@@ -24,8 +24,8 @@
         _fileManager = [NSFileManager defaultManager];
         _allFiles = [NSMutableArray array];
         _allNewFiles = [NSMutableArray array];
-        _filePath = @"/Users/wen/Desktop/needX/funnyTry/funnyTry/funnyTry/Class";
-        NSString *appendPath = [[NSBundle mainBundle] pathForResource:@"添加的代码.txt" ofType:nil];
+        _filePath = @"/Users/wen/Desktop/各种打包/酷彩-竞猜足球/混淆的/Lottery3.0.0/Lottery/Classes";
+        NSString *appendPath = [[NSBundle mainBundle] pathForResource:@"添加的代码的副本.txt" ofType:nil];
         _appendStr = [NSString stringWithContentsOfFile:appendPath encoding:NSUTF8StringEncoding error:nil];
     }
     return self;
@@ -33,7 +33,7 @@
 
 static NSString *suffix = @"SUFFIX";
 static NSString *moreFileName = @"TSRJCell";
-static NSInteger moreFileCount = 100;
+static NSInteger moreFileCount = 1000;
 static NSString *methodMark = @"mj_";
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,7 +44,7 @@ static NSString *methodMark = @"mj_";
     
     [self changeFileText];
 
-//    [self addMoreFile];
+    [self addMoreFile];
     
     /*
      1.需要修改OpenedUDID的运行环境 文件 -fno-objc-arc

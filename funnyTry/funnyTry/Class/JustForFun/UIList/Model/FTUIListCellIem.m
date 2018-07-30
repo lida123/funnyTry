@@ -58,6 +58,8 @@
         return  @"writing path animation";
     }else if([self.classString isEqualToString:@"FTChangeFileNameVC"]) {
         return @"change file name";
+    }else if ([self.classString isEqualToString:@"FTPackImageViewController"]){
+        return @"create pack imageg";
     }
     else {
         
