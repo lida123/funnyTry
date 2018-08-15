@@ -24,7 +24,7 @@
         _fileManager = [NSFileManager defaultManager];
         _allFiles = [NSMutableArray array];
         _allNewFiles = [NSMutableArray array];
-        _filePath = @"/Users/wen/Desktop/各种打包/酷彩-竞猜足球/混淆的/Lottery3.0.0/Lottery/Classes";
+        _filePath = @"/Users/wen/Desktop/needX/NOEETY/NOEETY/Classes";
         NSString *appendPath = [[NSBundle mainBundle] pathForResource:@"添加的代码的副本.txt" ofType:nil];
         _appendStr = [NSString stringWithContentsOfFile:appendPath encoding:NSUTF8StringEncoding error:nil];
     }
@@ -38,13 +38,13 @@ static NSString *methodMark = @"mj_";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self pickoutChangeableFileWithPath:self.filePath];
-    
-    [self changeFileName];
-    
-    [self changeFileText];
-
-    [self addMoreFile];
+//    [self pickoutChangeableFileWithPath:self.filePath];
+//
+//    [self changeFileName];
+//
+//    [self changeFileText];
+//
+//    [self addMoreFile];
     
     /*
      1.需要修改OpenedUDID的运行环境 文件 -fno-objc-arc
@@ -56,9 +56,152 @@ static NSString *methodMark = @"mj_";
      7.删除Global目录下logoManager
      8.地理位置限制文件的替换
      */
+    
+//    [self changeFileNameContainLotteryWithPath:self.filePath];
 }
 
-#pragma mark -Private
+#pragma mark - 修改带Lottery文件名
+- (void)changeFileNameContainLotteryWithPath:(NSString *)path {
+    NSDirectoryEnumerator *fileEnumerator = [_fileManager enumeratorAtPath:path];
+
+    // 修改文件名
+    NSInteger count = 0;
+    for (NSString *fileName in fileEnumerator) {
+        count++;
+        NSString *filePath = [path stringByAppendingPathComponent:fileName];
+        NSString *lastPath = [filePath lastPathComponent];
+        
+        if ([lastPath containsString:@"."]) {
+            
+            if ([lastPath containsString:@"Lottery"]){
+                NSString *newLastPath = [lastPath stringByReplacingOccurrencesOfString:@"Lottery" withString:@"Sport"];
+                NSString *newFilePath = [filePath stringByReplacingOccurrencesOfString:lastPath withString:newLastPath];
+                [self.fileManager moveItemAtPath:filePath toPath:newFilePath error:NULL];
+            } else if ([lastPath containsString:@"lottery"]) {
+                NSString *newLastPath = [lastPath stringByReplacingOccurrencesOfString:@"lottery" withString:@"sport"];
+                NSString *newFilePath = [filePath stringByReplacingOccurrencesOfString:lastPath withString:newLastPath];
+                [self.fileManager moveItemAtPath:filePath toPath:newFilePath error:NULL];
+            }
+        }
+    }
+    FTDPRINT(@"%zd",count);
+    
+    // 修改文件中的Lottery
+    fileEnumerator = [_fileManager enumeratorAtPath:path];
+    for (NSString *fileName in fileEnumerator) {
+        NSString *filePath = [path stringByAppendingPathComponent:fileName];
+        NSString *lastPath = [filePath lastPathComponent];
+        
+        if ([lastPath containsString:@".m"] || [lastPath containsString:@".h"]) {
+            
+            NSError *error;
+            NSString *fileOriginalString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
+            if (error) {
+                NSLog(@"读文件出错");
+            }
+            
+            NSArray *lines = [fileOriginalString componentsSeparatedByString:@"\n"];
+            NSMutableString *newStringM = [NSMutableString string];
+            for (NSString *line in lines) {
+                NSString *newString = [self handleOriginalString:line];
+                [newStringM appendString:newString];
+                [newStringM appendString:@"\n"];
+            }
+            
+            [[newStringM dataUsingEncoding:NSUTF8StringEncoding] writeToFile:filePath atomically:YES];
+        }
+    }
+}
+
+// lottery更换为sport
+static NSInteger changeCount = 0;
+- (NSString *)handleOriginalString:(NSString *)oldString {
+    if (!oldString) {
+        return nil;
+    }
+    
+    // 找出受保护的范围
+    NSMutableString *newString = oldString.mutableCopy;
+    NSString *regular = @"@\".*?lottery.*?\"";
+    NSError *error;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regular options:NSRegularExpressionCaseInsensitive error:&error];
+    NSMutableArray *protectRangeM = [NSMutableArray array];
+    if (!error) {
+        NSArray *matchs = [regex matchesInString:newString options:0 range:NSMakeRange(0, newString.length)];
+        if (matchs.count > 0) {
+            for (NSTextCheckingResult *match in matchs) {
+                //                NSString *result = [newString substringWithRange:match.range];
+                //                NSLog(@"%@",result);
+                
+                [protectRangeM addObject:[NSValue valueWithRange:match.range]];
+            }
+            
+        } else {
+            //            NSLog(@"正则没有匹配到数据");
+        }
+    } else {
+        NSLog(@"正则表达式出错: %@", error);
+    }
+    
+    // 找出所有范围
+    NSString *regular2 = @"lottery";
+    NSError *error2;
+    NSRegularExpression *regex2= [NSRegularExpression regularExpressionWithPattern:regular2 options:NSRegularExpressionCaseInsensitive error:&error2];
+    NSMutableArray *allRangeM = [NSMutableArray array];
+    if (!error2) {
+        NSArray *matchs = [regex2 matchesInString:newString options:0 range:NSMakeRange(0, newString.length)];
+        if (matchs.count > 0) {
+            for (NSTextCheckingResult *match in matchs) {
+                //                NSString *result = [newString substringWithRange:match.range];
+                //                NSLog(@"%@",result);
+                
+                [allRangeM addObject:[NSValue valueWithRange:match.range]];
+            }
+            
+        } else {
+            //            NSLog(@"正则没有匹配到数据");
+        }
+    } else {
+        NSLog(@"error - %@", error);
+    }
+    //    NSLog(@"剔除前:%zd", allRangeM.count);
+    for (NSValue *eachValue in [allRangeM copy]) {
+        NSRange eachRange = eachValue.rangeValue;
+        
+        for (NSValue *protectValue in protectRangeM) {
+            NSRange protectRange = protectValue.rangeValue;
+            NSRange intersectionRange = NSIntersectionRange(protectRange, eachRange);
+            if (NSEqualRanges(intersectionRange, eachRange)) {
+                //                NSLog(@"这个是在字符串里面的lottery");
+                [allRangeM removeObject:eachValue];
+                break;
+            }
+        }
+        
+    }
+    //    NSLog(@"剔除后:%zd", allRangeM.count);
+    
+    NSInteger delta = @"lottery".length - @"sport".length;
+    for (NSInteger i = 0; i < allRangeM.count; i++) {
+        NSRange range = [allRangeM[i] rangeValue];
+        NSString *oriString = [oldString substringWithRange:range];
+        if ([oriString containsString:@"Lottery"]) {
+            [newString replaceCharactersInRange:NSMakeRange(range.location - delta * i, range.length) withString:@"Sport"];
+        } else {
+            [newString replaceCharactersInRange:NSMakeRange(range.location - delta * i, range.length) withString:@"sport"];
+        }
+        changeCount++;
+        NSLog(@"进行第%zd了替换 %@", changeCount, oldString);
+    
+    }
+    
+    
+    
+    return newString;
+}
+#pragma mark -
+
+#pragma mark -文件名混淆 增加垃圾代码 增加垃圾文件
 - (void )pickoutChangeableFileWithPath:(NSString *)path
 {
     NSDirectoryEnumerator *fileEnumerator = [_fileManager enumeratorAtPath:path];
@@ -176,6 +319,7 @@ static NSString *methodMark = @"mj_";
         //添加符合条件的location进数组
         char nextString = [[stringM substringWithRange:NSMakeRange(rang.location + rang.length, 1)] characterAtIndex:0];
         char preString = [[stringM substringWithRange:NSMakeRange(rang.location - 1, 1)] characterAtIndex:0];
+        // 0-9 A-Z  a-z
         BOOL next = (nextString >= 48 && nextString <= 57)||(nextString >= 65 && nextString <= 90) || (nextString >= 97 && nextString <= 122);
         BOOL pre = (preString >= 48 && preString <= 57) || (preString >= 65 && preString <= 90) || (preString >= 97 && preString <= 122);
         
@@ -294,5 +438,89 @@ NSInteger count = 1;
     return string;
 }
 
+
+#pragma mark - 修改 xxx.xcassets 文件夹中的 png 资源文件名。
+static const NSString *kRandomAlphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+NSString *randomString(NSInteger length) {
+    NSMutableString *ret = [NSMutableString stringWithCapacity:length];
+    for (int i = 0; i < length; i++) {
+        [ret appendFormat:@"%C", [kRandomAlphabet characterAtIndex:arc4random_uniform((uint32_t)[kRandomAlphabet length])]];
+    }
+    return ret;
+}
+//
+void handleXcassetsFiles(NSString *directory) {
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSArray<NSString *> *files = [fm contentsOfDirectoryAtPath:directory error:nil];
+    BOOL isDirectory;
+    for (NSString *fileName in files) {
+        NSString *filePath = [directory stringByAppendingPathComponent:fileName];
+        
+        // 目录则递归
+        if ([fm fileExistsAtPath:filePath isDirectory:&isDirectory] && isDirectory) {
+            handleXcassetsFiles(filePath);
+            continue;
+        }
+        
+        // 当前文件是Contents.json且在一个.imageset目录下
+        if (![fileName isEqualToString:@"Contents.json"]) continue;
+        NSString *contentsDirectoryName = filePath.stringByDeletingLastPathComponent.lastPathComponent;
+        if (![contentsDirectoryName hasSuffix:@".imageset"]) continue;
+        
+        // 读取字符串
+        NSString *fileContent = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+        if (!fileContent) continue;
+        
+        NSMutableArray<NSString *> *processedImageFileNameArray = @[].mutableCopy;
+        
+        static NSString * const regexStr = @"\"filename\" *: *\"(.*)?\"";
+        NSRegularExpression *expression = [NSRegularExpression regularExpressionWithPattern:regexStr options:NSRegularExpressionUseUnicodeWordBoundaries error:nil];
+        
+        NSArray<NSTextCheckingResult *> *matches = [expression matchesInString:fileContent options:0 range:NSMakeRange(0, fileContent.length)];
+        while (matches.count > 0) {
+            NSInteger i = 0;
+            NSString *imageFileName = nil;
+            
+            // 退出外层循环条件(即正则匹配出来的文件名都被处理过了则退出循环)
+            do {
+                if (i >= matches.count) {
+                    i = -1;
+                    break;
+                }
+                imageFileName = [fileContent substringWithRange:[matches[i] rangeAtIndex:1]];
+                i++;
+            } while ([processedImageFileNameArray containsObject:imageFileName]);
+            if (i < 0) break;
+            
+            // 更改文件名并重写json文件
+            NSString *imageFilePath = [filePath.stringByDeletingLastPathComponent stringByAppendingPathComponent:imageFileName];
+            if ([fm fileExistsAtPath:imageFilePath]) {
+                NSString *newImageFileName = [randomString(10) stringByAppendingPathExtension:imageFileName.pathExtension];
+                NSString *newImageFilePath = [filePath.stringByDeletingLastPathComponent stringByAppendingPathComponent:newImageFileName];
+                while ([fm fileExistsAtPath:newImageFileName]) {
+                    newImageFileName = [randomString(10) stringByAppendingPathExtension:imageFileName.pathExtension];
+                    newImageFilePath = [filePath.stringByDeletingLastPathComponent stringByAppendingPathComponent:newImageFileName];
+                }
+                // 修改文件名
+                NSError *error;
+                [[NSFileManager defaultManager] moveItemAtPath:imageFilePath toPath:newImageFilePath error:&error];
+                if (error) {
+                    NSLog(@"修改文件名出错! %@ >>>> %@", imageFilePath, newImageFilePath);
+                }
+                
+                // 重写json
+                fileContent = [fileContent stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"\"%@\"", imageFileName] withString:[NSString stringWithFormat:@"\"%@\"", newImageFileName]];
+                [fileContent writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+                
+                [processedImageFileNameArray addObject:newImageFileName];
+            } else {
+                [processedImageFileNameArray addObject:imageFileName];
+            }
+            
+            // 再来
+            matches = [expression matchesInString:fileContent options:0 range:NSMakeRange(0, fileContent.length)];
+        }
+    }
+}
 
 @end

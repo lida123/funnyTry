@@ -33,6 +33,7 @@
 		C5423ED3205A40B700D027EB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C5423ED2205A40B700D027EB /* Person.m */; };
 		C5423EF6205A619900D027EB /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = C5423EF5205A619900D027EB /* Student.m */; };
 		C54E4A5D2050DDC8001F17D7 /* FTWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C54E4A5C2050DDC8001F17D7 /* FTWaterfallLayout.m */; };
+		C54FED70212423B0009BF94D /* FTDeleteCommentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C54FED6F212423B0009BF94D /* FTDeleteCommentTool.m */; };
 		C5616C111FA8777E00A9C033 /* FTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C101FA8777E00A9C033 /* FTAppDelegate.m */; };
 		C5616C191FA8777E00A9C033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5616C181FA8777E00A9C033 /* Assets.xcassets */; };
 		C5616C1F1FA8777E00A9C033 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C1E1FA8777E00A9C033 /* main.m */; };
@@ -243,6 +244,9 @@
 		C5423EF5205A619900D027EB /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		C54E4A5B2050DDC8001F17D7 /* FTWaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTWaterfallLayout.h; sourceTree = "<group>"; };
 		C54E4A5C2050DDC8001F17D7 /* FTWaterfallLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTWaterfallLayout.m; sourceTree = "<group>"; };
+		C54FED6D2123D569009BF94D /* 代码混淆.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "代码混淆.md"; sourceTree = "<group>"; };
+		C54FED6E212423B0009BF94D /* FTDeleteCommentTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTDeleteCommentTool.h; sourceTree = "<group>"; };
+		C54FED6F212423B0009BF94D /* FTDeleteCommentTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTDeleteCommentTool.m; sourceTree = "<group>"; };
 		C5616C0C1FA8777E00A9C033 /* funnyTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funnyTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5616C0F1FA8777E00A9C033 /* FTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTAppDelegate.h; sourceTree = "<group>"; };
 		C5616C101FA8777E00A9C033 /* FTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTAppDelegate.m; sourceTree = "<group>"; usesTabs = 0; };
@@ -605,12 +609,15 @@
 		C509D5E320871CCF000F38D2 /* ChangeFileName */ = {
 			isa = PBXGroup;
 			children = (
+				C54FED6D2123D569009BF94D /* 代码混淆.md */,
 				C56D5FB520D9042600C8BC44 /* 添加的代码的副本.txt */,
 				C509172420883E78000F38D2 /* 添加的代码.txt */,
 				C509D5E420871D57000F38D2 /* FTChangeFileNameVC.h */,
 				C509D5E520871D57000F38D2 /* FTChangeFileNameVC.m */,
 				C592ACCF20D27F9300D90E3D /* MoreViewTest.h */,
 				C592ACD020D27F9300D90E3D /* MoreViewTest.m */,
+				C54FED6E212423B0009BF94D /* FTDeleteCommentTool.h */,
+				C54FED6F212423B0009BF94D /* FTDeleteCommentTool.m */,
 			);
 			path = ChangeFileName;
 			sourceTree = "<group>";
@@ -1694,6 +1701,7 @@
 				C509172920883F3C000F38D2 /* FTPlaygroundVC.m in Sources */,
 				C598FBEA1FE0F67F00B67823 /* MASConstraint.m in Sources */,
 				C56EE52A2084820A005186DD /* NSObject+MJProperty.m in Sources */,
+				C54FED70212423B0009BF94D /* FTDeleteCommentTool.m in Sources */,
 				C598FBEF1FE0F67F00B67823 /* NSArray+MASAdditions.m in Sources */,
 				C57686C21FB07B0500066AA3 /* FTUIListCell.m in Sources */,
 				C5726D91209EEA570037DA02 /* MJRefreshBackFooter.m in Sources */,

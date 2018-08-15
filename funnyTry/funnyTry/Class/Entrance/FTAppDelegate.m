@@ -23,13 +23,6 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    NSArray *arr = [UIFont familyNames];
-    
-    NSLog(@"%@",arr);
-    
-    UIFont *font = [UIFont systemFontOfSize:18 weight:UIFontWeightMedium];
-    
-    UIFont *font1 = [UIFont systemFontOfSize:18];
     return YES;
 }
 

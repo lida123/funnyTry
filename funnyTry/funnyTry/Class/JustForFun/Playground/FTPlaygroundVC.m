@@ -155,7 +155,7 @@ int a = 6;
     
     for (NSInteger i = 0; i < count; i++) {
         objc_property_t p = list1[i];
-        NSLog(@"----%s",property_getName(p));
+//        NSLog(@"----%s",property_getName(p));
     }
 
 
