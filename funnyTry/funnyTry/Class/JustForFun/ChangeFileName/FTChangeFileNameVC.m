@@ -38,13 +38,13 @@ static NSString *methodMark = @"mj_";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self pickoutChangeableFileWithPath:self.filePath];
-//
-//    [self changeFileName];
-//
-//    [self changeFileText];
-//
-//    [self addMoreFile];
+    [self pickoutChangeableFileWithPath:self.filePath];
+
+    [self changeFileName];
+
+    [self changeFileText];
+
+    [self addMoreFile];
     
     /*
      1.需要修改OpenedUDID的运行环境 文件 -fno-objc-arc
@@ -439,88 +439,6 @@ NSInteger count = 1;
 }
 
 
-#pragma mark - 修改 xxx.xcassets 文件夹中的 png 资源文件名。
-static const NSString *kRandomAlphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-NSString *randomString(NSInteger length) {
-    NSMutableString *ret = [NSMutableString stringWithCapacity:length];
-    for (int i = 0; i < length; i++) {
-        [ret appendFormat:@"%C", [kRandomAlphabet characterAtIndex:arc4random_uniform((uint32_t)[kRandomAlphabet length])]];
-    }
-    return ret;
-}
-//
-void handleXcassetsFiles(NSString *directory) {
-    NSFileManager *fm = [NSFileManager defaultManager];
-    NSArray<NSString *> *files = [fm contentsOfDirectoryAtPath:directory error:nil];
-    BOOL isDirectory;
-    for (NSString *fileName in files) {
-        NSString *filePath = [directory stringByAppendingPathComponent:fileName];
-        
-        // 目录则递归
-        if ([fm fileExistsAtPath:filePath isDirectory:&isDirectory] && isDirectory) {
-            handleXcassetsFiles(filePath);
-            continue;
-        }
-        
-        // 当前文件是Contents.json且在一个.imageset目录下
-        if (![fileName isEqualToString:@"Contents.json"]) continue;
-        NSString *contentsDirectoryName = filePath.stringByDeletingLastPathComponent.lastPathComponent;
-        if (![contentsDirectoryName hasSuffix:@".imageset"]) continue;
-        
-        // 读取字符串
-        NSString *fileContent = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-        if (!fileContent) continue;
-        
-        NSMutableArray<NSString *> *processedImageFileNameArray = @[].mutableCopy;
-        
-        static NSString * const regexStr = @"\"filename\" *: *\"(.*)?\"";
-        NSRegularExpression *expression = [NSRegularExpression regularExpressionWithPattern:regexStr options:NSRegularExpressionUseUnicodeWordBoundaries error:nil];
-        
-        NSArray<NSTextCheckingResult *> *matches = [expression matchesInString:fileContent options:0 range:NSMakeRange(0, fileContent.length)];
-        while (matches.count > 0) {
-            NSInteger i = 0;
-            NSString *imageFileName = nil;
-            
-            // 退出外层循环条件(即正则匹配出来的文件名都被处理过了则退出循环)
-            do {
-                if (i >= matches.count) {
-                    i = -1;
-                    break;
-                }
-                imageFileName = [fileContent substringWithRange:[matches[i] rangeAtIndex:1]];
-                i++;
-            } while ([processedImageFileNameArray containsObject:imageFileName]);
-            if (i < 0) break;
-            
-            // 更改文件名并重写json文件
-            NSString *imageFilePath = [filePath.stringByDeletingLastPathComponent stringByAppendingPathComponent:imageFileName];
-            if ([fm fileExistsAtPath:imageFilePath]) {
-                NSString *newImageFileName = [randomString(10) stringByAppendingPathExtension:imageFileName.pathExtension];
-                NSString *newImageFilePath = [filePath.stringByDeletingLastPathComponent stringByAppendingPathComponent:newImageFileName];
-                while ([fm fileExistsAtPath:newImageFileName]) {
-                    newImageFileName = [randomString(10) stringByAppendingPathExtension:imageFileName.pathExtension];
-                    newImageFilePath = [filePath.stringByDeletingLastPathComponent stringByAppendingPathComponent:newImageFileName];
-                }
-                // 修改文件名
-                NSError *error;
-                [[NSFileManager defaultManager] moveItemAtPath:imageFilePath toPath:newImageFilePath error:&error];
-                if (error) {
-                    NSLog(@"修改文件名出错! %@ >>>> %@", imageFilePath, newImageFilePath);
-                }
-                
-                // 重写json
-                fileContent = [fileContent stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"\"%@\"", imageFileName] withString:[NSString stringWithFormat:@"\"%@\"", newImageFileName]];
-                [fileContent writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
-                
-                [processedImageFileNameArray addObject:newImageFileName];
-            } else {
-                [processedImageFileNameArray addObject:imageFileName];
-            }
-            
-            // 再来
-            matches = [expression matchesInString:fileContent options:0 range:NSMakeRange(0, fileContent.length)];
-        }
-    }
-}
+
 
 @end

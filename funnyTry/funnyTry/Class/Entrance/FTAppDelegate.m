@@ -8,6 +8,8 @@
 
 #import "FTAppDelegate.h"
 #import "FTTabBarController.h"
+#import "FTCodeConfuseTool.h"
+
 @interface FTAppDelegate ()
 
 @end
@@ -22,6 +24,15 @@
     self.window.rootViewController = tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+  
+    [FTCodeConfuseTool confuseProjectWithChangeFileNameDirectory:@""
+                                                    pbxprojPath:@""
+                                         fileNameAppendingPrefix:@"GQGQ"
+                                          xcassetsFilesDirectory:@""
+                                                 garbageCodePath:@"/Users/wen/Documents/GitHub/funnyTry/funnyTry/funnyTry/Class/JustForFun/ChangeFileName/一个实例方法的代码.txt"
+                                 garbageCodeInstanceMethonPrefix:@"GQGQ"
+                                               garbageFileCounts:20
+                                                 garbageFileName:@"godbless"];
     
     return YES;
 }
