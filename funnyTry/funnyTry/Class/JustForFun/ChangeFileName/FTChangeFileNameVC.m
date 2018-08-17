@@ -321,8 +321,11 @@ static NSInteger changeCount = 0;
         char preString = [[stringM substringWithRange:NSMakeRange(rang.location - 1, 1)] characterAtIndex:0];
         // 0-9 A-Z  a-z
         BOOL next = (nextString >= 48 && nextString <= 57)||(nextString >= 65 && nextString <= 90) || (nextString >= 97 && nextString <= 122);
-        BOOL pre = (preString >= 48 && preString <= 57) || (preString >= 65 && preString <= 90) || (preString >= 97 && preString <= 122);
         
+        // 0-9 A-Z  a-z +
+        BOOL pre = (preString >= 48 && preString <= 57) || (preString >= 65 && preString <= 90) || (preString >= 97 && preString <= 122) || (pre == '+');
+        
+        // 即currentString前后都不能是 0-9 A-Z  a-z
         if ( !next  && !pre) {
             [arrayRanges addObject:[NSNumber numberWithInteger:rang.location]];//将第一次的加入到数组中
         }

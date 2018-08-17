@@ -96,27 +96,34 @@ static void replaceOldClassNameInFileContent(NSString *targetDirectory, NSString
     NSArray *canChangeFilePaths = [self pickoutCanChangeFileNameForDirectory:dir];
     NSLog(@"可以更改名称的文件数量: %zd", canChangeFilePaths.count);
     
+    NSInteger count = 0;
     NSMutableSet *changedFileNames = [NSMutableSet set];
     for (NSString *oldFilePath in canChangeFilePaths) {
-        NSString *oldFileNameWithoutExt = oldFilePath.lastPathComponent.stringByDeletingPathExtension;
-         NSString *newFileNameWithoutExt = [NSString stringWithFormat:@"%@%@",appendingPrefix,oldFileNameWithoutExt];
-        
-        NSString *fileExt = oldFilePath.pathExtension;
-        NSString *newFilePath = [NSString stringWithFormat:@"%@/%@.%@", oldFilePath.stringByDeletingLastPathComponent, newFileNameWithoutExt, fileExt];
-        
-        // 修改文件名并
-        renameFile(oldFilePath, newFilePath);
-        
-        if (![changedFileNames containsObject:oldFileNameWithoutExt]) {
-            [changedFileNames addObject:oldFileNameWithoutExt];
+        @autoreleasepool {
+            count++;
+            NSLog(@"正在处理第 %zd 个文件", count);
             
-            // 修改文件内容
-            replaceOldClassNameInFileContent(dir, oldFileNameWithoutExt, newFileNameWithoutExt);
+            NSString *oldFileNameWithoutExt = oldFilePath.lastPathComponent.stringByDeletingPathExtension;
+            NSString *newFileNameWithoutExt = [NSString stringWithFormat:@"%@%@",appendingPrefix,oldFileNameWithoutExt];
             
-            // 修改工程文件中的文件名
-            NSString *regularExpression = [NSString stringWithFormat:@"\\b%@\\b", oldFileNameWithoutExt];
-            regularReplacement(xcodeprojContent, regularExpression, newFileNameWithoutExt);
-        }
+            NSString *fileExt = oldFilePath.pathExtension;
+            NSString *newFilePath = [NSString stringWithFormat:@"%@/%@.%@", oldFilePath.stringByDeletingLastPathComponent, newFileNameWithoutExt, fileExt];
+            
+            // 修改文件名并
+            renameFile(oldFilePath, newFilePath);
+            
+            if (![changedFileNames containsObject:oldFileNameWithoutExt]) {
+                [changedFileNames addObject:oldFileNameWithoutExt];
+                
+                // 修改文件内容
+                replaceOldClassNameInFileContent(dir, oldFileNameWithoutExt, newFileNameWithoutExt);
+                
+                // 修改工程文件中的文件名
+                NSString *regularExpression = [NSString stringWithFormat:@"\\b%@\\b", oldFileNameWithoutExt];
+                regularReplacement(xcodeprojContent, regularExpression, newFileNameWithoutExt);
+            }
+            
+        } // @autoreleasepool end
     }
     
     [xcodeprojContent writeToFile:pbxprojPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
@@ -159,6 +166,7 @@ static void replaceOldClassNameInFileContent(NSString *targetDirectory, NSString
     NSMutableSet *set = [NSMutableSet set];
     
     [set addObject:@"main"];
+    [set addObject:@"easing"];
     
     for (NSString *fileName in fileEnumerator) {
         NSString *lastPathWithoutExt = [fileName.lastPathComponent stringByDeletingPathExtension];
@@ -167,6 +175,7 @@ static void replaceOldClassNameInFileContent(NSString *targetDirectory, NSString
         if ([fileName containsString:@"+"]) {
             NSArray *com = [lastPathWithoutExt componentsSeparatedByString:@"+"];
             [set addObject:com[0]];
+            [set addObject:com[1]];
         }
     }
     return set;

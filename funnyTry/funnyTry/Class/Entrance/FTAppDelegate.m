@@ -25,10 +25,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
   
-    [FTCodeConfuseTool confuseProjectWithChangeFileNameDirectory:@""
-                                                    pbxprojPath:@""
+    [FTCodeConfuseTool confuseProjectWithChangeFileNameDirectory:@"/Users/wen/Desktop/needX/NOEETY/NOEETY/Classes"
+                                                    pbxprojPath:@"/Users/wen/Desktop/needX/NOEETY/NOEETY.xcodeproj/project.pbxproj"
                                          fileNameAppendingPrefix:@"GQGQ"
-                                          xcassetsFilesDirectory:@""
+                                          xcassetsFilesDirectory:@"/Users/wen/Desktop/needX/NOEETY/NOEETY"
                                                  garbageCodePath:@"/Users/wen/Documents/GitHub/funnyTry/funnyTry/funnyTry/Class/JustForFun/ChangeFileName/一个实例方法的代码.txt"
                                  garbageCodeInstanceMethonPrefix:@"GQGQ"
                                                garbageFileCounts:20
