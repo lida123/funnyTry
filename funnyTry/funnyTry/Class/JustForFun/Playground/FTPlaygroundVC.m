@@ -182,6 +182,16 @@ int a = 6;
     NSLog(@"one %s",__func__);
 }
 
+- (void)willMoveToParentViewController:(UIViewController *)parent {
+    [super willMoveToParentViewController:parent];
+       NSLog(@"%s--%@",__func__, parent);
+}
+
+- (void)didMoveToParentViewController:(UIViewController *)parent {
+    [super didMoveToParentViewController:parent];
+    NSLog(@"%s--%@",__func__, parent);
+}
+
 - (void)willChangeValueForKey:(NSString *)key {
     
 }

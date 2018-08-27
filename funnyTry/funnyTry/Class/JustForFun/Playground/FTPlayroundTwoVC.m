@@ -43,6 +43,15 @@ __weak NSString *string_weak_copy   = nil;
     // Dispose of any resources that can be recreated.
 }
 
+- (void)didMoveToParentViewController:(UIViewController *)parent {
+    [super didMoveToParentViewController:parent];
+    NSLog(@"%s--%@",__func__, parent);
+}
+
+- (void)willMoveToParentViewController:(UIViewController *)parent {
+    [super willMoveToParentViewController:parent];
+    NSLog(@"%s--%@",__func__, parent);
+}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     //    NSLog(@"self.associatedObject_assign: %@", self.associatedObject_assign); // Will Crash
@@ -50,24 +59,24 @@ __weak NSString *string_weak_copy   = nil;
     NSLog(@"self.associatedObject_copy:   %@", self.associatedObject_copy);
 }
 
-//- (void)viewWillAppear:(BOOL)animated {
-//    [super viewWillAppear:animated];
-//     NSLog(@"two %s",__func__);
-//}
-//
-//- (void)viewDidAppear:(BOOL)animated {
-//    [super viewDidAppear:animated];
-//     NSLog(@"two %s",__func__);
-//}
-//
-//- (void)viewWillDisappear:(BOOL)animated {
-//    [super viewWillDisappear:animated];
-//     NSLog(@"two %s",__func__);
-//
-//}
-//
-//- (void)viewDidDisappear:(BOOL)animated {
-//    [super viewDidDisappear:animated];
-//    NSLog(@"two %s",__func__);
-//}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+     NSLog(@"two %s",__func__);
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+     NSLog(@"two %s",__func__);
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+     NSLog(@"two %s",__func__);
+
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    NSLog(@"two %s",__func__);
+}
 @end

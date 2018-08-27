@@ -1,6 +1,6 @@
-- (NSString *)mj_underlineFromCamel11
+- (NSString *)bx_underlineFromCamel11
 {
-NSString *ori = @"good luck";
+NSString *ori = @"good luck sdafd";
 if (ori.length == 0) return ori;
 NSMutableString *string = [NSMutableString string];
 for (NSUInteger i = 0; i<ori.length; i++) {
@@ -10,29 +10,29 @@ NSString *cStringLower = [cString lowercaseString];
 if ([cString isEqualToString:cStringLower]) {
 [string appendString:cStringLower];
 } else {
-[string appendString:@"_"];
+[string appendString:@"bigball"];
 [string appendString:cStringLower];
-[string appendString:@"_"];
+[string appendString:@"bigball"];
 [string appendString:cStringLower];
-[string appendString:@"_"];
+[string appendString:@"bigball"];
 [string appendString:cStringLower];
-[string appendString:@"_"];
+[string appendString:@"bigball"];
 [string appendString:cStringLower];
-[string appendString:@"_"];
+[string appendString:@"bigball"];
 [string appendString:cStringLower];
-[string appendString:@"_"];
+[string appendString:@"bigball"];
 [string appendString:cStringLower];
-[string appendString:@"_"];
+[string appendString:@"bigball"];
 [string appendString:cStringLower];
-[string appendString:@"_"];
+[string appendString:@"bigball"];
 [string appendString:cStringLower];
-[string appendString:@"_"];
+[string appendString:@"bigball"];
 [string appendString:cStringLower];
-[string appendString:@"_"];
+[string appendString:@"bigball"];
 [string appendString:cStringLower];
-[string appendString:@"_"];
+[string appendString:@"bigball"];
 [string appendString:cStringLower];
-[string appendString:@"_"];
+[string appendString:@"bigball"];
 [string appendString:cStringLower];
 }
 }

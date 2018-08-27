@@ -25,14 +25,15 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
   
-    [FTCodeConfuseTool confuseProjectWithChangeFileNameDirectory:@"/Users/wen/Desktop/needX/NOEETY/NOEETY/Classes"
-                                                    pbxprojPath:@"/Users/wen/Desktop/needX/NOEETY/NOEETY.xcodeproj/project.pbxproj"
-                                         fileNameAppendingPrefix:@"GQGQ"
-                                          xcassetsFilesDirectory:@"/Users/wen/Desktop/needX/NOEETY/NOEETY"
-                                                 garbageCodePath:@"/Users/wen/Documents/GitHub/funnyTry/funnyTry/funnyTry/Class/JustForFun/ChangeFileName/一个实例方法的代码.txt"
-                                 garbageCodeInstanceMethonPrefix:@"GQGQ"
-                                               garbageFileCounts:20
-                                                 garbageFileName:@"godbless"];
+//    [FTCodeConfuseTool confuseProjectWithChangeFileNameDirectory:@"/Users/wen/Desktop/needX/tips-ios/Liaodao/Classes"
+//                                                    pbxprojPath:@"/Users/wen/Desktop/needX/tips-ios/Liaodao.xcodeproj/project.pbxproj"
+//                                         fileNameAppendingPrefix:@"GQGQ"
+//                                          xcassetsFilesDirectory:@"/Users/wen/Desktop/needX/tips-ios/Liaodao/Resource/Image"
+//                                                 garbageCodePath:@"/Users/wen/Documents/GitHub/funnyTry/funnyTry/funnyTry/Class/JustForFun/ChangeFileName/一个实例方法的代码.txt"
+//                                 garbageCodeInstanceMethonPrefix:@"GQGQ"
+//                                               garbageFileCounts:500
+//                                                 garbageFileName:@"godbless"];
+    [FTCodeConfuseTool changeXcassetsFilesForDirectory:@"/Users/wen/Desktop/needX/tips-ios/Liaodao/Resource/Image"];
     
     return YES;
 }
