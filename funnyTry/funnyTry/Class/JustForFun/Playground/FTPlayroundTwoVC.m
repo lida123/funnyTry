@@ -8,12 +8,14 @@
 
 #import "FTPlayroundTwoVC.h"
 #import "UIViewController+Association.h"
+#import "UITextField+TopPlaceholder.h"
 
 __weak NSString *string_weak_assign = nil;
 __weak NSString *string_weak_retain = nil;
 __weak NSString *string_weak_copy   = nil;
 
 @interface FTPlayroundTwoVC ()
+@property (strong, nonatomic) IBOutlet UITextField *topTextField;
 
 @end
 
@@ -21,11 +23,7 @@ __weak NSString *string_weak_copy   = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor greenColor];
-    CGRect frame = CGRectMake(0, 0, self.view.bounds.size.width * 0.5, self.view.bounds.size.height * 0.5);
-    UIView *view = [[UIView alloc] initWithFrame:frame];
-    view.backgroundColor = [UIColor redColor];
-    [self.view addSubview:view];
+
     
     
     self.associatedObject_assign = [NSString stringWithFormat:@"leichunfeng1"];
@@ -36,6 +34,7 @@ __weak NSString *string_weak_copy   = nil;
     string_weak_retain = self.associatedObject_retain;
     string_weak_copy   = self.associatedObject_copy;
     
+    [self.topTextField enableTopPlaceholder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,9 +53,7 @@ __weak NSString *string_weak_copy   = nil;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    //    NSLog(@"self.associatedObject_assign: %@", self.associatedObject_assign); // Will Crash
-    NSLog(@"self.associatedObject_retain: %@", self.associatedObject_retain);
-    NSLog(@"self.associatedObject_copy:   %@", self.associatedObject_copy);
+    [self.topTextField endEditing:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

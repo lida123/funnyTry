@@ -17,6 +17,14 @@
 		C509D5E620871D57000F38D2 /* FTChangeFileNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C509D5E520871D57000F38D2 /* FTChangeFileNameVC.m */; };
 		C51112C71FD5595E008AD74F /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C51112C61FD5595E008AD74F /* UIView+Screenshot.m */; };
 		C51112CA1FD63800008AD74F /* FTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = C51112C91FD63800008AD74F /* FTGlobal.m */; };
+		C51A952E213572510075FBEF /* NSString+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51A9520213572510075FBEF /* NSString+SGPagingView.m */; };
+		C51A952F213572510075FBEF /* UIButton+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51A9521213572510075FBEF /* UIButton+SGPagingView.m */; };
+		C51A9530213572510075FBEF /* UIView+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51A9522213572510075FBEF /* UIView+SGPagingView.m */; };
+		C51A9531213572510075FBEF /* SGPageContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51A9524213572510075FBEF /* SGPageContentScrollView.m */; };
+		C51A9532213572510075FBEF /* SGPageContentCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51A9527213572510075FBEF /* SGPageContentCollectionView.m */; };
+		C51A9533213572510075FBEF /* SGPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51A9529213572510075FBEF /* SGPageTitleView.m */; };
+		C51A9534213572510075FBEF /* SGPageTitleViewConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = C51A952A213572510075FBEF /* SGPageTitleViewConfigure.m */; };
+		C51A9537213784320075FBEF /* UITextField+TopPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = C51A9536213784320075FBEF /* UITextField+TopPlaceholder.m */; };
 		C525646E1FDFAB9E00BF0EB7 /* FTDragCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C525646D1FDFAB9E00BF0EB7 /* FTDragCellViewController.m */; };
 		C52564741FDFAE8300BF0EB7 /* FTChannelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C52564731FDFAE8300BF0EB7 /* FTChannelManager.m */; };
 		C525647A1FDFB0AF00BF0EB7 /* FTChannelCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52564791FDFB0AF00BF0EB7 /* FTChannelCollectionView.m */; };
@@ -216,6 +224,23 @@
 		C51112C61FD5595E008AD74F /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
 		C51112C81FD63800008AD74F /* FTGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTGlobal.h; sourceTree = "<group>"; };
 		C51112C91FD63800008AD74F /* FTGlobal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTGlobal.m; sourceTree = "<group>"; };
+		C51A951D213572510075FBEF /* UIButton+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SGPagingView.h"; sourceTree = "<group>"; };
+		C51A951E213572510075FBEF /* NSString+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SGPagingView.h"; sourceTree = "<group>"; };
+		C51A951F213572510075FBEF /* UIView+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SGPagingView.h"; sourceTree = "<group>"; };
+		C51A9520213572510075FBEF /* NSString+SGPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SGPagingView.m"; sourceTree = "<group>"; };
+		C51A9521213572510075FBEF /* UIButton+SGPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SGPagingView.m"; sourceTree = "<group>"; };
+		C51A9522213572510075FBEF /* UIView+SGPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SGPagingView.m"; sourceTree = "<group>"; };
+		C51A9524213572510075FBEF /* SGPageContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageContentScrollView.m; sourceTree = "<group>"; };
+		C51A9525213572510075FBEF /* SGPageContentCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageContentCollectionView.h; sourceTree = "<group>"; };
+		C51A9526213572510075FBEF /* SGPageContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageContentScrollView.h; sourceTree = "<group>"; };
+		C51A9527213572510075FBEF /* SGPageContentCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageContentCollectionView.m; sourceTree = "<group>"; };
+		C51A9529213572510075FBEF /* SGPageTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageTitleView.m; sourceTree = "<group>"; };
+		C51A952A213572510075FBEF /* SGPageTitleViewConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageTitleViewConfigure.m; sourceTree = "<group>"; };
+		C51A952B213572510075FBEF /* SGPageTitleViewConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageTitleViewConfigure.h; sourceTree = "<group>"; };
+		C51A952C213572510075FBEF /* SGPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageTitleView.h; sourceTree = "<group>"; };
+		C51A952D213572510075FBEF /* SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPagingView.h; sourceTree = "<group>"; };
+		C51A9535213784320075FBEF /* UITextField+TopPlaceholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+TopPlaceholder.h"; sourceTree = "<group>"; };
+		C51A9536213784320075FBEF /* UITextField+TopPlaceholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+TopPlaceholder.m"; sourceTree = "<group>"; };
 		C525646C1FDFAB9E00BF0EB7 /* FTDragCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTDragCellViewController.h; sourceTree = "<group>"; };
 		C525646D1FDFAB9E00BF0EB7 /* FTDragCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTDragCellViewController.m; sourceTree = "<group>"; };
 		C52564721FDFAE8300BF0EB7 /* FTChannelManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTChannelManager.h; sourceTree = "<group>"; };
@@ -580,6 +605,8 @@
 				C5BB8DCC20C68F4300BC1B3A /* NSObject+Sark.m */,
 				C59518B821097A17001C1BC1 /* UIViewController+Association.h */,
 				C59518B921097A17001C1BC1 /* UIViewController+Association.m */,
+				C51A9535213784320075FBEF /* UITextField+TopPlaceholder.h */,
+				C51A9536213784320075FBEF /* UITextField+TopPlaceholder.m */,
 			);
 			path = Playground;
 			sourceTree = "<group>";
@@ -618,6 +645,52 @@
 				C53366B321251E4000A260CD /* FTCodeConfuseTool.m */,
 			);
 			path = ChangeFileName;
+			sourceTree = "<group>";
+		};
+		C51A951B213572510075FBEF /* SGPagingView */ = {
+			isa = PBXGroup;
+			children = (
+				C51A951C213572510075FBEF /* Category */,
+				C51A9523213572510075FBEF /* SGPageContent */,
+				C51A9528213572510075FBEF /* SGPageTitle */,
+				C51A952D213572510075FBEF /* SGPagingView.h */,
+			);
+			path = SGPagingView;
+			sourceTree = "<group>";
+		};
+		C51A951C213572510075FBEF /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C51A951D213572510075FBEF /* UIButton+SGPagingView.h */,
+				C51A951E213572510075FBEF /* NSString+SGPagingView.h */,
+				C51A951F213572510075FBEF /* UIView+SGPagingView.h */,
+				C51A9520213572510075FBEF /* NSString+SGPagingView.m */,
+				C51A9521213572510075FBEF /* UIButton+SGPagingView.m */,
+				C51A9522213572510075FBEF /* UIView+SGPagingView.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C51A9523213572510075FBEF /* SGPageContent */ = {
+			isa = PBXGroup;
+			children = (
+				C51A9524213572510075FBEF /* SGPageContentScrollView.m */,
+				C51A9525213572510075FBEF /* SGPageContentCollectionView.h */,
+				C51A9526213572510075FBEF /* SGPageContentScrollView.h */,
+				C51A9527213572510075FBEF /* SGPageContentCollectionView.m */,
+			);
+			path = SGPageContent;
+			sourceTree = "<group>";
+		};
+		C51A9528213572510075FBEF /* SGPageTitle */ = {
+			isa = PBXGroup;
+			children = (
+				C51A9529213572510075FBEF /* SGPageTitleView.m */,
+				C51A952A213572510075FBEF /* SGPageTitleViewConfigure.m */,
+				C51A952B213572510075FBEF /* SGPageTitleViewConfigure.h */,
+				C51A952C213572510075FBEF /* SGPageTitleView.h */,
+			);
+			path = SGPageTitle;
 			sourceTree = "<group>";
 		};
 		C525646B1FDFAB7000BF0EB7 /* DragCell */ = {
@@ -1469,6 +1542,7 @@
 		C5F5E5261FAC3977009FB8D3 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C51A951B213572510075FBEF /* SGPagingView */,
 				C5726D61209EEA560037DA02 /* MJRefresh */,
 				C56EE50C2084820A005186DD /* MJExtension */,
 				C598FBCF1FE0F67F00B67823 /* Masonry */,
@@ -1686,6 +1760,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C51A952E213572510075FBEF /* NSString+SGPagingView.m in Sources */,
 				C57686721FAFF66500066AA3 /* SDWebImageDecoder.m in Sources */,
 				C52564741FDFAE8300BF0EB7 /* FTChannelManager.m in Sources */,
 				C5726D96209EEA570037DA02 /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -1726,9 +1801,12 @@
 				C5726D92209EEA570037DA02 /* MJRefreshComponent.m in Sources */,
 				C5BB8DCD20C68F4300BC1B3A /* NSObject+Sark.m in Sources */,
 				C5726DA1209EEA570037DA02 /* UIScrollView+MJExtension.m in Sources */,
+				C51A952F213572510075FBEF /* UIButton+SGPagingView.m in Sources */,
 				C59D91E01FB18DD3004550D0 /* SVProgressHUD.m in Sources */,
+				C51A9534213572510075FBEF /* SGPageTitleViewConfigure.m in Sources */,
 				C534B7A820BC031B00651271 /* NOEELeftTitleBtn.m in Sources */,
 				C59D91D11FB18D04004550D0 /* LJSaomiaoViewController.m in Sources */,
+				C51A9532213572510075FBEF /* SGPageContentCollectionView.m in Sources */,
 				C59D91E51FB44998004550D0 /* FTFlowMountainViewController.m in Sources */,
 				C51112CA1FD63800008AD74F /* FTGlobal.m in Sources */,
 				C59D91B81FB17DB2004550D0 /* FTBaseNavigationController.m in Sources */,
@@ -1782,6 +1860,7 @@
 				C576866E1FAFF66500066AA3 /* MKAnnotationView+WebCache.m in Sources */,
 				C5423EF6205A619900D027EB /* Student.m in Sources */,
 				C5726D99209EEA570037DA02 /* MJRefreshBackNormalFooter.m in Sources */,
+				C51A9537213784320075FBEF /* UITextField+TopPlaceholder.m in Sources */,
 				C5726D9D209EEA570037DA02 /* MJRefreshStateHeader.m in Sources */,
 				C574DBAF1FD4DFBB0003F827 /* FTLoginNextViewController.m in Sources */,
 				C56EE5292084820A005186DD /* NSObject+MJKeyValue.m in Sources */,
@@ -1796,6 +1875,7 @@
 				C574DBB21FD4E29D0003F827 /* FTCustomTransitioning.m in Sources */,
 				C59D91CA1FB18B0E004550D0 /* FTScanViewController.m in Sources */,
 				C576866F1FAFF66500066AA3 /* NSData+ImageContentType.m in Sources */,
+				C51A9533213572510075FBEF /* SGPageTitleView.m in Sources */,
 				C598FBEB1FE0F67F00B67823 /* MASConstraintMaker.m in Sources */,
 				C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */,
 				C5726D9F209EEA570037DA02 /* MJRefreshConst.m in Sources */,
@@ -1803,6 +1883,7 @@
 				C5736A951FD945290018BA92 /* FTCustomPushTransitionFirstVC.m in Sources */,
 				C59518BA21097A17001C1BC1 /* UIViewController+Association.m in Sources */,
 				C57686701FAFF66500066AA3 /* SDImageCache.m in Sources */,
+				C51A9531213572510075FBEF /* SGPageContentScrollView.m in Sources */,
 				C598FBEC1FE0F67F00B67823 /* MASLayoutConstraint.m in Sources */,
 				C53366B421251E4000A260CD /* FTCodeConfuseTool.m in Sources */,
 				C52BACEE1FEA464100ED9E10 /* GQPlayGifView.m in Sources */,
@@ -1813,6 +1894,7 @@
 				C5616C111FA8777E00A9C033 /* FTAppDelegate.m in Sources */,
 				C598FBFB1FE1238100B67823 /* UIView+anchorPoint.m in Sources */,
 				C598FC021FE2268800B67823 /* FTPausePlayAnimationVC.m in Sources */,
+				C51A9530213572510075FBEF /* UIView+SGPagingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,9 +33,50 @@
 //                                 garbageCodeInstanceMethonPrefix:@"GQGQ"
 //                                               garbageFileCounts:500
 //                                                 garbageFileName:@"godbless"];
-    [FTCodeConfuseTool changeXcassetsFilesForDirectory:@"/Users/wen/Desktop/needX/tips-ios/Liaodao/Resource/Image"];
+//    [FTCodeConfuseTool changeXcassetsFilesForDirectory:@"/Users/wen/Desktop/needX/tips-ios/Liaodao/Resource/Image"];
+    
+    CGFloat components[3];
+    CFTimeInterval t0 = CFAbsoluteTimeGetCurrent();
+    for (NSInteger i = 0; i < 100000; i++) {
+          [self P_getRGBComponents:components forColor:[UIColor grayColor]];
+    }
+    CFTimeInterval t1 = CFAbsoluteTimeGetCurrent();
+
+  
+    CFTimeInterval t2 = CFAbsoluteTimeGetCurrent();
+    for (NSInteger i = 0; i < 100000; i++) {
+        [self P2_getRGBComponents:components forColor:[UIColor grayColor]];
+    }
+    CFTimeInterval t3 = CFAbsoluteTimeGetCurrent();
+    
+    NSLog(@"%f",(t1-t0)/(t3-t2));
     
     return YES;
+}
+
+- (void)P_getRGBComponents:(CGFloat [3])components forColor:(UIColor *)color {
+    CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
+    unsigned char resultingPixel[4];
+    CGContextRef context = CGBitmapContextCreate(&resultingPixel, 1, 1, 8, 4, rgbColorSpace, 1);
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, CGRectMake(0, 0, 1, 1));
+    CGContextRelease(context);
+    CGColorSpaceRelease(rgbColorSpace);
+    for (int component = 0; component < 3; component++) {
+        components[component] = resultingPixel[component] / 255.0f;
+    }
+}
+
+- (void)P2_getRGBComponents:(CGFloat [3])components forColor:(UIColor *)color {
+    CGFloat red = 0.0;
+    CGFloat green = 0.0;
+    CGFloat blue = 0.0;
+    CGFloat alpha = 0.0;
+    [color getRed:&red green:&green blue:&blue alpha:&alpha];
+    
+    components[0] = red;
+    components[1] = green;
+    components[2] = blue;
 }
 
 - (UIFont *)font {
