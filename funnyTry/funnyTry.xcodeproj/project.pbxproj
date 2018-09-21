@@ -661,11 +661,11 @@
 		C51A951C213572510075FBEF /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				C51A951D213572510075FBEF /* UIButton+SGPagingView.h */,
 				C51A951E213572510075FBEF /* NSString+SGPagingView.h */,
-				C51A951F213572510075FBEF /* UIView+SGPagingView.h */,
 				C51A9520213572510075FBEF /* NSString+SGPagingView.m */,
+				C51A951D213572510075FBEF /* UIButton+SGPagingView.h */,
 				C51A9521213572510075FBEF /* UIButton+SGPagingView.m */,
+				C51A951F213572510075FBEF /* UIView+SGPagingView.h */,
 				C51A9522213572510075FBEF /* UIView+SGPagingView.m */,
 			);
 			path = Category;
@@ -674,10 +674,10 @@
 		C51A9523213572510075FBEF /* SGPageContent */ = {
 			isa = PBXGroup;
 			children = (
-				C51A9524213572510075FBEF /* SGPageContentScrollView.m */,
 				C51A9525213572510075FBEF /* SGPageContentCollectionView.h */,
-				C51A9526213572510075FBEF /* SGPageContentScrollView.h */,
 				C51A9527213572510075FBEF /* SGPageContentCollectionView.m */,
+				C51A9526213572510075FBEF /* SGPageContentScrollView.h */,
+				C51A9524213572510075FBEF /* SGPageContentScrollView.m */,
 			);
 			path = SGPageContent;
 			sourceTree = "<group>";

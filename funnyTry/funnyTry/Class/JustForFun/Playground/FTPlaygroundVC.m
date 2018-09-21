@@ -53,9 +53,6 @@ struct son
 
 int a = 6;
 
-
-
-
 @interface FTPlaygroundVC ()<UIScrollViewDelegate>
 @property (nonatomic, strong) dispatch_queue_t queue;
 @property (nonatomic, strong) FTTouchView *redView;

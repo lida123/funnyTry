@@ -6,6 +6,32 @@
 //  Copyright © 2018年 GQ. All rights reserved.
 //
 
+void addLeftBottomRightShadowToView(UIView *view,CGFloat shadowOpacity,CGFloat leftOffSet, CGFloat rightOffSet,CGFloat bottomOffset,CGSize viewSize)
+{
+    //////// shadow /////////
+    CALayer *shadowLayer = view.layer;
+    
+    shadowLayer.shadowColor = [UIColor blackColor].CGColor;
+    shadowLayer.shadowOffset = CGSizeMake(0, 0);
+    shadowLayer.shadowOpacity = shadowOpacity;
+    
+    //路径阴影
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    
+    CGFloat x = 0;
+    CGFloat y = 0;
+    CGFloat w = viewSize.width;
+    CGFloat h = viewSize.height;
+    
+    [path moveToPoint:CGPointMake(x - leftOffSet, y + bottomOffset)]; //左上
+    [path addLineToPoint:CGPointMake(x - leftOffSet, y + h + bottomOffset)];//左下
+    [path addLineToPoint:CGPointMake(x + w + rightOffSet, y + h + bottomOffset)];//右下
+    [path addLineToPoint:CGPointMake(x + w + rightOffSet, y + bottomOffset)];//右上
+    [path addLineToPoint:CGPointMake(x - leftOffSet, y + bottomOffset)]; //左上
+    shadowLayer.shadowPath = path.CGPath;
+}
+
+
 #import "FTPlayroundTwoVC.h"
 #import "UIViewController+Association.h"
 #import "UITextField+TopPlaceholder.h"
@@ -35,6 +61,15 @@ __weak NSString *string_weak_copy   = nil;
     string_weak_copy   = self.associatedObject_copy;
     
     [self.topTextField enableTopPlaceholder];
+    
+    
+    UIView *redView = [[UIView alloc] initWithFrame:CGRectMake(50, 200, 200, 50)];
+    redView.backgroundColor = [UIColor redColor];
+    redView.layer.cornerRadius = 10;
+    
+    [self.view addSubview:redView];
+    
+    addLeftBottomRightShadowToView(redView, 0.5, 5, 5, 5, redView.frame.size);
 }
 
 - (void)didReceiveMemoryWarning {
