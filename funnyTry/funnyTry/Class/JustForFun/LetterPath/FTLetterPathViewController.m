@@ -11,10 +11,12 @@
 #import <ImageIO/ImageIO.h>
 #import "UIImage+GIF.h"
 #import <math.h>
+#import "SVProgressHUD.h"
 
 @interface FTLetterPathViewController ()<CAAnimationDelegate>
 @property (nonatomic, strong) CAShapeLayer *pathLayer;
 @property (nonatomic, strong) CALayer *penLayer;
+@property (nonatomic, strong) UITextField *tf;
 
 @end
 
@@ -37,6 +39,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
+
+    self.tf = [[UITextField alloc] initWithFrame:CGRectMake(50, 100, 100, 50)];
+    self.tf.backgroundColor = [UIColor redColor];
+    [self.view addSubview:self.tf];
+
 }
 
 /*
@@ -93,8 +100,30 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self setupTextLayer];
-    [self startAnimation];
+//    [self setupTextLayer];
+//    [self startAnimation];
+    
+    NSString *text = self.tf.text;
+    if (!text.length) {
+        return;
+    }
+    
+    CGRect rect = CGRectMake(0, 0, 800,800);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0);
+    UIImage *img = [UIImage imageNamed:@"abc"];
+    [img drawInRect:rect];
+    
+    
+    [text drawAtPoint:CGPointMake(650, 270) withAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont fontWithName:@"KaiTi_GB2312" size:30]}];
+    
+    UIImage *newImgage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageWriteToSavedPhotosAlbum(newImgage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+}
+
+//必要实现的协议方法, 不然会崩溃
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    [SVProgressHUD showSuccessWithStatus:@"写入成功!"];
 }
 
 - (void)setupTextLayer {

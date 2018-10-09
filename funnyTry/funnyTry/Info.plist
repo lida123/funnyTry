@@ -32,53 +32,29 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
-			<array/>
+			<array>
+				<string>caiyi9188Lottery15697game</string>
+			</array>
 		</dict>
 		<dict/>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>caiyi9188Lottery15697game</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>use your camera</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>@"嘻嘻嘻嘻"</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>@"我要访问相册啊"</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>BebasNeue.otf</string>
-		<string>MFBanHei_Noncommercial-Regular.otf</string>
-		<string>Meslo LG M Italic for Powerline.ttf</string>
-	</array>
-	<key>UIApplicationShortcutItems</key>
-	<array>
-		<dict>
-			<key>UIAPPlicationShortcutItemIconFile</key>
-			<string>tabbar_discover_nor.png</string>
-			<key>UIApplicationShortcutItemSubtitle</key>
-			<string>99</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>数学</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>shuxue.com</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeLove</string>
-			<key>UIApplicationShortcutItemSubtitle</key>
-			<string>100</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>语文</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>yuwen.com</string>
-		</dict>
+		<string>ftkaiti.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
