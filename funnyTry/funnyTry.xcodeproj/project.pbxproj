@@ -180,6 +180,7 @@
 		C5D1380D1FCFF9BF009EC87E /* LYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D138091FCFF9BE009EC87E /* LYButton.m */; };
 		C5D1380E1FCFF9BF009EC87E /* LYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D1380B1FCFF9BE009EC87E /* LYTextField.m */; };
 		C5D138171FCFFA1E009EC87E /* FTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D138161FCFFA1E009EC87E /* FTLoginViewController.m */; };
+		C5EB8C56215B328000D98B64 /* FTWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EB8C55215B328000D98B64 /* FTWaterView.m */; };
 		C5F09B822085FAC600BB2341 /* UIImage+Function.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F09B802085FAC600BB2341 /* UIImage+Function.m */; };
 		C5F5E5231FAC372B009FB8D3 /* FTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */; };
 		C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */; };
@@ -530,6 +531,8 @@
 		C5D1380C1FCFF9BF009EC87E /* LYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYButton.h; sourceTree = "<group>"; };
 		C5D138151FCFFA1E009EC87E /* FTLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLoginViewController.h; sourceTree = "<group>"; };
 		C5D138161FCFFA1E009EC87E /* FTLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLoginViewController.m; sourceTree = "<group>"; };
+		C5EB8C54215B328000D98B64 /* FTWaterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTWaterView.h; sourceTree = "<group>"; };
+		C5EB8C55215B328000D98B64 /* FTWaterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTWaterView.m; sourceTree = "<group>"; };
 		C5F09B802085FAC600BB2341 /* UIImage+Function.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Function.m"; sourceTree = "<group>"; };
 		C5F09B812085FAC600BB2341 /* UIImage+Function.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Function.h"; sourceTree = "<group>"; };
 		C5F5E5211FAC372B009FB8D3 /* FTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTabBarController.h; sourceTree = "<group>"; };
@@ -607,6 +610,8 @@
 				C59518B921097A17001C1BC1 /* UIViewController+Association.m */,
 				C51A9535213784320075FBEF /* UITextField+TopPlaceholder.h */,
 				C51A9536213784320075FBEF /* UITextField+TopPlaceholder.m */,
+				C5EB8C54215B328000D98B64 /* FTWaterView.h */,
+				C5EB8C55215B328000D98B64 /* FTWaterView.m */,
 			);
 			path = Playground;
 			sourceTree = "<group>";
@@ -1832,6 +1837,7 @@
 				C525646E1FDFAB9E00BF0EB7 /* FTDragCellViewController.m in Sources */,
 				C59D91B51FB15C5A004550D0 /* UIView+CutShape.m in Sources */,
 				C5616C1F1FA8777E00A9C033 /* main.m in Sources */,
+				C5EB8C56215B328000D98B64 /* FTWaterView.m in Sources */,
 				C51112C71FD5595E008AD74F /* UIView+Screenshot.m in Sources */,
 				C5D1380D1FCFF9BF009EC87E /* LYButton.m in Sources */,
 				C5726D97209EEA570037DA02 /* MJRefreshAutoStateFooter.m in Sources */,

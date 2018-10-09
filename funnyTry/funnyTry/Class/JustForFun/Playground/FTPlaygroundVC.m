@@ -23,7 +23,8 @@
 #import "NOEELeftTitleBtn.h"
 #import "NSObject+Sark.h"
 #import "UIViewController+Association.h"
-
+#import "Student.h"
+#import "FTWaterView.h"
 
 //父结构体
 struct father
@@ -59,6 +60,7 @@ int a = 6;
 @property (nonatomic, strong) FTTouchView *touchView;
 @property (nonatomic, strong) UIScrollView *sr;
 @property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong)  FTWaterView * water;
 @end
 
 @implementation FTPlaygroundVC
@@ -69,93 +71,106 @@ int a = 6;
     self.navigationItem.title = @"Have fun";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"nextGround" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonClick)];
     _redView = [[FTTouchView alloc] initWithFrame:CGRectMake(50, FTNavigationBarPlusStatusBarHeight, 200, 200)];
-    _redView.backgroundColor = [UIColor grayColor];
-    _redView.tintColor = [UIColor redColor];
-    _redView.layoutMargins = UIEdgeInsetsMake(100, 100, 100, 100);
-//    [self.view addSubview:_redView];
+    _redView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:_redView];
     
-    NSDictionary *jsonDic = @{@"name":@"sgq",@"age":@"18",@"books":@[@{@"name":@"Chinese"},@{@"name":@"math"}]};
-    Student *stu = [Student modelWithJSON:jsonDic];
+//    NSDictionary *jsonDic = @{@"name":@"sgq",@"age":@"18",@"books":@[@{@"name":@"Chinese"},@{@"name":@"math"}]};
+//    Student *stu = [Student modelWithJSON:jsonDic];
+//
+//
+//
+//    CAGradientLayer *gradient = [CAGradientLayer layer];
+//    gradient.frame = CGRectMake(100, 100, 200, 200);
+//    gradient.colors = [NSArray arrayWithObjects:
+//                       (id)[UIColor redColor].CGColor,
+//                       (id)[UIColor greenColor].CGColor,
+//                       nil];
+//    gradient.locations = @[@0.5,@1];
+//    gradient.startPoint = CGPointMake(0, 1);
+//    gradient.endPoint = CGPointMake(1, 0);
+//    [self.view.layer insertSublayer:gradient atIndex:0];
+//
+//    //创建CGContextRef
+//
+//    UIGraphicsBeginImageContext(self.view.bounds.size);
+//
+//    CGContextRef gc = UIGraphicsGetCurrentContext();
+//
+//    //创建CGMutablePathRef
+//
+//    CGMutablePathRef path = CGPathCreateMutable();
+//
+//    //绘制Path
+//
+//    CGRect rect = CGRectInset(self.view.bounds, 1, 30);
+//
+//    CGPathMoveToPoint(path, NULL, CGRectGetMinX(rect), CGRectGetMinY(rect));
+//
+//    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(rect), CGRectGetHeight(rect));
+//
+//    CGPathAddLineToPoint(path, NULL, CGRectGetWidth(rect), CGRectGetHeight(rect) * 2 / 3);
+//
+//    CGPathCloseSubpath(path);
+//
+//    //绘制渐变
+//
+//    [self drawLinearGradient:gc path:path startColor:[UIColor greenColor].CGColor endColor:[UIColor redColor].CGColor];
+//
+//    //注意释放CGMutablePathRef
+//
+//    CGPathRelease(path);
+//
+//    //从Context中获取图像，并显示在界面上
+//
+//    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+//
+//    UIGraphicsEndImageContext();
+//
+//    UIImageView *imgView = [[UIImageView alloc] initWithImage:img];
+//
+//    [self.view addSubview:imgView];
+//
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [button setTitle:@"贝格尔来德" forState:UIControlStateNormal];
+//    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    [button setImage:[UIImage imageNamed:@"c"] forState:UIControlStateNormal];
+//    [button sizeToFit];
+//    button.frame = CGRectMake(0, 0, button.frame.size.width, 30);
+//    [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 30)];
+//    [button setTitleEdgeInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
+//    button.center = self.view.center;
+//    button.layer.cornerRadius = 2;
+//    button.backgroundColor = [UIColor redColor];
+//
+//    button.titleLabel.font = [UIFont systemFontOfSize:18];
+//
+//    [self.view addSubview:button];
+//
+//    unsigned int count;
+//    objc_property_t * list1 = class_copyPropertyList([UIViewController class], &count);
+//
+//
+//    for (NSInteger i = 0; i < count; i++) {
+//        objc_property_t p = list1[i];
+////        NSLog(@"----%s",property_getName(p));
+//    }
+//
+    Student * st = [Student new];
+    [st performSelector:@selector(test) withObject:nil afterDelay:0];
     
-
-
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = CGRectMake(100, 100, 200, 200);
-    gradient.colors = [NSArray arrayWithObjects:
-                       (id)[UIColor redColor].CGColor,
-                       (id)[UIColor greenColor].CGColor,
-                       nil];
-    gradient.locations = @[@0.5,@1];
-    gradient.startPoint = CGPointMake(0, 1);
-    gradient.endPoint = CGPointMake(1, 0);
-    [self.view.layer insertSublayer:gradient atIndex:0];
-
-    //创建CGContextRef
-
-    UIGraphicsBeginImageContext(self.view.bounds.size);
-
-    CGContextRef gc = UIGraphicsGetCurrentContext();
-
-    //创建CGMutablePathRef
-
-    CGMutablePathRef path = CGPathCreateMutable();
-
-    //绘制Path
-
-    CGRect rect = CGRectInset(self.view.bounds, 1, 30);
-
-    CGPathMoveToPoint(path, NULL, CGRectGetMinX(rect), CGRectGetMinY(rect));
-
-    CGPathAddLineToPoint(path, NULL, CGRectGetMidX(rect), CGRectGetHeight(rect));
-
-    CGPathAddLineToPoint(path, NULL, CGRectGetWidth(rect), CGRectGetHeight(rect) * 2 / 3);
-
-    CGPathCloseSubpath(path);
-
-    //绘制渐变
-
-    [self drawLinearGradient:gc path:path startColor:[UIColor greenColor].CGColor endColor:[UIColor redColor].CGColor];
-
-    //注意释放CGMutablePathRef
-
-    CGPathRelease(path);
-
-    //从Context中获取图像，并显示在界面上
-
-    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-
-    UIGraphicsEndImageContext();
-
-    UIImageView *imgView = [[UIImageView alloc] initWithImage:img];
-
-    [self.view addSubview:imgView];
+    _water = [[FTWaterView alloc] initWithFrame:_redView.bounds];
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"[st performSelector:@selector(test) withObject:nil afterDelay:0]";
+    label.textColor = [UIColor whiteColor];
+    label.frame = CGRectMake(0, 0, _redView.bounds.size.width, 20);
+    [_redView addSubview:label];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"贝格尔来德" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [button setImage:[UIImage imageNamed:@"c"] forState:UIControlStateNormal];
-    [button sizeToFit];
-    button.frame = CGRectMake(0, 0, button.frame.size.width, 30);
-    [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 30)];
-    [button setTitleEdgeInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
-    button.center = self.view.center;
-    button.layer.cornerRadius = 2;
-    button.backgroundColor = [UIColor redColor];
-
-    button.titleLabel.font = [UIFont systemFontOfSize:18];
-
-    [self.view addSubview:button];
-
-    unsigned int count;
-    objc_property_t * list1 = class_copyPropertyList([UIViewController class], &count);
-    
-    
-    for (NSInteger i = 0; i < count; i++) {
-        objc_property_t p = list1[i];
-//        NSLog(@"----%s",property_getName(p));
-    }
-
-
+    CALayer *layer = [CALayer layer];
+    layer.frame = _redView.bounds;
+    layer.delegate = _water;
+    [layer setNeedsDisplay];
+    _water.superLayer = layer;
+    _redView.layer.mask = layer;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -290,7 +305,9 @@ void test(struct son *t)
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {    
-    
+//    [_water startAnimation];
+    Student * st = [Student new];
+    [st performSelector:@selector(bbbb) withObject:@"sss" afterDelay:0];
 }
 
 #pragma mark -Private

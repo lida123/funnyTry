@@ -9,5 +9,5 @@
 #import "FTBaseViewController.h"
 
 @interface FTPlaygroundVC : FTBaseViewController
-
+@property (nonatomic, strong, readonly) NSDate *mydate;
 @end

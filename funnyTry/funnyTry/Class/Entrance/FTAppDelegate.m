@@ -35,21 +35,22 @@
 //                                                 garbageFileName:@"godbless"];
 //    [FTCodeConfuseTool changeXcassetsFilesForDirectory:@"/Users/wen/Desktop/needX/tips-ios/Liaodao/Resource/Image"];
     
-    CGFloat components[3];
-    CFTimeInterval t0 = CFAbsoluteTimeGetCurrent();
-    for (NSInteger i = 0; i < 100000; i++) {
-          [self P_getRGBComponents:components forColor:[UIColor grayColor]];
-    }
-    CFTimeInterval t1 = CFAbsoluteTimeGetCurrent();
-
-  
-    CFTimeInterval t2 = CFAbsoluteTimeGetCurrent();
-    for (NSInteger i = 0; i < 100000; i++) {
-        [self P2_getRGBComponents:components forColor:[UIColor grayColor]];
-    }
-    CFTimeInterval t3 = CFAbsoluteTimeGetCurrent();
-    
-    NSLog(@"%f",(t1-t0)/(t3-t2));
+//    CGFloat components[3];
+//    CFTimeInterval t0 = CFAbsoluteTimeGetCurrent();
+//    for (NSInteger i = 0; i < 100000; i++) {
+//          [self P_getRGBComponents:components forColor:[UIColor grayColor]];
+//    }
+//    CFTimeInterval t1 = CFAbsoluteTimeGetCurrent();
+//
+//
+//    CFTimeInterval t2 = CFAbsoluteTimeGetCurrent();
+//    for (NSInteger i = 0; i < 100000; i++) {
+//        [self P2_getRGBComponents:components forColor:[UIColor grayColor]];
+//    }
+//    CFTimeInterval t3 = CFAbsoluteTimeGetCurrent();
+//
+//    NSLog(@"%f",(t1-t0)/(t3-t2));
+    NSLog(@"-----%zd-----", @"09991".integerValue);
     
     return YES;
 }

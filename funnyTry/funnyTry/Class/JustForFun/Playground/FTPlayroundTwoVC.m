@@ -66,10 +66,12 @@ __weak NSString *string_weak_copy   = nil;
     UIView *redView = [[UIView alloc] initWithFrame:CGRectMake(50, 200, 200, 50)];
     redView.backgroundColor = [UIColor redColor];
     redView.layer.cornerRadius = 10;
+    redView.tag = 999;
     
     [self.view addSubview:redView];
     
     addLeftBottomRightShadowToView(redView, 0.5, 5, 5, 5, redView.frame.size);
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,7 +90,31 @@ __weak NSString *string_weak_copy   = nil;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self.topTextField endEditing:YES];
+//    [self.topTextField endEditing:YES];
+    
+    CGFloat totalTime = 1.05;
+    NSArray *keyTimes = @[@0, @(0.2/totalTime), @(0.45/totalTime), @(0.75/totalTime), @(1)];
+    
+    UIView *redView = [self.view viewWithTag:999];
+    CAKeyframeAnimation *keyFrame = [CAKeyframeAnimation animation];
+    keyFrame.keyPath = @"transform.translation.y";
+    keyFrame.values = @[@(0), @(-30), @(0), @(-10), @(0)];
+    keyFrame.keyTimes = keyTimes;
+    keyFrame.removedOnCompletion = NO;
+    keyFrame.duration = totalTime;
+    
+    CAKeyframeAnimation *keyFrame1 = [CAKeyframeAnimation animation];
+    keyFrame1.keyPath = @"transform.scale";
+    keyFrame1.values = @[@(1.0), @(1.2), @(1.0), @(1.1), @(1.0)];
+    keyFrame1.keyTimes = keyTimes;
+    keyFrame1.duration = totalTime;
+
+    
+    CAAnimationGroup *group = [CAAnimationGroup animation];
+    group.duration = totalTime;
+    group.animations = @[keyFrame, keyFrame1];
+    [redView.layer addAnimation:group forKey:nil];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {

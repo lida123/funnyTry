@@ -19,4 +19,9 @@
     NSLog(@"hehe");
     return nil;
 }
+
+
+- (void)test {
+    NSLog(@"We are book");
+}
 @end
