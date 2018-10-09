@@ -54,7 +54,7 @@
     
     return YES;
 }
-
+/// 1111
 - (void)P_getRGBComponents:(CGFloat [3])components forColor:(UIColor *)color {
     CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
     unsigned char resultingPixel[4];
@@ -67,7 +67,9 @@
         components[component] = resultingPixel[component] / 255.0f;
     }
 }
-
+////22222
+//33333
+////444
 - (void)P2_getRGBComponents:(CGFloat [3])components forColor:(UIColor *)color {
     CGFloat red = 0.0;
     CGFloat green = 0.0;
