@@ -25,6 +25,7 @@
 #import "UIViewController+Association.h"
 #import "Student.h"
 #import "FTWaterView.h"
+#import "Person+add.h"
 
 //父结构体
 struct father
@@ -171,6 +172,27 @@ int a = 6;
     [layer setNeedsDisplay];
     _water.superLayer = layer;
     _redView.layer.mask = layer;
+    
+    Person *p = [Person new];
+    p.female = YES;
+    NSLog(@"%@", p.female ? @"女的":@"男的");
+    
+    
+//    unsigned int count;
+//    objc_property_t * ps =  class_copyPropertyList([Person class], &count);
+//
+//    for (NSInteger i = 0; i < count; i++) {
+//        objc_property_t p = ps[i];
+//        NSLog(@"%s", property_getName(p));
+//    }
+//
+//    Ivar * ivars =  class_copyIvarList([Person class], &count);
+//
+//    for (NSInteger i = 0; i < count; i++) {
+//        Ivar ivar = ivars[i];
+//        NSLog(@"%s", ivar_getName(ivar));
+//    }
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -305,9 +327,9 @@ void test(struct son *t)
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {    
-//    [_water startAnimation];
-    Student * st = [Student new];
-    [st performSelector:@selector(bbbb) withObject:@"sss" afterDelay:0];
+    [_water startAnimation];
+//    Student * st = [Student new];
+//    [st performSelector:@selector(bbbb) withObject:@"sss" afterDelay:0];
 }
 
 #pragma mark -Private

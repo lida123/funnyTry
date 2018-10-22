@@ -24,16 +24,17 @@
     self.window.rootViewController = tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
   
-//    [FTCodeConfuseTool confuseProjectWithChangeFileNameDirectory:@"/Users/wen/Desktop/needX/tips-ios/Liaodao/Classes"
-//                                                    pbxprojPath:@"/Users/wen/Desktop/needX/tips-ios/Liaodao.xcodeproj/project.pbxproj"
-//                                         fileNameAppendingPrefix:@"GQGQ"
-//                                          xcassetsFilesDirectory:@"/Users/wen/Desktop/needX/tips-ios/Liaodao/Resource/Image"
-//                                                 garbageCodePath:@"/Users/wen/Documents/GitHub/funnyTry/funnyTry/funnyTry/Class/JustForFun/ChangeFileName/一个实例方法的代码.txt"
-//                                 garbageCodeInstanceMethonPrefix:@"GQGQ"
-//                                               garbageFileCounts:500
-//                                                 garbageFileName:@"godbless"];
-//    [FTCodeConfuseTool changeXcassetsFilesForDirectory:@"/Users/wen/Desktop/needX/tips-ios/Liaodao/Resource/Image"];
+    [FTCodeConfuseTool confuseProjectWithChangeFileNameDirectory:@"/Users/wen/Desktop/needX/tips-ios2/Liaodao"
+                                                    pbxprojPath:@"/Users/wen/Desktop/needX/tips-ios2/Liaodao.xcodeproj/project.pbxproj"
+                                         fileNameAppendingPrefix:@"VVVV"
+                                          xcassetsFilesDirectory:@"/Users/wen/Desktop/needX/tips-ios2/Liaodao"
+                                                 garbageCodePath:@"/Users/wen/Documents/GitHub/funnyTry/funnyTry/funnyTry/Class/JustForFun/ChangeFileName/一个实例方法的代码.txt"
+                                 garbageCodeInstanceMethonPrefix:@"VVVV"
+                                               garbageFileCounts:200
+                                                 garbageFileName:@"vvvvuseless"];
+
     
 //    CGFloat components[3];
 //    CFTimeInterval t0 = CFAbsoluteTimeGetCurrent();
@@ -69,7 +70,7 @@
 }
 ////22222
 //33333
-////444
+////5555
 - (void)P2_getRGBComponents:(CGFloat [3])components forColor:(UIColor *)color {
     CGFloat red = 0.0;
     CGFloat green = 0.0;

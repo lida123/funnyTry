@@ -46,7 +46,8 @@ __weak NSString *string_weak_copy   = nil;
 @end
 
 @implementation FTPlayroundTwoVC
-
+//#define sgq
+//#define vvv
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -72,6 +73,22 @@ __weak NSString *string_weak_copy   = nil;
     
     addLeftBottomRightShadowToView(redView, 0.5, 5, 5, 5, redView.frame.size);
     
+    UILabel *alabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 200, 100)];
+    alabel.text = @"as";
+    alabel.textColor = [UIColor redColor];
+    alabel.backgroundColor = [UIColor whiteColor];
+    alabel.font = [UIFont systemFontOfSize:19];
+    alabel.textAlignment = NSTextAlignmentCenter;
+    alabel.numberOfLines = 0;
+    alabel.layer.borderWidth = 2;
+    alabel.layer.borderColor = [UIColor greenColor].CGColor;
+    alabel.layer.cornerRadius = 5;
+    
+    [self.view addSubview:alabel];
+#if defined sgq || defined vvv
+    NSLog(@"xxx");
+    
+#endif
 }
 
 - (void)didReceiveMemoryWarning {

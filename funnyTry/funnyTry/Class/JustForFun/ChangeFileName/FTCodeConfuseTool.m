@@ -8,6 +8,8 @@
 
 #import "FTCodeConfuseTool.h"
 
+#define kShouldRenameFileDotExts @[@".h", @".m", @".xib"]
+
 // 文件重命名
 static void renameFile(NSString *oldPath, NSString *newPath) {
     NSError *error;
@@ -49,9 +51,8 @@ static void replaceOldClassNameInFileContent(NSString *targetDirectory, NSString
             continue;
         }
         
-        NSString *fileName = filePath.lastPathComponent;
-        if ([fileName hasSuffix:@".h"] || [fileName hasSuffix:@".m"] || [fileName hasSuffix:@".pch"]|| [fileName hasSuffix:@".xib"] || [fileName hasSuffix:@".storyboard"]) {
-            
+        NSString *ext = [NSString stringWithFormat:@".%@", filePath.pathExtension];
+        if ([kShouldRenameFileDotExts containsObject:ext] || [ext isEqualToString:@".xib"] || [ext isEqualToString:@".pch"]) {
             NSError *error = nil;
             NSMutableString *fileContent = [NSMutableString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
             if (error) {
@@ -78,7 +79,7 @@ static void replaceOldClassNameInFileContent(NSString *targetDirectory, NSString
 #pragma mark - 修改文件名
 + (void)changeFileNameForDirectory:(NSString *)dir pbxprojPath:(NSString *)pbxprojPath appendingPrefix:(NSString *)appendingPrefix {
     NSFileManager *fm = [NSFileManager defaultManager];
- 
+    
     NSEnumerator *fileEnumerator = [fm enumeratorAtPath:dir];
     if (!fileEnumerator) {
         NSLog(@"目录无效");
@@ -101,7 +102,7 @@ static void replaceOldClassNameInFileContent(NSString *targetDirectory, NSString
     for (NSString *oldFilePath in canChangeFilePaths) {
         @autoreleasepool {
             count++;
-            NSLog(@"正在处理第 %zd 个文件", count);
+            NSLog(@"正在处理第 %zd 个文件...", count);
             
             NSString *oldFileNameWithoutExt = oldFilePath.lastPathComponent.stringByDeletingPathExtension;
             NSString *newFileNameWithoutExt = [NSString stringWithFormat:@"%@%@",appendingPrefix,oldFileNameWithoutExt];
@@ -113,14 +114,18 @@ static void replaceOldClassNameInFileContent(NSString *targetDirectory, NSString
             renameFile(oldFilePath, newFilePath);
             
             if (![changedFileNames containsObject:oldFileNameWithoutExt]) {
-                [changedFileNames addObject:oldFileNameWithoutExt];
-                
                 // 修改文件内容
                 replaceOldClassNameInFileContent(dir, oldFileNameWithoutExt, newFileNameWithoutExt);
                 
-                // 修改工程文件中的文件名
-                NSString *regularExpression = [NSString stringWithFormat:@"\\b%@\\b", oldFileNameWithoutExt];
-                regularReplacement(xcodeprojContent, regularExpression, newFileNameWithoutExt);
+                // 修改工程引用文件中的文件名
+                for (NSString *dotExt in kShouldRenameFileDotExts) {
+                    NSString *oldString = [NSString stringWithFormat:@"%@%@", oldFileNameWithoutExt,dotExt];
+                    NSString *regularExpression = [NSString stringWithFormat:@"\\b%@\\b", oldString];
+                    NSString *newString = [NSString stringWithFormat:@"%@%@", newFileNameWithoutExt,dotExt];
+                    regularReplacement(xcodeprojContent, regularExpression, newString);
+                }
+                
+                [changedFileNames addObject:oldFileNameWithoutExt];
             }
             
         } // @autoreleasepool end
@@ -142,14 +147,14 @@ static void replaceOldClassNameInFileContent(NSString *targetDirectory, NSString
     for (NSString *fileName in fileEnumerator) {
         NSString *filePath = [dir stringByAppendingPathComponent:fileName];
         NSString *lastPathWithoutExt = [fileName.lastPathComponent stringByDeletingPathExtension];
-        
+        NSString *ext = [NSString stringWithFormat:@".%@", fileName.pathExtension];
         // 分类不能修改
         if ([lastPathWithoutExt containsString:@"+"]) {
             continue;
         }
         
         // 暂时支持修改.h .m .xib
-        if ([fileName containsString:@".h"] || [fileName containsString:@".m"] || [fileName containsString:@".xib"]){
+        if ([kShouldRenameFileDotExts containsObject:ext]){
             if (![cannotChangeFileNames containsObject:lastPathWithoutExt]) {
                 [canChangeFilePaths addObject:filePath];
             }
@@ -159,14 +164,13 @@ static void replaceOldClassNameInFileContent(NSString *targetDirectory, NSString
     return canChangeFilePaths;
 }
 
-// 不可修改的文件名(分类和xib)
+// 不可修改的文件名(分类)
 + (NSSet *)pickoutCannotChangeFileNameForDirectory:(NSString *)dir {
     NSFileManager *fm = [NSFileManager defaultManager];
     NSEnumerator *fileEnumerator = [fm enumeratorAtPath:dir];
     NSMutableSet *set = [NSMutableSet set];
     
     [set addObject:@"main"];
-    [set addObject:@"easing"];
     
     for (NSString *fileName in fileEnumerator) {
         NSString *lastPathWithoutExt = [fileName.lastPathComponent stringByDeletingPathExtension];
@@ -317,7 +321,7 @@ static NSInteger count = 0;
      - (NSString *)mj_underlineFromCamel11
      {
      */
-    NSString * regularExpression = @"^-.*?\\)(.*?)\\s?\\{";
+    NSString * regularExpression = @"^-.*?\\)(.*?)\\s*?\\{";
     NSString *methonName = nil;
     NSRegularExpression *expression = [NSRegularExpression regularExpressionWithPattern:regularExpression options:0 error:nil];
     NSArray<NSTextCheckingResult *> *matches = [expression matchesInString:origalCode options:0 range:NSMakeRange(0, origalCode.length)];

@@ -41,7 +41,7 @@
 + (void)addGarbageFilesInDirectory:(NSString *)directory fileCounts:(NSInteger)count fileName:(NSString *)fileName garbageCodePath:(NSString*)garbageCodePath instanceMethonPrefix:(NSString*)instanceMethonPrefix;
 
 
-// 不建议使用: 对于 /* */  这种类型的注释, 如果在项目中存在不规范注释残留, 比如存在 /**/ /*  */ 会导致匹配超出预计目标
+//  对于 /* */  这种类型的注释, 如果在项目中存在不规范注释残留, 比如存在 /**/ /*  */ 会导致匹配超出预计目标
 + (void)deleteCommentForDirectory:(NSString *)directory;
 
 
@@ -59,7 +59,7 @@
  * @param pbxprojPath               xx.xcodeproj 显示包内容中的project.pbxproj的路径
  * @param fileNameAppendingPrefix   文件改名前缀
  * @param xcassetsFilesDirectory    Xcassets文件目录
- * @param garbageCodePath           提供一个实例方法的文件路径
+ * @param garbageCodePath           提供一个实例方法的文件路径 方法以 xx_xx为名
  * @param garbageCodeInstanceMethonPrefix    需要改名的文件夹目录
  * @param garbageFileCounts         增加的垃圾文件数量
  * @param garbageFileName           垃圾文件名称(自动修改)

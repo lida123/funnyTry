@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Person : NSObject
+@interface Person : NSObject {
+    int _gg;
+}
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) NSNumber *age;
 @property (nonatomic, assign) NSUInteger count;
