@@ -16,7 +16,6 @@
 
 @implementation FTAppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     FTTabBarController *tabBarController = [[FTTabBarController alloc] init];
@@ -25,32 +24,31 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-  
-    [FTCodeConfuseTool confuseProjectWithChangeFileNameDirectory:@"/Users/wen/Desktop/needX/tips-ios2/Liaodao"
-                                                    pbxprojPath:@"/Users/wen/Desktop/needX/tips-ios2/Liaodao.xcodeproj/project.pbxproj"
-                                         fileNameAppendingPrefix:@"VVVV"
-                                          xcassetsFilesDirectory:@"/Users/wen/Desktop/needX/tips-ios2/Liaodao"
-                                                 garbageCodePath:@"/Users/wen/Documents/GitHub/funnyTry/funnyTry/funnyTry/Class/JustForFun/ChangeFileName/一个实例方法的代码.txt"
-                                 garbageCodeInstanceMethonPrefix:@"VVVV"
-                                               garbageFileCounts:200
-                                                 garbageFileName:@"vvvvuseless"];
-
+//    [FTCodeConfuseTool confuseProjectWithChangeFileNameDirectory:@"/Users/wen/Desktop/needX/tips-ios2/Liaodao"
+//                                                     pbxprojPath:@"/Users/wen/Desktop/needX/tips-ios2/Liaodao.xcodeproj/project.pbxproj"
+//                                         fileNameAppendingPrefix:@"VVVV"
+//                                          xcassetsFilesDirectory:@"/Users/wen/Desktop/needX/tips-ios2/Liaodao"
+//                                                 garbageCodePath:@"/Users/wen/Documents/GitHub/funnyTry/funnyTry/funnyTry/Class/JustForFun/ChangeFileName/一个实例方法的代码.txt"
+//                                 garbageCodeInstanceMethonPrefix:@"VVVV"
+//                                               garbageFileCounts:200
+//                                                 garbageFileName:@"vvvvuseless"];
     
-//    CGFloat components[3];
-//    CFTimeInterval t0 = CFAbsoluteTimeGetCurrent();
-//    for (NSInteger i = 0; i < 100000; i++) {
-//          [self P_getRGBComponents:components forColor:[UIColor grayColor]];
-//    }
-//    CFTimeInterval t1 = CFAbsoluteTimeGetCurrent();
-//
-//
-//    CFTimeInterval t2 = CFAbsoluteTimeGetCurrent();
-//    for (NSInteger i = 0; i < 100000; i++) {
-//        [self P2_getRGBComponents:components forColor:[UIColor grayColor]];
-//    }
-//    CFTimeInterval t3 = CFAbsoluteTimeGetCurrent();
-//
-//    NSLog(@"%f",(t1-t0)/(t3-t2));
+    
+    //    CGFloat components[3]
+    //    CFTimeInterval t0 = CFAbsoluteTimeGetCurrent();
+    //    for (NSInteger i = 0; i < 100000; i++) {
+    //          [self P_getRGBComponents:components forColor:[UIColor grayColor]];
+    //    }
+    //    CFTimeInterval t1 = CFAbsoluteTimeGetCurrent();
+    //
+    //
+    //    CFTimeInterval t2 = CFAbsoluteTimeGetCurrent();
+    //    for (NSInteger i = 0; i < 100000; i++) {
+    //        [self P2_getRGBComponents:components forColor:[UIColor grayColor]];
+    //    }
+    //    CFTimeInterval t3 = CFAbsoluteTimeGetCurrent();
+    //
+    //    NSLog(@"%f",(t1-t0)/(t3-t2));
     NSLog(@"-----%zd-----", @"09991".integerValue);
     
     return YES;

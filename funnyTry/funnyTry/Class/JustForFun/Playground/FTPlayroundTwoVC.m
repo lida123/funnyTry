@@ -35,6 +35,9 @@ void addLeftBottomRightShadowToView(UIView *view,CGFloat shadowOpacity,CGFloat l
 #import "FTPlayroundTwoVC.h"
 #import "UIViewController+Association.h"
 #import "UITextField+TopPlaceholder.h"
+#import "FTTouchView.h"
+#import "FTRetainCyleView.h"
+#import "SGQActionSheet.h"
 
 __weak NSString *string_weak_assign = nil;
 __weak NSString *string_weak_retain = nil;
@@ -51,8 +54,7 @@ __weak NSString *string_weak_copy   = nil;
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
-    
+    [self.view addSubview:[[FTRetainCyleView alloc] initWithFrame:CGRectZero]];
     self.associatedObject_assign = [NSString stringWithFormat:@"leichunfeng1"];
     self.associatedObject_retain = [NSString stringWithFormat:@"leichunfeng2"];
     self.associatedObject_copy   = [NSString stringWithFormat:@"leichunfeng3"];
@@ -89,6 +91,7 @@ __weak NSString *string_weak_copy   = nil;
     NSLog(@"xxx");
     
 #endif
+    
 }
 
 - (void)didReceiveMemoryWarning {

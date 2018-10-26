@@ -26,6 +26,9 @@
 #import "Student.h"
 #import "FTWaterView.h"
 #import "Person+add.h"
+#import "NSObject+MemoryLeak.h"
+#import "SGQActionSheet.h"
+#import "SGQAlertView.h"
 
 //父结构体
 struct father
@@ -71,10 +74,17 @@ int a = 6;
 {
     self.navigationItem.title = @"Have fun";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"nextGround" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonClick)];
-    _redView = [[FTTouchView alloc] initWithFrame:CGRectMake(50, FTNavigationBarPlusStatusBarHeight, 200, 200)];
-    _redView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:_redView];
     
+    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(50, 100, 200, 100)];
+    [self.view addSubview:tf];
+    tf.backgroundColor = [UIColor redColor];
+//    _redView = [[FTTouchView alloc] initWithFrame:CGRectMake(50, FTNavigationBarPlusStatusBarHeight, 200, 200)];
+//    _redView.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:_redView];
+//    [Person swizzleSEL:@selector(noexist) withSEL:@selector(test)];
+//    
+//    UIApplication;
+//    [[Person new] performSelector:@selector(noexist)];
 //    NSDictionary *jsonDic = @{@"name":@"sgq",@"age":@"18",@"books":@[@{@"name":@"Chinese"},@{@"name":@"math"}]};
 //    Student *stu = [Student modelWithJSON:jsonDic];
 //
@@ -156,26 +166,26 @@ int a = 6;
 ////        NSLog(@"----%s",property_getName(p));
 //    }
 //
-    Student * st = [Student new];
-    [st performSelector:@selector(test) withObject:nil afterDelay:0];
-    
-    _water = [[FTWaterView alloc] initWithFrame:_redView.bounds];
-    UILabel *label = [[UILabel alloc] init];
-    label.text = @"[st performSelector:@selector(test) withObject:nil afterDelay:0]";
-    label.textColor = [UIColor whiteColor];
-    label.frame = CGRectMake(0, 0, _redView.bounds.size.width, 20);
-    [_redView addSubview:label];
-    
-    CALayer *layer = [CALayer layer];
-    layer.frame = _redView.bounds;
-    layer.delegate = _water;
-    [layer setNeedsDisplay];
-    _water.superLayer = layer;
-    _redView.layer.mask = layer;
-    
-    Person *p = [Person new];
-    p.female = YES;
-    NSLog(@"%@", p.female ? @"女的":@"男的");
+//    Student * st = [Student new];
+//    [st performSelector:@selector(test) withObject:nil afterDelay:0];
+//
+//    _water = [[FTWaterView alloc] initWithFrame:_redView.bounds];
+//    UILabel *label = [[UILabel alloc] init];
+//    label.text = @"[st performSelector:@selector(test) withObject:nil afterDelay:0]";
+//    label.textColor = [UIColor whiteColor];
+//    label.frame = CGRectMake(0, 0, _redView.bounds.size.width, 20);
+//    [_redView addSubview:label];
+//
+//    CALayer *layer = [CALayer layer];
+//    layer.frame = _redView.bounds;
+//    layer.delegate = _water;
+//    [layer setNeedsDisplay];
+//    _water.superLayer = layer;
+//    _redView.layer.mask = layer;
+//
+//    Person *p = [Person new];
+//    p.female = YES;
+//    NSLog(@"%@", p.female ? @"女的":@"男的");
     
     
 //    unsigned int count;
@@ -195,44 +205,44 @@ int a = 6;
 
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    NSLog(@"one %s",__func__);
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-     NSLog(@"one %s",__func__);
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-     NSLog(@"one %s",__func__);
-    
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    NSLog(@"one %s",__func__);
-}
-
-- (void)willMoveToParentViewController:(UIViewController *)parent {
-    [super willMoveToParentViewController:parent];
-       NSLog(@"%s--%@",__func__, parent);
-}
-
-- (void)didMoveToParentViewController:(UIViewController *)parent {
-    [super didMoveToParentViewController:parent];
-    NSLog(@"%s--%@",__func__, parent);
-}
-
-- (void)willChangeValueForKey:(NSString *)key {
-    
-}
-
-- (void)didChangeValueForKey:(NSString *)key {
-    
-}
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//    NSLog(@"one %s",__func__);
+//}
+//
+//- (void)viewDidAppear:(BOOL)animated {
+//    [super viewDidAppear:animated];
+//     NSLog(@"one %s",__func__);
+//}
+//
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//     NSLog(@"one %s",__func__);
+//
+//}
+//
+//- (void)viewDidDisappear:(BOOL)animated {
+//    [super viewDidDisappear:animated];
+//    NSLog(@"one %s",__func__);
+//}
+//
+//- (void)willMoveToParentViewController:(UIViewController *)parent {
+//    [super willMoveToParentViewController:parent];
+//       NSLog(@"%s--%@",__func__, parent);
+//}
+//
+//- (void)didMoveToParentViewController:(UIViewController *)parent {
+//    [super didMoveToParentViewController:parent];
+//    NSLog(@"%s--%@",__func__, parent);
+//}
+//
+//- (void)willChangeValueForKey:(NSString *)key {
+//
+//}
+//
+//- (void)didChangeValueForKey:(NSString *)key {
+//
+//}
 
 void test(struct son *t)
 {
@@ -327,9 +337,24 @@ void test(struct son *t)
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {    
-    [_water startAnimation];
+//    [_water startAnimation];
 //    Student * st = [Student new];
 //    [st performSelector:@selector(bbbb) withObject:@"sss" afterDelay:0];
+    NSAttributedString *attri = [[NSMutableAttributedString alloc] initWithString:@"退出后不会删除任何历史数据，下次登录依然可以善用本账号" attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15], NSForegroundColorAttributeName:[UIColor greenColor]}];
+    SGQActionSheet *sheet = [[SGQActionSheet alloc] initWithMessage:nil attributedMessage:nil cancelButtonTitle:@"取消" otherButtonTitles:@[@"退出登录", @"登录遇到问题", @"来袭客服"] otherButtonsClickBlock:^(UIButton *button, NSInteger index) {
+        if (index  == 0) {
+            NSLog(@"退出");
+        }
+    }];
+
+    UIButton *button = [[sheet allButtons] lastObject];
+    [button setTitleColor:[UIColor colorWithRed:220/250.0 green:40/250.0 blue:48/250.0 alpha:1.0] forState:UIControlStateNormal];
+
+    [sheet showWithAnimation];
+//    SGQAlertView *alert =  [[SGQAlertView alloc] initWithTitle:@"" subTitle:@"" message:@"退出后不会删除任何历史数据，下次登录依然可以善用本账号" buttonTitles:@[@"button1", @"button2", @"button3", @"cancel"] buttonsClickBlock:^(UIButton *button, NSInteger index) {
+//        NSLog(@"%@", [button titleForState:UIControlStateNormal]);
+//    }];
+//    [alert showWithAnimation];
 }
 
 #pragma mark -Private

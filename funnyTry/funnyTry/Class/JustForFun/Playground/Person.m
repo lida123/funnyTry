@@ -12,5 +12,8 @@
 
 @implementation Person
 
+- (void)test {
+    NSLog(@"person test");
+}
 
 @end
