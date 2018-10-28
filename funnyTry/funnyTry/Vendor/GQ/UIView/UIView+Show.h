@@ -16,7 +16,7 @@
   showAnimationInterval:(NSTimeInterval)showAnimationInterval
           finishedBlock:(void(^)(BOOL finished))finishedBlock;
 
-/// 蒙层透明度直接以a直接显示出来 蒙层颜色可选
+/// 蒙层透明度直接以a直接显示出来, 蒙层颜色可选
 - (void)showDisplayView:(UIView *)displayView
              coverAlpha:(CGFloat)coverAlpha
              coverColor:(UIColor*)coverColor

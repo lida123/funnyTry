@@ -340,21 +340,37 @@ void test(struct son *t)
 //    [_water startAnimation];
 //    Student * st = [Student new];
 //    [st performSelector:@selector(bbbb) withObject:@"sss" afterDelay:0];
-    NSAttributedString *attri = [[NSMutableAttributedString alloc] initWithString:@"退出后不会删除任何历史数据，下次登录依然可以善用本账号" attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15], NSForegroundColorAttributeName:[UIColor greenColor]}];
-    SGQActionSheet *sheet = [[SGQActionSheet alloc] initWithMessage:nil attributedMessage:nil cancelButtonTitle:@"取消" otherButtonTitles:@[@"退出登录", @"登录遇到问题", @"来袭客服"] otherButtonsClickBlock:^(UIButton *button, NSInteger index) {
+
+    SGQActionSheet *sheet = [[SGQActionSheet alloc] initWithMessage:@"退出后不会删除任何历史数据，下次登录依然可以使用本账号" attributedMessage:nil cancelButtonTitle:@"取消" otherButtonTitles:@[@"退出登录", @"登录遇到问题", @"联系客服"] otherButtonsClickBlock:^(UIButton *button, NSInteger index) {
         if (index  == 0) {
             NSLog(@"退出");
+        } else if (index == 1) {
+            NSLog(@"登录遇到问题");
+        } else if (index == 2) {
+            NSLog(@"联系客服");
         }
     }];
-
-    UIButton *button = [[sheet allButtons] lastObject];
-    [button setTitleColor:[UIColor colorWithRed:220/250.0 green:40/250.0 blue:48/250.0 alpha:1.0] forState:UIControlStateNormal];
-
     [sheet showWithAnimation];
+    
+    
 //    SGQAlertView *alert =  [[SGQAlertView alloc] initWithTitle:@"" subTitle:@"" message:@"退出后不会删除任何历史数据，下次登录依然可以善用本账号" buttonTitles:@[@"button1", @"button2", @"button3", @"cancel"] buttonsClickBlock:^(UIButton *button, NSInteger index) {
 //        NSLog(@"%@", [button titleForState:UIControlStateNormal]);
 //    }];
 //    [alert showWithAnimation];
+//    Person * p =  [Person new];
+//    for (NSInteger i = 0; i < 1000000; i++) {
+//        @autoreleasepool {
+//        SEL selector = @selector(mayleak);
+//
+//        [self mayleak];
+//    }
+//    }
+    
+}
+
+- (void )mayleak {
+//    NSObject *obj = [NSObject new];
+    
 }
 
 #pragma mark -Private

@@ -16,4 +16,8 @@
     NSLog(@"person test");
 }
 
+- (NSObject *)mayleak {
+    NSObject *obj = [NSObject new];
+    return obj;
+}
 @end
