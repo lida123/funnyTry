@@ -53,7 +53,7 @@
             promptLabel.textAlignment = NSTextAlignmentCenter;
             promptLabel.backgroundColor = [UIColor clearColor];
             [self addSubview:promptLabel];
-            top = promptLabel.bottom;
+            top =CGRectGetMaxY(promptLabel.frame);
         }
         
         // 中间按钮
@@ -78,7 +78,7 @@
             button.frame = CGRectMake(0, top, btnWidth, btnHeight);
             [self addSubview:button];
             [_allButtons addObject:button];
-            top = button.bottom;
+            top = CGRectGetMaxY(button.frame);
         }
         
         // 上下分割

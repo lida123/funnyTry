@@ -75,9 +75,11 @@ int a = 6;
     self.navigationItem.title = @"Have fun";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"nextGround" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonClick)];
     
-    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(50, 100, 200, 100)];
+    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(50, 200, 200, 50)];
     [self.view addSubview:tf];
-    tf.backgroundColor = [UIColor redColor];
+    tf.placeholder = @"input your name";
+    tf.borderStyle = UITextBorderStyleLine;
+//    tf.backgroundColor = [UIColor redColor];
 //    _redView = [[FTTouchView alloc] initWithFrame:CGRectMake(50, FTNavigationBarPlusStatusBarHeight, 200, 200)];
 //    _redView.backgroundColor = [UIColor redColor];
 //    [self.view addSubview:_redView];
@@ -352,11 +354,7 @@ void test(struct son *t)
     }];
     [sheet showWithAnimation];
     
-    
-//    SGQAlertView *alert =  [[SGQAlertView alloc] initWithTitle:@"" subTitle:@"" message:@"退出后不会删除任何历史数据，下次登录依然可以善用本账号" buttonTitles:@[@"button1", @"button2", @"button3", @"cancel"] buttonsClickBlock:^(UIButton *button, NSInteger index) {
-//        NSLog(@"%@", [button titleForState:UIControlStateNormal]);
-//    }];
-//    [alert showWithAnimation];
+
 //    Person * p =  [Person new];
 //    for (NSInteger i = 0; i < 1000000; i++) {
 //        @autoreleasepool {
@@ -387,7 +385,6 @@ void test(struct son *t)
 
 - (void)rightBarButtonClick
 {
- 
     FTPlayroundTwoVC *vc = [[FTPlayroundTwoVC alloc] init];
 //    vc.view.frame = CGRectMake(0, 0, 100, 100);
     [self.navigationController pushViewController:vc animated:YES];
