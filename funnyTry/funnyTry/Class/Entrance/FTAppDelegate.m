@@ -10,6 +10,7 @@
 #import "FTTabBarController.h"
 #import "FTCodeConfuseTool.h"
 
+
 @interface FTAppDelegate ()
 
 @end
@@ -23,6 +24,7 @@
     self.window.rootViewController = tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
     
 //    [FTCodeConfuseTool confuseProjectWithChangeFileNameDirectory:@"/Users/wen/Desktop/needX/tips-ios2/Liaodao"
 //                                                     pbxprojPath:@"/Users/wen/Desktop/needX/tips-ios2/Liaodao.xcodeproj/project.pbxproj"

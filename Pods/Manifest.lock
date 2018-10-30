@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - FBRetainCycleDetector (0.1.4)
   - NOEEBaseFramework (0.0.3)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -21,20 +22,23 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - FBRetainCycleDetector
   - NOEEBaseFramework
   - YYKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - FBRetainCycleDetector
     - NOEEBaseFramework
     - YYKit
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   NOEEBaseFramework: 961b8f787cc2e6c0f2f0c407fa9c4241f6a2a2b7
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 33a5330f8295cf30329924df8ada9fb7c14506f1
+PODFILE CHECKSUM: 22dcb530017403f666063aa3623d0f90a2ef302c
 
 COCOAPODS: 1.5.3

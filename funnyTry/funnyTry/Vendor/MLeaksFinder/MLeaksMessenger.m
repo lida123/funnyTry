@@ -32,8 +32,6 @@ static __weak UIAlertView *alertView;
                                                   otherButtonTitles:additionalButtonTitle, nil];
     [alertViewTemp show];
     alertView = alertViewTemp;
-    
-    NSLog(@"%@: %@", title, message);
 }
 
 @end
