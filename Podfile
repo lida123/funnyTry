@@ -6,6 +6,5 @@ target 'funnyTry' do
 pod "AFNetworking"
 pod "YYKit"
 pod "NOEEBaseFramework"
-pod "FBRetainCycleDetector"
 
 end
