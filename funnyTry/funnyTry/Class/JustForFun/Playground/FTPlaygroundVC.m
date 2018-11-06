@@ -29,6 +29,8 @@
 #import "NSObject+MemoryLeak.h"
 #import "SGQActionSheet.h"
 #import "SGQAlertView.h"
+#import "FTWebViewController.h"
+#import "FTWKViewController.h"
 
 //父结构体
 struct father
@@ -343,16 +345,16 @@ void test(struct son *t)
 //    Student * st = [Student new];
 //    [st performSelector:@selector(bbbb) withObject:@"sss" afterDelay:0];
 
-    SGQActionSheet *sheet = [[SGQActionSheet alloc] initWithMessage:@"退出后不会删除任何历史数据，下次登录依然可以使用本账号" attributedMessage:nil cancelButtonTitle:@"取消" otherButtonTitles:@[@"退出登录", @"登录遇到问题", @"联系客服"] otherButtonsClickBlock:^(UIButton *button, NSInteger index) {
-        if (index  == 0) {
-            NSLog(@"退出");
-        } else if (index == 1) {
-            NSLog(@"登录遇到问题");
-        } else if (index == 2) {
-            NSLog(@"联系客服");
-        }
-    }];
-    [sheet showWithAnimation];
+//    SGQActionSheet *sheet = [[SGQActionSheet alloc] initWithMessage:@"退出后不会删除任何历史数据，下次登录依然可以使用本账号" attributedMessage:nil cancelButtonTitle:@"取消" otherButtonTitles:@[@"退出登录", @"登录遇到问题", @"联系客服"] otherButtonsClickBlock:^(UIButton *button, NSInteger index) {
+//        if (index  == 0) {
+//            NSLog(@"退出");
+//        } else if (index == 1) {
+//            NSLog(@"登录遇到问题");
+//        } else if (index == 2) {
+//            NSLog(@"联系客服");
+//        }
+//    }];
+//    [sheet showWithAnimation];
     
 
 //    Person * p =  [Person new];
@@ -363,6 +365,8 @@ void test(struct son *t)
 //        [self mayleak];
 //    }
 //    }
+    
+    [self.navigationController pushViewController:[FTWKViewController new] animated:YES];
     
 }
 
@@ -387,7 +391,8 @@ void test(struct son *t)
 {
     FTPlayroundTwoVC *vc = [[FTPlayroundTwoVC alloc] init];
 //    vc.view.frame = CGRectMake(0, 0, 100, 100);
-    [self.navigationController pushViewController:vc animated:YES];
+//    [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController presentViewController:vc animated:YES completion:nil];
 }
 
 #pragma mark -GCD

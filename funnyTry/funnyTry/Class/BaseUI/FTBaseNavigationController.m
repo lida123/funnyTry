@@ -76,5 +76,4 @@
 }
 
 #pragma mark - Getter
-
 @end

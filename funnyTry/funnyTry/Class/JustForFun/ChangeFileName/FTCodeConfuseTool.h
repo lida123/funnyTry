@@ -11,10 +11,6 @@
 @interface FTCodeConfuseTool : NSObject
 
 /**
- * 如果项目里有.c文件(...)
- * 最好将项目中非三方代码放在一个文件夹.
- * 不修改category文件
- * 不修改xib文件
  * @param dir 文件目录
  * @param pbxprojPath xx.xcodeproj 显示包内容中的project.pbxproj的路径
  * @param appendingPrefix 在原本的文件名上追加的前缀

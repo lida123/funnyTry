@@ -64,6 +64,12 @@
 		C5616C1F1FA8777E00A9C033 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C1E1FA8777E00A9C033 /* main.m */; };
 		C5616C291FA8777E00A9C033 /* funnyTryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C281FA8777E00A9C033 /* funnyTryTests.m */; };
 		C5616C341FA8777E00A9C033 /* funnyTryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C331FA8777E00A9C033 /* funnyTryUITests.m */; };
+		C56A5EA02189B86A006FDA50 /* FTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56A5E9E2189B86A006FDA50 /* FTWebViewController.m */; };
+		C56A5EA12189B86A006FDA50 /* FTWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C56A5E9F2189B86A006FDA50 /* FTWebViewController.xib */; };
+		C56A5EA42189BAAF006FDA50 /* FTMyURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = C56A5EA32189BAAF006FDA50 /* FTMyURLProtocol.m */; };
+		C56A5F17218B04E8006FDA50 /* sf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C56A5F16218B04E6006FDA50 /* sf.jpg */; };
+		C56A5F19218B0522006FDA50 /* IMG_0302.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C56A5F18218B0522006FDA50 /* IMG_0302.jpg */; };
+		C56A5F1B218B0577006FDA50 /* bftt.png in Resources */ = {isa = PBXBuildFile; fileRef = C56A5F1A218B0577006FDA50 /* bftt.png */; };
 		C56D5FB620D9042700C8BC44 /* 添加的代码的副本.txt in Resources */ = {isa = PBXBuildFile; fileRef = C56D5FB520D9042600C8BC44 /* 添加的代码的副本.txt */; };
 		C56EE5222084820A005186DD /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C56EE50F2084820A005186DD /* MJExtensionConst.m */; };
 		C56EE5232084820A005186DD /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = C56EE5112084820A005186DD /* MJFoundation.m */; };
@@ -75,6 +81,21 @@
 		C56EE5292084820A005186DD /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = C56EE51D2084820A005186DD /* NSObject+MJKeyValue.m */; };
 		C56EE52A2084820A005186DD /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = C56EE51F2084820A005186DD /* NSObject+MJProperty.m */; };
 		C56EE52B2084820A005186DD /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C56EE5212084820A005186DD /* NSString+MJExtension.m */; };
+		C56F715A218C1B9600BECFB3 /* FTWKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F7158218C1B9600BECFB3 /* FTWKViewController.m */; };
+		C56F716221906C1600BECFB3 /* NSURLProtocol+WKWebVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F716121906C1600BECFB3 /* NSURLProtocol+WKWebVIew.m */; };
+		C56F718E21915B4700BECFB3 /* GYMockResponseDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F717121915B4700BECFB3 /* GYMockResponseDSL.m */; };
+		C56F718F21915B4700BECFB3 /* GYMockResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F717221915B4700BECFB3 /* GYMockResponse.m */; };
+		C56F719121915B4700BECFB3 /* GYHttpMock.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F717721915B4700BECFB3 /* GYHttpMock.m */; };
+		C56F719221915B4700BECFB3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C56F717821915B4700BECFB3 /* README.md */; };
+		C56F719321915B4700BECFB3 /* GYMockURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F717921915B4700BECFB3 /* GYMockURLProtocol.m */; };
+		C56F719421915B4700BECFB3 /* GYNSURLSessionHook.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F717B21915B4700BECFB3 /* GYNSURLSessionHook.m */; };
+		C56F719521915B4700BECFB3 /* GYNSURLConnectionHook.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F717F21915B4700BECFB3 /* GYNSURLConnectionHook.m */; };
+		C56F719621915B4700BECFB3 /* GYHttpClientHook.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F718021915B4700BECFB3 /* GYHttpClientHook.m */; };
+		C56F719721915B4700BECFB3 /* GYMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F718121915B4700BECFB3 /* GYMatcher.m */; };
+		C56F719821915B4700BECFB3 /* GYMockRequestDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F718321915B4700BECFB3 /* GYMockRequestDSL.m */; };
+		C56F719921915B4700BECFB3 /* GYMockRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F718421915B4700BECFB3 /* GYMockRequest.m */; };
+		C56F719A21915B4700BECFB3 /* NSURLRequest+GYURLRequestProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F718A21915B4700BECFB3 /* NSURLRequest+GYURLRequestProtocol.m */; };
+		C56F719B21915B4700BECFB3 /* NSString+mock.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F718B21915B4700BECFB3 /* NSString+mock.m */; };
 		C5715C3A1FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C5715C391FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.m */; };
 		C5726D90209EEA570037DA02 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C5726D64209EEA560037DA02 /* MJRefreshAutoFooter.m */; };
 		C5726D91209EEA570037DA02 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C5726D66209EEA560037DA02 /* MJRefreshBackFooter.m */; };
@@ -339,6 +360,14 @@
 		C5616C2F1FA8777E00A9C033 /* funnyTryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = funnyTryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5616C331FA8777E00A9C033 /* funnyTryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = funnyTryUITests.m; sourceTree = "<group>"; };
 		C5616C351FA8777E00A9C033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C56A5E9D2189B86A006FDA50 /* FTWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTWebViewController.h; sourceTree = "<group>"; };
+		C56A5E9E2189B86A006FDA50 /* FTWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTWebViewController.m; sourceTree = "<group>"; };
+		C56A5E9F2189B86A006FDA50 /* FTWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTWebViewController.xib; sourceTree = "<group>"; };
+		C56A5EA22189BAAF006FDA50 /* FTMyURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTMyURLProtocol.h; sourceTree = "<group>"; };
+		C56A5EA32189BAAF006FDA50 /* FTMyURLProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTMyURLProtocol.m; sourceTree = "<group>"; };
+		C56A5F16218B04E6006FDA50 /* sf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sf.jpg; sourceTree = "<group>"; };
+		C56A5F18218B0522006FDA50 /* IMG_0302.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0302.jpg; sourceTree = "<group>"; };
+		C56A5F1A218B0577006FDA50 /* bftt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bftt.png; sourceTree = "<group>"; };
 		C56D5FB520D9042600C8BC44 /* 添加的代码的副本.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "添加的代码的副本.txt"; sourceTree = "<group>"; };
 		C56EE50D2084820A005186DD /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
 		C56EE50E2084820A005186DD /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
@@ -361,6 +390,35 @@
 		C56EE51F2084820A005186DD /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		C56EE5202084820A005186DD /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		C56EE5212084820A005186DD /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		C56F7157218C1B9600BECFB3 /* FTWKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTWKViewController.h; sourceTree = "<group>"; };
+		C56F7158218C1B9600BECFB3 /* FTWKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTWKViewController.m; sourceTree = "<group>"; };
+		C56F716021906C1600BECFB3 /* NSURLProtocol+WKWebVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+WKWebVIew.h"; sourceTree = "<group>"; };
+		C56F716121906C1600BECFB3 /* NSURLProtocol+WKWebVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+WKWebVIew.m"; sourceTree = "<group>"; };
+		C56F716E21915B4700BECFB3 /* GYMockURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYMockURLProtocol.h; sourceTree = "<group>"; };
+		C56F717121915B4700BECFB3 /* GYMockResponseDSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYMockResponseDSL.m; sourceTree = "<group>"; };
+		C56F717221915B4700BECFB3 /* GYMockResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYMockResponse.m; sourceTree = "<group>"; };
+		C56F717321915B4700BECFB3 /* GYMockResponseDSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYMockResponseDSL.h; sourceTree = "<group>"; };
+		C56F717421915B4700BECFB3 /* GYMockResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYMockResponse.h; sourceTree = "<group>"; };
+		C56F717621915B4700BECFB3 /* GYMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYMatcher.h; sourceTree = "<group>"; };
+		C56F717721915B4700BECFB3 /* GYHttpMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYHttpMock.m; sourceTree = "<group>"; };
+		C56F717821915B4700BECFB3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C56F717921915B4700BECFB3 /* GYMockURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYMockURLProtocol.m; sourceTree = "<group>"; };
+		C56F717B21915B4700BECFB3 /* GYNSURLSessionHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYNSURLSessionHook.m; sourceTree = "<group>"; };
+		C56F717C21915B4700BECFB3 /* GYNSURLConnectionHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYNSURLConnectionHook.h; sourceTree = "<group>"; };
+		C56F717D21915B4700BECFB3 /* GYHttpClientHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYHttpClientHook.h; sourceTree = "<group>"; };
+		C56F717E21915B4700BECFB3 /* GYNSURLSessionHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYNSURLSessionHook.h; sourceTree = "<group>"; };
+		C56F717F21915B4700BECFB3 /* GYNSURLConnectionHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYNSURLConnectionHook.m; sourceTree = "<group>"; };
+		C56F718021915B4700BECFB3 /* GYHttpClientHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYHttpClientHook.m; sourceTree = "<group>"; };
+		C56F718121915B4700BECFB3 /* GYMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYMatcher.m; sourceTree = "<group>"; };
+		C56F718321915B4700BECFB3 /* GYMockRequestDSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYMockRequestDSL.m; sourceTree = "<group>"; };
+		C56F718421915B4700BECFB3 /* GYMockRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYMockRequest.m; sourceTree = "<group>"; };
+		C56F718521915B4700BECFB3 /* GYMockRequestDSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYMockRequestDSL.h; sourceTree = "<group>"; };
+		C56F718621915B4700BECFB3 /* GYMockRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYMockRequest.h; sourceTree = "<group>"; };
+		C56F718721915B4700BECFB3 /* GYHttpMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYHttpMock.h; sourceTree = "<group>"; };
+		C56F718921915B4700BECFB3 /* NSString+mock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+mock.h"; sourceTree = "<group>"; };
+		C56F718A21915B4700BECFB3 /* NSURLRequest+GYURLRequestProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+GYURLRequestProtocol.m"; sourceTree = "<group>"; };
+		C56F718B21915B4700BECFB3 /* NSString+mock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+mock.m"; sourceTree = "<group>"; };
+		C56F718C21915B4700BECFB3 /* NSURLRequest+GYURLRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+GYURLRequestProtocol.h"; sourceTree = "<group>"; };
 		C5715C381FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTTransitionTypeChooseVC.h; sourceTree = "<group>"; };
 		C5715C391FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTTransitionTypeChooseVC.m; sourceTree = "<group>"; };
 		C5726D63209EEA560037DA02 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
@@ -646,6 +704,8 @@
 		C509172620883F08000F38D2 /* Playground */ = {
 			isa = PBXGroup;
 			children = (
+				C56F716021906C1600BECFB3 /* NSURLProtocol+WKWebVIew.h */,
+				C56F716121906C1600BECFB3 /* NSURLProtocol+WKWebVIew.m */,
 				C509172720883F3C000F38D2 /* FTPlaygroundVC.h */,
 				C509172820883F3C000F38D2 /* FTPlaygroundVC.m */,
 				C58618FC2091B65B00B49D4C /* FTPlayroundTwoVC.h */,
@@ -673,6 +733,13 @@
 				C5AA16EB216DE409008CE1B3 /* Person+add.m */,
 				C51755002181B99A0063BE98 /* FTRetainCyleView.h */,
 				C51755012181B99A0063BE98 /* FTRetainCyleView.m */,
+				C56A5E9D2189B86A006FDA50 /* FTWebViewController.h */,
+				C56A5E9E2189B86A006FDA50 /* FTWebViewController.m */,
+				C56A5E9F2189B86A006FDA50 /* FTWebViewController.xib */,
+				C56A5EA22189BAAF006FDA50 /* FTMyURLProtocol.h */,
+				C56A5EA32189BAAF006FDA50 /* FTMyURLProtocol.m */,
+				C56F7157218C1B9600BECFB3 /* FTWKViewController.h */,
+				C56F7158218C1B9600BECFB3 /* FTWKViewController.m */,
 			);
 			path = Playground;
 			sourceTree = "<group>";
@@ -966,6 +1033,70 @@
 				C56EE5212084820A005186DD /* NSString+MJExtension.m */,
 			);
 			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		C56F716D21915B4700BECFB3 /* GYHttpMock */ = {
+			isa = PBXGroup;
+			children = (
+				C56F718821915B4700BECFB3 /* Categories */,
+				C56F718721915B4700BECFB3 /* GYHttpMock.h */,
+				C56F717721915B4700BECFB3 /* GYHttpMock.m */,
+				C56F717621915B4700BECFB3 /* GYMatcher.h */,
+				C56F718121915B4700BECFB3 /* GYMatcher.m */,
+				C56F716E21915B4700BECFB3 /* GYMockURLProtocol.h */,
+				C56F717921915B4700BECFB3 /* GYMockURLProtocol.m */,
+				C56F717A21915B4700BECFB3 /* Hooks */,
+				C56F717821915B4700BECFB3 /* README.md */,
+				C56F718221915B4700BECFB3 /* Request */,
+				C56F717021915B4700BECFB3 /* Response */,
+			);
+			path = GYHttpMock;
+			sourceTree = "<group>";
+		};
+		C56F717021915B4700BECFB3 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				C56F717121915B4700BECFB3 /* GYMockResponseDSL.m */,
+				C56F717221915B4700BECFB3 /* GYMockResponse.m */,
+				C56F717321915B4700BECFB3 /* GYMockResponseDSL.h */,
+				C56F717421915B4700BECFB3 /* GYMockResponse.h */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		C56F717A21915B4700BECFB3 /* Hooks */ = {
+			isa = PBXGroup;
+			children = (
+				C56F717D21915B4700BECFB3 /* GYHttpClientHook.h */,
+				C56F718021915B4700BECFB3 /* GYHttpClientHook.m */,
+				C56F717C21915B4700BECFB3 /* GYNSURLConnectionHook.h */,
+				C56F717F21915B4700BECFB3 /* GYNSURLConnectionHook.m */,
+				C56F717E21915B4700BECFB3 /* GYNSURLSessionHook.h */,
+				C56F717B21915B4700BECFB3 /* GYNSURLSessionHook.m */,
+			);
+			path = Hooks;
+			sourceTree = "<group>";
+		};
+		C56F718221915B4700BECFB3 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				C56F718321915B4700BECFB3 /* GYMockRequestDSL.m */,
+				C56F718421915B4700BECFB3 /* GYMockRequest.m */,
+				C56F718521915B4700BECFB3 /* GYMockRequestDSL.h */,
+				C56F718621915B4700BECFB3 /* GYMockRequest.h */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		C56F718821915B4700BECFB3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C56F718921915B4700BECFB3 /* NSString+mock.h */,
+				C56F718A21915B4700BECFB3 /* NSURLRequest+GYURLRequestProtocol.m */,
+				C56F718B21915B4700BECFB3 /* NSString+mock.m */,
+				C56F718C21915B4700BECFB3 /* NSURLRequest+GYURLRequestProtocol.h */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		C5726D61209EEA560037DA02 /* MJRefresh */ = {
@@ -1383,6 +1514,9 @@
 		C59D91B91FB18230004550D0 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				C56A5F1A218B0577006FDA50 /* bftt.png */,
+				C56A5F18218B0522006FDA50 /* IMG_0302.jpg */,
+				C56A5F16218B04E6006FDA50 /* sf.jpg */,
 				C59D91BA1FB18238004550D0 /* Tabbar */,
 			);
 			path = Image;
@@ -1664,6 +1798,7 @@
 		C5F5E5261FAC3977009FB8D3 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C56F716D21915B4700BECFB3 /* GYHttpMock */,
 				C517550A2182E33E0063BE98 /* GQ */,
 				C517502B2181603C0063BE98 /* MLeaksFinder */,
 				C51A951B213572510075FBEF /* SGPagingView */,
@@ -1798,6 +1933,8 @@
 				C5AD1A451FD1389700A7EE86 /* 2.m4a in Resources */,
 				C57B971020300D49009568CA /* ftkaiti.ttf in Resources */,
 				C52BACBC1FE8FE1500ED9E10 /* noun_project_347_2.png in Resources */,
+				C56F719221915B4700BECFB3 /* README.md in Resources */,
+				C56A5F1B218B0577006FDA50 /* bftt.png in Resources */,
 				C5736A9C1FD945D60018BA92 /* pic2.jpeg in Resources */,
 				C5AD1A3F1FD1389700A7EE86 /* 10.m4a in Resources */,
 				C59D91C11FB18245004550D0 /* tabbar_discover_nor@3x.png in Resources */,
@@ -1805,11 +1942,14 @@
 				C59D91C21FB18245004550D0 /* tabbar_discover_sel@2x.png in Resources */,
 				C5AD1A411FD1389700A7EE86 /* 12.m4a in Resources */,
 				C57B970E2030086C009568CA /* abc.png in Resources */,
+				C56A5F17218B04E8006FDA50 /* sf.jpg in Resources */,
+				C56A5EA12189B86A006FDA50 /* FTWebViewController.xib in Resources */,
 				C59D91C01FB18245004550D0 /* tabbar_discover_sel@3x.png in Resources */,
 				C534FBF321080E53004002A3 /* xunwei_logo.png in Resources */,
 				C5AD1A461FD1389700A7EE86 /* 3.m4a in Resources */,
 				C534FBF121080E4B004002A3 /* xunwei_launch.png in Resources */,
 				C59D91DF1FB18DD3004550D0 /* SVProgressHUD.bundle in Resources */,
+				C56A5F19218B0522006FDA50 /* IMG_0302.jpg in Resources */,
 				C5BB762F20BE58E100BC1B3A /* MFBanHei_Noncommercial-Regular.otf in Resources */,
 				C5AD1A4A1FD1389700A7EE86 /* 7.m4a in Resources */,
 				C5AD1A4B1FD1389700A7EE86 /* 8.m4a in Resources */,
@@ -1891,9 +2031,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C56F719421915B4700BECFB3 /* GYNSURLSessionHook.m in Sources */,
 				C51750442181603C0063BE98 /* MLeakedObjectProxy.m in Sources */,
 				C51A952E213572510075FBEF /* NSString+SGPagingView.m in Sources */,
 				C57686721FAFF66500066AA3 /* SDWebImageDecoder.m in Sources */,
+				C56F719A21915B4700BECFB3 /* NSURLRequest+GYURLRequestProtocol.m in Sources */,
+				C56F719321915B4700BECFB3 /* GYMockURLProtocol.m in Sources */,
 				C52564741FDFAE8300BF0EB7 /* FTChannelManager.m in Sources */,
 				C5726D96209EEA570037DA02 /* MJRefreshAutoNormalFooter.m in Sources */,
 				C57686911FAFF75C00066AA3 /* FTWaterfallViewController.m in Sources */,
@@ -1914,9 +2057,12 @@
 				C576869E1FAFF8EB00066AA3 /* XMGShopCell.m in Sources */,
 				C59EFF231FB5AC770004E0D4 /* FLAnimatedImageView.m in Sources */,
 				C57686B61FB069BF00066AA3 /* FTUIListViewController.m in Sources */,
+				C56F719821915B4700BECFB3 /* GYMockRequestDSL.m in Sources */,
 				C509173720906558000F38D2 /* UIScrollView+Moving.m in Sources */,
 				C5715C3A1FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.m in Sources */,
 				C57686B21FB0300B00066AA3 /* FTBaseCell.m in Sources */,
+				C56F719521915B4700BECFB3 /* GYNSURLConnectionHook.m in Sources */,
+				C56F719621915B4700BECFB3 /* GYHttpClientHook.m in Sources */,
 				C517504C2181603C0063BE98 /* UIApplication+MemoryLeak.m in Sources */,
 				C51755022181B99B0063BE98 /* FTRetainCyleView.m in Sources */,
 				C517504B2181603C0063BE98 /* UIViewController+MemoryLeak.m in Sources */,
@@ -1929,10 +2075,12 @@
 				C5423ED3205A40B700D027EB /* Person.m in Sources */,
 				C57686741FAFF66500066AA3 /* SDWebImageDownloaderOperation.m in Sources */,
 				C5D1380E1FCFF9BF009EC87E /* LYTextField.m in Sources */,
+				C56F718F21915B4700BECFB3 /* GYMockResponse.m in Sources */,
 				C5726D98209EEA570037DA02 /* MJRefreshBackGifFooter.m in Sources */,
 				C5726D9B209EEA570037DA02 /* MJRefreshGifHeader.m in Sources */,
 				C57686AD1FB02E6000066AA3 /* FBShimmeringLayer.m in Sources */,
 				C51755172182F8D20063BE98 /* UIView+AnimatedShow.m in Sources */,
+				C56F718E21915B4700BECFB3 /* GYMockResponseDSL.m in Sources */,
 				C598FBF21FE0F67F00B67823 /* ViewController+MASAdditions.m in Sources */,
 				C598FBED1FE0F67F00B67823 /* MASViewAttribute.m in Sources */,
 				C56EE5282084820A005186DD /* NSObject+MJCoding.m in Sources */,
@@ -1969,8 +2117,11 @@
 				C5B8C4361FBD669800037249 /* FTCircleLoadingViewController.m in Sources */,
 				C5D138171FCFFA1E009EC87E /* FTLoginViewController.m in Sources */,
 				C5726D95209EEA570037DA02 /* MJRefreshAutoGifFooter.m in Sources */,
+				C56F715A218C1B9600BECFB3 /* FTWKViewController.m in Sources */,
+				C56F719121915B4700BECFB3 /* GYHttpMock.m in Sources */,
 				C525646E1FDFAB9E00BF0EB7 /* FTDragCellViewController.m in Sources */,
 				C51750492181603C0063BE98 /* UITabBarController+MemoryLeak.m in Sources */,
+				C56A5EA42189BAAF006FDA50 /* FTMyURLProtocol.m in Sources */,
 				C59D91B51FB15C5A004550D0 /* UIView+CutShape.m in Sources */,
 				C51755102182E3720063BE98 /* SGQActionSheet.m in Sources */,
 				C5616C1F1FA8777E00A9C033 /* main.m in Sources */,
@@ -1988,8 +2139,10 @@
 				C525647A1FDFB0AF00BF0EB7 /* FTChannelCollectionView.m in Sources */,
 				C57686781FAFF66500066AA3 /* UIImage+GIF.m in Sources */,
 				C5726D93209EEA570037DA02 /* MJRefreshFooter.m in Sources */,
+				C56A5EA02189B86A006FDA50 /* FTWebViewController.m in Sources */,
 				C57686791FAFF66500066AA3 /* UIImage+MultiFormat.m in Sources */,
 				C509D5E620871D57000F38D2 /* FTChangeFileNameVC.m in Sources */,
+				C56F719921915B4700BECFB3 /* GYMockRequest.m in Sources */,
 				C56EE5222084820A005186DD /* MJExtensionConst.m in Sources */,
 				C576867A1FAFF66500066AA3 /* UIImage+WebP.m in Sources */,
 				C5726D9C209EEA570037DA02 /* MJRefreshNormalHeader.m in Sources */,
@@ -2026,6 +2179,7 @@
 				C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */,
 				C517504D2181603C0063BE98 /* NSObject+MemoryLeak.m in Sources */,
 				C5726D9F209EEA570037DA02 /* MJRefreshConst.m in Sources */,
+				C56F719721915B4700BECFB3 /* GYMatcher.m in Sources */,
 				C598FC081FE2279400B67823 /* IQiYIButton.m in Sources */,
 				C5736A951FD945290018BA92 /* FTCustomPushTransitionFirstVC.m in Sources */,
 				C59518BA21097A17001C1BC1 /* UIViewController+Association.m in Sources */,
@@ -2036,6 +2190,7 @@
 				C53366B421251E4000A260CD /* FTCodeConfuseTool.m in Sources */,
 				C52BACEE1FEA464100ED9E10 /* GQPlayGifView.m in Sources */,
 				C51750472181603C0063BE98 /* UISplitViewController+MemoryLeak.m in Sources */,
+				C56F716221906C1600BECFB3 /* NSURLProtocol+WKWebVIew.m in Sources */,
 				C58618FF2091B65B00B49D4C /* FTPlayroundTwoVC.m in Sources */,
 				C59D91E11FB18DD3004550D0 /* SVRadialGradientLayer.m in Sources */,
 				C56EE5242084820A005186DD /* MJProperty.m in Sources */,
@@ -2043,6 +2198,7 @@
 				C5616C111FA8777E00A9C033 /* FTAppDelegate.m in Sources */,
 				C598FBFB1FE1238100B67823 /* UIView+anchorPoint.m in Sources */,
 				C598FC021FE2268800B67823 /* FTPausePlayAnimationVC.m in Sources */,
+				C56F719B21915B4700BECFB3 /* NSString+mock.m in Sources */,
 				C51A9530213572510075FBEF /* UIView+SGPagingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,7 +25,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
-    
+//    [FTAppDelegate findTargetStringForDirectory:@"/Users/wen/Desktop/needX/tips-ios2/Liaodao"];
 //    [FTCodeConfuseTool confuseProjectWithChangeFileNameDirectory:@"/Users/wen/Desktop/needX/tips-ios2/Liaodao"
 //                                                     pbxprojPath:@"/Users/wen/Desktop/needX/tips-ios2/Liaodao.xcodeproj/project.pbxproj"
 //                                         fileNameAppendingPrefix:@"VVVV"
@@ -125,5 +125,40 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     NSLog(@"%s",__func__);
 }
+
+
++ (void)findTargetStringForDirectory:(NSString *)directory {
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSArray<NSString *> *files = [fm contentsOfDirectoryAtPath:directory error:nil];
+    
+    BOOL isDirectory;
+    for (NSString *fileName in files) {
+        NSString *filePath = [directory stringByAppendingPathComponent:fileName];
+        
+        // 目录则递归
+        if ([fm fileExistsAtPath:filePath isDirectory:&isDirectory] && isDirectory) {
+            [self findTargetStringForDirectory:filePath];
+            continue;
+        }
+        
+        if (![fileName hasSuffix:@".m"]) {
+            continue;
+        }
+        
+        // 读取字符串
+        NSString *fileContent = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+        if (!fileContent) continue;
+        
+        static NSString * const regexStr = @".*?(SGPageTitleView pageTitleViewWithFrame).*?";
+        NSRegularExpression *expression = [NSRegularExpression regularExpressionWithPattern:regexStr options:0 error:nil];
+        
+        NSArray<NSTextCheckingResult *> *matches = [expression matchesInString:fileContent options:0 range:NSMakeRange(0, fileContent.length)];
+        if (matches.count > 0) {
+            NSLog(@"%@",fileName);
+        }
+        
+    }
+}
+
 
 @end

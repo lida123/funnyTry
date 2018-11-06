@@ -134,6 +134,10 @@ __weak NSString *string_weak_copy   = nil;
     group.duration = totalTime;
     group.animations = @[keyFrame, keyFrame1];
     [redView.layer addAnimation:group forKey:nil];
+    
+    if (self.presentingViewController) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 
 }
 
