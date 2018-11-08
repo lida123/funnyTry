@@ -60,7 +60,6 @@
 		C5423EF6205A619900D027EB /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = C5423EF5205A619900D027EB /* Student.m */; };
 		C54E4A5D2050DDC8001F17D7 /* FTWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C54E4A5C2050DDC8001F17D7 /* FTWaterfallLayout.m */; };
 		C559779A2192E38600D804F3 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C55977992192E38600D804F3 /* YYFPSLabel.m */; };
-		C559779D2192E96100D804F3 /* UIImage+RTTint.m in Sources */ = {isa = PBXBuildFile; fileRef = C559779C2192E96100D804F3 /* UIImage+RTTint.m */; };
 		C559779F2192E9F900D804F3 /* mm.png in Resources */ = {isa = PBXBuildFile; fileRef = C559779E2192E9F900D804F3 /* mm.png */; };
 		C55977A12192EB3700D804F3 /* home_free.png in Resources */ = {isa = PBXBuildFile; fileRef = C55977A02192EB3700D804F3 /* home_free.png */; };
 		C55977A42192ECB100D804F3 /* UIView+Borders.m in Sources */ = {isa = PBXBuildFile; fileRef = C55977A22192ECB100D804F3 /* UIView+Borders.m */; };
@@ -355,8 +354,6 @@
 		C54FED6D2123D569009BF94D /* 代码混淆记录.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "代码混淆记录.md"; sourceTree = "<group>"; };
 		C55977982192E38600D804F3 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
 		C55977992192E38600D804F3 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
-		C559779B2192E96100D804F3 /* UIImage+RTTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RTTint.h"; sourceTree = "<group>"; };
-		C559779C2192E96100D804F3 /* UIImage+RTTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RTTint.m"; sourceTree = "<group>"; };
 		C559779E2192E9F900D804F3 /* mm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mm.png; sourceTree = "<group>"; };
 		C55977A02192EB3700D804F3 /* home_free.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_free.png; sourceTree = "<group>"; };
 		C55977A22192ECB100D804F3 /* UIView+Borders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Borders.m"; sourceTree = "<group>"; };
@@ -828,8 +825,6 @@
 			children = (
 				C55977A32192ECB100D804F3 /* UIView+Borders.h */,
 				C55977A22192ECB100D804F3 /* UIView+Borders.m */,
-				C559779B2192E96100D804F3 /* UIImage+RTTint.h */,
-				C559779C2192E96100D804F3 /* UIImage+RTTint.m */,
 				C55977982192E38600D804F3 /* YYFPSLabel.h */,
 				C55977992192E38600D804F3 /* YYFPSLabel.m */,
 				C51755112182F8D20063BE98 /* UIView */,
@@ -2159,7 +2154,6 @@
 				C5726DA2209EEA570037DA02 /* UIScrollView+MJRefresh.m in Sources */,
 				C59D91DE1FB18DD3004550D0 /* SVProgressAnimatedView.m in Sources */,
 				C534FBEF21080CE7004002A3 /* FTPackImageViewController.m in Sources */,
-				C559779D2192E96100D804F3 /* UIImage+RTTint.m in Sources */,
 				C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */,
 				C525647A1FDFB0AF00BF0EB7 /* FTChannelCollectionView.m in Sources */,
 				C57686781FAFF66500066AA3 /* UIImage+GIF.m in Sources */,
