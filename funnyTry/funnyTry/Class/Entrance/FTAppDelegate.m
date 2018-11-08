@@ -9,6 +9,7 @@
 #import "FTAppDelegate.h"
 #import "FTTabBarController.h"
 #import "FTCodeConfuseTool.h"
+#import "YYFPSLabel.h"
 
 
 @interface FTAppDelegate ()
@@ -51,7 +52,9 @@
     //    CFTimeInterval t3 = CFAbsoluteTimeGetCurrent();
     //
     //    NSLog(@"%f",(t1-t0)/(t3-t2));
-    NSLog(@"-----%zd-----", @"09991".integerValue);
+    
+    YYFPSLabel *ftpLabel = [[YYFPSLabel alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
+    [self.window addSubview:ftpLabel];
     
     return YES;
 }

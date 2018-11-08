@@ -31,6 +31,9 @@
 #import "SGQAlertView.h"
 #import "FTWebViewController.h"
 #import "FTWKViewController.h"
+#import <sys/stat.h>
+#import "UIImage+RTTint.h"
+#import "UIView+Borders.h"
 
 //父结构体
 struct father
@@ -74,8 +77,17 @@ int a = 6;
 #pragma mark -Life cycle
 - (void)viewDidLoad
 {
+
     self.navigationItem.title = @"Have fun";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"nextGround" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonClick)];
+    
+
+    UIView *grayView = [[UIView alloc] initWithFrame:CGRectMake(50, 100, 50, 50)];
+    grayView.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:grayView];
+    [grayView addBottomBorderWithHeight:1 andColor:[UIColor redColor]];
+ 
+
     
     UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(50, 200, 200, 50)];
     [self.view addSubview:tf];
@@ -380,6 +392,7 @@ void test(struct son *t)
 {
 
 }
+
 
 - (void)buttonClicked:(UIButton*)button
 {

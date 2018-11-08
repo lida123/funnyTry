@@ -9,7 +9,7 @@
 #import "FTBaseNavigationController.h"
 #import "FTBaseNavigationControllerNotice.h"
 
-@interface FTBaseNavigationController ()<UINavigationControllerDelegate>
+@interface FTBaseNavigationController ()<UINavigationControllerDelegate, UIGestureRecognizerDelegate>
 
 @end
 
@@ -30,6 +30,34 @@
     
     [self.navigationBar setBarStyle:UIBarStyleDefault];
 }
+
+-(void)initGlobalPan
+{
+    //取消系统自带手势
+    self.interactivePopGestureRecognizer.enabled = NO;
+    
+    //获取系统的手势的target数组
+    NSMutableArray *_targets = [self.interactivePopGestureRecognizer valueForKeyPath:@"_targets"];
+    //获取target
+    id target = [[_targets firstObject] valueForKeyPath:@"_target"];
+    //获取action
+    SEL action = NSSelectorFromString(@"handleNavigationTransition:");
+    
+    //创建一个与系统一样的手势 只把它的类改为UIPanGestureRecognizer
+    UIPanGestureRecognizer *popRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget: target action: action];
+    popRecognizer.delegate = self;
+    //添加到系统手势作用的view上
+    UIView *gestureView = self.interactivePopGestureRecognizer.view;
+    [gestureView addGestureRecognizer:popRecognizer];
+}
+
+-(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    //当前控制器为根控制器，pop动画正在执行的时候不允许手势
+    return self.viewControllers.count != 1 && ![[self valueForKeyPath:@"_isTransitioning"] boolValue];
+}
+
+
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     // 将显示的Controller
