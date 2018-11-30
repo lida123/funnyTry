@@ -15,6 +15,7 @@
 		C5091730208DB858000F38D2 /* FTUIListPreViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C509172F208DB858000F38D2 /* FTUIListPreViewVC.m */; };
 		C509173720906558000F38D2 /* UIScrollView+Moving.m in Sources */ = {isa = PBXBuildFile; fileRef = C509173620906558000F38D2 /* UIScrollView+Moving.m */; };
 		C509D5E620871D57000F38D2 /* FTChangeFileNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C509D5E520871D57000F38D2 /* FTChangeFileNameVC.m */; };
+		C510419A21B12C400051214D /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C510419921B12C400051214D /* BSBacktraceLogger.m */; };
 		C51112C71FD5595E008AD74F /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C51112C61FD5595E008AD74F /* UIView+Screenshot.m */; };
 		C51112CA1FD63800008AD74F /* FTGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = C51112C91FD63800008AD74F /* FTGlobal.m */; };
 		C51750432181603C0063BE98 /* UINavigationController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = C517502C2181603C0063BE98 /* UINavigationController+MemoryLeak.m */; };
@@ -390,7 +391,6 @@
 		C5DA048D21945D3700493209 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D91DC1FB18DD3004550D0 /* SVRadialGradientLayer.m */; };
 		C5DA048E21945D3700493209 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = C56EE5132084820A005186DD /* MJProperty.m */; };
 		C5DA048F21945D3700493209 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = C56EE5152084820A005186DD /* MJPropertyKey.m */; };
-		C5DA049021945D3700493209 /* FTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C101FA8777E00A9C033 /* FTAppDelegate.m */; };
 		C5DA049121945D3700493209 /* UIView+anchorPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FBF91FE1238100B67823 /* UIView+anchorPoint.m */; };
 		C5DA049221945D3700493209 /* FTPausePlayAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FC011FE2268800B67823 /* FTPausePlayAnimationVC.m */; };
 		C5DA049321945D3700493209 /* NSString+mock.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F718B21915B4700BECFB3 /* NSString+mock.m */; };
@@ -485,6 +485,8 @@
 		C509173620906558000F38D2 /* UIScrollView+Moving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Moving.m"; sourceTree = "<group>"; };
 		C509D5E420871D57000F38D2 /* FTChangeFileNameVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTChangeFileNameVC.h; sourceTree = "<group>"; };
 		C509D5E520871D57000F38D2 /* FTChangeFileNameVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTChangeFileNameVC.m; sourceTree = "<group>"; };
+		C510419821B12C400051214D /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
+		C510419921B12C400051214D /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
 		C51112C51FD5595E008AD74F /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
 		C51112C61FD5595E008AD74F /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
 		C51112C81FD63800008AD74F /* FTGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTGlobal.h; sourceTree = "<group>"; };
@@ -1018,6 +1020,15 @@
 				C53366B321251E4000A260CD /* FTCodeConfuseTool.m */,
 			);
 			path = ChangeFileName;
+			sourceTree = "<group>";
+		};
+		C510419621B1297B0051214D /* BSBacktraceLogger */ = {
+			isa = PBXGroup;
+			children = (
+				C510419821B12C400051214D /* BSBacktraceLogger.h */,
+				C510419921B12C400051214D /* BSBacktraceLogger.m */,
+			);
+			path = BSBacktraceLogger;
 			sourceTree = "<group>";
 		};
 		C517502B2181603C0063BE98 /* MLeaksFinder */ = {
@@ -2046,6 +2057,7 @@
 		C5F5E5261FAC3977009FB8D3 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C510419621B1297B0051214D /* BSBacktraceLogger */,
 				C56F716D21915B4700BECFB3 /* GYHttpMock */,
 				C517550A2182E33E0063BE98 /* GQ */,
 				C517502B2181603C0063BE98 /* MLeaksFinder */,
@@ -2437,6 +2449,7 @@
 				C56F718F21915B4700BECFB3 /* GYMockResponse.m in Sources */,
 				C5726D98209EEA570037DA02 /* MJRefreshBackGifFooter.m in Sources */,
 				C5726D9B209EEA570037DA02 /* MJRefreshGifHeader.m in Sources */,
+				C510419A21B12C400051214D /* BSBacktraceLogger.m in Sources */,
 				C57686AD1FB02E6000066AA3 /* FBShimmeringLayer.m in Sources */,
 				C51755172182F8D20063BE98 /* UIView+AnimatedShow.m in Sources */,
 				C56F718E21915B4700BECFB3 /* GYMockResponseDSL.m in Sources */,
@@ -2750,7 +2763,6 @@
 				C5DA048D21945D3700493209 /* SVRadialGradientLayer.m in Sources */,
 				C5DA048E21945D3700493209 /* MJProperty.m in Sources */,
 				C5DA048F21945D3700493209 /* MJPropertyKey.m in Sources */,
-				C5DA049021945D3700493209 /* FTAppDelegate.m in Sources */,
 				C5DA049121945D3700493209 /* UIView+anchorPoint.m in Sources */,
 				C5DA049221945D3700493209 /* FTPausePlayAnimationVC.m in Sources */,
 				C5DA049321945D3700493209 /* NSString+mock.m in Sources */,

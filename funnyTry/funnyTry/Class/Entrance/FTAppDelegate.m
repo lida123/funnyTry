@@ -10,6 +10,7 @@
 #import "FTTabBarController.h"
 #import "FTCodeConfuseTool.h"
 #import "YYFPSLabel.h"
+#import "BSBacktraceLogger.h"
 
 
 @interface FTAppDelegate ()
@@ -36,25 +37,15 @@
 //                                               garbageFileCounts:200
 //                                                 garbageFileName:@"vvvvuseless"];
     
+
     
-    //    CGFloat components[3]
-    //    CFTimeInterval t0 = CFAbsoluteTimeGetCurrent();
-    //    for (NSInteger i = 0; i < 100000; i++) {
-    //          [self P_getRGBComponents:components forColor:[UIColor grayColor]];
-    //    }
-    //    CFTimeInterval t1 = CFAbsoluteTimeGetCurrent();
-    //
-    //
-    //    CFTimeInterval t2 = CFAbsoluteTimeGetCurrent();
-    //    for (NSInteger i = 0; i < 100000; i++) {
-    //        [self P2_getRGBComponents:components forColor:[UIColor grayColor]];
-    //    }
-    //    CFTimeInterval t3 = CFAbsoluteTimeGetCurrent();
-    //
-    //    NSLog(@"%f",(t1-t0)/(t3-t2));
-    
-    YYFPSLabel *ftpLabel = [[YYFPSLabel alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
+    YYFPSLabel *ftpLabel = [[YYFPSLabel alloc] initWithFrame:CGRectMake(0, 44, 0, 0 )];
+    [ftpLabel sizeToFit];
     [self.window addSubview:ftpLabel];
+    
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+//        BSLOG_MAIN  // 打印主线程调用栈
+//    });
     
     return YES;
 }

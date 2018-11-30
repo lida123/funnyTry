@@ -70,7 +70,7 @@ static void getSuper(Class class, NSMutableString *result) {
     return [self methodsForClass:[self class] typeFormat:@"-"];
 }
 
-+ (NSArray *)properties {
++ (NSArray *)dl_properties {
     unsigned int outCount;
     objc_property_t *properties = class_copyPropertyList([self class], &outCount);
     NSMutableArray *result = [NSMutableArray array];
@@ -81,7 +81,7 @@ static void getSuper(Class class, NSMutableString *result) {
     return result.count ? [result copy] : nil;
 }
 
-+ (NSArray *)instanceVariables {
++ (NSArray *)dl_instanceVariables {
     unsigned int outCount;
     Ivar *ivars = class_copyIvarList([self class], &outCount);
     NSMutableArray *result = [NSMutableArray array];

@@ -17,10 +17,12 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <UIKit/UIFeedbackGenerator.h>
 #import "FTPlayroundTwoVC.h"
+#import "MLeakedObjectProxy.h"
 #import <YYKit.h>
 #import <objc/runtime.h>
 #import "MJRefresh.h"
 #import "NOEELeftTitleBtn.h"
+#import "MLeaksFinder.h"
 #import "NSObject+Sark.h"
 #import "UIViewController+Association.h"
 #import "Student.h"
@@ -32,8 +34,8 @@
 #import "FTWebViewController.h"
 #import "FTWKViewController.h"
 #import <sys/stat.h>
-#import "UIImage+RTTint.h"
 #import "UIView+Borders.h"
+#import "NSObject+DLIntrospection.h"
 
 //父结构体
 struct father
@@ -352,7 +354,12 @@ void test(struct son *t)
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{    
+{
+    dispatch_sync(dispatch_get_global_queue(0, 0), ^{
+        sleep(2.0);
+        NSLog(@"%@", [NSThread currentThread]);
+    });
+    NSLog(@"touche end");
 //    [_water startAnimation];
 //    Student * st = [Student new];
 //    [st performSelector:@selector(bbbb) withObject:@"sss" afterDelay:0];
@@ -378,14 +385,15 @@ void test(struct son *t)
 //    }
 //    }
     
-    [self.navigationController pushViewController:[FTWKViewController new] animated:YES];
+//    [self.navigationController pushViewController:[FTWKViewController new] animated:YES];
     
 }
 
-- (void )mayleak {
-//    NSObject *obj = [NSObject new];
-    
+- (id )mayleak {
+    NSObject *obj = [NSObject new];
+    return obj;
 }
+
 
 #pragma mark -Private
 - (void)pushToSomeVC

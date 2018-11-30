@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Book : NSObject
+@interface Book : NSObject {
+    id age;
+}
 @property (nonatomic, strong) NSString *name;
 
 - (void)onePage:(NSString *)line;
