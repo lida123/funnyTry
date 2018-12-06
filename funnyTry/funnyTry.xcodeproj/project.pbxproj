@@ -164,6 +164,7 @@
 		C58AB6311FE7675900139498 /* FTOneLoadingAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6301FE7675900139498 /* FTOneLoadingAnimationVC.m */; };
 		C58AB6361FE7682F00139498 /* FTOneLoadingAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6351FE7682F00139498 /* FTOneLoadingAnimationView.m */; };
 		C58AB6391FE768B800139498 /* FTLoadingCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C58AB6381FE768B800139498 /* FTLoadingCircleLayer.m */; };
+		C58D7ED821B7DDB3003F50DC /* CTBlockDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = C58D7ED621B7DDB3003F50DC /* CTBlockDescription.m */; };
 		C592ACCA20D105EB00D90E3D /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = C592ACC920D105EB00D90E3D /* NSObject+DLIntrospection.m */; };
 		C59518BA21097A17001C1BC1 /* UIViewController+Association.m in Sources */ = {isa = PBXBuildFile; fileRef = C59518B921097A17001C1BC1 /* UIViewController+Association.m */; };
 		C598FBE91FE0F67F00B67823 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FBD11FE0F67F00B67823 /* MASCompositeConstraint.m */; };
@@ -774,6 +775,8 @@
 		C58AB6351FE7682F00139498 /* FTOneLoadingAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTOneLoadingAnimationView.m; sourceTree = "<group>"; };
 		C58AB6371FE768B800139498 /* FTLoadingCircleLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLoadingCircleLayer.h; sourceTree = "<group>"; };
 		C58AB6381FE768B800139498 /* FTLoadingCircleLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLoadingCircleLayer.m; sourceTree = "<group>"; };
+		C58D7ED621B7DDB3003F50DC /* CTBlockDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBlockDescription.m; sourceTree = "<group>"; };
+		C58D7ED721B7DDB3003F50DC /* CTBlockDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBlockDescription.h; sourceTree = "<group>"; };
 		C592ACC820D105EB00D90E3D /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
 		C592ACC920D105EB00D90E3D /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
 		C594A4221FFF79B3006699A6 /* FTBaseNavigationControllerNotice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseNavigationControllerNotice.h; sourceTree = "<group>"; };
@@ -1681,6 +1684,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C58D7ED521B7DDB3003F50DC /* CTBlockDescription */ = {
+			isa = PBXGroup;
+			children = (
+				C58D7ED621B7DDB3003F50DC /* CTBlockDescription.m */,
+				C58D7ED721B7DDB3003F50DC /* CTBlockDescription.h */,
+			);
+			path = CTBlockDescription;
+			sourceTree = "<group>";
+		};
 		C592ACC720D105EB00D90E3D /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -2057,6 +2069,7 @@
 		C5F5E5261FAC3977009FB8D3 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C58D7ED521B7DDB3003F50DC /* CTBlockDescription */,
 				C510419621B1297B0051214D /* BSBacktraceLogger */,
 				C56F716D21915B4700BECFB3 /* GYHttpMock */,
 				C517550A2182E33E0063BE98 /* GQ */,
@@ -2496,6 +2509,7 @@
 				C56A5EA42189BAAF006FDA50 /* FTMyURLProtocol.m in Sources */,
 				C59D91B51FB15C5A004550D0 /* UIView+CutShape.m in Sources */,
 				C51755102182E3720063BE98 /* SGQActionSheet.m in Sources */,
+				C58D7ED821B7DDB3003F50DC /* CTBlockDescription.m in Sources */,
 				C5616C1F1FA8777E00A9C033 /* main.m in Sources */,
 				C5AA16EC216DE409008CE1B3 /* Person+add.m in Sources */,
 				C5EB8C56215B328000D98B64 /* FTWaterView.m in Sources */,
