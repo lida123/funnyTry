@@ -2406,7 +2406,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /usr/local/bin/python3;
-			shellScript = "# -*- coding:utf-8 -*-\n\nfrom biplist import *\nimport time\nimport os\n\n\ntry:\n    # 当前目录\n    curdir = os.getcwd()\n\n    # 文件路径\n    app_info_path = curdir + '/funnyTry/Info.plist'\n\n\n    print(app_info_path)\n\n    # 读取Info.plist文件和ProjectSettings.plist\n    app_info = readPlist(app_info_path)\n\n    print(app_info)\n\n    # 读取版本号\n    app_version = app_info['CFBundleVersion'].split('.')\n\nexcept BaseException as e:\n    print(str(e))";
+			shellScript = "# -*- coding:utf-8 -*-\n#!/usr/bin/python3\n# 测试读取plist文件数据,修改后重新写入\n\nfrom biplist import *\nimport time\nimport os\n\n\ntry:\n# 当前目录\ncur_dir = os.getcwd()\n\n# 文件路径\napp_info_path = '/Users/wen/Desktop/Info.plist'\nsetting_path = '/Users/wen/Desktop/Info.plist'\n\n# 读取Info.plist文件和ProjectSettings.plist\napp_info = readPlist(app_info_path)\nsettings = readPlist(setting_path)\n\n# 读取版本号\napp_version = app_info['appInsideVersion'].split('.')\nauto_verson = settings['MyBuildVersion']\n\n# 拆出前三出来比较\napp_version = ''.join(app_version)\nauto_verson_pre3 = auto_verson[0:3]\nauto_verson_sub3_int = int(auto_verson[-3:])\n\ntarget_autoVersion = ''\nif app_version != auto_verson_pre3:\ntarget_autoVersion = app_version + '000'\nelse:\nauto_verson_sub3_int += 1\ntarget_autoVersion = auto_verson_pre3 + '%03d' % (auto_verson_sub3_int)\n\n# 更新数据\nsettings['MyBuildVersion'] = target_autoVersion\n\nsettings['UpdateDate'] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())\nprint(settings)\n\n# 写入\nres = writePlist(settings, setting_path, 'utf-8')\nprint(res)\n\n\nexcept BaseException as e:\nprint(str(e))\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

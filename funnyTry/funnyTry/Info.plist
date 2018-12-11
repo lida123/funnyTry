@@ -54,9 +54,9 @@
 	<key>NSCameraUsageDescription</key>
 	<string>use your camera</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>@"嘻嘻嘻嘻"</string>
+	<string>@&quot;嘻嘻嘻嘻&quot;</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>@"我要访问相册啊"</string>
+	<string>@&quot;我要访问相册啊&quot;</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>ftkaiti.ttf</string>
@@ -80,5 +80,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>appInsideVersion</key>
+	<string>4.1.0</string>
+	<key>MyBuildVersion</key>
+	<string>410000</string>
 </dict>
 </plist>

@@ -11,6 +11,7 @@
 #import "FTCodeConfuseTool.h"
 #import "YYFPSLabel.h"
 #import "BSBacktraceLogger.h"
+#import "NSObject+MemoryLeak.h"
 
 
 @interface FTAppDelegate ()
@@ -47,8 +48,22 @@
 //        BSLOG_MAIN  // 打印主线程调用栈
 //    });
     
+//    [FTAppDelegate swizzleSEL:@selector(test0) withSEL:@selector(test2)];
+//    [self performSelector:@selector(test2)];
+//     [self performSelector:@selector(test0)];
+ 
+    
     return YES;
 }
+
+- (void)test1 {
+    NSLog(@"%s",__func__);
+}
+
+- (void)test2 {
+    NSLog(@"%s",__func__);
+}
+
 /// 1111
 - (void)P_getRGBComponents:(CGFloat [3])components forColor:(UIColor *)color {
     CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();

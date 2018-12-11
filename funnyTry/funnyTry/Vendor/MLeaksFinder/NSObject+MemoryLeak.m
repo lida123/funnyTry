@@ -160,10 +160,9 @@ const void *const kLatestSenderKey = &kLatestSenderKey;
                     method_getTypeEncoding(swizzledMethod));
     
     if (didAddMethod) {
-        // 添加成功表明当前类添加之前并没有originalSEL这个方法(意味着你尝试替换一个并不存在的方法). 那么执行到此处.已经帮你给这个类添加了originalSEL这个方法.且实现是swizzledMethod.
+        // 添加成功表明当前类添加之前并没有originalSEL这个方法(意味着你尝试替换一个并不存在的方法). 那么执行到此处.已经帮你给这个类添加了originalSEL这个方法.且实现是swizzledMethod的实现.
         
-        // 此时再将当前类的swizzledSEL的实现替换为 method_getImplementation(originalMethod) ,此时获取的实现已经是swizzledMethod了.
-        // 后续无论你调用 originalSEL 还是 swizzledSEL 都是同样的实现 swizzledMethod
+        // 此时虽然尝试执行将 swizzledSEL对应的实现替换为 originalSEL 的, 但是由于 originalSEL 的实现为空, 替换会失败,即 swizzledSEL 的实现仍让为 swizzledSEL 本来的实现. 最终两个不同名的方法, 实现是一样的
         class_replaceMethod(class,
                             swizzledSEL,
                             method_getImplementation(originalMethod),
