@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C5616C0B1FA8777E00A9C033"
-               BuildableName = "funnyTry.app"
-               BlueprintName = "funnyTry"
+               BlueprintIdentifier = "C5DA03E721945D3700493209"
+               BuildableName = "NORMAL.app"
+               BlueprintName = "NORMAL"
                ReferencedContainer = "container:funnyTry.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,33 +28,13 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C5616C231FA8777E00A9C033"
-               BuildableName = "funnyTryTests.xctest"
-               BlueprintName = "funnyTryTests"
-               ReferencedContainer = "container:funnyTry.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C5616C2E1FA8777E00A9C033"
-               BuildableName = "funnyTryUITests.xctest"
-               BlueprintName = "funnyTryUITests"
-               ReferencedContainer = "container:funnyTry.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C5616C0B1FA8777E00A9C033"
-            BuildableName = "funnyTry.app"
-            BlueprintName = "funnyTry"
+            BlueprintIdentifier = "C5DA03E721945D3700493209"
+            BuildableName = "NORMAL.app"
+            BlueprintName = "NORMAL"
             ReferencedContainer = "container:funnyTry.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C5616C0B1FA8777E00A9C033"
-            BuildableName = "funnyTry.app"
-            BlueprintName = "funnyTry"
+            BlueprintIdentifier = "C5DA03E721945D3700493209"
+            BuildableName = "NORMAL.app"
+            BlueprintName = "NORMAL"
             ReferencedContainer = "container:funnyTry.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -94,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C5616C0B1FA8777E00A9C033"
-            BuildableName = "funnyTry.app"
-            BlueprintName = "funnyTry"
+            BlueprintIdentifier = "C5DA03E721945D3700493209"
+            BuildableName = "NORMAL.app"
+            BlueprintName = "NORMAL"
             ReferencedContainer = "container:funnyTry.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -105,7 +85,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

@@ -1,0 +1,8 @@
+app_identifier("com.loveqiusai.sports") # The bundle identifier of your app
+apple_id("apple6@9188cp.cn") # Your Apple email address
+
+itc_team_id("118901687") # App Store Connect Team ID
+team_id("N2575CK63N") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

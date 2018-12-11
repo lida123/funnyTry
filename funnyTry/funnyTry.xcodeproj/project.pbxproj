@@ -396,7 +396,6 @@
 		C5DA049221945D3700493209 /* FTPausePlayAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C598FC011FE2268800B67823 /* FTPausePlayAnimationVC.m */; };
 		C5DA049321945D3700493209 /* NSString+mock.m in Sources */ = {isa = PBXBuildFile; fileRef = C56F718B21915B4700BECFB3 /* NSString+mock.m */; };
 		C5DA049421945D3700493209 /* UIView+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C51A9522213572510075FBEF /* UIView+SGPagingView.m */; };
-		C5DA049621945D3700493209 /* libPods-funnyTry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B31141A503542081989F8C /* libPods-funnyTry.a */; };
 		C5DA049821945D3700493209 /* 添加的代码的副本.txt in Resources */ = {isa = PBXBuildFile; fileRef = C56D5FB520D9042600C8BC44 /* 添加的代码的副本.txt */; };
 		C5DA049921945D3700493209 /* 5.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C5AD1A391FD1389600A7EE86 /* 5.m4a */; };
 		C5DA049A21945D3700493209 /* mm.png in Resources */ = {isa = PBXBuildFile; fileRef = C559779E2192E9F900D804F3 /* mm.png */; };
@@ -450,6 +449,7 @@
 		C5F5E5231FAC372B009FB8D3 /* FTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5221FAC372B009FB8D3 /* FTTabBarController.m */; };
 		C5F5E5291FAC3A5E009FB8D3 /* FTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */; };
 		C5F5E52D1FAC3AAA009FB8D3 /* FTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E52C1FAC3AAA009FB8D3 /* FTBaseTableViewController.m */; };
+		C615F08D08D19DECA6642CFF /* libPods-funnyTry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B31141A503542081989F8C /* libPods-funnyTry.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -471,8 +471,8 @@
 
 /* Begin PBXFileReference section */
 		31B31141A503542081989F8C /* libPods-funnyTry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-funnyTry.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		34E765B0ECA9913D4F7D8C93 /* Pods-funnyTry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funnyTry.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-funnyTry/Pods-funnyTry.debug.xcconfig"; sourceTree = "<group>"; };
-		B88E524ACBCD5678496AA835 /* Pods-funnyTry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funnyTry.release.xcconfig"; path = "../Pods/Target Support Files/Pods-funnyTry/Pods-funnyTry.release.xcconfig"; sourceTree = "<group>"; };
+		849C1D7B1BDCB16FE46CAE35 /* Pods-funnyTry.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funnyTry.beta.xcconfig"; path = "../Pods/Target Support Files/Pods-funnyTry/Pods-funnyTry.beta.xcconfig"; sourceTree = "<group>"; };
+		B53AEC866B8795F30AD3F1E3 /* Pods-funnyTry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funnyTry.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-funnyTry/Pods-funnyTry.debug.xcconfig"; sourceTree = "<group>"; };
 		C502174B20561EAC00F2FF77 /* FTPagedScaleLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPagedScaleLayout.h; sourceTree = "<group>"; };
 		C502174C20561EAC00F2FF77 /* FTPagedScaleLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPagedScaleLayout.m; sourceTree = "<group>"; };
 		C509172420883E78000F38D2 /* 添加的代码.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "添加的代码.txt"; sourceTree = "<group>"; };
@@ -893,6 +893,7 @@
 		C5F5E5281FAC3A5E009FB8D3 /* FTBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBaseViewController.m; sourceTree = "<group>"; };
 		C5F5E52B1FAC3AAA009FB8D3 /* FTBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBaseTableViewController.h; sourceTree = "<group>"; };
 		C5F5E52C1FAC3AAA009FB8D3 /* FTBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBaseTableViewController.m; sourceTree = "<group>"; };
+		D062CBE2FD376343696E0E45 /* Pods-funnyTry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funnyTry.release.xcconfig"; path = "../Pods/Target Support Files/Pods-funnyTry/Pods-funnyTry.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -901,6 +902,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C4C6EF953234755E7DDA6D0 /* libPods-funnyTry.a in Frameworks */,
+				C615F08D08D19DECA6642CFF /* libPods-funnyTry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -922,7 +924,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5DA049621945D3700493209 /* libPods-funnyTry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,8 +941,9 @@
 		5CD006325D82C76E18F9CCD3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				34E765B0ECA9913D4F7D8C93 /* Pods-funnyTry.debug.xcconfig */,
-				B88E524ACBCD5678496AA835 /* Pods-funnyTry.release.xcconfig */,
+				B53AEC866B8795F30AD3F1E3 /* Pods-funnyTry.debug.xcconfig */,
+				849C1D7B1BDCB16FE46CAE35 /* Pods-funnyTry.beta.xcconfig */,
+				D062CBE2FD376343696E0E45 /* Pods-funnyTry.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -2148,7 +2150,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5DA04C921945D3700493209 /* Build configuration list for PBXNativeTarget "NORMAL" */;
 			buildPhases = (
-				C5DA03E821945D3700493209 /* [CP] Check Pods Manifest.lock */,
 				C5DA03E921945D3700493209 /* Sources */,
 				C5DA049521945D3700493209 /* Frameworks */,
 				C5DA049721945D3700493209 /* Resources */,
@@ -2170,12 +2171,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = FT;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = GQ;
 				TargetAttributes = {
 					C5616C0B1FA8777E00A9C033 = {
 						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 0;
@@ -2364,24 +2365,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C5DA03E821945D3700493209 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-funnyTry-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C5DA04C821945D3700493209 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2405,8 +2388,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /usr/local/bin/python3;
-			shellScript = "# -*- coding:utf-8 -*-\n#!/usr/bin/python3\n# 测试读取plist文件数据,修改后重新写入\n\nfrom biplist import *\nimport time\nimport os\n\n\ntry:\n# 当前目录\ncur_dir = os.getcwd()\n\n# 文件路径\napp_info_path = '/Users/wen/Desktop/Info.plist'\nsetting_path = '/Users/wen/Desktop/Info.plist'\n\n# 读取Info.plist文件和ProjectSettings.plist\napp_info = readPlist(app_info_path)\nsettings = readPlist(setting_path)\n\n# 读取版本号\napp_version = app_info['appInsideVersion'].split('.')\nauto_verson = settings['MyBuildVersion']\n\n# 拆出前三出来比较\napp_version = ''.join(app_version)\nauto_verson_pre3 = auto_verson[0:3]\nauto_verson_sub3_int = int(auto_verson[-3:])\n\ntarget_autoVersion = ''\nif app_version != auto_verson_pre3:\ntarget_autoVersion = app_version + '000'\nelse:\nauto_verson_sub3_int += 1\ntarget_autoVersion = auto_verson_pre3 + '%03d' % (auto_verson_sub3_int)\n\n# 更新数据\nsettings['MyBuildVersion'] = target_autoVersion\n\nsettings['UpdateDate'] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())\nprint(settings)\n\n# 写入\nres = writePlist(settings, setting_path, 'utf-8')\nprint(res)\n\n\nexcept BaseException as e:\nprint(str(e))\n";
+			shellPath = /bin/sh;
+			shellScript = "\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2814,6 +2797,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -2821,6 +2805,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -2869,6 +2854,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -2876,6 +2862,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -2906,13 +2893,13 @@
 		};
 		C5616C391FA8777E00A9C033 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34E765B0ECA9913D4F7D8C93 /* Pods-funnyTry.debug.xcconfig */;
+			baseConfigurationReference = B53AEC866B8795F30AD3F1E3 /* Pods-funnyTry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Shiyu Zha (7JSV7DSMFR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shiyu Zha (7JSV7DSMFR)";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = U7F2PF4JVH;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2575CK63N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/Class/Entrance/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2922,32 +2909,32 @@
 				INFOPLIST_FILE = funnyTry/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.funnyTry;
+				PRODUCT_BUNDLE_IDENTIFIER = com.loveqiusai.sports;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8f922747-a158-471d-9867-c94220c345eb";
-				PROVISIONING_PROFILE_SPECIFIER = 9188universalProfile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		C5616C3A1FA8777E00A9C033 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B88E524ACBCD5678496AA835 /* Pods-funnyTry.release.xcconfig */;
+			baseConfigurationReference = D062CBE2FD376343696E0E45 /* Pods-funnyTry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanghai DiBin Culture Development Co., Ltd. (U7F2PF4JVH)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shanghai DiBin Culture Development Co., Ltd. (U7F2PF4JVH)";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = U7F2PF4JVH;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2575CK63N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/Class/Entrance/PrefixHeader.pch";
 				INFOPLIST_FILE = funnyTry/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.funnyTry;
+				PRODUCT_BUNDLE_IDENTIFIER = com.loveqiusai.sports;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8f922747-a158-471d-9867-c94220c345eb";
-				PROVISIONING_PROFILE_SPECIFIER = 9188universalProfile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -3008,7 +2995,6 @@
 		};
 		C5DA04CA21945D3700493209 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34E765B0ECA9913D4F7D8C93 /* Pods-funnyTry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Shiyu Zha (7JSV7DSMFR)";
@@ -3026,7 +3012,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.funnyTry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8f922747-a158-471d-9867-c94220c345eb";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = 9188universalProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -3034,7 +3020,6 @@
 		};
 		C5DA04CB21945D3700493209 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B88E524ACBCD5678496AA835 /* Pods-funnyTry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanghai DiBin Culture Development Co., Ltd. (U7F2PF4JVH)";
@@ -3048,11 +3033,146 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.funnyTry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8f922747-a158-471d-9867-c94220c345eb";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = 9188universalProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
+		};
+		C5F6FCE021BF9A07002C7C78 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Beta;
+		};
+		C5F6FCE121BF9A07002C7C78 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 849C1D7B1BDCB16FE46CAE35 /* Pods-funnyTry.beta.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2575CK63N;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/Class/Entrance/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=100",
+				);
+				INFOPLIST_FILE = funnyTry/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.loveqiusai.sports;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Beta;
+		};
+		C5F6FCE221BF9A07002C7C78 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = funnyTryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gaoqiang.funnyTryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/funnyTry.app/funnyTry";
+			};
+			name = Beta;
+		};
+		C5F6FCE321BF9A07002C7C78 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = funnyTryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gaoqiang.funnyTryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = funnyTry;
+			};
+			name = Beta;
+		};
+		C5F6FCE421BF9A07002C7C78 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shiyu Zha (7JSV7DSMFR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shiyu Zha (7JSV7DSMFR)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = U7F2PF4JVH;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/funnyTry/Class/Entrance/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=100",
+				);
+				INFOPLIST_FILE = "funnyTry copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.funnyTry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = 9188universalProfile;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Beta;
 		};
 /* End XCBuildConfiguration section */
 
@@ -3061,6 +3181,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C5616C361FA8777E00A9C033 /* Debug */,
+				C5F6FCE021BF9A07002C7C78 /* Beta */,
 				C5616C371FA8777E00A9C033 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3070,6 +3191,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C5616C391FA8777E00A9C033 /* Debug */,
+				C5F6FCE121BF9A07002C7C78 /* Beta */,
 				C5616C3A1FA8777E00A9C033 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3079,6 +3201,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C5616C3C1FA8777E00A9C033 /* Debug */,
+				C5F6FCE221BF9A07002C7C78 /* Beta */,
 				C5616C3D1FA8777E00A9C033 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3088,6 +3211,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C5616C3F1FA8777E00A9C033 /* Debug */,
+				C5F6FCE321BF9A07002C7C78 /* Beta */,
 				C5616C401FA8777E00A9C033 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -3097,6 +3221,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C5DA04CA21945D3700493209 /* Debug */,
+				C5F6FCE421BF9A07002C7C78 /* Beta */,
 				C5DA04CB21945D3700493209 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

@@ -46,6 +46,8 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MyBuildVersion</key>
+	<string>410000</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -54,9 +56,9 @@
 	<key>NSCameraUsageDescription</key>
 	<string>use your camera</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>@&quot;嘻嘻嘻嘻&quot;</string>
+	<string>@"嘻嘻嘻嘻"</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>@&quot;我要访问相册啊&quot;</string>
+	<string>@"我要访问相册啊"</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>ftkaiti.ttf</string>
@@ -82,7 +84,5 @@
 	</array>
 	<key>appInsideVersion</key>
 	<string>4.1.0</string>
-	<key>MyBuildVersion</key>
-	<string>410000</string>
 </dict>
 </plist>
