@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Beta.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
-		</dict>
 		<key>NORMAL.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -24,7 +19,7 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>funnyTry.xcscheme</key>
+		<key>funnyTry.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<true/>

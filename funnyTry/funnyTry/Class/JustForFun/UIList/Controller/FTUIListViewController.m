@@ -42,7 +42,10 @@
     [self.view addSubview:self.tableView];
     
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
-    
+   
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        
+    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
