@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C588142AAEA94787166901BE1A4BBC35"
+               BlueprintIdentifier = "ACF3621C7C3071702CC65EFBCF44F856"
                BlueprintName = "NOEEBaseFramework"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libNOEEBaseFramework.a">

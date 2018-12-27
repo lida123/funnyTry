@@ -89,12 +89,6 @@ int a = 6;
     [self.view addSubview:grayView];
     [grayView addBottomBorderWithHeight:1 andColor:[UIColor redColor]];
  
-
-    
-    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(50, 200, 200, 50)];
-    [self.view addSubview:tf];
-    tf.placeholder = @"input your name";
-    tf.borderStyle = UITextBorderStyleLine;
 //    tf.backgroundColor = [UIColor redColor];
 //    _redView = [[FTTouchView alloc] initWithFrame:CGRectMake(50, FTNavigationBarPlusStatusBarHeight, 200, 200)];
 //    _redView.backgroundColor = [UIColor redColor];
@@ -221,6 +215,32 @@ int a = 6;
 //        NSLog(@"%s", ivar_getName(ivar));
 //    }
 
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 200, 200, 200)];
+    imageView.image = [UIImage imageNamed:@"bftt"];
+    [self.view addSubview:imageView];
+    
+    UIView* aView = [[UIView alloc] initWithFrame:imageView.frame];
+    aView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:aView];
+
+    aView.layer.borderWidth = 1.0;
+    aView.layer.borderColor = [UIColor blackColor].CGColor;
+    
+    CAShapeLayer* cropLayer = [[CAShapeLayer alloc] init];
+    [aView.layer addSublayer:cropLayer];
+    // 创建一个绘制路径
+    CGMutablePathRef path = CGPathCreateMutable();
+    // 空心矩形的rect
+    CGRect cropRect = CGRectMake(20, 30, 60, 40);
+    // 绘制rect
+    CGPathAddRect(path, nil, aView.bounds);
+    CGPathAddRect(path, nil, cropRect);
+    // 设置填充规则(重点)
+    [cropLayer setFillRule:kCAFillRuleEvenOdd];
+    // 关联绘制的path
+    [cropLayer setPath:path];
+    // 设置填充的颜色
+    [cropLayer setFillColor:[[UIColor redColor] CGColor]];
 }
 
 //- (void)viewWillAppear:(BOOL)animated {
