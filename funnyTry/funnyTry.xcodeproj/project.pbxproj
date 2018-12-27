@@ -216,6 +216,12 @@
 		C5AD1A4B1FD1389700A7EE86 /* 8.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C5AD1A3C1FD1389600A7EE86 /* 8.m4a */; };
 		C5AD1A4C1FD1389700A7EE86 /* 9.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C5AD1A3D1FD1389600A7EE86 /* 9.m4a */; };
 		C5AD1A551FD14DF100A7EE86 /* pic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5AD1A541FD14DF000A7EE86 /* pic1.jpg */; };
+		C5B45BC421D4B28D00828556 /* JKFreeImageClipRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B45BB821D4B28D00828556 /* JKFreeImageClipRectView.m */; };
+		C5B45BC521D4B28D00828556 /* JKClipImageToolResouce.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5B45BBC21D4B28D00828556 /* JKClipImageToolResouce.bundle */; };
+		C5B45BC621D4B28D00828556 /* JKSqureImageClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B45BC021D4B28D00828556 /* JKSqureImageClipView.m */; };
+		C5B45BC721D4B28D00828556 /* JKImageClipTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B45BC121D4B28D00828556 /* JKImageClipTool.m */; };
+		C5B45BC821D4B28D00828556 /* JKFreeImageClipCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B45BC221D4B28D00828556 /* JKFreeImageClipCoverView.m */; };
+		C5B45BC921D4B28D00828556 /* JKFreeImageClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B45BC321D4B28D00828556 /* JKFreeImageClipView.m */; };
 		C5B8C4361FBD669800037249 /* FTCircleLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B8C4351FBD669800037249 /* FTCircleLoadingViewController.m */; };
 		C5B8C43B1FBD670200037249 /* FTCircleLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B8C43A1FBD670200037249 /* FTCircleLoadingView.m */; };
 		C5B8C43E1FBD9DF400037249 /* UIButton+CircleLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B8C43D1FBD9DF400037249 /* UIButton+CircleLoading.m */; };
@@ -864,6 +870,19 @@
 		C5AD1A3C1FD1389600A7EE86 /* 8.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8.m4a; sourceTree = "<group>"; };
 		C5AD1A3D1FD1389600A7EE86 /* 9.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9.m4a; sourceTree = "<group>"; };
 		C5AD1A541FD14DF000A7EE86 /* pic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpg; sourceTree = "<group>"; };
+		C5B45BB721D4B28D00828556 /* JKSqureImageClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKSqureImageClipView.h; sourceTree = "<group>"; };
+		C5B45BB821D4B28D00828556 /* JKFreeImageClipRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKFreeImageClipRectView.m; sourceTree = "<group>"; };
+		C5B45BB921D4B28D00828556 /* JKImageClipToolMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKImageClipToolMacro.h; sourceTree = "<group>"; };
+		C5B45BBA21D4B28D00828556 /* JKImageClipTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKImageClipTool.h; sourceTree = "<group>"; };
+		C5B45BBB21D4B28D00828556 /* JKFreeImageClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKFreeImageClipView.h; sourceTree = "<group>"; };
+		C5B45BBC21D4B28D00828556 /* JKClipImageToolResouce.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JKClipImageToolResouce.bundle; sourceTree = "<group>"; };
+		C5B45BBD21D4B28D00828556 /* JKFreeImageClipCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKFreeImageClipCoverView.h; sourceTree = "<group>"; };
+		C5B45BBE21D4B28D00828556 /* JKImageClipActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKImageClipActionProtocol.h; sourceTree = "<group>"; };
+		C5B45BBF21D4B28D00828556 /* JKFreeImageClipRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKFreeImageClipRectView.h; sourceTree = "<group>"; };
+		C5B45BC021D4B28D00828556 /* JKSqureImageClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKSqureImageClipView.m; sourceTree = "<group>"; };
+		C5B45BC121D4B28D00828556 /* JKImageClipTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKImageClipTool.m; sourceTree = "<group>"; };
+		C5B45BC221D4B28D00828556 /* JKFreeImageClipCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKFreeImageClipCoverView.m; sourceTree = "<group>"; };
+		C5B45BC321D4B28D00828556 /* JKFreeImageClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKFreeImageClipView.m; sourceTree = "<group>"; };
 		C5B8C4341FBD669800037249 /* FTCircleLoadingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCircleLoadingViewController.h; sourceTree = "<group>"; };
 		C5B8C4351FBD669800037249 /* FTCircleLoadingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTCircleLoadingViewController.m; sourceTree = "<group>"; };
 		C5B8C4391FBD670200037249 /* FTCircleLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCircleLoadingView.h; sourceTree = "<group>"; };
@@ -1922,6 +1941,26 @@
 			path = Transitioning;
 			sourceTree = "<group>";
 		};
+		C5B45BB621D4B28D00828556 /* JKImageClip */ = {
+			isa = PBXGroup;
+			children = (
+				C5B45BB721D4B28D00828556 /* JKSqureImageClipView.h */,
+				C5B45BB821D4B28D00828556 /* JKFreeImageClipRectView.m */,
+				C5B45BB921D4B28D00828556 /* JKImageClipToolMacro.h */,
+				C5B45BBA21D4B28D00828556 /* JKImageClipTool.h */,
+				C5B45BBB21D4B28D00828556 /* JKFreeImageClipView.h */,
+				C5B45BBC21D4B28D00828556 /* JKClipImageToolResouce.bundle */,
+				C5B45BBD21D4B28D00828556 /* JKFreeImageClipCoverView.h */,
+				C5B45BBE21D4B28D00828556 /* JKImageClipActionProtocol.h */,
+				C5B45BBF21D4B28D00828556 /* JKFreeImageClipRectView.h */,
+				C5B45BC021D4B28D00828556 /* JKSqureImageClipView.m */,
+				C5B45BC121D4B28D00828556 /* JKImageClipTool.m */,
+				C5B45BC221D4B28D00828556 /* JKFreeImageClipCoverView.m */,
+				C5B45BC321D4B28D00828556 /* JKFreeImageClipView.m */,
+			);
+			path = JKImageClip;
+			sourceTree = "<group>";
+		};
 		C5B497F91FD008F100C6B6B4 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2069,6 +2108,7 @@
 		C5F5E5261FAC3977009FB8D3 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C5B45BB621D4B28D00828556 /* JKImageClip */,
 				C58D7ED521B7DDB3003F50DC /* CTBlockDescription */,
 				C510419621B1297B0051214D /* BSBacktraceLogger */,
 				C56F716D21915B4700BECFB3 /* GYHttpMock */,
@@ -2261,6 +2301,7 @@
 				C5AD1A471FD1389700A7EE86 /* 4.m4a in Resources */,
 				C52BACE21FE9310200ED9E10 /* BLEH.gif in Resources */,
 				C59EFF241FB5AC770004E0D4 /* Info.plist in Resources */,
+				C5B45BC521D4B28D00828556 /* JKClipImageToolResouce.bundle in Resources */,
 				C509172520883E78000F38D2 /* 添加的代码.txt in Resources */,
 				C5AD1A551FD14DF100A7EE86 /* pic1.jpg in Resources */,
 				C5AD1A441FD1389700A7EE86 /* 15.m4a in Resources */,
@@ -2423,11 +2464,13 @@
 				C576869E1FAFF8EB00066AA3 /* XMGShopCell.m in Sources */,
 				C59EFF231FB5AC770004E0D4 /* FLAnimatedImageView.m in Sources */,
 				C57686B61FB069BF00066AA3 /* FTUIListViewController.m in Sources */,
+				C5B45BC721D4B28D00828556 /* JKImageClipTool.m in Sources */,
 				C56F719821915B4700BECFB3 /* GYMockRequestDSL.m in Sources */,
 				C509173720906558000F38D2 /* UIScrollView+Moving.m in Sources */,
 				C5715C3A1FD5346D00F0AAE7 /* FTTransitionTypeChooseVC.m in Sources */,
 				C57686B21FB0300B00066AA3 /* FTBaseCell.m in Sources */,
 				C56F719521915B4700BECFB3 /* GYNSURLConnectionHook.m in Sources */,
+				C5B45BC821D4B28D00828556 /* JKFreeImageClipCoverView.m in Sources */,
 				C56F719621915B4700BECFB3 /* GYHttpClientHook.m in Sources */,
 				C517504C2181603C0063BE98 /* UIApplication+MemoryLeak.m in Sources */,
 				C51755022181B99B0063BE98 /* FTRetainCyleView.m in Sources */,
@@ -2496,6 +2539,7 @@
 				C5AA16EC216DE409008CE1B3 /* Person+add.m in Sources */,
 				C5EB8C56215B328000D98B64 /* FTWaterView.m in Sources */,
 				C55977A42192ECB100D804F3 /* UIView+Borders.m in Sources */,
+				C5B45BC921D4B28D00828556 /* JKFreeImageClipView.m in Sources */,
 				C51750462181603C0063BE98 /* UITouch+MemoryLeak.m in Sources */,
 				C51112C71FD5595E008AD74F /* UIView+Screenshot.m in Sources */,
 				C5D1380D1FCFF9BF009EC87E /* LYButton.m in Sources */,
@@ -2513,11 +2557,13 @@
 				C509D5E620871D57000F38D2 /* FTChangeFileNameVC.m in Sources */,
 				C56F719921915B4700BECFB3 /* GYMockRequest.m in Sources */,
 				C56EE5222084820A005186DD /* MJExtensionConst.m in Sources */,
+				C5B45BC621D4B28D00828556 /* JKSqureImageClipView.m in Sources */,
 				C576867A1FAFF66500066AA3 /* UIImage+WebP.m in Sources */,
 				C5726D9C209EEA570037DA02 /* MJRefreshNormalHeader.m in Sources */,
 				C598FBE91FE0F67F00B67823 /* MASCompositeConstraint.m in Sources */,
 				C5B8C43B1FBD670200037249 /* FTCircleLoadingView.m in Sources */,
 				C59D91DD1FB18DD3004550D0 /* SVIndefiniteAnimatedView.m in Sources */,
+				C5B45BC421D4B28D00828556 /* JKFreeImageClipRectView.m in Sources */,
 				C57686761FAFF66500066AA3 /* SDWebImagePrefetcher.m in Sources */,
 				C5726D94209EEA570037DA02 /* MJRefreshHeader.m in Sources */,
 				C5F5E5231FAC372B009FB8D3 /* FTTabBarController.m in Sources */,

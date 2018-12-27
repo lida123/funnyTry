@@ -219,28 +219,28 @@ int a = 6;
     imageView.image = [UIImage imageNamed:@"bftt"];
     [self.view addSubview:imageView];
     
-    UIView* aView = [[UIView alloc] initWithFrame:imageView.frame];
-    aView.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:aView];
-
-    aView.layer.borderWidth = 1.0;
-    aView.layer.borderColor = [UIColor blackColor].CGColor;
+    CGRect r = [self.view convertRect:CGRectMake(10, 10, 10, 10) toView:imageView];
     
+//    UIView* aView = [[UIView alloc] initWithFrame:imageView.frame];
+//    aView.backgroundColor = [UIColor clearColor];
+//    [self.view addSubview:aView];
+
     CAShapeLayer* cropLayer = [[CAShapeLayer alloc] init];
-    [aView.layer addSublayer:cropLayer];
+    [self.view.layer addSublayer:cropLayer];
     // 创建一个绘制路径
     CGMutablePathRef path = CGPathCreateMutable();
     // 空心矩形的rect
-    CGRect cropRect = CGRectMake(20, 30, 60, 40);
+    CGRect cropRect = CGRectMake(50 + 20 , 200 + 20, 50, 50);
     // 绘制rect
-    CGPathAddRect(path, nil, aView.bounds);
+    CGPathAddRect(path, nil, imageView.frame);
     CGPathAddRect(path, nil, cropRect);
     // 设置填充规则(重点)
     [cropLayer setFillRule:kCAFillRuleEvenOdd];
     // 关联绘制的path
     [cropLayer setPath:path];
     // 设置填充的颜色
-    [cropLayer setFillColor:[[UIColor redColor] CGColor]];
+    cropLayer.fillColor = [[UIColor blackColor] colorWithAlphaComponent:0.7].CGColor;
+    cropLayer.strokeColor = [UIColor whiteColor].CGColor;
 }
 
 //- (void)viewWillAppear:(BOOL)animated {
