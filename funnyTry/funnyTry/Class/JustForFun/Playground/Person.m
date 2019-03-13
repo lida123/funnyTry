@@ -13,11 +13,14 @@
 @implementation Person
 
 - (void)test {
-    NSLog(@"person test");
+    NSLog(@"Person test");
 }
 
-- (NSObject *)mayleak {
-    NSObject *obj = [NSObject new];
-    return obj;
++ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
+    if ([key isEqualToString:@"qtId"]) {
+        return NO;
+    }
+    return [super automaticallyNotifiesObserversForKey: key];
 }
+
 @end

@@ -17,35 +17,8 @@ void dynamicMethodIMP(id self, SEL _cmd)
 
 @implementation Student
 
-//+ (BOOL)resolveClassMethod:(SEL)sel {
-//    return YES;
-//}
-//
-//+ (BOOL) resolveInstanceMethod:(SEL)sel
-//{
-//    const char *types = sel_getName(sel);
-//    class_addMethod([self class], sel, (IMP) dynamicMethodIMP, types);
-//    return YES;
-//}
-
-- (id)forwardingTargetForSelector:(SEL)aSelector {
-    return [Book new];
+- (void)speakWithAword:(NSString *)word {
+    NSLog(@"word");
 }
-
-- (void)forwardInvocation:(NSInvocation *)anInvocation {
-    id target = anInvocation.target;
-    if ([target isKindOfClass:NSClassFromString(@"Book")]) {
-        [anInvocation invokeWithTarget:target];
-    }
-}
-//
-//- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
-//
-//    NSMethodSignature* signature = [super methodSignatureForSelector:aSelector];
-//    if (!signature) {
-//        signature = [[NSClassFromString(@"Book") new] methodSignatureForSelector:aSelector];
-//    }
-//    return signature;
-//}
 
 @end

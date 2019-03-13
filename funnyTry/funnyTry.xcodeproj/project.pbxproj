@@ -51,6 +51,8 @@
 		C52BACBC1FE8FE1500ED9E10 /* noun_project_347_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C52BACBB1FE8FE1500ED9E10 /* noun_project_347_2.png */; };
 		C52BACE21FE9310200ED9E10 /* BLEH.gif in Resources */ = {isa = PBXBuildFile; fileRef = C52BACE11FE9310200ED9E10 /* BLEH.gif */; };
 		C52BACEE1FEA464100ED9E10 /* GQPlayGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = C52BACEC1FEA464100ED9E10 /* GQPlayGifView.m */; };
+		C52F0FF82238975E00E1963F /* NSObject+KVOBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C52F0FF72238975E00E1963F /* NSObject+KVOBlock.m */; };
+		C52F0FFB223899C300E1963F /* SWKVOObserverItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C52F0FFA223899C300E1963F /* SWKVOObserverItem.m */; };
 		C53366B421251E4000A260CD /* FTCodeConfuseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C53366B321251E4000A260CD /* FTCodeConfuseTool.m */; };
 		C53368DE21255F8800A260CD /* 一个实例方法的代码.txt in Resources */ = {isa = PBXBuildFile; fileRef = C53368DD21255F8800A260CD /* 一个实例方法的代码.txt */; };
 		C534B7A820BC031B00651271 /* NOEELeftTitleBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C534B7A620BC031B00651271 /* NOEELeftTitleBtn.m */; };
@@ -565,6 +567,10 @@
 		C52BACE11FE9310200ED9E10 /* BLEH.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BLEH.gif; sourceTree = "<group>"; };
 		C52BACEC1FEA464100ED9E10 /* GQPlayGifView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQPlayGifView.m; sourceTree = "<group>"; };
 		C52BACED1FEA464100ED9E10 /* GQPlayGifView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPlayGifView.h; sourceTree = "<group>"; };
+		C52F0FF62238975E00E1963F /* NSObject+KVOBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVOBlock.h"; sourceTree = "<group>"; };
+		C52F0FF72238975E00E1963F /* NSObject+KVOBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVOBlock.m"; sourceTree = "<group>"; };
+		C52F0FF9223899C300E1963F /* SWKVOObserverItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWKVOObserverItem.h; sourceTree = "<group>"; };
+		C52F0FFA223899C300E1963F /* SWKVOObserverItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWKVOObserverItem.m; sourceTree = "<group>"; };
 		C53366B221251E4000A260CD /* FTCodeConfuseTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCodeConfuseTool.h; sourceTree = "<group>"; };
 		C53366B321251E4000A260CD /* FTCodeConfuseTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTCodeConfuseTool.m; sourceTree = "<group>"; };
 		C53368DD21255F8800A260CD /* 一个实例方法的代码.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "一个实例方法的代码.txt"; sourceTree = "<group>"; };
@@ -1217,6 +1223,17 @@
 				C52BACEC1FEA464100ED9E10 /* GQPlayGifView.m */,
 			);
 			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		C52F0FF52238974300E1963F /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				C52F0FF62238975E00E1963F /* NSObject+KVOBlock.h */,
+				C52F0FF72238975E00E1963F /* NSObject+KVOBlock.m */,
+				C52F0FF9223899C300E1963F /* SWKVOObserverItem.h */,
+				C52F0FFA223899C300E1963F /* SWKVOObserverItem.m */,
+			);
+			path = KVO;
 			sourceTree = "<group>";
 		};
 		C534FBEC21080CC1004002A3 /* createPackImg */ = {
@@ -1944,19 +1961,19 @@
 		C5B45BB621D4B28D00828556 /* JKImageClip */ = {
 			isa = PBXGroup;
 			children = (
-				C5B45BB721D4B28D00828556 /* JKSqureImageClipView.h */,
-				C5B45BB821D4B28D00828556 /* JKFreeImageClipRectView.m */,
-				C5B45BB921D4B28D00828556 /* JKImageClipToolMacro.h */,
-				C5B45BBA21D4B28D00828556 /* JKImageClipTool.h */,
-				C5B45BBB21D4B28D00828556 /* JKFreeImageClipView.h */,
 				C5B45BBC21D4B28D00828556 /* JKClipImageToolResouce.bundle */,
 				C5B45BBD21D4B28D00828556 /* JKFreeImageClipCoverView.h */,
-				C5B45BBE21D4B28D00828556 /* JKImageClipActionProtocol.h */,
-				C5B45BBF21D4B28D00828556 /* JKFreeImageClipRectView.h */,
-				C5B45BC021D4B28D00828556 /* JKSqureImageClipView.m */,
-				C5B45BC121D4B28D00828556 /* JKImageClipTool.m */,
 				C5B45BC221D4B28D00828556 /* JKFreeImageClipCoverView.m */,
+				C5B45BBF21D4B28D00828556 /* JKFreeImageClipRectView.h */,
+				C5B45BB821D4B28D00828556 /* JKFreeImageClipRectView.m */,
+				C5B45BBB21D4B28D00828556 /* JKFreeImageClipView.h */,
 				C5B45BC321D4B28D00828556 /* JKFreeImageClipView.m */,
+				C5B45BBE21D4B28D00828556 /* JKImageClipActionProtocol.h */,
+				C5B45BBA21D4B28D00828556 /* JKImageClipTool.h */,
+				C5B45BC121D4B28D00828556 /* JKImageClipTool.m */,
+				C5B45BB921D4B28D00828556 /* JKImageClipToolMacro.h */,
+				C5B45BB721D4B28D00828556 /* JKSqureImageClipView.h */,
+				C5B45BC021D4B28D00828556 /* JKSqureImageClipView.m */,
 			);
 			path = JKImageClip;
 			sourceTree = "<group>";
@@ -2108,6 +2125,7 @@
 		C5F5E5261FAC3977009FB8D3 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C52F0FF52238974300E1963F /* KVO */,
 				C5B45BB621D4B28D00828556 /* JKImageClip */,
 				C58D7ED521B7DDB3003F50DC /* CTBlockDescription */,
 				C510419621B1297B0051214D /* BSBacktraceLogger */,
@@ -2489,6 +2507,7 @@
 				C5726D9B209EEA570037DA02 /* MJRefreshGifHeader.m in Sources */,
 				C510419A21B12C400051214D /* BSBacktraceLogger.m in Sources */,
 				C57686AD1FB02E6000066AA3 /* FBShimmeringLayer.m in Sources */,
+				C52F0FFB223899C300E1963F /* SWKVOObserverItem.m in Sources */,
 				C51755172182F8D20063BE98 /* UIView+AnimatedShow.m in Sources */,
 				C56F718E21915B4700BECFB3 /* GYMockResponseDSL.m in Sources */,
 				C598FBF21FE0F67F00B67823 /* ViewController+MASAdditions.m in Sources */,
@@ -2574,6 +2593,7 @@
 				C5423EF6205A619900D027EB /* Student.m in Sources */,
 				C559779A2192E38600D804F3 /* YYFPSLabel.m in Sources */,
 				C5726D99209EEA570037DA02 /* MJRefreshBackNormalFooter.m in Sources */,
+				C52F0FF82238975E00E1963F /* NSObject+KVOBlock.m in Sources */,
 				C51A9537213784320075FBEF /* UITextField+TopPlaceholder.m in Sources */,
 				C5726D9D209EEA570037DA02 /* MJRefreshStateHeader.m in Sources */,
 				C574DBAF1FD4DFBB0003F827 /* FTLoginNextViewController.m in Sources */,

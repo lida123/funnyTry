@@ -20,6 +20,7 @@
 #import "MLeakedObjectProxy.h"
 #import <YYKit.h>
 #import <objc/runtime.h>
+#import <objc/message.h>
 #import "MJRefresh.h"
 #import "NOEELeftTitleBtn.h"
 #import "MLeaksFinder.h"
@@ -63,7 +64,9 @@ struct son
   #define FTABC 0
 #endif
 
-int a = 6;
+void sayHello(void) {
+    NSLog(@"hello");
+}
 
 @interface FTPlaygroundVC ()<UIScrollViewDelegate>
 @property (nonatomic, strong) dispatch_queue_t queue;
@@ -72,6 +75,8 @@ int a = 6;
 @property (nonatomic, strong) UIScrollView *sr;
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic, strong)  FTWaterView * water;
+@property (nonatomic, strong) Person *pObjct;
+
 @end
 
 @implementation FTPlaygroundVC
@@ -83,16 +88,16 @@ int a = 6;
     self.navigationItem.title = @"Have fun";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"nextGround" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonClick)];
     
-
-    UIView *grayView = [[UIView alloc] initWithFrame:CGRectMake(50, 100, 50, 50)];
-    grayView.backgroundColor = [UIColor grayColor];
-    [self.view addSubview:grayView];
-    [grayView addBottomBorderWithHeight:1 andColor:[UIColor redColor]];
+//
+//    UIView *grayView = [[UIView alloc] initWithFrame:CGRectMake(50, 100, 50, 50)];
+//    grayView.backgroundColor = [UIColor grayColor];
+//    [self.view addSubview:grayView];
+//    [grayView addBottomBorderWithHeight:1 andColor:[UIColor redColor]];
  
 //    tf.backgroundColor = [UIColor redColor];
-//    _redView = [[FTTouchView alloc] initWithFrame:CGRectMake(50, FTNavigationBarPlusStatusBarHeight, 200, 200)];
-//    _redView.backgroundColor = [UIColor redColor];
-//    [self.view addSubview:_redView];
+    _redView = [[FTTouchView alloc] initWithFrame:CGRectMake(50, FTNavigationBarPlusStatusBarHeight, 200, 200)];
+    _redView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:_redView];
 //    [Person swizzleSEL:@selector(noexist) withSEL:@selector(test)];
 //    
 //    UIApplication;
@@ -112,9 +117,9 @@ int a = 6;
 //    gradient.startPoint = CGPointMake(0, 1);
 //    gradient.endPoint = CGPointMake(1, 0);
 //    [self.view.layer insertSublayer:gradient atIndex:0];
-//
-//    //创建CGContextRef
-//
+
+    //创建CGContextRef
+
 //    UIGraphicsBeginImageContext(self.view.bounds.size);
 //
 //    CGContextRef gc = UIGraphicsGetCurrentContext();
@@ -125,7 +130,7 @@ int a = 6;
 //
 //    //绘制Path
 //
-//    CGRect rect = CGRectInset(self.view.bounds, 1, 30);
+//    CGRect rect = CGRectInset(self.view.bounds, 10, 69);
 //
 //    CGPathMoveToPoint(path, NULL, CGRectGetMinX(rect), CGRectGetMinY(rect));
 //
@@ -139,8 +144,8 @@ int a = 6;
 //
 //    [self drawLinearGradient:gc path:path startColor:[UIColor greenColor].CGColor endColor:[UIColor redColor].CGColor];
 //
-//    //注意释放CGMutablePathRef
-//
+    //注意释放CGMutablePathRef
+
 //    CGPathRelease(path);
 //
 //    //从Context中获取图像，并显示在界面上
@@ -181,26 +186,31 @@ int a = 6;
 //    Student * st = [Student new];
 //    [st performSelector:@selector(test) withObject:nil afterDelay:0];
 //
-//    _water = [[FTWaterView alloc] initWithFrame:_redView.bounds];
-//    UILabel *label = [[UILabel alloc] init];
-//    label.text = @"[st performSelector:@selector(test) withObject:nil afterDelay:0]";
-//    label.textColor = [UIColor whiteColor];
-//    label.frame = CGRectMake(0, 0, _redView.bounds.size.width, 20);
-//    [_redView addSubview:label];
-//
-//    CALayer *layer = [CALayer layer];
-//    layer.frame = _redView.bounds;
-//    layer.delegate = _water;
-//    [layer setNeedsDisplay];
-//    _water.superLayer = layer;
-//    _redView.layer.mask = layer;
-//
-//    Person *p = [Person new];
-//    p.female = YES;
-//    NSLog(@"%@", p.female ? @"女的":@"男的");
+    _water = [[FTWaterView alloc] initWithFrame:_redView.bounds];
     
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"[st performSelector:@selector(test) withObject:nil afterDelay:0]";
+    label.textColor = [UIColor whiteColor];
+    label.frame = CGRectMake(0, 0, _redView.bounds.size.width, 20);
+    [_redView addSubview:label];
+
+    CALayer *layer = [CALayer layer];
+    layer.frame = _redView.bounds;
+    layer.delegate = _water;
+    [layer setNeedsDisplay];
+    _water.superLayer = layer;
+    _redView.layer.mask = layer;
     
-//    unsigned int count;
+    Class bbqClass = objc_allocateClassPair([NSObject class], "BBQ", 0);
+    BOOL addSuccess = class_addIvar(bbqClass, "name", sizeof(NSString *), log2(sizeof(NSString *)), @encode(NSString *));
+    objc_registerClassPair(bbqClass);
+    if (addSuccess) {
+        id obj = [[bbqClass alloc] init];
+        [obj setValue:@"sgq" forKey:@"name"];
+        NSLog(@"%@",[obj valueForKey:@"name"]);
+    }
+    
+   
 //    objc_property_t * ps =  class_copyPropertyList([Person class], &count);
 //
 //    for (NSInteger i = 0; i < count; i++) {
@@ -208,39 +218,88 @@ int a = 6;
 //        NSLog(@"%s", property_getName(p));
 //    }
 //
-//    Ivar * ivars =  class_copyIvarList([Person class], &count);
-//
-//    for (NSInteger i = 0; i < count; i++) {
-//        Ivar ivar = ivars[i];
-//        NSLog(@"%s", ivar_getName(ivar));
-//    }
+    
+    unsigned int count;
+    Ivar * ivars =  class_copyIvarList([Person class], &count);
+    for (NSInteger i = 0; i < count; i++) {
+        Ivar ivar = ivars[i];
+        NSLog(@"[%s] [%td]", ivar_getName(ivar), ivar_getOffset(ivar));
+    }
+    
+//    NSNumber *number1 = @(0x1);
+//    NSNumber *number2 = @(0x20);
+//    NSNumber *number3 = @(0x3F);
+//    NSNumber *numberFFFF = @(0xFFFFFFFFFFEFE);
+//    NSNumber *maxNum = @(MAXFLOAT);
+//    NSLog(@"number1 pointer is %p class is %@", number1, number1.class);
+//    NSLog(@"number2 pointer is %p class is %@", number2, number2.class);
+//    NSLog(@"number3 pointer is %p class is %@", number3, number3.class);
+//    NSLog(@"numberffff pointer is %p class is %@", numberFFFF, numberFFFF.class);
+//    NSLog(@"maxNum pointer is %p class is %@", maxNum, maxNum.class);
 
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 200, 200, 200)];
-    imageView.image = [UIImage imageNamed:@"bftt"];
-    [self.view addSubview:imageView];
     
-    CGRect r = [self.view convertRect:CGRectMake(10, 10, 10, 10) toView:imageView];
     
+//    Person *personObject = [Person new];
+////    personObject.age = 18;
+//    personObject.height = 180;
+//    personObject.name = "xiaoming";
+//    NSLog(@"%p", personObject);
+////    personObject.age = 20;
+//
+//    NSLog(@"InstanceSize:%ld", class_getInstanceSize([Person class]));
+//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 200, 200, 200)];
+//    imageView.image = [UIImage imageNamed:@"bftt"];
+//    [self.view addSubview:imageView];
+//
+//    CGRect r = [self.view convertRect:CGRectMake(10, 10, 10, 10) toView:imageView];
+//
 //    UIView* aView = [[UIView alloc] initWithFrame:imageView.frame];
 //    aView.backgroundColor = [UIColor clearColor];
 //    [self.view addSubview:aView];
 
-    CAShapeLayer* cropLayer = [[CAShapeLayer alloc] init];
-    [self.view.layer addSublayer:cropLayer];
-    // 创建一个绘制路径
-    CGMutablePathRef path = CGPathCreateMutable();
-    // 空心矩形的rect
-    CGRect cropRect = CGRectMake(50 + 20 , 200 + 20, 50, 50);
-    // 绘制rect
-    CGPathAddRect(path, nil, imageView.frame);
-    CGPathAddRect(path, nil, cropRect);
-    // 设置填充规则(重点)
-    [cropLayer setFillRule:kCAFillRuleEvenOdd];
-    // 关联绘制的path
-    [cropLayer setPath:path];
-    // 设置填充的颜色
-    cropLayer.fillColor = [[UIColor blackColor] colorWithAlphaComponent:0.7].CGColor;
-    cropLayer.strokeColor = [UIColor whiteColor].CGColor;
+//    CAShapeLayer* cropLayer = [[CAShapeLayer alloc] init];
+//    [self.view.layer addSublayer:cropLayer];
+//    // 创建一个绘制路径
+//    CGMutablePathRef path = CGPathCreateMutable();
+//    // 空心矩形的rect
+//    CGRect cropRect = CGRectMake(50 + 20 , 200 + 20, 50, 50);
+//    // 绘制rect
+//    CGPathAddRect(path, nil, imageView.frame);
+//    CGPathAddRect(path, nil, cropRect);
+//    // 设置填充规则(重点)
+//    [cropLayer setFillRule:kCAFillRuleEvenOdd];
+//    // 关联绘制的path
+//    [cropLayer setPath:path];
+//    // 设置填充的颜色
+//    cropLayer.fillColor = [[UIColor blackColor] colorWithAlphaComponent:0.7].CGColor;
+//    cropLayer.strokeColor = [UIColor whiteColor].CGColor;
+//    NSDictionary *dict = @{@"key1" : @"value1",
+//                           @"key2" : @"value2"};
+//    NSError *error;
+//    [self findValue2InDict:dict error:&error];
+//    NSLog(@"%@", error);
+    
+    
+    Person *p = [Person new];
+    [p addObserver:self forKeyPath:@"qtId" options:NSKeyValueObservingOptionNew context:nil];
+    [p addObserver:self forKeyPath:@"awayTeamLogo" options:NSKeyValueObservingOptionNew context:nil];
+    p.qtId = @"new_qtid";
+    p.awayTeamLogo = @"new_logo";
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    NSLog(@"%@", change[NSKeyValueChangeNewKey]);
+}
+
+- (void)findValue2InDict:(NSDictionary *)dict error:(NSError **)error {
+    __block NSError *e;
+    [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, NSString *  _Nonnull value, BOOL * _Nonnull stop) {
+        if ([value isEqualToString:@"value2"]) {
+            *stop = YES;
+            *error = [NSError errorWithDomain:@"xxx" code:-1 userInfo:nil];
+        }
+    }];
+    *error = e;
 }
 
 //- (void)viewWillAppear:(BOOL)animated {
@@ -380,7 +439,7 @@ void test(struct son *t)
         NSLog(@"%@", [NSThread currentThread]);
     });
     NSLog(@"touche end");
-//    [_water startAnimation];
+    [_water startAnimation];
 //    Student * st = [Student new];
 //    [st performSelector:@selector(bbbb) withObject:@"sss" afterDelay:0];
 

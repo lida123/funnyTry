@@ -10,7 +10,10 @@
 
 @interface Student : Person
 
-@property (nonatomic, strong) NSMutableArray *books;
-@property (nonatomic, strong) id idName;
+@property (nonatomic, assign) int classId;
+
+- (void)test;
+
+- (void)speakWithAword:(NSString *)word;
 
 @end
