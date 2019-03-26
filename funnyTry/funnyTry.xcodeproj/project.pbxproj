@@ -71,6 +71,7 @@
 		C5616C1F1FA8777E00A9C033 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C1E1FA8777E00A9C033 /* main.m */; };
 		C5616C291FA8777E00A9C033 /* funnyTryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C281FA8777E00A9C033 /* funnyTryTests.m */; };
 		C5616C341FA8777E00A9C033 /* funnyTryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5616C331FA8777E00A9C033 /* funnyTryUITests.m */; };
+		C56925B2224A2B75004A2056 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = C56925B0224A2B75004A2056 /* Aspects.m */; };
 		C56A5EA02189B86A006FDA50 /* FTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56A5E9E2189B86A006FDA50 /* FTWebViewController.m */; };
 		C56A5EA12189B86A006FDA50 /* FTWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C56A5E9F2189B86A006FDA50 /* FTWebViewController.xib */; };
 		C56A5EA42189BAAF006FDA50 /* FTMyURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = C56A5EA32189BAAF006FDA50 /* FTMyURLProtocol.m */; };
@@ -605,6 +606,8 @@
 		C5616C2F1FA8777E00A9C033 /* funnyTryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = funnyTryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5616C331FA8777E00A9C033 /* funnyTryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = funnyTryUITests.m; sourceTree = "<group>"; };
 		C5616C351FA8777E00A9C033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C56925B0224A2B75004A2056 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		C56925B1224A2B75004A2056 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
 		C56A5E9D2189B86A006FDA50 /* FTWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTWebViewController.h; sourceTree = "<group>"; };
 		C56A5E9E2189B86A006FDA50 /* FTWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTWebViewController.m; sourceTree = "<group>"; };
 		C56A5E9F2189B86A006FDA50 /* FTWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTWebViewController.xib; sourceTree = "<group>"; };
@@ -1301,6 +1304,15 @@
 				C5616C351FA8777E00A9C033 /* Info.plist */,
 			);
 			path = funnyTryUITests;
+			sourceTree = "<group>";
+		};
+		C56925AF224A2B62004A2056 /* Aspect */ = {
+			isa = PBXGroup;
+			children = (
+				C56925B1224A2B75004A2056 /* Aspects.h */,
+				C56925B0224A2B75004A2056 /* Aspects.m */,
+			);
+			path = Aspect;
 			sourceTree = "<group>";
 		};
 		C56EE50C2084820A005186DD /* MJExtension */ = {
@@ -2125,6 +2137,7 @@
 		C5F5E5261FAC3977009FB8D3 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C56925AF224A2B62004A2056 /* Aspect */,
 				C52F0FF52238974300E1963F /* KVO */,
 				C5B45BB621D4B28D00828556 /* JKImageClip */,
 				C58D7ED521B7DDB3003F50DC /* CTBlockDescription */,
@@ -2560,6 +2573,7 @@
 				C55977A42192ECB100D804F3 /* UIView+Borders.m in Sources */,
 				C5B45BC921D4B28D00828556 /* JKFreeImageClipView.m in Sources */,
 				C51750462181603C0063BE98 /* UITouch+MemoryLeak.m in Sources */,
+				C56925B2224A2B75004A2056 /* Aspects.m in Sources */,
 				C51112C71FD5595E008AD74F /* UIView+Screenshot.m in Sources */,
 				C5D1380D1FCFF9BF009EC87E /* LYButton.m in Sources */,
 				C5726D97209EEA570037DA02 /* MJRefreshAutoStateFooter.m in Sources */,

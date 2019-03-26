@@ -1,4 +1,8 @@
 date     name               author        state
+
 20171106 FBShimmering       Facebook      finished
 20180109 RESideMenu         Roman Efimov  finished
 20180306 MJExtension        MJ            finished
+20180926 WMPageController   Mark          finished
+20190313 FBKVOController    Facebook      finished
+20190326 Aspect             steipete      finished

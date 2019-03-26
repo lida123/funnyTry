@@ -37,7 +37,7 @@
 #import <sys/stat.h>
 #import "UIView+Borders.h"
 #import "NSObject+DLIntrospection.h"
-
+  typedef void(^blockType)(void);
 //父结构体
 struct father
 {
@@ -280,11 +280,21 @@ void sayHello(void) {
 //    NSLog(@"%@", error);
     
     
-    Person *p = [Person new];
-    [p addObserver:self forKeyPath:@"qtId" options:NSKeyValueObservingOptionNew context:nil];
-    [p addObserver:self forKeyPath:@"awayTeamLogo" options:NSKeyValueObservingOptionNew context:nil];
-    p.qtId = @"new_qtid";
-    p.awayTeamLogo = @"new_logo";
+//    Person *p = [Person new];
+//    [p addObserver:self forKeyPath:@"qtId" options:NSKeyValueObservingOptionNew context:nil];
+//    [p addObserver:self forKeyPath:@"awayTeamLogo" options:NSKeyValueObservingOptionNew context:nil];
+//    p.qtId = @"new_qtid";
+//    p.awayTeamLogo = @"new_logo";
+  
+    NSMutableString *str = [NSMutableString stringWithString:@"Hello"];
+    blockType blk = ^{
+        [str appendString:@" World"];
+        NSLog(@"%@",str);
+    };
+    blk();
+ 
+   
+
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -434,11 +444,12 @@ void test(struct son *t)
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    dispatch_sync(dispatch_get_global_queue(0, 0), ^{
-        sleep(2.0);
-        NSLog(@"%@", [NSThread currentThread]);
-    });
-    NSLog(@"touche end");
+    [self testGCDSemaphore];
+//    dispatch_sync(dispatch_get_global_queue(0, 0), ^{
+//        sleep(2.0);
+//        NSLog(@"%@", [NSThread currentThread]);
+//    });
+//    NSLog(@"touche end");
     [_water startAnimation];
 //    Student * st = [Student new];
 //    [st performSelector:@selector(bbbb) withObject:@"sss" afterDelay:0];
@@ -579,10 +590,11 @@ void test(struct son *t)
     dispatch_queue_t queue =  dispatch_queue_create("label", DISPATCH_QUEUE_CONCURRENT);
     
     for (NSInteger i = 0; i < 10; i++) {
+        NSLog(@"add %zd", i);
         dispatch_async(queue, ^{
             dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
             NSLog(@"%zd ing",i);
-            sleep(2);
+            sleep((int)i);
             NSLog(@"%zd end",i);
             dispatch_semaphore_signal(semaphore);
         });
